@@ -13,11 +13,13 @@
         font-family: 'Poppins', sans-serif;
         background-color: #f2f6fc;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 100vh;
         text-align: center;
         color: #333;
+        position: relative;
       }
 
       .container {
@@ -54,9 +56,24 @@
       a.download-button:hover {
         background-color: #0056b3;
       }
+
+      footer {
+        position: absolute;
+        bottom: 20px;
+        font-size: 14px;
+      }
+
+      footer a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
     </style>
   </head>
-
   <body>
     <div class="container">
       <img src="logo.jpg" alt="Logo" class="logo" />
@@ -64,8 +81,9 @@
       <p>Se il download non parte automaticamente,</p>
       <a href="menu.pdf" download class="download-button">Clicca qui</a>
     </div>
+
+    <footer>
+      <a href="https://linktr.ee/CiroMaresca" target="_blank">Powered by Maresca Ciro</a>
+    </footer>
   </body>
-
 </html>
-
-
