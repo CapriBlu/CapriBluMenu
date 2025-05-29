@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="5; URL='menu.pdf'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: #f2f6fc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        color: #333;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .logo {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      h1 {
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      a.download-button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+      }
+
+      a.download-button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <img src="logo.jpg" alt="Logo" class="logo" />
+      <h1>Il tuo download sta per iniziare...</h1>
+      <p>Se il download non parte automaticamente,</p>
+      <a href="menu.pdf" download class="download-button">Clicca qui</a>
+    </div>
+  </body>
+
+</html>
+
+
