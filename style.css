@@ -92,9 +92,14 @@ h1 {
 }
 
 footer {
-  position: absolute;
-  bottom: 20px;
+  flex-shrink: 0;
+  position: static; /* Rimuovi position: absolute */
+  margin-top: 32px;
+  padding-bottom: 16px;
   font-size: 14px;
+  width: 100%;
+  text-align: center;
+  background: none;
 }
 
 footer a {
