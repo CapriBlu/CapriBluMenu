@@ -152,9 +152,59 @@ h1 {
   margin: 20px 0;
 }
 
-.language-selector input[type="radio"] {
-  display: none;
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 24px 10px 12px;
+  border-radius: 32px;
+  background: #fff;
+  border: 2px solid #007bff;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s, border 0.2s, box-shadow 0.2s;
+  min-width: 120px;
 }
+
+.lang-btn:hover,
+input[type="radio"]:checked + .lang-btn {
+  background: linear-gradient(90deg, #2601f8 60%, #007bff 100%);
+  color: #fff;
+  border-color: #2601f8;
+  box-shadow: 0 4px 16px rgba(38,1,248,0.15);
+}
+
+.lang-btn .flag {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  flex-shrink: 0;
+}
+
+.lang-btn-text {
+  margin-left: 4px;
+  font-size: 1.05em;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Specifiche bandiere */
+.flag-it {
+  background-image: url('img/band-ita-ing.jpg');
+}
+.flag-fr {
+  background-image: url('https://flagcdn.com/w80/fr.png');
+}
+.flag-es {
+  background-image: url('https://flagcdn.com/w80/es.png');
+}
+/* ...existing code... */
 
 .flag {
   width: 80px;

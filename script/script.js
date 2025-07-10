@@ -1,7 +1,7 @@
 // global var declaration
 const files = {
       // fr: 'pdf/menu-fr.pdf',
-      // es: 'pdf/menu-es.pdf',
+      //es: 'pdf/menu-es.pdf',
       it: 'pdf/menu-it-eng.pdf',
       //en: 'pdf/menu-it-eng.pdf'
     };
@@ -22,27 +22,44 @@ function createLenguageRadio(){
   input.id = key;
   input.name = "language";
   input.value = key;
-
+  input.style.display = "none"; 
+  
   const label = document.createElement("label");
   label.htmlFor = key;
   label.className = `flag flag-${key}`;
   label.title = key;
   
-  //add listener 
+  // Bottone ovale
+  const button = document.createElement("label");
+  button.htmlFor = key;
+  button.className = `lang-btn lang-btn-${key}`;
+  button.title = key;
+
+  // Cerchio bandiera
+  const flag = document.createElement("span");
+  flag.className = `flag flag-${key}`;
+
+  // Testo menu
+  const text = document.createElement("span");
+  text.className = "lang-btn-text";
+  text.textContent = "Menu";
+
+  button.appendChild(flag);
+  button.appendChild(text);
+
+  // Listener
   input.addEventListener('change', function () {
     const lang = this.value;
-
     const filename = files[lang];
     if (filename) {
       downloadFile(filename);
     }
-    
   });
 
   container.appendChild(input);
-  container.appendChild(label);
+  container.appendChild(button);
 
-  });
+});
 }
 
 //download request
