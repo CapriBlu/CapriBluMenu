@@ -1,80 +1,166 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-
-  width: 100%;
-  max-width: 320px; /* prima 500px */
-
-  padding: 20px 15px;
+* {
   box-sizing: border-box;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  text-align: center;
+
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.45)),
+    url("img/Sfondo-per-il-Sito.jpg") center center / cover no-repeat fixed;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 285px;
+
+  padding: 22px 18px;
+  border-radius: 22px;
+
+  background: rgba(0, 20, 35, 0.42);
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 13px;
+}
+
 .logo {
-  width: 110px; /* prima 180px */
-  height: auto;
+  width: 86px;
+  height: 86px;
+  object-fit: cover;
+
   border-radius: 50%;
-  box-shadow: 0 0 15px rgba(255,255,255,0.4);
+  border: 2px solid rgba(255, 255, 255, 0.45);
+
+  box-shadow: 0 0 18px rgba(0, 220, 255, 0.45);
 }
 
 h1 {
-  margin: 0;
-  font-size: 1.3rem; /* prima 2rem */
-  line-height: 1.3;
+  margin: 0 0 4px;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
 }
 
 h1 span {
-  font-size: 0.8rem;
+  display: block;
+  margin-top: 5px;
+
+  font-size: 0.72rem;
+  font-weight: 400;
+  opacity: 0.9;
 }
 
-.download-button {
-  width: 100%;
-}
+.menu-button {
+  width: 185px;
+  min-height: 38px;
 
-.download-button a {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
 
-  padding: 10px 15px; /* più basso */
+  padding: 8px 14px;
 
-  text-decoration: none;
   color: white;
+  text-decoration: none;
 
-  background: rgba(0,0,0,0.55);
-  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
 
-  font-size: 0.95rem;
+  border-radius: 999px;
+
+  background: rgba(0, 0, 0, 0.48);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+
+  box-shadow:
+    inset 0 0 10px rgba(255, 255, 255, 0.08),
+    0 0 16px rgba(0, 210, 255, 0.25);
+
+  transition: 0.25s ease;
 }
 
-.menu-flag {
-  width: 28px; /* prima 42px */
-  border-radius: 4px;
+.menu-button:hover {
+  transform: translateY(-2px);
+  background: rgba(0, 45, 70, 0.65);
+  box-shadow: 0 0 22px rgba(0, 210, 255, 0.45);
+}
+
+.menu-button img {
+  width: 24px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 3px;
 }
 
 .google-rating {
-  margin-bottom: 15px;
+  margin-top: 18px;
+  font-size: 0.78rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .google-rating p {
-  font-size: 0.85rem;
-  margin-bottom: 8px;
+  margin: 0 0 7px;
 }
 
 .google-rating a {
-  padding: 10px 18px;
-  font-size: 0.9rem;
-}
-.container {
-  margin-top: 30px;
+  display: inline-block;
+
+  padding: 7px 16px;
+  border-radius: 999px;
+
+  color: white;
+  text-decoration: none;
+
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+
+  font-size: 0.78rem;
+  font-weight: 500;
 }
 
-.download-button a,
-.google-rating a {
-  max-width: 260px;
-  margin: 0 auto;
+.google-rating a:hover {
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.35);
+}
+
+@media (max-width: 480px) {
+  .card {
+    max-width: 260px;
+    padding: 20px 15px;
+  }
+
+  .logo {
+    width: 78px;
+    height: 78px;
+  }
+
+  .menu-button {
+    width: 170px;
+  }
 }
 
 
