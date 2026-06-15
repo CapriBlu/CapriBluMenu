@@ -1,57 +1,31 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-
-  background-image: url("img/Sfondo per il Sito.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-
-  text-align: center;
-  color: white;
-}
-
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
+  gap: 15px;
 
   width: 100%;
-  max-width: 500px;
+  max-width: 320px; /* prima 500px */
 
-  padding: 40px 20px;
+  padding: 20px 15px;
   box-sizing: border-box;
 }
 
 .logo {
-  width: 180px;
+  width: 110px; /* prima 180px */
   height: auto;
   border-radius: 50%;
-  box-shadow: 0 0 25px rgba(255,255,255,0.5);
+  box-shadow: 0 0 15px rgba(255,255,255,0.4);
 }
 
 h1 {
   margin: 0;
-  font-size: 2rem;
-  text-shadow: 0 0 10px rgba(0,0,0,0.8);
+  font-size: 1.3rem; /* prima 2rem */
+  line-height: 1.3;
 }
 
 h1 span {
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 0.8rem;
 }
 
 .download-button {
@@ -62,73 +36,36 @@ h1 span {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 8px;
 
-  padding: 15px 25px;
+  padding: 10px 15px; /* più basso */
 
   text-decoration: none;
   color: white;
 
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(8px);
+  background: rgba(0,0,0,0.55);
+  border-radius: 12px;
 
-  border: 1px solid rgba(255,255,255,0.3);
-  border-radius: 15px;
-
-  transition: all 0.3s ease;
-}
-
-.download-button a:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 20px rgba(255,255,255,0.5);
+  font-size: 0.95rem;
 }
 
 .menu-flag {
-  width: 42px;
-  height: auto;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(255,255,255,0.6);
+  width: 28px; /* prima 42px */
+  border-radius: 4px;
 }
 
 .google-rating {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .google-rating p {
-  margin-bottom: 10px;
-  text-shadow: 0 0 10px rgba(0,0,0,0.8);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
 }
 
 .google-rating a {
-  display: inline-block;
-  padding: 12px 25px;
-
-  text-decoration: none;
-  color: white;
-
-  background: rgba(0,0,0,0.6);
-  border-radius: 12px;
-
-  transition: all 0.3s ease;
-}
-
-.google-rating a:hover {
-  box-shadow: 0 0 20px rgba(255,255,255,0.5);
-}
-
-@media (max-width: 768px) {
-
-  .logo {
-    width: 140px;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  .download-button a {
-    padding: 14px 20px;
-  }
+  padding: 10px 18px;
+  font-size: 0.9rem;
 }
 
 
