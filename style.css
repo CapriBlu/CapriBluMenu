@@ -96,9 +96,8 @@ h1 {
 }
 
 .google-btn {
-  width: 155px;
+  width: 110px;
   height: auto;
-  display: block;
-  margin: 0 auto;
+  border-radius: 20px;
 }
 
