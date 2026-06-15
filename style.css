@@ -14,13 +14,9 @@ body {
   color: white;
   text-align: center;
 
-  background-image:
+  background:
     linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)),
-    url("./img/Sfondo-per-il-Sito.jpg");
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    url("./img/Sfondo-per-il-Sito.jpg") center center / cover no-repeat;
 
   display: flex;
   flex-direction: column;
@@ -32,9 +28,8 @@ body {
 
 .card {
   width: 100%;
-  max-width: 260px;
-
-  padding: 20px 16px;
+  max-width: 250px;
+  padding: 18px 14px;
   border-radius: 22px;
 
   background: rgba(0, 20, 35, 0.55);
@@ -44,73 +39,65 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 11px;
 }
 
 .logo {
-  width: 82px;
-  height: 82px;
+  width: 78px;
+  height: 78px;
   object-fit: cover;
   border-radius: 50%;
 }
 
 h1 {
   margin: 0;
-  font-size: 20px;
-  line-height: 1.2;
+  font-size: 19px;
 }
 
 .subtitle {
-  margin: 0 0 6px;
+  margin: 0 0 5px;
   font-size: 12px;
 }
 
 .menu-button {
-  width: 165px;
-  height: 38px;
+  width: 155px;
+  height: 36px;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 7px;
 
   border-radius: 999px;
-
-  background: rgba(0,0,0,0.55);
+  background: rgba(0,0,0,0.58);
   border: 1px solid rgba(255,255,255,0.35);
 
   color: white;
   text-decoration: none;
-
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
 }
 
 .menu-button .flag {
-  width: 24px;
-  height: 16px;
+  width: 22px;
+  height: 14px;
   object-fit: cover;
   border-radius: 3px;
 }
 
 .google-rating {
-  margin-top: 18px;
-  font-size: 12px;
-}
-
-.google-rating p {
-  margin: 0 0 8px;
+  margin-top: 16px;
 }
 
 .google-rating a {
-  color: white;
-  text-decoration: none;
-
-  padding: 7px 14px;
-  border-radius: 999px;
-
-  background: rgba(0,0,0,0.55);
-  border: 1px solid rgba(255,255,255,0.3);
+  background: none;
+  border: none;
+  padding: 0;
 }
 
+.google-btn {
+  width: 175px;
+  height: auto;
+  display: block;
+}
 
