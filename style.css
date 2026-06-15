@@ -1,4 +1,4 @@
-* {
+ {
   box-sizing: border-box;
 }
 
@@ -15,22 +15,27 @@ body {
   text-align: center;
 
   background:
-    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.55)),
-    url("./img/Sfondo-per-il-Sito.jpg") center center / cover no-repeat;
+    linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.50)),
+    url("./img/Sfondo-per-il-Sito.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 110%;
 
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 
-  padding: 18px;
+  padding: 20px;
 }
 
 .card {
   width: 100%;
-  max-width: 250px;
-  padding: 18px 14px;
-  border-radius: 22px;
+  max-width: 300px;
+
+  padding: 24px 18px;
+
+  border-radius: 24px;
 
   background: rgba(0, 20, 35, 0.55);
   border: 1px solid rgba(255,255,255,0.25);
@@ -39,65 +44,89 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 11px;
+  gap: 14px;
 }
 
 .logo {
-  width: 78px;
-  height: 78px;
+  width: 95px;
+  height: 95px;
   object-fit: cover;
   border-radius: 50%;
 }
 
 h1 {
   margin: 0;
-  font-size: 19px;
+  font-size: 22px;
+  line-height: 1.2;
 }
 
 .subtitle {
-  margin: 0 0 5px;
-  font-size: 12px;
+  margin: 0 0 6px;
+  font-size: 13px;
+  opacity: 0.9;
 }
 
 .menu-button {
-  width: 155px;
-  height: 36px;
+  width: 185px;
+  height: 42px;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
+  gap: 8px;
 
   border-radius: 999px;
+
   background: rgba(0,0,0,0.58);
   border: 1px solid rgba(255,255,255,0.35);
 
   color: white;
   text-decoration: none;
-  font-size: 13px;
+
+  font-size: 14px;
   font-weight: bold;
 }
 
 .menu-button .flag {
-  width: 22px;
-  height: 14px;
+  width: 24px;
+  height: 16px;
   object-fit: cover;
   border-radius: 3px;
 }
 
-.google-rating {
-  margin-top: 16px;
+/* PULSANTE GOOGLE */
+
+.google-button {
+  width: 220px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 6px;
+
+  border-radius: 999px;
+
+  background: rgba(0,0,0,0.58);
+  border: 1px solid rgba(255,255,255,0.35);
+
+  text-decoration: none;
 }
 
-.google-rating a {
-  background: none;
-  border: none;
-  padding: 0;
-}
-
-.google-btn {
-  width: 22px;
+.google-button img {
+  width: 180px;
+  max-width: 100%;
   height: auto;
-  border-radius: 20px;
+  display: block;
 }
 
+@media (max-width: 480px) {
+  .card {
+    max-width: 290px;
+  }
+
+  .logo {
+    width: 90px;
+    height: 90px;
+  }
+}
