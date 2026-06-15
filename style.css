@@ -114,15 +114,15 @@ h1 {
 }
 
 .google-button img {
-  width: 180px;
-  max-width: 100%;
+  width: 90px;
+  max-width: 50%;
   height: auto;
   display: block;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 120px) {
   .card {
-    max-width: 290px;
+    max-width: 180px;
   }
 
   .logo {
