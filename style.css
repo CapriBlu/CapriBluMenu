@@ -6,7 +6,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
   min-height: 100vh;
 }
 
@@ -16,142 +15,147 @@ body {
   text-align: center;
 
   background:
-    linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.25)),
-    url("./img/Sfondo-per-il-Sito.png");
+    linear-gradient(rgba(0,0,35,0.25), rgba(0,0,45,0.45)),
+    url("./img/Sfondo-per-il-Sito.jpg");
 
-  background-position: center center;
-  background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  padding: 12px;
+  padding: 18px;
 }
 
 .card {
-  width: 98%;
-  max-width: 700px;
+  width: 100%;
+  max-width: 430px;
+  min-height: auto;
 
-  padding: 65px 45px;
+  padding: 34px 22px 42px;
 
-  border-radius: 42px;
+  border-radius: 28px;
 
-  background: rgba(10,20,45,0.22);
+  background: rgba(2, 12, 55, 0.58);
+  border: 1px solid rgba(255,255,255,0.12);
 
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 
-  border: 1px solid rgba(255,255,255,0.10);
-
-  box-shadow:
-    0 20px 60px rgba(0,0,0,0.30);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
+  box-shadow: 0 0 35px rgba(0, 90, 255, 0.18);
 }
 
-/* NUOVO LOGO */
+.logo-link {
+  display: block;
+  margin-bottom: 22px;
+}
 
 .logo {
-  width: 100%;
-  max-width: 500px;
-
-  height: auto;
-
-  object-fit: contain;
-
+  width: 210px;
+  max-width: 72vw;
   display: block;
-
-  border-radius: 0;
-  box-shadow: none;
+  margin: 0 auto;
 }
 
 .subtitle {
-  margin: 0;
-
-  font-size: 18px;
-  opacity: 0.95;
+  margin: 0 0 34px;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 0 8px rgba(255,255,255,0.45);
 }
 
-/* BOTTONI IMMAGINE */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
 
 .image-button {
-  width: 100%;
-  max-width: 420px;
+  display: block;
+  width: 220px;
+  max-width: 72vw;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  text-decoration: none;
-
-  transition: transform .25s ease;
-}
-
-.image-button:hover {
-  transform: scale(1.03);
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .image-button img {
   width: 100%;
-  max-width: 380px;
-
   height: auto;
-
   display: block;
 }
 
-/* TABLET */
+.image-button:hover {
+  transform: scale(1.04);
+  filter: brightness(1.15);
+}
 
-@media (max-width: 768px) {
+.small-button {
+  width: 190px;
+  margin-top: 4px;
+}
+
+@media (max-width: 480px) {
+
+  body {
+    align-items: flex-start;
+    padding: 16px 14px;
+  }
 
   .card {
-    width: 98%;
-    max-width: 600px;
-
-    padding: 55px 30px;
+    max-width: 100%;
+    min-height: calc(100vh - 32px);
+    padding: 28px 18px 36px;
+    border-radius: 24px;
   }
 
   .logo {
-    max-width: 430px;
+    width: 190px;
+    max-width: 68vw;
   }
 
-  .image-button img {
-    max-width: 340px;
+  .logo-link {
+    margin-bottom: 24px;
   }
 
   .subtitle {
-    font-size: 17px;
+    margin-bottom: 30px;
+    font-size: 12px;
+  }
+
+  .buttons {
+    gap: 24px;
+  }
+
+  .image-button {
+    width: 205px;
+    max-width: 70vw;
+  }
+
+  .small-button {
+    width: 178px;
+    margin-top: 2px;
   }
 }
 
-/* SMARTPHONE */
-
-@media (max-width: 600px) {
-
-  .card {
-    width: 98%;
-    max-width: 560px;
-
-    padding: 50px 22px;
-
-    background: rgba(10,20,45,0.20);
-  }
+@media (max-width: 360px) {
 
   .logo {
-    max-width: 340px;
+    width: 175px;
   }
 
-  .subtitle {
-    font-size: 16px;
+  .image-button {
+    width: 190px;
   }
 
-  .image-button img {
-    max-width: 320px;
+  .small-button {
+    width: 165px;
+  }
+
+  .buttons {
+    gap: 20px;
   }
 }
