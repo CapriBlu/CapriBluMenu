@@ -133,12 +133,20 @@ h1 {
   transform: scale(1.02);
 }
 
-.google-button img {
-  width: 120px;
-  height: auto;
-  object-fit: contain;
-  display: block;
-}
+.google-button {
+  width: 230px;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+
+  background: rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.25);
+
+  text-decoration: none;
 
 /* TELEFONI PICCOLI */
 
