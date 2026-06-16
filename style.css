@@ -39,10 +39,10 @@ body {
 
   border-radius: 42px;
 
-  background: rgba(10,20,45,0.16);
+  background: rgba(10,20,45,0.22);
 
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 
   border: 1px solid rgba(255,255,255,0.10);
 
@@ -82,6 +82,30 @@ h1 {
   opacity: 0.95;
 }
 
+/* FOOD MENU IMAGE BUTTON */
+
+.food-button {
+  width: 100%;
+  max-width: 420px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+}
+
+.food-button img {
+  width: 100%;
+  max-width: 380px;
+
+  height: auto;
+
+  display: block;
+}
+
+/* DRINK BUTTON */
+
 .menu-button {
   width: 100%;
   max-width: 400px;
@@ -113,18 +137,11 @@ h1 {
   background: rgba(255,255,255,0.08);
 }
 
-.flag {
-  width: 34px;
-  height: 22px;
-
-  object-fit: cover;
-  border-radius: 4px;
-}
+/* GOOGLE BUTTON IMAGE */
 
 .google-button {
   width: 100%;
-  max-width: 400px;
-  height: 74px;
+  max-width: 420px;
 
   display: flex;
   justify-content: center;
@@ -135,10 +152,19 @@ h1 {
 
 .google-button img {
   width: 100%;
-  max-width: 360px;
+  max-width: 380px;
+
   height: auto;
 
   display: block;
+}
+
+.flag {
+  width: 34px;
+  height: 22px;
+
+  object-fit: cover;
+  border-radius: 4px;
 }
 
 /* TABLET */
@@ -160,6 +186,16 @@ h1 {
   h1 {
     font-size: 34px;
   }
+
+  .food-button img,
+  .google-button img {
+    max-width: 340px;
+  }
+
+  .menu-button {
+    max-width: 360px;
+    height: 68px;
+  }
 }
 
 /* SMARTPHONE */
@@ -167,12 +203,12 @@ h1 {
 @media (max-width: 600px) {
 
   .card {
-    width: 99%;
+    width: 98%;
     max-width: 560px;
 
-    padding: 70px 35px;
+    padding: 60px 28px;
 
-    background: rgba(10,20,45,0.14);
+    background: rgba(10,20,45,0.20);
   }
 
   .logo {
@@ -188,17 +224,15 @@ h1 {
     font-size: 17px;
   }
 
-  .menu-button,
-  .google-button {
-    max-width: 390px;
-    height: 74px;
+  .food-button img,
+  .google-button img {
+    max-width: 320px;
   }
 
   .menu-button {
-    font-size: 20px;
-  }
+    max-width: 320px;
+    height: 68px;
 
-  .google-button img {
-    max-width: 360px;
+    font-size: 18px;
   }
 }
