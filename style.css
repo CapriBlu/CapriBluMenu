@@ -55,38 +55,37 @@ body {
 }
 
 .logo {
-  width: 65px;
-  height: 65px;
+  width: 68px;
+  height: 68px;
 
   object-fit: cover;
   border-radius: 50%;
 
-  box-shadow:
-    0 0 18px rgba(255,255,255,0.20);
+  box-shadow: 0 0 18px rgba(255,255,255,0.20);
 
-  transform: translateX(6px);
+  transform: translateX(5px);
 }
 
 h1 {
   margin: 0;
 
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 700;
 
   line-height: 1.2;
 }
 
 .subtitle {
-  margin: 0;
+  margin: 0 0 6px;
 
-  font-size: 12px;
+  font-size: 14px;
 
   opacity: 0.9;
 }
 
 .menu-button {
   width: 230px;
-  height: 50px;
+  height: 52px;
 
   display: flex;
   align-items: center;
@@ -127,7 +126,7 @@ h1 {
 
 .google-button {
   width: 230px;
-  height: 50px;
+  height: 52px;
 
   display: flex;
   justify-content: center;
@@ -141,6 +140,7 @@ h1 {
 
   font-size: 15px;
   font-weight: 700;
+  letter-spacing: 0.3px;
 
   background:
     linear-gradient(
@@ -164,8 +164,6 @@ h1 {
     0 0 20px rgba(52,168,83,0.20);
 }
 
-/* SMARTPHONE */
-
 @media (max-width: 390px) {
 
   .card {
@@ -174,12 +172,12 @@ h1 {
   }
 
   .logo {
-    width: 60px;
-    height: 60px;
+    width: 62px;
+    height: 62px;
   }
 
   h1 {
-    font-size: 17px;
+    font-size: 22px;
   }
 
   .menu-button,
