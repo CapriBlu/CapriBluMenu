@@ -34,10 +34,12 @@ body {
   width: 100%;
   max-width: 340px;
   padding: 28px 22px;
+
   border-radius: 28px;
 
   background: rgba(10, 20, 45, 0.45);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 
   border: 1px solid rgba(255,255,255,0.20);
   box-shadow: 0 12px 40px rgba(0,0,0,0.45);
@@ -45,17 +47,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
 }
 
 .logo {
-  width: 90px;
-  height: 90px;
+  width: 72px;
+  height: 72px;
 
   object-fit: cover;
   border-radius: 50%;
 
-  box-shadow: 0 0 20px rgba(255,255,255,0.25);
+  box-shadow: 0 0 18px rgba(255,255,255,0.25);
 
   transform: translateX(6px);
 }
@@ -110,31 +112,30 @@ h1 {
 /* GOOGLE BUTTON */
 
 .google-button {
-  width: 170px;
-  height: 38px;
+  width: 230px;
+  height: 54px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  padding: 0;
-  margin-top: 4px;
-
-  overflow: hidden;
-
   border-radius: 999px;
 
-  background: transparent;
-  border: none;
-  box-shadow: none;
+  background: rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.25);
 
   text-decoration: none;
+
+  transition: 0.2s ease;
+}
+
+.google-button:hover {
+  transform: scale(1.02);
 }
 
 .google-button img {
-  width: 170px;
-  height: 38px;
-
+  width: 120px;
+  height: auto;
   object-fit: contain;
   display: block;
 }
@@ -142,15 +143,14 @@ h1 {
 /* TELEFONI PICCOLI */
 
 @media (max-width: 390px) {
-
   .card {
     max-width: 320px;
     padding: 24px 18px;
   }
 
   .logo {
-    width: 84px;
-    height: 84px;
+    width: 66px;
+    height: 66px;
     transform: translateX(6px);
   }
 
@@ -158,18 +158,13 @@ h1 {
     font-size: 22px;
   }
 
-  .menu-button {
+  .menu-button,
+  .google-button {
     width: 215px;
     height: 50px;
   }
 
-  .google-button {
-    width: 160px;
-    height: 35px;
-  }
-
   .google-button img {
-    width: 160px;
-    height: 35px;
+    width: 110px;
   }
 }
