@@ -16,13 +16,12 @@ body {
   text-align: center;
 
   background:
-    linear-gradient(rgba(0, 0, 35, 0.20), rgba(0, 0, 45, 0.35)),
-    url("./img/Sfondo-per-il-Sito.jpg");
+    linear-gradient(rgba(0, 0, 35, 0.15), rgba(0, 0, 45, 0.28)),
+    url("./img/Sfondo-per-il-Sito.png");
 
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: scroll;
 
   display: flex;
   justify-content: center;
@@ -35,22 +34,22 @@ body {
   width: 100%;
   max-width: 430px;
 
-  padding: 32px 20px 36px;
+  padding: 30px 20px 34px;
 
   border-radius: 28px;
 
-  background: rgba(3, 12, 55, 0.58);
+  background: rgba(3, 12, 55, 0.36);
   border: 1px solid rgba(255, 255, 255, 0.14);
 
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 
   box-shadow: 0 0 35px rgba(0, 80, 255, 0.25);
 }
 
 .logo-link {
   display: block;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .logo {
@@ -61,21 +60,20 @@ body {
 }
 
 .subtitle {
-  margin: 0 0 26px;
+  margin: 0 0 18px;
   font-size: 12px;
   font-weight: 700;
   color: white;
-  text-shadow: 0 0 8px rgba(255,255,255,0.45);
+  text-shadow: 0 0 8px rgba(255,255,255,0.55);
 }
 
 .buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 4px;
 }
 
-/* IMPORTANTE: elimina distanze strane */
 .image-button {
   display: block;
   margin: 0 !important;
@@ -102,7 +100,6 @@ body {
 
 .google-button {
   width: 175px;
-  margin-top: 2px !important;
 }
 
 .image-button:hover {
@@ -113,25 +110,18 @@ body {
 @media (max-width: 480px) {
 
   body {
-    min-height: 100vh;
     padding: 16px 14px;
-
     background-size: cover;
     background-position: center center;
   }
 
   .card {
     max-width: 100%;
-    min-height: calc(100vh - 32px);
+    min-height: auto;
 
-    padding: 30px 18px 34px;
+    padding: 28px 18px 32px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-
-    background: rgba(3, 12, 55, 0.52);
+    background: rgba(3, 12, 55, 0.34);
   }
 
   .logo {
@@ -139,16 +129,16 @@ body {
   }
 
   .logo-link {
-    margin-bottom: 26px;
+    margin-bottom: 20px;
   }
 
   .subtitle {
-    margin-bottom: 22px;
+    margin-bottom: 14px;
     font-size: 12px;
   }
 
   .buttons {
-    gap: 8px;
+    gap: 2px;
   }
 
   .food-button {
@@ -183,6 +173,6 @@ body {
   }
 
   .buttons {
-    gap: 6px;
+    gap: 0;
   }
 }
