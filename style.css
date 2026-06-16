@@ -129,10 +129,6 @@ h1 {
   transition: 0.2s ease;
 }
 
-.google-button:hover {
-  transform: scale(1.02);
-}
-
 .google-button {
   width: 230px;
   height: 54px;
@@ -146,7 +142,15 @@ h1 {
   background: rgba(0,0,0,0.45);
   border: 1px solid rgba(255,255,255,0.25);
 
-  text-decoration: none;
+  overflow: hidden;
+}
+
+.google-button img {
+  max-width: 70%;
+  max-height: 60%;
+  width: auto;
+  height: auto;
+}
 
 /* TELEFONI PICCOLI */
 
