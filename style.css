@@ -31,6 +31,9 @@ body {
 }
 
 .card {
+  position: relative;
+  overflow: hidden;
+
   width: 100%;
   max-width: 430px;
 
@@ -47,14 +50,45 @@ body {
   box-shadow: 0 0 35px rgba(0, 80, 255, 0.25);
 }
 
+/* Pasta Lovers */
+
+.corner-left,
+.corner-right {
+  position: absolute;
+  width: 95px;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.corner-left {
+  top: 10px;
+  left: 10px;
+}
+
+.corner-right {
+  top: 10px;
+  right: 10px;
+  transform: scaleX(-1);
+}
+
+/* Contenuto sopra le decorazioni */
+
+.logo-link,
+.subtitle,
+.buttons {
+  position: relative;
+  z-index: 2;
+}
+
 .logo-link {
   display: block;
   margin-bottom: 20px;
 }
 
 .logo {
-  width: 120px;
-  max-width: 68vw;
+  width: 165px;
+  max-width: 60vw;
   display: block;
   margin: 0 auto;
 }
@@ -71,7 +105,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
 }
 
 .image-button {
@@ -79,66 +113,46 @@ body {
   margin: 0 !important;
   padding: 0 !important;
   line-height: 0;
-  transition: transform 0.2s ease, filter 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .image-button img {
   display: block;
   width: 100%;
   height: auto;
-  margin: 0;
-  padding: 0;
-}
-
-.food-button {
-  width: 215px;
-}
-
-.drink-button {
-  width: 205px;
-}
-
-.google-button {
-  width: 230px;
 }
 
 .image-button:hover {
   transform: scale(1.04);
-  filter: brightness(1.15);
 }
+
+.food-button {
+  width: 210px;
+}
+
+.drink-button {
+  width: 200px;
+}
+
+.google-button {
+  width: 250px;
+}
+
+/* MOBILE */
 
 @media (max-width: 480px) {
 
-  body {
-    padding: 16px 14px;
-    background-size: cover;
-    background-position: center center;
-  }
-
   .card {
     max-width: 100%;
-    min-height: auto;
-
-    padding: 28px 18px 32px;
-
-    background: rgba(3, 12, 55, 0.34);
+    padding: 26px 16px 30px;
   }
 
   .logo {
-    width: 185px;
-  }
-
-  .logo-link {
-    margin-bottom: 20px;
-  }
-
-  .subtitle {
-    margin-bottom: 14px;
-    font-size: 12px;
+    width: 150px;
   }
 
   .buttons {
-    gap: 2px;
+    gap: 0;
   }
 
   .food-button {
@@ -150,29 +164,12 @@ body {
   }
 
   .google-button {
-    width: 168px;
-  }
-}
-
-@media (max-width: 360px) {
-
-  .logo {
-    width: 170px;
+    width: 235px;
   }
 
-  .food-button {
-    width: 190px;
-  }
-
-  .drink-button {
-    width: 182px;
-  }
-
-  .google-button {
-    width: 155px;
-  }
-
-  .buttons {
-    gap: 0;
+  .corner-left,
+  .corner-right {
+    width: 80px;
+    opacity: 0.12;
   }
 }
