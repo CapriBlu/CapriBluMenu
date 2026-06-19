@@ -45,7 +45,6 @@ body {
   border-radius: 28px;
 
   background: rgba(3, 12, 55, 0.36);
-
   border: 1px solid rgba(255, 255, 255, 0.14);
 
   backdrop-filter: blur(4px);
@@ -56,25 +55,28 @@ body {
     0 0 12px rgba(255, 255, 255, 0.08);
 }
 
-/* DECORAZIONI */
+/* DECORAZIONI PASTA LOVERS */
 
 .corner-left,
 .corner-right {
   position: absolute;
-  width: 95px;
-  opacity: 0.15;
+  width: 145px;
+  opacity: 0.55;
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
+  filter:
+    brightness(1.8)
+    drop-shadow(0 0 8px rgba(255,255,255,0.35));
 }
 
 .corner-left {
-  top: 10px;
-  left: 10px;
+  top: 8px;
+  left: 8px;
 }
 
 .corner-right {
-  top: 10px;
-  right: 10px;
+  top: 8px;
+  right: 8px;
   transform: scaleX(-1);
 }
 
@@ -95,25 +97,17 @@ body {
 .logo {
   width: 150px;
   max-width: 58vw;
-
   display: block;
-
   margin-left: auto;
   margin-right: auto;
-
-  transform: translateX(8px);
 }
 
 .subtitle {
   margin: 0 0 18px;
-
   font-size: 12px;
   font-weight: 700;
-
   color: white;
-
-  text-shadow:
-    0 0 8px rgba(255,255,255,0.55);
+  text-shadow: 0 0 8px rgba(255,255,255,0.55);
 }
 
 .buttons {
@@ -125,12 +119,9 @@ body {
 
 .image-button {
   display: block;
-
   margin: 0;
   padding: 0;
-
   line-height: 0;
-
   transition:
     transform 0.20s ease,
     filter 0.20s ease;
@@ -157,7 +148,7 @@ body {
 }
 
 .google-button {
-  width: 285px;
+  width: 305px;
   margin-top: 4px;
 }
 
@@ -171,7 +162,6 @@ body {
 
   .logo {
     width: 140px;
-    transform: translateX(6px);
   }
 
   .food-button {
@@ -183,12 +173,22 @@ body {
   }
 
   .google-button {
-    width: 275px;
+    width: 290px;
   }
 
   .corner-left,
   .corner-right {
-    width: 80px;
-    opacity: 0.12;
+    width: 120px;
+    opacity: 0.48;
+  }
+
+  .corner-left {
+    top: 8px;
+    left: 6px;
+  }
+
+  .corner-right {
+    top: 8px;
+    right: 6px;
   }
 }
