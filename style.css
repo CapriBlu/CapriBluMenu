@@ -77,7 +77,6 @@ body {
 .corner-right {
   top: 8px;
   right: 8px;
-  transform: scaleX(-1);
 }
 
 /* CONTENUTO */
