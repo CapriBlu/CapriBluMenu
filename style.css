@@ -284,3 +284,41 @@ right: -5px;
     padding: 9px 18px;
   }
 }
+.photo-menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  max-width: 260px;
+  min-height: 52px;
+
+  margin: 4px auto 6px;
+  padding: 0 22px;
+
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.45);
+
+  background: rgba(255,255,255,0.14);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  color: white;
+  font-size: 17px;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 0.4px;
+
+  box-shadow:
+    0 0 12px rgba(255,255,255,0.35),
+    inset 0 0 10px rgba(255,255,255,0.12);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.photo-menu-button:hover {
+  transform: scale(1.04);
+  box-shadow:
+    0 0 20px rgba(255,255,255,0.55),
+    inset 0 0 12px rgba(255,255,255,0.18);
+}
