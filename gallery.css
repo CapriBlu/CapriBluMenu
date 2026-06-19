@@ -1,79 +1,195 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+
+  background:
+    linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.60)),
+    url("./img/Sfondo-per-il-Sito.jpg");
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding: 14px;
+}
+
 .gallery-page {
   width: 100%;
-  max-width: 850px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 24px 12px 40px;
-  text-align: center;
+  padding: 20px 6px 40px;
 }
 
 .gallery-title {
-  color: white;
   font-size: 32px;
-  margin: 20px 0 24px;
-  text-shadow: 0 0 12px rgba(255,255,255,0.65);
+  margin: 18px 0 24px;
+  color: white;
+  text-shadow: 0 0 14px rgba(255,255,255,0.70);
 }
 
 .back-button {
   display: inline-flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
-  margin-bottom: 10px;
   padding: 10px 20px;
-
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.45);
 
-  background: rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.45);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 
   color: white;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
 
-  box-shadow: 0 0 12px rgba(255,255,255,0.25);
+  box-shadow: 0 0 14px rgba(255,255,255,0.25);
 }
 
-.insta-grid {
+.category-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
+  gap: 10px;
 }
 
-.insta-grid a {
+.category-card {
+  position: relative;
   display: block;
+
   aspect-ratio: 1 / 1;
   overflow: hidden;
-  border-radius: 8px;
+
+  border-radius: 16px;
+  text-decoration: none;
+
   background: rgba(0,0,0,0.35);
-  box-shadow: 0 0 10px rgba(255,255,255,0.18);
+  box-shadow:
+    0 0 12px rgba(255,255,255,0.20),
+    inset 0 0 10px rgba(255,255,255,0.08);
 }
 
-.insta-grid img {
+.category-card img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
+
   transition: transform 0.25s ease;
 }
 
-.insta-grid a:hover img {
-  transform: scale(1.05);
+.category-card:hover img {
+  transform: scale(1.06);
 }
 
+.category-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: 10px 6px;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.05),
+      rgba(0,0,0,0.75)
+    );
+}
+
+.category-overlay span {
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.1;
+  text-shadow: 0 0 8px rgba(0,0,0,0.9);
+}
+
+.category-overlay small {
+  margin-top: 3px;
+  color: rgba(255,255,255,0.88);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.1;
+  text-shadow: 0 0 8px rgba(0,0,0,0.9);
+}
+
+/* Pagina interna della singola categoria */
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.photo-card {
+  display: block;
+  overflow: hidden;
+  border-radius: 16px;
+
+  background: rgba(0,0,0,0.35);
+  box-shadow: 0 0 12px rgba(255,255,255,0.18);
+}
+
+.photo-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Telefono */
+
 @media (max-width: 600px) {
-  .gallery-page {
-    padding: 18px 8px 32px;
+  body {
+    padding: 10px;
   }
 
   .gallery-title {
     font-size: 26px;
+    margin: 16px 0 20px;
   }
 
-  .insta-grid {
+  .category-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 4px;
+    gap: 6px;
+  }
+
+  .category-card {
+    border-radius: 11px;
+  }
+
+  .category-overlay {
+    padding: 7px 4px;
+  }
+
+  .category-overlay span {
+    font-size: 12px;
+  }
+
+  .category-overlay small {
+    font-size: 9px;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
 
   .back-button {
