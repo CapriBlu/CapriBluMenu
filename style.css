@@ -34,8 +34,9 @@ body {
   position: relative;
   width: 100%;
   max-width: 340px;
+  min-height: auto;
 
-  padding: 24px 18px 26px;
+  padding: 24px 18px 28px;
   border-radius: 28px;
 
   background: rgba(10, 20, 45, 0.45);
@@ -58,14 +59,14 @@ body {
 
 .logo {
   width: 100%;
-  max-width: 230px;
+  max-width: 220px;
   height: auto;
   display: block;
   margin: 0 auto 10px;
 }
 
 .subtitle {
-  margin: 4px 0 16px;
+  margin: 4px 0 42px;
   font-size: 17px;
   font-weight: 600;
   color: white;
@@ -76,15 +77,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 34px;
 }
-
-/* Tutti i pulsanti immagine */
 
 .image-button {
   display: block;
   width: 100%;
-  max-width: 285px;
   text-decoration: none;
   line-height: 0;
   transition: transform 0.25s ease, filter 0.25s ease;
@@ -101,14 +99,12 @@ body {
   filter: brightness(1.08);
 }
 
-/* Regolazioni singoli bottoni */
-
 .food-button {
-  max-width: 275px;
+  max-width: 285px;
 }
 
 .drink-button {
-  max-width: 275px;
+  max-width: 255px;
 }
 
 .gallery-button {
@@ -118,8 +114,6 @@ body {
 .google-button {
   max-width: 285px;
 }
-
-/* Decorazioni laterali */
 
 .corner-left,
 .corner-right {
@@ -140,8 +134,6 @@ body {
   transform: scaleX(-1);
 }
 
-/* Telefono */
-
 @media (max-width: 480px) {
   body {
     padding: 12px;
@@ -149,7 +141,7 @@ body {
 
   .card {
     max-width: 335px;
-    padding: 22px 15px 24px;
+    padding: 22px 15px 26px;
   }
 
   .logo {
@@ -158,15 +150,27 @@ body {
 
   .subtitle {
     font-size: 16px;
-    margin-bottom: 14px;
+    margin-bottom: 38px;
   }
 
   .buttons {
-    gap: 9px;
+    gap: 30px;
   }
 
-  .image-button {
-    max-width: 275px;
+  .food-button {
+    max-width: 280px;
+  }
+
+  .drink-button {
+    max-width: 255px;
+  }
+
+  .gallery-button {
+    max-width: 280px;
+  }
+
+  .google-button {
+    max-width: 280px;
   }
 
   .corner-left,
