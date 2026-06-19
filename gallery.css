@@ -16,13 +16,15 @@ body {
   text-align: center;
 
   background:
-    linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.60)),
+    linear-gradient(rgba(0,0,0,0.20), rgba(0,0,0,0.40)),
     url("./img/Sfondo-per-il-Sito.jpg");
 
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 
+  min-height: 100vh;
   padding: 14px;
 }
 
@@ -155,6 +157,7 @@ body {
 @media (max-width: 600px) {
   body {
     padding: 10px;
+    background-attachment: scroll;
   }
 
   .gallery-page {
