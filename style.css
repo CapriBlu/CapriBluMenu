@@ -1,324 +1,176 @@
 * {
   box-sizing: border-box;
-  }
+}
 
 html,
 body {
-margin: 0;
-padding: 0;
-width: 100%;
-min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
 }
 
 body {
-font-family: Arial, sans-serif;
-color: white;
-text-align: center;
-
-background:
-linear-gradient(
-rgba(0, 0, 35, 0.15),
-rgba(0, 0, 45, 0.28)
-),
-url("./img/Sfondo-per-il-Sito.png");
-
-background-size: cover;
-background-position: center center;
-background-repeat: no-repeat;
-
-display: flex;
-justify-content: center;
-align-items: center;
-
-padding: 18px;
-}
-
-.card {
-position: relative;
-overflow: hidden;
-
-width: 100%;
-max-width: 430px;
-
-padding: 30px 20px 34px;
-
-border-radius: 28px;
-
-background: rgba(3, 12, 55, 0.36);
-
-border: 1px solid rgba(255, 255, 255, 0.14);
-
-backdrop-filter: blur(4px);
--webkit-backdrop-filter: blur(4px);
-
-box-shadow:
-0 0 35px rgba(0, 80, 255, 0.25),
-0 0 12px rgba(255, 255, 255, 0.08);
-}
-
-/* DECORAZIONI PASTA LOVERS */
-
-.corner-left,
-.corner-right {
-position: absolute;
-width: 125px;
-opacity: 0.85;
-pointer-events: none;
-z-index: 1;
-
-filter:
-brightness(2.6)
-drop-shadow(0 0 12px rgba(255,255,255,0.75))
-drop-shadow(0 0 24px rgba(255,255,255,0.45));
-}
-
-.corner-left {
-top: -5px;
-left: -5px;
-}
-
-.corner-right {
-top: -5px;
-right: -5px;
-}
-
-/* CONTENUTO */
-
-.logo-link,
-.subtitle,
-.buttons {
-position: relative;
-z-index: 2;
-}
-
-.logo-link {
-display: block;
-margin-bottom: 18px;
-}
-
-.logo {
-width: 150px;
-max-width: 58vw;
-display: block;
-margin-left: auto;
-margin-right: auto;
-}
-
-.subtitle {
-margin: 0 0 18px;
-
-font-size: 12px;
-font-weight: 700;
-
-color: white;
-
-text-shadow:
-0 0 8px rgba(255,255,255,0.55);
-}
-
-.buttons {
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 4px;
-}
-
-.image-button {
-display: block;
-
-margin: 0;
-padding: 0;
-
-line-height: 0;
-
-transition:
-transform 0.20s ease,
-filter 0.20s ease;
-}
-
-.image-button:hover {
-transform: scale(1.04);
-}
-
-.image-button img {
-display: block;
-width: 100%;
-height: auto;
-}
-
-/* BOTTONI */
-
-.food-button {
-width: 220px;
-}
-
-.drink-button {
-width: 210px;
-}
-
-.google-button {
-width: 330px;
-margin-top: 4px;
-}
-
-/* MOBILE */
-
-@media (max-width: 480px) {
-
-.card {
-padding: 24px 14px 28px;
-}
-
-.logo {
-width: 140px;
-}
-
-.food-button {
-width: 215px;
-}
-
-.drink-button {
-width: 205px;
-}
-
-.google-button {
-width: 310px;
-}
-
-.corner-left,
-.corner-right {
-width: 105px;
-opacity: 0.75;
-}
-
-.corner-left {
-top: -5px;
-left: -5px;
-}
-
-.corner-right {
-top: -5px;
-right: -5px;
-}
-}
-.gallery-page {
-  width: 100%;
-  max-width: 850px;
-  margin: 0 auto;
-  padding: 24px 12px 40px;
+  font-family: Arial, sans-serif;
+  color: white;
   text-align: center;
-}
 
-.gallery-title {
-  color: white;
-  font-size: 32px;
-  margin: 20px 0 24px;
-  text-shadow: 0 0 12px rgba(255,255,255,0.65);
-}
+  background:
+    linear-gradient(rgba(0,0,0,0.20), rgba(0,0,0,0.40)),
+    url("./img/Sfondo-per-il-Sito.jpg");
 
-.back-button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  margin-bottom: 10px;
-  padding: 10px 20px;
-
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.45);
-
-  background: rgba(255,255,255,0.14);
-  backdrop-filter: blur(8px);
-
-  color: white;
-  font-size: 15px;
-  font-weight: 600;
-  text-decoration: none;
-
-  box-shadow: 0 0 12px rgba(255,255,255,0.25);
-}
-
-.insta-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
-}
-
-.insta-grid a {
-  display: block;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  border-radius: 8px;
-  background: rgba(0,0,0,0.35);
-  box-shadow: 0 0 10px rgba(255,255,255,0.18);
-}
-
-.insta-grid img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-  transition: transform 0.25s ease;
-}
-
-.insta-grid a:hover img {
-  transform: scale(1.05);
-}
-
-@media (max-width: 600px) {
-  .gallery-page {
-    padding: 18px 8px 32px;
-  }
-
-  .gallery-title {
-    font-size: 26px;
-  }
-
-  .insta-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4px;
-  }
-
-  .back-button {
-    font-size: 14px;
-    padding: 9px 18px;
-  }
-}
-.photo-menu-button {
   display: flex;
   justify-content: center;
   align-items: center;
 
+  padding: 16px;
+}
+
+.card {
+  position: relative;
   width: 100%;
-  max-width: 260px;
-  min-height: 52px;
+  max-width: 340px;
 
-  margin: 4px auto 6px;
-  padding: 0 22px;
+  padding: 24px 18px 26px;
+  border-radius: 28px;
 
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.45);
-
-  background: rgba(255,255,255,0.14);
+  background: rgba(10, 20, 45, 0.45);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 
-  color: white;
-  font-size: 17px;
-  font-weight: 800;
-  text-decoration: none;
-  letter-spacing: 0.4px;
+  border: 1px solid rgba(255,255,255,0.22);
 
   box-shadow:
-    0 0 12px rgba(255,255,255,0.35),
-    inset 0 0 10px rgba(255,255,255,0.12);
+    0 0 28px rgba(0,0,0,0.35),
+    inset 0 0 18px rgba(255,255,255,0.08);
 
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
 }
 
-.photo-menu-button:hover {
-  transform: scale(1.04);
-  box-shadow:
-    0 0 20px rgba(255,255,255,0.55),
-    inset 0 0 12px rgba(255,255,255,0.18);
+.logo-link {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.logo {
+  width: 100%;
+  max-width: 230px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.subtitle {
+  margin: 4px 0 16px;
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 0 8px rgba(0,0,0,0.7);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Tutti i pulsanti immagine */
+
+.image-button {
+  display: block;
+  width: 100%;
+  max-width: 285px;
+  text-decoration: none;
+  line-height: 0;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.image-button img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-button:hover {
+  transform: scale(1.035);
+  filter: brightness(1.08);
+}
+
+/* Regolazioni singoli bottoni */
+
+.food-button {
+  max-width: 275px;
+}
+
+.drink-button {
+  max-width: 275px;
+}
+
+.gallery-button {
+  max-width: 285px;
+}
+
+.google-button {
+  max-width: 285px;
+}
+
+/* Decorazioni laterali */
+
+.corner-left,
+.corner-right {
+  position: absolute;
+  top: 12px;
+  width: 54px;
+  height: auto;
+  opacity: 0.95;
+  pointer-events: none;
+}
+
+.corner-left {
+  left: 10px;
+}
+
+.corner-right {
+  right: 10px;
+  transform: scaleX(-1);
+}
+
+/* Telefono */
+
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+
+  .card {
+    max-width: 335px;
+    padding: 22px 15px 24px;
+  }
+
+  .logo {
+    max-width: 215px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+
+  .buttons {
+    gap: 9px;
+  }
+
+  .image-button {
+    max-width: 275px;
+  }
+
+  .corner-left,
+  .corner-right {
+    width: 48px;
+  }
 }
