@@ -16,7 +16,10 @@ body {
   text-align: center;
 
   background:
-    linear-gradient(rgba(0, 0, 35, 0.15), rgba(0, 0, 45, 0.28)),
+    linear-gradient(
+      rgba(0, 0, 35, 0.15),
+      rgba(0, 0, 45, 0.28)
+    ),
     url("./img/Sfondo-per-il-Sito.png");
 
   background-size: cover;
@@ -42,15 +45,18 @@ body {
   border-radius: 28px;
 
   background: rgba(3, 12, 55, 0.36);
+
   border: 1px solid rgba(255, 255, 255, 0.14);
 
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 
-  box-shadow: 0 0 35px rgba(0, 80, 255, 0.25);
+  box-shadow:
+    0 0 35px rgba(0, 80, 255, 0.25),
+    0 0 12px rgba(255, 255, 255, 0.08);
 }
 
-/* Pasta Lovers */
+/* DECORAZIONI */
 
 .corner-left,
 .corner-right {
@@ -72,7 +78,7 @@ body {
   transform: scaleX(-1);
 }
 
-/* Contenuto sopra le decorazioni */
+/* CONTENUTO */
 
 .logo-link,
 .subtitle,
@@ -83,37 +89,55 @@ body {
 
 .logo-link {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .logo {
-  width: 165px;
-  max-width: 60vw;
+  width: 150px;
+  max-width: 58vw;
+
   display: block;
-  margin: 0 auto;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  transform: translateX(8px);
 }
 
 .subtitle {
   margin: 0 0 18px;
+
   font-size: 12px;
   font-weight: 700;
+
   color: white;
-  text-shadow: 0 0 8px rgba(255,255,255,0.55);
+
+  text-shadow:
+    0 0 8px rgba(255,255,255,0.55);
 }
 
 .buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
+  gap: 4px;
 }
 
 .image-button {
   display: block;
-  margin: 0 !important;
-  padding: 0 !important;
+
+  margin: 0;
+  padding: 0;
+
   line-height: 0;
-  transition: transform 0.2s ease;
+
+  transition:
+    transform 0.20s ease,
+    filter 0.20s ease;
+}
+
+.image-button:hover {
+  transform: scale(1.04);
 }
 
 .image-button img {
@@ -122,20 +146,19 @@ body {
   height: auto;
 }
 
-.image-button:hover {
-  transform: scale(1.04);
-}
+/* BOTTONI */
 
 .food-button {
-  width: 210px;
+  width: 220px;
 }
 
 .drink-button {
-  width: 200px;
+  width: 210px;
 }
 
 .google-button {
-  width: 250px;
+  width: 285px;
+  margin-top: 4px;
 }
 
 /* MOBILE */
@@ -143,28 +166,24 @@ body {
 @media (max-width: 480px) {
 
   .card {
-    max-width: 100%;
-    padding: 26px 16px 30px;
+    padding: 24px 14px 28px;
   }
 
   .logo {
-    width: 150px;
-  }
-
-  .buttons {
-    gap: 0;
+    width: 140px;
+    transform: translateX(6px);
   }
 
   .food-button {
-    width: 205px;
+    width: 215px;
   }
 
   .drink-button {
-    width: 195px;
+    width: 205px;
   }
 
   .google-button {
-    width: 235px;
+    width: 275px;
   }
 
   .corner-left,
