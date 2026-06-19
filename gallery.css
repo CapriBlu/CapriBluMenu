@@ -110,7 +110,7 @@ body {
   background:
     linear-gradient(
       rgba(0,0,0,0.05),
-      rgba(0,0,0,0.75)
+      rgba(0,0,0,0.78)
     );
 }
 
@@ -131,12 +131,10 @@ body {
   text-shadow: 0 0 8px rgba(0,0,0,0.9);
 }
 
-/* Pagina interna della singola categoria */
-
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 12px;
 }
 
 .photo-card {
@@ -154,11 +152,13 @@ body {
   display: block;
 }
 
-/* Telefono */
-
 @media (max-width: 600px) {
   body {
     padding: 10px;
+  }
+
+  .gallery-page {
+    padding: 18px 4px 32px;
   }
 
   .gallery-title {
