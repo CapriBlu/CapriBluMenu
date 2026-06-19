@@ -114,26 +114,31 @@ body {
   margin-top: 10px;
 }
 
+/* PASTA LOVERS */
+
 .corner-left,
 .corner-right {
   position: absolute;
   top: 4px;
-  width: 82px;
+  width: 88px;
   height: auto;
   opacity: 1;
   pointer-events: none;
 }
 
 .corner-left {
-  left: 6px;
+  left: 4px;
 }
 
 .corner-right {
-  right: 6px;
+  right: 4px;
   transform: scaleX(-1);
 }
 
+/* MOBILE */
+
 @media (max-width: 480px) {
+
   body {
     padding: 12px;
   }
@@ -176,15 +181,15 @@ body {
 
   .corner-left,
   .corner-right {
-    width: 56px;
-    top: 8px;
+    width: 84px;
+    top: 4px;
   }
 
   .corner-left {
-    left: 12px;
+    left: 4px;
   }
 
   .corner-right {
-    right: 12px;
+    right: 4px;
   }
 }
