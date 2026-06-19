@@ -35,8 +35,7 @@ body {
   width: 100%;
   max-width: 340px;
 
-  padding: 24px 18px 28px;
-
+  padding: 22px 18px 26px;
   border-radius: 28px;
 
   background: rgba(10,20,45,0.45);
@@ -59,35 +58,32 @@ body {
 
 .logo {
   width: 100%;
-  max-width: 220px;
+  max-width: 185px;
   height: auto;
   display: block;
-  margin: 0 auto 10px;
+  margin: 0 auto 18px;
 }
 
 .subtitle {
-  margin: 6px 0 38px;
+  margin: 0 0 34px;
   font-size: 17px;
-  font-weight: 600;
+  font-weight: 700;
   color: white;
-  text-shadow: 0 0 8px rgba(0,0,0,0.7);
+  text-shadow: 0 0 8px rgba(0,0,0,0.8);
 }
 
 .buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 26px;
+  gap: 20px;
 }
 
 .image-button {
   display: block;
   text-decoration: none;
   line-height: 0;
-
-  transition:
-    transform 0.25s ease,
-    filter 0.25s ease;
+  transition: transform 0.25s ease, filter 0.25s ease;
 }
 
 .image-button img {
@@ -102,41 +98,41 @@ body {
 }
 
 .food-button {
-  width: 285px;
+  width: 270px;
 }
 
 .drink-button {
-  width: 250px;
+  width: 255px;
 }
 
 .gallery-button {
-  width: 285px;
+  width: 255px;
 }
 
 .google-button {
-  width: 285px;
+  width: 270px;
 }
 
 .corner-left,
 .corner-right {
   position: absolute;
-  top: 12px;
-  width: 52px;
+  top: 15px;
+  width: 72px;
   height: auto;
+  opacity: 1;
   pointer-events: none;
 }
 
 .corner-left {
-  left: 10px;
+  left: 18px;
 }
 
 .corner-right {
-  right: 10px;
+  right: 18px;
   transform: scaleX(-1);
 }
 
 @media (max-width: 480px) {
-
   body {
     padding: 12px;
   }
@@ -147,30 +143,46 @@ body {
   }
 
   .logo {
-    max-width: 210px;
+    max-width: 175px;
+    margin-bottom: 18px;
   }
 
   .subtitle {
     font-size: 16px;
-    margin-bottom: 34px;
+    margin-bottom: 32px;
   }
 
   .buttons {
-    gap: 22px;
+    gap: 18px;
   }
 
-  .food-button,
-  .gallery-button,
-  .google-button {
-    width: 270px;
+  .food-button {
+    width: 265px;
   }
 
   .drink-button {
-    width: 245px;
+    width: 250px;
+  }
+
+  .gallery-button {
+    width: 250px;
+  }
+
+  .google-button {
+    width: 265px;
   }
 
   .corner-left,
   .corner-right {
-    width: 48px;
+    width: 68px;
+    top: 14px;
+  }
+
+  .corner-left {
+    left: 17px;
+  }
+
+  .corner-right {
+    right: 17px;
   }
 }
