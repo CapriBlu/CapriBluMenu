@@ -117,19 +117,19 @@ body {
 .corner-left,
 .corner-right {
   position: absolute;
-  top: 8px;
-  width: 58px;
+  top: 4px;
+  width: 82px;
   height: auto;
   opacity: 1;
   pointer-events: none;
 }
 
 .corner-left {
-  left: 12px;
+  left: 6px;
 }
 
 .corner-right {
-  right: 12px;
+  right: 6px;
   transform: scaleX(-1);
 }
 
