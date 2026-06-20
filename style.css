@@ -120,7 +120,7 @@ body {
 .corner-right {
   position: absolute;
   top: 4px;
-  width: 150px;
+  width: 120px;
   height: auto;
   opacity: 1;
   pointer-events: none;
@@ -163,25 +163,25 @@ body {
   }
 
   .food-button {
-    width: 265px;
+    width: 240px;
   }
 
   .drink-button {
-    width: 245px;
-  }
-
-  .gallery-button {
     width: 220px;
   }
 
+  .gallery-button {
+    width: 200px;
+  }
+
   .google-button {
-    width: 265px;
+    width: 250px;
     margin-top: 10px;
   }
 
   .corner-left,
   .corner-right {
-    width: 140px;
+    width: 120px;
     top: 4px;
   }
 
