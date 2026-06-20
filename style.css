@@ -76,7 +76,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 16px;
 }
 
 .image-button {
@@ -111,7 +111,7 @@ body {
 
 .google-button {
   width: 250px;
-  margin-top: 6px;
+  margin-top: 14px;
 }
 
 /* PASTA LOVERS */
@@ -132,7 +132,6 @@ body {
 
 .corner-right {
   right: 4px;
-  transform: scaleX(-1);
 }
 
 /* MOBILE */
@@ -159,7 +158,7 @@ body {
   }
 
   .buttons {
-    gap: 9px;
+    gap: 15px;
   }
 
   .food-button {
@@ -176,7 +175,7 @@ body {
 
   .google-button {
     width: 245px;
-    margin-top: 6px;
+    margin-top: 12px;
   }
 
   .corner-left,
