@@ -76,7 +76,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
+  gap: 10px;
 }
 
 .image-button {
@@ -98,20 +98,20 @@ body {
 }
 
 .food-button {
-  width: 270px;
+  width: 250px;
 }
 
 .drink-button {
-  width: 245px;
+  width: 225px;
 }
 
 .gallery-button {
-  width: 245px;
+  width: 225px;
 }
 
 .google-button {
-  width: 270px;
-  margin-top: 10px;
+  width: 250px;
+  margin-top: 6px;
 }
 
 /* PASTA LOVERS */
@@ -120,7 +120,7 @@ body {
 .corner-right {
   position: absolute;
   top: 4px;
-  width: 120px;
+  width: 95px;
   height: auto;
   opacity: 1;
   pointer-events: none;
@@ -159,11 +159,11 @@ body {
   }
 
   .buttons {
-    gap: 2px;
+    gap: 9px;
   }
 
   .food-button {
-    width: 240px;
+    width: 245px;
   }
 
   .drink-button {
@@ -171,17 +171,17 @@ body {
   }
 
   .gallery-button {
-    width: 200px;
+    width: 220px;
   }
 
   .google-button {
-    width: 250px;
-    margin-top: 10px;
+    width: 245px;
+    margin-top: 6px;
   }
 
   .corner-left,
   .corner-right {
-    width: 120px;
+    width: 92px;
     top: 4px;
   }
 
