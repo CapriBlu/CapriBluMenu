@@ -121,12 +121,14 @@ body {
 
 .thefork-button {
   width: 292px;
+  max-width: 100%;
   margin-top: 4px;
 }
 
 .google-button {
-  width: 250px;
-  margin-top: 20px;
+  width: 292px;
+  max-width: 100%;
+  margin-top: 4px;
 }
 
 /* PASTA LOVERS */
@@ -195,8 +197,9 @@ body {
   }
 
   .google-button {
-    width: 245px;
-    margin-top: 18px;
+    width: 292px;
+    max-width: 100%;
+    margin-top: 4px;
   }
 
   .corner-left,
