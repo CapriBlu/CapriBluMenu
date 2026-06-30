@@ -119,6 +119,11 @@ body {
   width: 225px;
 }
 
+.thefork-button {
+  width: 292px;
+  margin-top: 4px;
+}
+
 .google-button {
   width: 250px;
   margin-top: 20px;
@@ -181,6 +186,12 @@ body {
 
   .gallery-button {
     width: 220px;
+  }
+
+  .thefork-button {
+    width: 292px;
+    max-width: 100%;
+    margin-top: 4px;
   }
 
   .google-button {
