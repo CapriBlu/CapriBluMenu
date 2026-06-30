@@ -50,13 +50,13 @@ body {
   max-width: 340px;
   padding: 22px 18px 26px;
   border-radius: 28px;
-  background: rgba(10,20,45,0.48);
+  background: rgba(6, 44, 94, 0.58);
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
-  border: 1px solid rgba(255,255,255,0.24);
+  border: 1px solid rgba(255,255,255,0.34);
   box-shadow:
     0 0 32px rgba(0,0,0,0.40),
-    inset 0 0 18px rgba(255,255,255,0.10);
+    inset 0 0 18px rgba(255,255,255,0.12);
   overflow: hidden;
 }
 
@@ -86,7 +86,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 26px;
+  gap: 24px;
 }
 
 .image-button {
@@ -108,25 +108,25 @@ body {
 }
 
 .food-button {
-  width: 250px;
+  width: 225px;
 }
 
 .drink-button {
-  width: 225px;
+  width: 203px;
 }
 
 .gallery-button {
-  width: 225px;
+  width: 203px;
 }
 
 .thefork-button {
-  width: 292px;
+  width: 263px;
   max-width: 100%;
   margin-top: 4px;
 }
 
 .google-button {
-  width: 292px;
+  width: 263px;
   max-width: 100%;
   margin-top: 4px;
 }
@@ -175,29 +175,29 @@ body {
   }
 
   .buttons {
-    gap: 24px;
+    gap: 22px;
   }
 
   .food-button {
-    width: 245px;
+    width: 221px;
   }
 
   .drink-button {
-    width: 220px;
+    width: 198px;
   }
 
   .gallery-button {
-    width: 220px;
+    width: 198px;
   }
 
   .thefork-button {
-    width: 292px;
+    width: 263px;
     max-width: 100%;
     margin-top: 4px;
   }
 
   .google-button {
-    width: 292px;
+    width: 263px;
     max-width: 100%;
     margin-top: 4px;
   }
