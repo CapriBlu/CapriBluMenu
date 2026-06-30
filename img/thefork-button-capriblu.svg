@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="297" viewBox="0 0 1000 297" role="img" aria-label="20% Book Your Table with TheFork">
+  <defs>
+    <filter id="softShadow" x="-8%" y="-22%" width="116%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#031b3f" flood-opacity="0.35"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#2c78c4" flood-opacity="0.35"/>
+    </filter>
+    <linearGradient id="cream" x1="0" x2="1">
+      <stop offset="0" stop-color="#fffdf6"/>
+      <stop offset="0.5" stop-color="#fff9ed"/>
+      <stop offset="1" stop-color="#fffdf7"/>
+    </linearGradient>
+    <style>
+      .blue{fill:#0b4fa8}.navy{fill:#10235b}.line{fill:none;stroke:#0b4fa8;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}.thin{fill:none;stroke:#0b4fa8;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}.hand{font-family:'Trebuchet MS','Comic Sans MS',Arial,sans-serif}.big{font-size:62px;font-weight:700}.title{font-size:38px;font-weight:600;letter-spacing:.3px}.small{font-size:17px}.green{fill:#5faf1b}.roof{fill:#f26a23}.white{fill:#fffefa}.tile1{fill:#0b4fa8}.tile2{fill:#1f91dc}.tile3{fill:#10235b}.tile4{fill:#ffffff}.yellow{fill:#ffd342}.leaf{fill:#2b9d41}
+    </style>
+  </defs>
+
+  <g filter="url(#softShadow)">
+    <rect x="18" y="32" width="964" height="232" rx="112" fill="url(#cream)"/>
+    <rect x="18" y="32" width="964" height="232" rx="112" fill="none" stroke="#ffffff" stroke-width="12"/>
+    <rect x="24" y="38" width="952" height="220" rx="106" fill="none" stroke="#0b4fa8" stroke-width="5"/>
+    <rect x="34" y="48" width="932" height="200" rx="96" fill="none" stroke="#10235b" stroke-width="2" opacity="0.35"/>
+
+    <path class="thin" d="M56 88c34-33 63-40 96-33M64 112c24-14 48-22 76-21M68 134c16-12 38-17 56-13" opacity="0.75"/>
+    <path class="thin" d="M59 84c-7 25-7 50 4 73M83 70c-4 14-4 26 2 40M113 59c-3 14-1 26 6 36"/>
+    <path class="blue" d="M68 81c17-14 30-12 30-12s-6 15-25 19zM96 64c18-12 30-8 30-8s-7 14-25 17zM126 56c16-7 28-3 28-3s-9 12-27 12z" opacity="0.85"/>
+    <path class="thin" d="M55 203c28 11 66 9 98 6M58 218c31 8 66 5 95 5M72 191c8-29 19-42 30-45 12 17 17 33 18 50M125 199c8-16 17-22 28-27 10 12 15 22 15 30"/>
+    <path class="thin" d="M54 171c11-9 19-9 30 0M72 166c-2 9-3 15-4 22" opacity="0.8"/>
+
+    <circle cx="196" cy="111" r="42" class="green"/>
+    <path d="M184 73v76M197 73v76M210 73v76M184 111h26" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+    <path d="M197 145v33" stroke="#fff" stroke-width="14" stroke-linecap="round"/>
+    <text x="122" y="196" class="hand green" font-size="43" font-weight="700">thefork</text>
+    <text x="134" y="216" class="hand" font-size="16" fill="#1b5c0e">a Tripadvisor company</text>
+
+    <line x1="304" y1="72" x2="304" y2="226" stroke="#0b4fa8" stroke-width="3" opacity="0.9"/>
+    <path class="thin" d="M464 70c18-18 38-18 55 0 18-18 38-18 56 0M519 51c-9 10-9 25 0 36M489 63c14 1 22 8 27 19M549 63c-14 1-22 8-27 19"/>
+    <circle cx="519" cy="68" r="8" class="blue"/>
+
+    <text x="345" y="160" class="hand big" fill="#0b4fa8">20%</text>
+    <text x="492" y="156" class="hand title" fill="#0b4fa8">Book Your Table</text>
+
+    <ellipse cx="515" cy="207" rx="19" ry="25" class="yellow" stroke="#0b4fa8" stroke-width="2" transform="rotate(-25 515 207)"/>
+    <ellipse cx="545" cy="207" rx="19" ry="25" class="yellow" stroke="#0b4fa8" stroke-width="2" transform="rotate(25 545 207)"/>
+    <path class="leaf" d="M523 178c-20-14-36-4-46 12 22 6 37 2 46-12zM538 178c18-16 36-10 48 5-19 9-36 8-48-5z" stroke="#0b4fa8" stroke-width="2"/>
+    <path class="thin" d="M478 202l-14 8M586 202l14 8"/>
+
+    <g transform="translate(165 222)">
+      <rect width="625" height="36" fill="#fff"/>
+      <g opacity="0.98">
+        <rect x="0" y="0" width="50" height="36" class="tile1"/><polygon points="0,0 50,0 25,18" class="tile4"/><polygon points="0,36 50,36 25,18" class="tile2"/>
+        <rect x="50" y="0" width="50" height="36" class="tile2"/><polygon points="50,0 100,36 50,36" class="tile4"/><polygon points="100,0 100,36 50,0" class="tile3"/>
+        <rect x="100" y="0" width="50" height="36" class="tile3"/><polygon points="100,0 150,0 150,36" class="tile4"/><polygon points="100,36 150,36 100,0" class="tile2"/>
+        <rect x="150" y="0" width="50" height="36" class="tile1"/><polygon points="150,0 200,18 150,36" class="tile4"/><polygon points="200,0 200,36 175,18" class="tile2"/>
+        <rect x="200" y="0" width="50" height="36" class="tile2"/><polygon points="200,0 250,0 225,36" class="tile4"/><polygon points="200,36 250,36 225,0" class="tile3"/>
+        <rect x="250" y="0" width="50" height="36" class="tile1"/><polygon points="250,0 300,36 250,36" class="tile4"/><polygon points="300,0 300,36 250,0" class="tile2"/>
+        <rect x="300" y="0" width="50" height="36" class="tile3"/><polygon points="300,0 350,0 325,18" class="tile4"/><polygon points="300,36 350,36 325,18" class="tile2"/>
+        <rect x="350" y="0" width="50" height="36" class="tile1"/><polygon points="350,0 400,36 350,36" class="tile4"/><polygon points="400,0 400,36 350,0" class="tile2"/>
+        <rect x="400" y="0" width="50" height="36" class="tile2"/><polygon points="400,0 450,0 425,36" class="tile4"/><polygon points="400,36 450,36 425,0" class="tile3"/>
+        <rect x="450" y="0" width="50" height="36" class="tile1"/><polygon points="450,0 500,18 450,36" class="tile4"/><polygon points="500,0 500,36 475,18" class="tile2"/>
+        <rect x="500" y="0" width="50" height="36" class="tile3"/><polygon points="500,0 550,0 550,36" class="tile4"/><polygon points="500,36 550,36 500,0" class="tile2"/>
+        <rect x="550" y="0" width="75" height="36" class="tile1"/><polygon points="550,0 625,36 550,36" class="tile4"/><polygon points="625,0 625,36 550,0" class="tile2"/>
+      </g>
+    </g>
+
+    <g transform="translate(848 78) scale(0.68)">
+      <path class="white" d="M11 155h170c9-17 13-49 5-75-9-32-39-55-73-58-39-4-73 13-92 47-12 20-16 46-10 86z"/>
+      <path class="line" d="M20 154c18-27 39-42 65-49 35-10 67-35 93-76M47 165c24-18 55-30 93-39" opacity="0.65"/>
+      <g>
+        <rect x="122" y="20" width="48" height="49" rx="5" class="white" stroke="#0b4fa8" stroke-width="3"/><path class="roof" d="M118 22c12-13 44-17 57 0z" stroke="#0b4fa8" stroke-width="2"/><path class="thin" d="M142 36v22M132 46h21"/>
+        <rect x="80" y="46" width="53" height="53" rx="5" class="white" stroke="#0b4fa8" stroke-width="3"/><path class="roof" d="M76 49c12-14 49-17 62 0z" stroke="#0b4fa8" stroke-width="2"/><path class="thin" d="M105 64v24M94 76h23"/>
+        <rect x="134" y="85" width="56" height="60" rx="5" class="white" stroke="#0b4fa8" stroke-width="3"/><path class="roof" d="M130 88c12-16 52-18 65 0z" stroke="#0b4fa8" stroke-width="2"/><path class="thin" d="M164 102v27M151 116h25"/>
+        <rect x="50" y="100" width="60" height="58" rx="5" class="white" stroke="#0b4fa8" stroke-width="3"/><path class="roof" d="M46 102c12-16 56-18 68 0z" stroke="#0b4fa8" stroke-width="2"/><path class="thin" d="M82 116v27M69 130h25"/>
+        <rect x="15" y="137" width="45" height="43" rx="5" class="white" stroke="#0b4fa8" stroke-width="3"/><path class="roof" d="M12 139c9-12 41-14 50 0z" stroke="#0b4fa8" stroke-width="2"/><path class="thin" d="M38 151v20M28 161h18"/>
+      </g>
+      <g class="leaf" stroke="#0b4fa8" stroke-width="2" opacity="0.9">
+        <circle cx="172" cy="153" r="9"/><circle cx="189" cy="155" r="9"/><circle cx="159" cy="168" r="9"/><circle cx="183" cy="174" r="9"/><circle cx="143" cy="160" r="7"/><circle cx="118" cy="62" r="7"/><circle cx="65" cy="96" r="6"/>
+      </g>
+    </g>
+  </g>
+</svg>
