@@ -158,16 +158,30 @@ body {
   width: 203px;
 }
 
-.thefork-button {
-  width: 263px;
-  max-width: 100%;
-  margin-top: 4px;
+.quick-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  width: 100%;
+  margin-top: 2px;
+  animation: fadeUp 0.7s ease 0.48s both;
 }
 
+.quick-button {
+  width: 136px;
+  max-width: calc(50% - 9px);
+  margin: 0;
+}
+
+.quick-button img {
+  border-radius: 22px;
+  filter: drop-shadow(0 0 12px rgba(255,255,255,0.16));
+}
+
+.thefork-button,
 .google-button {
-  width: 263px;
-  max-width: 100%;
-  margin-top: 4px;
+  margin-top: 0;
 }
 
 /* PASTA LOVERS */
@@ -285,16 +299,18 @@ body {
     width: 198px;
   }
 
-  .thefork-button {
-    width: 263px;
-    max-width: 100%;
-    margin-top: 4px;
+  .quick-buttons {
+    gap: 16px;
+    margin-top: 2px;
   }
 
-  .google-button {
-    width: 263px;
-    max-width: 100%;
-    margin-top: 4px;
+  .quick-button {
+    width: 136px;
+    max-width: calc(50% - 8px);
+  }
+
+  .quick-button img {
+    border-radius: 20px;
   }
 
   .corner-left,
@@ -316,6 +332,7 @@ body {
   .card,
   .subtitle,
   .image-button,
+  .quick-buttons,
   .corner-left,
   .corner-right,
   .logo-link {
