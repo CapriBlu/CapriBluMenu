@@ -161,6 +161,48 @@ body {
   text-shadow: 0 0 8px rgba(0,0,0,0.9);
 }
 
+.slow-gallery {
+  width: 100vw;
+  margin: 34px calc(50% - 50vw) 0;
+  padding: 16px 0 8px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.92);
+  border-top: 1px solid rgba(255,255,255,0.55);
+  border-bottom: 1px solid rgba(255,255,255,0.55);
+}
+
+.slow-gallery-track {
+  display: flex;
+  gap: 22px;
+  width: max-content;
+  animation: slowGalleryScroll 55s linear infinite;
+  will-change: transform;
+}
+
+.slow-gallery-track img {
+  flex: 0 0 auto;
+  width: 190px;
+  height: 245px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.16);
+}
+
+.slow-gallery:hover .slow-gallery-track {
+  animation-play-state: paused;
+}
+
+@keyframes slowGalleryScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -226,6 +268,22 @@ body {
     font-size: 9px;
   }
 
+  .slow-gallery {
+    margin-top: 26px;
+    padding: 12px 0 6px;
+  }
+
+  .slow-gallery-track {
+    gap: 14px;
+    animation-duration: 42s;
+  }
+
+  .slow-gallery-track img {
+    width: 135px;
+    height: 185px;
+    border-radius: 15px;
+  }
+
   .photo-grid {
     grid-template-columns: 1fr;
     gap: 14px;
@@ -234,5 +292,12 @@ body {
   .back-button {
     font-size: 14px;
     padding: 9px 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slow-gallery-track {
+    animation: none;
+    overflow-x: auto;
   }
 }
