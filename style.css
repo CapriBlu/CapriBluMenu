@@ -47,12 +47,56 @@ body {
   background: linear-gradient(rgba(3, 13, 35, 0.22), rgba(3, 13, 35, 0.52));
 }
 
+.page-shell {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.top-brand {
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  animation: fadeUp 0.8s ease both;
+}
+
+.brand-logo-link {
+  display: inline-block;
+  text-decoration: none;
+  line-height: 0;
+  animation: logoFloat 4s ease-in-out infinite;
+}
+
+.brand-logo {
+  display: block;
+  width: 280px;
+  max-width: 54vw;
+  height: auto;
+  filter: drop-shadow(0 0 14px rgba(255,255,255,0.35));
+}
+
+.top-pasta {
+  width: 88px;
+  height: auto;
+  flex: 0 0 auto;
+  filter: drop-shadow(0 0 10px rgba(255,255,255,0.22));
+  animation: cornerDrop 0.9s ease 0.1s both;
+}
+
 .card {
   position: relative;
   z-index: 1;
   width: 100%;
   max-width: 348px;
-  padding: 24px 18px 28px;
+  padding: 28px 18px 28px;
   border-radius: 32px;
   background: rgba(7, 38, 86, 0.56);
   backdrop-filter: blur(13px);
@@ -184,7 +228,7 @@ body {
   margin-top: 0;
 }
 
-/* PASTA LOVERS */
+/* PASTA LOVERS - vecchie classi non più usate nella card */
 
 .corner-left,
 .corner-right {
@@ -267,9 +311,27 @@ body {
     display: block;
   }
 
+  .page-shell {
+    gap: 12px;
+  }
+
+  .top-brand {
+    max-width: 338px;
+    gap: 10px;
+  }
+
+  .brand-logo {
+    width: 205px;
+    max-width: 56vw;
+  }
+
+  .top-pasta {
+    width: 66px;
+  }
+
   .card {
     max-width: 338px;
-    padding: 22px 15px 25px;
+    padding: 24px 15px 25px;
     border-radius: 30px;
   }
 
@@ -333,9 +395,12 @@ body {
   .subtitle,
   .image-button,
   .quick-buttons,
+  .top-brand,
+  .top-pasta,
   .corner-left,
   .corner-right,
-  .logo-link {
+  .logo-link,
+  .brand-logo-link {
     animation: none;
   }
 
