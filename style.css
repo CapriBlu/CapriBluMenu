@@ -33,6 +33,10 @@ body {
   z-index: -3;
 }
 
+.bg-video-mobile {
+  display: none;
+}
+
 .video-overlay {
   position: fixed;
   top: 0;
@@ -239,6 +243,14 @@ body {
 
   body {
     padding: 12px;
+  }
+
+  .bg-video-desktop {
+    display: none;
+  }
+
+  .bg-video-mobile {
+    display: block;
   }
 
   .card {
