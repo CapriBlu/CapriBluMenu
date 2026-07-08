@@ -192,6 +192,34 @@ body {
   width: 203px;
 }
 
+.invoice-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 225px;
+  min-height: 54px;
+  padding: 12px 18px;
+  border-radius: 18px;
+  text-decoration: none;
+  color: #0b2a55;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.22),
+    inset 0 0 18px rgba(23, 75, 138, 0.10);
+  text-transform: uppercase;
+  animation: fadeUp 0.7s ease 0.43s both;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.invoice-link:hover {
+  transform: translateY(-3px) scale(1.025);
+  filter: brightness(1.05);
+}
+
 .quick-buttons {
   display: flex;
   align-items: center;
@@ -218,7 +246,6 @@ body {
     opacity: 0;
     transform: translateY(18px) scale(0.97);
   }
-
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -230,19 +257,6 @@ body {
     opacity: 0;
     transform: translateY(14px);
   }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes cornerDrop {
-  from {
-    opacity: 0;
-    transform: translateY(-14px);
-  }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -250,19 +264,29 @@ body {
 }
 
 @keyframes logoFloat {
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0);
   }
-
   50% {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
   }
 }
 
-@media (max-width: 480px) {
+@keyframes cornerDrop {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 600px) {
   body {
-    padding: 12px;
+    align-items: flex-start;
+    padding: 18px 12px;
   }
 
   .bg-video-desktop {
@@ -274,80 +298,57 @@ body {
   }
 
   .page-shell {
-    gap: 12px;
+    gap: 16px;
   }
 
   .top-brand {
-    max-width: 338px;
-    gap: 10px;
+    gap: 8px;
   }
 
   .brand-logo {
-    width: 220px;
+    width: 235px;
     max-width: 58vw;
   }
 
   .top-pasta {
-    width: 72px;
+    width: 68px;
+    max-width: 18vw;
   }
 
   .top-pasta-right {
-    width: 145px;
-    max-width: 25vw;
+    width: 94px;
+    max-width: 22vw;
   }
 
   .card {
-    max-width: 338px;
-    padding: 24px 15px 25px;
-    border-radius: 30px;
+    max-width: 340px;
+    padding: 24px 16px;
   }
 
   .subtitle {
-    margin-bottom: 15px;
     font-size: 16px;
   }
 
   .buttons {
-    gap: 22px;
+    gap: 20px;
   }
 
   .food-button,
-  .drink-button {
-    width: 221px;
+  .drink-button,
+  .invoice-link {
+    width: 214px;
   }
 
   .gallery-button {
-    width: 198px;
+    width: 194px;
   }
 
   .quick-buttons {
-    gap: 16px;
-    margin-top: 2px;
+    gap: 14px;
   }
 
   .quick-button {
-    width: 136px;
-    max-width: calc(50% - 8px);
-  }
-
-  .quick-button img {
-    border-radius: 20px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .card,
-  .subtitle,
-  .image-button,
-  .quick-buttons,
-  .top-brand,
-  .top-pasta,
-  .brand-logo-link {
-    animation: none;
-  }
-
-  .image-button,
-  .image-button img {
-    transition: none;
+    width: 128px;
+    max-width: calc(50% - 7px);
   }
 }
