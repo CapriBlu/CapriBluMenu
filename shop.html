@@ -5,7 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Capri Blu Boutique</title>
   <link rel="icon" type="image/png" href="./img/Logo-Capri-Blu-Def.png">
-  <link rel="stylesheet" href="./shop.css?v=5">
+  <link rel="stylesheet" href="./shop.css?v=6">
+  <style>
+    .product-shelf{position:relative;z-index:3;display:flex;gap:10px;width:100%;margin:8px 0 18px;padding:10px 4px 13px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.45) transparent}
+    .product-shelf::-webkit-scrollbar{height:5px}.product-shelf::-webkit-scrollbar-track{background:transparent}.product-shelf::-webkit-scrollbar-thumb{background:rgba(255,255,255,.42);border-radius:999px}
+    .shelf-item{flex:0 0 auto;min-width:112px;padding:10px 12px;border-radius:18px;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.78);background:rgba(4,31,74,.34);box-shadow:inset 0 0 14px rgba(255,255,255,.04);backdrop-filter:blur(8px);scroll-snap-align:center;transition:transform .22s ease,background .22s ease,border-color .22s ease,opacity .22s ease}
+    .shelf-item .shelf-icon{display:block;margin-bottom:5px;font-size:23px}.shelf-item span:last-child{display:block;font-size:12px;font-weight:800;line-height:1.15;white-space:nowrap}
+    .shelf-item.is-active{color:#08245a;background:linear-gradient(#fff,#dbeeff);border-color:rgba(255,255,255,.9);box-shadow:0 8px 18px rgba(0,0,0,.18),0 0 18px rgba(255,255,255,.16);transform:translateY(-2px)}
+    .shelf-item:disabled{cursor:default;opacity:.66}
+    .product-image{clip-path:inset(0 0 9.5% 0)}
+    @media(max-width:600px){.product-shelf{margin-top:5px;padding-bottom:10px}.shelf-item{min-width:98px;padding:9px 10px}.shelf-item .shelf-icon{font-size:21px}.shelf-item span:last-child{font-size:11px}.product-image{clip-path:inset(0 0 10% 0)}}
+  </style>
 </head>
 <body>
   <video class="bg-video bg-video-desktop" autoplay muted loop playsinline preload="auto" aria-hidden="true">
@@ -31,53 +41,24 @@
       <p class="intro">Una selezione di oggetti e sapori da portare con te.</p>
 
       <nav class="product-shelf" aria-label="Anteprima prodotti Boutique">
-        <button class="shelf-item is-active" type="button" aria-current="true">
-          <span class="shelf-icon">🍋</span>
-          <span>Limoncello</span>
-        </button>
-        <button class="shelf-item" type="button" disabled>
-          <span class="shelf-icon">🍈</span>
-          <span>Meloncello</span>
-        </button>
-        <button class="shelf-item" type="button" disabled>
-          <span class="shelf-icon">🥛</span>
-          <span>Crema di limone</span>
-        </button>
-        <button class="shelf-item" type="button" disabled>
-          <span class="shelf-icon">💧</span>
-          <span>Acqua Capri Blu</span>
-        </button>
-        <button class="shelf-item" type="button" disabled>
-          <span class="shelf-icon">🥃</span>
-          <span>Bicchieri</span>
-        </button>
-        <button class="shelf-item" type="button" disabled>
-          <span class="shelf-icon">👜</span>
-          <span>Borse</span>
-        </button>
-        <button class="shelf-item" type="button" disabled>
-          <span class="shelf-icon">🛋️</span>
-          <span>Cuscini</span>
-        </button>
-        <button class="shelf-item" type="button" disabled>
-          <span class="shelf-icon">🍽️</span>
-          <span>Piatti</span>
-        </button>
-        <button class="shelf-item" type="button" disabled>
-          <span class="shelf-icon">🌿</span>
-          <span>Liquori speciali</span>
-        </button>
+        <button class="shelf-item is-active" type="button" aria-current="true"><span class="shelf-icon">🍋</span><span>Limoncello</span></button>
+        <button class="shelf-item" type="button" disabled><span class="shelf-icon">🍈</span><span>Meloncello</span></button>
+        <button class="shelf-item" type="button" disabled><span class="shelf-icon">🥛</span><span>Crema di limone</span></button>
+        <button class="shelf-item" type="button" disabled><span class="shelf-icon">💧</span><span>Acqua Capri Blu</span></button>
+        <button class="shelf-item" type="button" disabled><span class="shelf-icon">🥃</span><span>Bicchieri</span></button>
+        <button class="shelf-item" type="button" disabled><span class="shelf-icon">👜</span><span>Borse</span></button>
+        <button class="shelf-item" type="button" disabled><span class="shelf-icon">🛋️</span><span>Cuscini</span></button>
+        <button class="shelf-item" type="button" disabled><span class="shelf-icon">🍽️</span><span>Piatti</span></button>
+        <button class="shelf-item" type="button" disabled><span class="shelf-icon">🌿</span><span>Liquori speciali</span></button>
       </nav>
 
       <article class="product-stage">
         <button class="nav-button nav-prev" type="button" aria-label="Prodotto precedente" disabled>‹</button>
-
         <div class="product-visual">
           <span class="product-glow" aria-hidden="true"></span>
-          <img class="product-image" src="./img/boutique/bott.Limoncello.png?v=2" alt="Bottiglia di Limoncello Capri Blu Sorrento">
+          <img class="product-image" src="./img/boutique/bott.Limoncello.png?v=3" alt="Bottiglia di Limoncello Capri Blu Sorrento">
           <span class="product-shadow" aria-hidden="true"></span>
         </div>
-
         <button class="nav-button nav-next" type="button" aria-label="Prodotto successivo" disabled>›</button>
       </article>
 
