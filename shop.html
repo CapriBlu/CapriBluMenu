@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Capri Blu Boutique</title>
   <link rel="icon" type="image/png" href="./img/Logo-Capri-Blu-Def.png">
-  <link rel="stylesheet" href="./shop.css?v=3">
+  <link rel="stylesheet" href="./shop.css?v=4">
 </head>
 <body>
   <video class="bg-video bg-video-desktop" autoplay muted loop playsinline preload="auto" aria-hidden="true">
@@ -17,36 +17,51 @@
   </video>
   <div class="video-overlay" aria-hidden="true"></div>
 
-  <div class="loader" id="loader" aria-label="Caricamento Capri Blu Boutique">
+  <div class="loader" aria-label="Caricamento Capri Blu Boutique">
     <div class="loader-ring"><img src="./img/LOGO.capriblu.png?v=1" alt="Capri Blu Sorrento"></div>
     <p>Capri Blu Boutique</p>
   </div>
 
-  <main class="shop-page" id="shopPage">
+  <main class="shop-page">
     <a href="./index.html" class="back-button">Back</a>
 
-    <section class="boutique-card">
+    <section class="showroom" aria-label="Vetrina Capri Blu Boutique">
       <img class="boutique-logo" src="./img/bottone.boutique.png?v=1" alt="Capri Blu Boutique">
       <p class="eyebrow">Capri Blu Sorrento</p>
-      <h1>La nostra Boutique sta arrivando</h1>
-      <p class="intro">Porta con te un ricordo di Sorrento e dello stile Capri Blu.</p>
+      <p class="intro">Una selezione di oggetti e sapori da portare con te.</p>
 
-      <div class="category-grid" aria-label="Prodotti Capri Blu Boutique">
-        <article class="category-card"><span class="category-icon">◌</span><h2>Bicchieri</h2><p>Bicchieri decorati firmati Capri Blu.</p><small>Coming soon</small></article>
-        <article class="category-card"><span class="category-icon">▱</span><h2>Borsa</h2><p>Shopper e borse dallo stile mediterraneo.</p><small>Coming soon</small></article>
-        <article class="category-card"><span class="category-icon">◇</span><h2>Cuscino</h2><p>Cuscini decorativi ispirati alle maioliche.</p><small>Coming soon</small></article>
-        <article class="category-card"><span class="category-icon">◉</span><h2>Piatti</h2><p>Piatti e ceramiche per la tavola.</p><small>Coming soon</small></article>
-        <article class="category-card"><span class="category-icon">♢</span><h2>Liquori</h2><p>Specialità da degustare e regalare.</p><small>Coming soon</small></article>
+      <article class="product-stage">
+        <button class="nav-button nav-prev" type="button" aria-label="Prodotto precedente" disabled>‹</button>
+
+        <div class="product-visual">
+          <span class="product-glow" aria-hidden="true"></span>
+          <img class="product-image" src="./img/boutique/bott.Limoncello.png?v=1" alt="Limoncello Capri Blu Sorrento">
+          <span class="product-shadow" aria-hidden="true"></span>
+        </div>
+
+        <button class="nav-button nav-next" type="button" aria-label="Prodotto successivo" disabled>›</button>
+      </article>
+
+      <div class="product-info">
+        <span class="product-kicker">Collezione Liquori</span>
+        <h1>Limoncello Capri Blu</h1>
+        <p>Ispirato ai profumi dei limoni della Penisola Sorrentina, racchiuso in una bottiglia decorata a mano.</p>
+        <span class="availability">Disponibile presso Capri Blu Sorrento</span>
+      </div>
+
+      <div class="product-dots" aria-label="Navigazione prodotti">
+        <button class="dot is-active" type="button" aria-label="Limoncello Capri Blu"></button>
+        <button class="dot" type="button" aria-label="Prossimo prodotto" disabled></button>
+        <button class="dot" type="button" aria-label="Prossimo prodotto" disabled></button>
       </div>
 
       <p class="brand-quote">Every object tells the story of Capri Blu.</p>
-      <p class="coming-soon">Coming soon</p>
     </section>
   </main>
 
   <script>
     window.addEventListener('load', function () {
-      window.setTimeout(function () { document.body.classList.add('is-ready'); }, 1300);
+      window.setTimeout(function () { document.body.classList.add('is-ready'); }, 1100);
     });
   </script>
 </body>
