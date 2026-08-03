@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capri Blu Boutique</title>
+
+  <link rel="icon" type="image/png" href="./img/Logo-Capri-Blu-Def.png">
+  <link rel="stylesheet" href="./shop.css?v=1">
+</head>
+<body>
+  <video class="bg-video bg-video-desktop" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+    <source src="./img/capri_blu_pc_25s_1080p_hq.mp4?v=1" type="video/mp4">
+  </video>
+
+  <video class="bg-video bg-video-mobile" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+    <source src="./img/vid.webM.mobile.webm" type="video/webm">
+    <source src="./img/capri_blu_pc_25s_1080p_hq.mp4?v=1" type="video/mp4">
+  </video>
+
+  <div class="video-overlay" aria-hidden="true"></div>
+
+  <div class="loader" id="loader" aria-label="Caricamento Capri Blu Boutique">
+    <div class="loader-ring">
+      <img src="./img/LOGO.capriblu.png?v=1" alt="Capri Blu Sorrento">
+    </div>
+    <p>Capri Blu Boutique</p>
+  </div>
+
+  <main class="shop-page" id="shopPage">
+    <a href="./index.html" class="back-button">Back</a>
+
+    <section class="boutique-card">
+      <img class="boutique-logo" src="./img/bottone.boutique.png?v=1" alt="Capri Blu Boutique">
+
+      <p class="eyebrow">Capri Blu Sorrento</p>
+      <h1>La nostra Boutique sta arrivando</h1>
+      <p class="intro">Porta con te un ricordo di Sorrento e dello stile Capri Blu.</p>
+      <p class="coming-soon">Coming soon</p>
+    </section>
+  </main>
+
+  <script>
+    window.addEventListener('load', function () {
+      window.setTimeout(function () {
+        document.body.classList.add('is-ready');
+      }, 1300);
+    });
+  </script>
+</body>
+</html>
