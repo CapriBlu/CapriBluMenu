@@ -5,16 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Capri Blu Boutique</title>
   <link rel="icon" type="image/png" href="./img/Logo-Capri-Blu-Def.png">
-  <link rel="stylesheet" href="./shop.css?v=6">
+  <link rel="stylesheet" href="./shop.css?v=7">
   <style>
-    .product-shelf{position:relative;z-index:3;display:flex;gap:10px;width:100%;margin:8px 0 18px;padding:10px 4px 13px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.45) transparent}
-    .product-shelf::-webkit-scrollbar{height:5px}.product-shelf::-webkit-scrollbar-track{background:transparent}.product-shelf::-webkit-scrollbar-thumb{background:rgba(255,255,255,.42);border-radius:999px}
-    .shelf-item{flex:0 0 auto;min-width:112px;padding:10px 12px;border-radius:18px;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.78);background:rgba(4,31,74,.34);box-shadow:inset 0 0 14px rgba(255,255,255,.04);backdrop-filter:blur(8px);scroll-snap-align:center;transition:transform .22s ease,background .22s ease,border-color .22s ease,opacity .22s ease}
-    .shelf-item .shelf-icon{display:block;margin-bottom:5px;font-size:23px}.shelf-item span:last-child{display:block;font-size:12px;font-weight:800;line-height:1.15;white-space:nowrap}
-    .shelf-item.is-active{color:#08245a;background:linear-gradient(#fff,#dbeeff);border-color:rgba(255,255,255,.9);box-shadow:0 8px 18px rgba(0,0,0,.18),0 0 18px rgba(255,255,255,.16);transform:translateY(-2px)}
-    .shelf-item:disabled{cursor:default;opacity:.66}
+    .shelf-wrap{position:relative;z-index:4;width:100%;margin:12px 0 22px}
+    .shelf-arrow{position:absolute;top:50%;z-index:6;width:42px;height:42px;border:1px solid rgba(255,255,255,.34);border-radius:50%;color:#fff;background:rgba(4,31,74,.72);font-size:28px;line-height:1;box-shadow:0 8px 20px rgba(0,0,0,.28);backdrop-filter:blur(10px);transform:translateY(-50%);cursor:pointer;transition:transform .2s ease,background .2s ease,opacity .2s ease}
+    .shelf-arrow:hover{background:rgba(17,79,154,.86);transform:translateY(-50%) scale(1.06)}
+    .shelf-arrow.prev{left:-14px}.shelf-arrow.next{right:-14px}
+    .product-shelf{display:flex;gap:16px;width:100%;padding:8px 18px 14px;overflow-x:auto;scroll-behavior:smooth;scroll-snap-type:x mandatory;overscroll-behavior-inline:contain;scrollbar-width:none}
+    .product-shelf::-webkit-scrollbar{display:none}
+    .shelf-card{position:relative;flex:0 0 clamp(180px,31vw,235px);height:150px;overflow:hidden;border:1px solid rgba(255,255,255,.23);border-radius:24px;color:#fff;background:linear-gradient(145deg,rgba(18,70,139,.92),rgba(3,25,63,.94));box-shadow:0 12px 28px rgba(0,0,0,.3),inset 0 0 20px rgba(255,255,255,.05);scroll-snap-align:center;cursor:pointer;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease,opacity .25s ease}
+    .shelf-card:hover{transform:translateY(-5px) scale(1.015);border-color:rgba(255,255,255,.62);box-shadow:0 18px 34px rgba(0,0,0,.38),0 0 22px rgba(255,255,255,.1)}
+    .shelf-card.is-active{border:2px solid #fff;box-shadow:0 17px 34px rgba(0,0,0,.38),0 0 26px rgba(255,222,111,.28)}
+    .shelf-card:disabled{cursor:default;opacity:.66}
+    .shelf-card:disabled:hover{transform:none;border-color:rgba(255,255,255,.23);box-shadow:0 12px 28px rgba(0,0,0,.3),inset 0 0 20px rgba(255,255,255,.05)}
+    .shelf-card::after{content:"";position:absolute;inset:42% 0 0;background:linear-gradient(transparent,rgba(2,15,40,.92))}
+    .shelf-preview{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:68px;background:radial-gradient(circle at 50% 34%,rgba(255,255,255,.2),transparent 54%)}
+    .shelf-preview img{max-width:74%;max-height:118px;object-fit:contain;filter:drop-shadow(0 10px 12px rgba(0,0,0,.35));clip-path:inset(0 0 10% 0)}
+    .shelf-caption{position:absolute;z-index:2;right:12px;bottom:11px;left:12px;text-align:left}
+    .shelf-caption strong{display:block;font-family:Georgia,"Times New Roman",serif;font-size:20px;line-height:1.05;text-shadow:0 3px 8px rgba(0,0,0,.7)}
+    .shelf-caption small{display:block;margin-top:4px;color:rgba(255,255,255,.82);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
     .product-image{clip-path:inset(0 0 9.5% 0)}
-    @media(max-width:600px){.product-shelf{margin-top:5px;padding-bottom:10px}.shelf-item{min-width:98px;padding:9px 10px}.shelf-item .shelf-icon{font-size:21px}.shelf-item span:last-child{font-size:11px}.product-image{clip-path:inset(0 0 10% 0)}}
+    @media(max-width:600px){.shelf-wrap{margin-top:8px}.shelf-arrow{width:36px;height:36px;font-size:24px}.shelf-arrow.prev{left:-5px}.shelf-arrow.next{right:-5px}.product-shelf{gap:12px;padding:6px 26px 12px}.shelf-card{flex-basis:74vw;max-width:260px;height:145px}.shelf-caption strong{font-size:19px}.product-image{clip-path:inset(0 0 10% 0)}}
   </style>
 </head>
 <body>
@@ -40,17 +51,24 @@
       <p class="eyebrow">Capri Blu Sorrento</p>
       <p class="intro">Una selezione di oggetti e sapori da portare con te.</p>
 
-      <nav class="product-shelf" aria-label="Anteprima prodotti Boutique">
-        <button class="shelf-item is-active" type="button" aria-current="true"><span class="shelf-icon">🍋</span><span>Limoncello</span></button>
-        <button class="shelf-item" type="button" disabled><span class="shelf-icon">🍈</span><span>Meloncello</span></button>
-        <button class="shelf-item" type="button" disabled><span class="shelf-icon">🥛</span><span>Crema di limone</span></button>
-        <button class="shelf-item" type="button" disabled><span class="shelf-icon">💧</span><span>Acqua Capri Blu</span></button>
-        <button class="shelf-item" type="button" disabled><span class="shelf-icon">🥃</span><span>Bicchieri</span></button>
-        <button class="shelf-item" type="button" disabled><span class="shelf-icon">👜</span><span>Borse</span></button>
-        <button class="shelf-item" type="button" disabled><span class="shelf-icon">🛋️</span><span>Cuscini</span></button>
-        <button class="shelf-item" type="button" disabled><span class="shelf-icon">🍽️</span><span>Piatti</span></button>
-        <button class="shelf-item" type="button" disabled><span class="shelf-icon">🌿</span><span>Liquori speciali</span></button>
-      </nav>
+      <div class="shelf-wrap">
+        <button class="shelf-arrow prev" id="shelfPrev" type="button" aria-label="Scorri a sinistra">‹</button>
+        <nav class="product-shelf" id="productShelf" aria-label="Vetrina prodotti Boutique">
+          <button class="shelf-card is-active" type="button" aria-current="true">
+            <span class="shelf-preview"><img src="./img/boutique/bott.Limoncello.png?v=3" alt=""></span>
+            <span class="shelf-caption"><strong>Limoncello</strong><small>Liquori Capri Blu</small></span>
+          </button>
+          <button class="shelf-card" type="button" disabled><span class="shelf-preview">🍈</span><span class="shelf-caption"><strong>Meloncello</strong><small>Prossimamente</small></span></button>
+          <button class="shelf-card" type="button" disabled><span class="shelf-preview">🥛</span><span class="shelf-caption"><strong>Crema di limone</strong><small>Prossimamente</small></span></button>
+          <button class="shelf-card" type="button" disabled><span class="shelf-preview">💧</span><span class="shelf-caption"><strong>Acqua Capri Blu</strong><small>Prossimamente</small></span></button>
+          <button class="shelf-card" type="button" disabled><span class="shelf-preview">🥃</span><span class="shelf-caption"><strong>Bicchieri</strong><small>Home Collection</small></span></button>
+          <button class="shelf-card" type="button" disabled><span class="shelf-preview">👜</span><span class="shelf-caption"><strong>Borse</strong><small>Capri Blu Style</small></span></button>
+          <button class="shelf-card" type="button" disabled><span class="shelf-preview">🛋️</span><span class="shelf-caption"><strong>Cuscini</strong><small>Home Collection</small></span></button>
+          <button class="shelf-card" type="button" disabled><span class="shelf-preview">🍽️</span><span class="shelf-caption"><strong>Piatti</strong><small>Ceramiche</small></span></button>
+          <button class="shelf-card" type="button" disabled><span class="shelf-preview">🌿</span><span class="shelf-caption"><strong>Liquori speciali</strong><small>Capri Blu Selection</small></span></button>
+        </nav>
+        <button class="shelf-arrow next" id="shelfNext" type="button" aria-label="Scorri a destra">›</button>
+      </div>
 
       <article class="product-stage">
         <button class="nav-button nav-prev" type="button" aria-label="Prodotto precedente" disabled>‹</button>
@@ -83,6 +101,19 @@
     window.addEventListener('load', function () {
       window.setTimeout(function () { document.body.classList.add('is-ready'); }, 1100);
     });
+
+    const shelf = document.getElementById('productShelf');
+    const shelfPrev = document.getElementById('shelfPrev');
+    const shelfNext = document.getElementById('shelfNext');
+
+    function scrollShelf(direction) {
+      const card = shelf.querySelector('.shelf-card');
+      const distance = card ? card.getBoundingClientRect().width + 16 : 240;
+      shelf.scrollBy({ left: direction * distance, behavior: 'smooth' });
+    }
+
+    shelfPrev.addEventListener('click', function () { scrollShelf(-1); });
+    shelfNext.addEventListener('click', function () { scrollShelf(1); });
   </script>
 </body>
 </html>
