@@ -5,38 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Capri Blu Boutique</title>
   <link rel="icon" type="image/png" href="./img/Logo-Capri-Blu-Def.png">
-  <link rel="stylesheet" href="./shop.css?v=8">
+  <link rel="stylesheet" href="./shop.css?v=9">
   <style>
-    .shelf-wrap{position:relative;z-index:4;width:100%;margin:12px 0 22px}
-    .shelf-arrow{position:absolute;top:50%;z-index:6;width:42px;height:42px;border:1px solid rgba(255,255,255,.34);border-radius:50%;color:#fff;background:rgba(4,31,74,.72);font-size:28px;line-height:1;box-shadow:0 8px 20px rgba(0,0,0,.28);backdrop-filter:blur(10px);transform:translateY(-50%);cursor:pointer;transition:transform .2s ease,background .2s ease,opacity .2s ease}
-    .shelf-arrow:hover{background:rgba(17,79,154,.86);transform:translateY(-50%) scale(1.06)}
-    .shelf-arrow.prev{left:-14px}.shelf-arrow.next{right:-14px}
-    .product-shelf{display:flex;gap:16px;width:100%;padding:8px 18px 14px;overflow-x:auto;scroll-behavior:smooth;scroll-snap-type:x mandatory;overscroll-behavior-inline:contain;scrollbar-width:none}
-    .product-shelf::-webkit-scrollbar{display:none}
-    .shelf-card{position:relative;flex:0 0 clamp(180px,31vw,235px);height:150px;overflow:hidden;border:1px solid rgba(255,255,255,.23);border-radius:24px;color:#fff;background:linear-gradient(145deg,rgba(18,70,139,.92),rgba(3,25,63,.94));box-shadow:0 12px 28px rgba(0,0,0,.3),inset 0 0 20px rgba(255,255,255,.05);scroll-snap-align:center;cursor:pointer;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease,opacity .25s ease}
-    .shelf-card:hover{transform:translateY(-5px) scale(1.015);border-color:rgba(255,255,255,.62);box-shadow:0 18px 34px rgba(0,0,0,.38),0 0 22px rgba(255,255,255,.1)}
-    .shelf-card.is-active{border:2px solid #fff;box-shadow:0 17px 34px rgba(0,0,0,.38),0 0 26px var(--active-glow,rgba(255,222,111,.28));transform:translateY(-5px) scale(1.035)}
-    .shelf-card:disabled{cursor:default;opacity:.66}
-    .shelf-card:disabled:hover{transform:none;border-color:rgba(255,255,255,.23);box-shadow:0 12px 28px rgba(0,0,0,.3),inset 0 0 20px rgba(255,255,255,.05)}
-    .shelf-card::after{content:"";position:absolute;inset:42% 0 0;background:linear-gradient(transparent,rgba(2,15,40,.92))}
-    .shelf-preview{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:68px;background:radial-gradient(circle at 50% 34%,rgba(255,255,255,.2),transparent 54%)}
-    .shelf-preview img{max-width:74%;max-height:118px;object-fit:contain;filter:drop-shadow(0 10px 12px rgba(0,0,0,.35));clip-path:inset(0 0 10% 0)}
-    .shelf-caption{position:absolute;z-index:2;right:12px;bottom:11px;left:12px;text-align:left}
-    .shelf-caption strong{display:block;font-family:Georgia,"Times New Roman",serif;font-size:20px;line-height:1.05;text-shadow:0 3px 8px rgba(0,0,0,.7)}
-    .shelf-caption small{display:block;margin-top:4px;color:rgba(255,255,255,.82);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-    .product-image{clip-path:inset(0 0 9.5% 0);transition:opacity .28s ease,transform .28s ease,filter .35s ease}
-    .product-info{transition:opacity .25s ease,transform .25s ease}
-    .is-switching .product-image{opacity:0;transform:translateY(8px) scale(.97)}
-    .is-switching .product-info{opacity:0;transform:translateY(8px)}
-    .product-glow{background:radial-gradient(circle,var(--glow-strong,rgba(255,218,84,.34)) 0,var(--glow-soft,rgba(255,194,32,.13)) 38%,transparent 72%)!important;transition:background .35s ease}
-    @media(max-width:600px){.shelf-wrap{margin-top:8px}.shelf-arrow{width:36px;height:36px;font-size:24px}.shelf-arrow.prev{left:-5px}.shelf-arrow.next{right:-5px}.product-shelf{gap:12px;padding:6px 26px 12px}.shelf-card{flex-basis:74vw;max-width:260px;height:145px}.shelf-caption strong{font-size:19px}.product-image{clip-path:inset(0 0 10% 0)}}
+    .shelf-wrap{position:relative;z-index:4;width:100%;margin:12px 0 22px}.shelf-arrow{position:absolute;top:50%;z-index:6;width:42px;height:42px;border:1px solid rgba(255,255,255,.34);border-radius:50%;color:#fff;background:rgba(4,31,74,.72);font-size:28px;line-height:1;box-shadow:0 8px 20px rgba(0,0,0,.28);backdrop-filter:blur(10px);transform:translateY(-50%);cursor:pointer;transition:transform .2s ease,background .2s ease,opacity .2s ease}.shelf-arrow:hover{background:rgba(17,79,154,.86);transform:translateY(-50%) scale(1.06)}.shelf-arrow.prev{left:-14px}.shelf-arrow.next{right:-14px}.product-shelf{display:flex;gap:16px;width:100%;padding:8px 18px 14px;overflow-x:auto;scroll-behavior:smooth;scroll-snap-type:x mandatory;overscroll-behavior-inline:contain;scrollbar-width:none}.product-shelf::-webkit-scrollbar{display:none}.shelf-card{position:relative;flex:0 0 clamp(180px,31vw,235px);height:150px;overflow:hidden;border:1px solid rgba(255,255,255,.23);border-radius:24px;color:#fff;background:linear-gradient(145deg,rgba(18,70,139,.92),rgba(3,25,63,.94));box-shadow:0 12px 28px rgba(0,0,0,.3),inset 0 0 20px rgba(255,255,255,.05);scroll-snap-align:center;cursor:pointer;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease,opacity .25s ease}.shelf-card:hover{transform:translateY(-5px) scale(1.015);border-color:rgba(255,255,255,.62);box-shadow:0 18px 34px rgba(0,0,0,.38),0 0 22px rgba(255,255,255,.1)}.shelf-card.is-active{border:2px solid #fff;box-shadow:0 17px 34px rgba(0,0,0,.38),0 0 26px var(--active-glow,rgba(255,222,111,.28));transform:translateY(-5px) scale(1.035)}.shelf-card:disabled{cursor:default;opacity:.66}.shelf-card:disabled:hover{transform:none;border-color:rgba(255,255,255,.23);box-shadow:0 12px 28px rgba(0,0,0,.3),inset 0 0 20px rgba(255,255,255,.05)}.shelf-card::after{content:"";position:absolute;inset:42% 0 0;background:linear-gradient(transparent,rgba(2,15,40,.92))}.shelf-preview{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:68px;background:radial-gradient(circle at 50% 34%,rgba(255,255,255,.2),transparent 54%)}.shelf-preview img{max-width:74%;max-height:118px;object-fit:contain;filter:drop-shadow(0 10px 12px rgba(0,0,0,.35));clip-path:inset(0 0 10% 0)}.shelf-caption{position:absolute;z-index:2;right:12px;bottom:11px;left:12px;text-align:left}.shelf-caption strong{display:block;font-family:Georgia,"Times New Roman",serif;font-size:20px;line-height:1.05;text-shadow:0 3px 8px rgba(0,0,0,.7)}.shelf-caption small{display:block;margin-top:4px;color:rgba(255,255,255,.82);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}.product-image{clip-path:inset(0 0 9.5% 0);transition:opacity .28s ease,transform .28s ease,filter .35s ease}.product-info{transition:opacity .25s ease,transform .25s ease}.is-switching .product-image{opacity:0;transform:translateY(8px) scale(.97)}.is-switching .product-info{opacity:0;transform:translateY(8px)}.product-glow{background:radial-gradient(circle,var(--glow-strong,rgba(255,218,84,.34)) 0,var(--glow-soft,rgba(255,194,32,.13)) 38%,transparent 72%)!important;transition:background .35s ease}@media(max-width:600px){.shelf-wrap{margin-top:8px}.shelf-arrow{width:36px;height:36px;font-size:24px}.shelf-arrow.prev{left:-5px}.shelf-arrow.next{right:-5px}.product-shelf{gap:12px;padding:6px 26px 12px}.shelf-card{flex-basis:74vw;max-width:260px;height:145px}.shelf-caption strong{font-size:19px}.product-image{clip-path:inset(0 0 10% 0)}}
   </style>
 </head>
 <body>
   <video class="bg-video bg-video-desktop" autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="./img/capri_blu_pc_25s_1080p_hq.mp4?v=1" type="video/mp4"></video>
   <video class="bg-video bg-video-mobile" autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="./img/vid.webM.mobile.webm" type="video/webm"><source src="./img/capri_blu_pc_25s_1080p_hq.mp4?v=1" type="video/mp4"></video>
   <div class="video-overlay" aria-hidden="true"></div>
-
   <div class="loader" aria-label="Caricamento Capri Blu Boutique"><div class="loader-ring"><img src="./img/LOGO.capriblu.png?v=1" alt="Capri Blu Sorrento"></div><p>Capri Blu Boutique</p></div>
 
   <main class="shop-page">
@@ -49,15 +26,9 @@
       <div class="shelf-wrap">
         <button class="shelf-arrow prev" id="shelfPrev" type="button" aria-label="Scorri a sinistra">‹</button>
         <nav class="product-shelf" id="productShelf" aria-label="Vetrina prodotti Boutique">
-          <button class="shelf-card is-active" type="button" data-product="limoncello" aria-current="true">
-            <span class="shelf-preview"><img src="./img/boutique/bott.Limoncello.png?v=3" alt=""></span>
-            <span class="shelf-caption"><strong>Limoncello</strong><small>Liquori Capri Blu</small></span>
-          </button>
-          <button class="shelf-card" type="button" data-product="meloncello">
-            <span class="shelf-preview"><img src="./img/boutique/bott.meloncello.png?v=1" alt=""></span>
-            <span class="shelf-caption"><strong>Meloncello</strong><small>Liquori Capri Blu</small></span>
-          </button>
-          <button class="shelf-card" type="button" disabled><span class="shelf-preview">🥛</span><span class="shelf-caption"><strong>Crema di limone</strong><small>Prossimamente</small></span></button>
+          <button class="shelf-card is-active" type="button" data-product="limoncello" aria-current="true"><span class="shelf-preview"><img src="./img/boutique/bott.Limoncello.png?v=3" alt=""></span><span class="shelf-caption"><strong>Limoncello</strong><small>Liquori Capri Blu</small></span></button>
+          <button class="shelf-card" type="button" data-product="meloncello"><span class="shelf-preview"><img src="./img/boutique/bott.meloncello.png?v=1" alt=""></span><span class="shelf-caption"><strong>Meloncello</strong><small>Liquori Capri Blu</small></span></button>
+          <button class="shelf-card" type="button" data-product="cremadilimone"><span class="shelf-preview"><img src="./img/boutique/Bott.cremadilimone.png?v=1" alt=""></span><span class="shelf-caption"><strong>Crema di limone</strong><small>Liquori Capri Blu</small></span></button>
           <button class="shelf-card" type="button" disabled><span class="shelf-preview">💧</span><span class="shelf-caption"><strong>Acqua Capri Blu</strong><small>Prossimamente</small></span></button>
           <button class="shelf-card" type="button" disabled><span class="shelf-preview">🥃</span><span class="shelf-caption"><strong>Bicchieri</strong><small>Home Collection</small></span></button>
           <button class="shelf-card" type="button" disabled><span class="shelf-preview">👜</span><span class="shelf-caption"><strong>Borse</strong><small>Capri Blu Style</small></span></button>
@@ -69,11 +40,7 @@
 
       <article class="product-stage">
         <button class="nav-button nav-prev" id="productPrev" type="button" aria-label="Prodotto precedente" disabled>‹</button>
-        <div class="product-visual">
-          <span class="product-glow" aria-hidden="true"></span>
-          <img class="product-image" id="productImage" src="./img/boutique/bott.Limoncello.png?v=3" alt="Bottiglia di Limoncello Capri Blu Sorrento">
-          <span class="product-shadow" aria-hidden="true"></span>
-        </div>
+        <div class="product-visual"><span class="product-glow" aria-hidden="true"></span><img class="product-image" id="productImage" src="./img/boutique/bott.Limoncello.png?v=3" alt="Bottiglia di Limoncello Capri Blu Sorrento"><span class="product-shadow" aria-hidden="true"></span></div>
         <button class="nav-button nav-next" id="productNext" type="button" aria-label="Prodotto successivo">›</button>
       </article>
 
@@ -87,90 +54,23 @@
       <div class="product-dots" aria-label="Navigazione prodotti">
         <button class="dot is-active" type="button" data-product="limoncello" aria-label="Limoncello Capri Blu"></button>
         <button class="dot" type="button" data-product="meloncello" aria-label="Meloncello Capri Blu"></button>
+        <button class="dot" type="button" data-product="cremadilimone" aria-label="Crema di limone Capri Blu"></button>
       </div>
-
       <p class="brand-quote">Every object tells the story of Capri Blu.</p>
     </section>
   </main>
 
   <script>
-    window.addEventListener('load', function () { window.setTimeout(function () { document.body.classList.add('is-ready'); }, 1100); });
-
-    const products = {
-      limoncello: {
-        image: './img/boutique/bott.Limoncello.png?v=3',
-        alt: 'Bottiglia di Limoncello Capri Blu Sorrento',
-        kicker: 'Collezione Liquori',
-        title: 'Limoncello Capri Blu',
-        description: 'Ispirato ai profumi dei limoni della Penisola Sorrentina, racchiuso in una bottiglia decorata a mano.',
-        glowStrong: 'rgba(255,218,84,.34)',
-        glowSoft: 'rgba(255,194,32,.13)',
-        cardGlow: 'rgba(255,222,111,.28)'
-      },
-      meloncello: {
-        image: './img/boutique/bott.meloncello.png?v=1',
-        alt: 'Bottiglia di Meloncello Capri Blu Sorrento',
-        kicker: 'Collezione Liquori',
-        title: 'Meloncello Capri Blu',
-        description: 'Liquore cremoso e profumato al melone, presentato nella bottiglia decorata Capri Blu.',
-        glowStrong: 'rgba(255,151,34,.40)',
-        glowSoft: 'rgba(255,105,15,.16)',
-        cardGlow: 'rgba(255,142,45,.32)'
-      }
+    window.addEventListener('load',function(){window.setTimeout(function(){document.body.classList.add('is-ready')},1100)});
+    const products={
+      limoncello:{image:'./img/boutique/bott.Limoncello.png?v=3',alt:'Bottiglia di Limoncello Capri Blu Sorrento',kicker:'Collezione Liquori',title:'Limoncello Capri Blu',description:'Ispirato ai profumi dei limoni della Penisola Sorrentina, racchiuso in una bottiglia decorata a mano.',glowStrong:'rgba(255,218,84,.34)',glowSoft:'rgba(255,194,32,.13)',cardGlow:'rgba(255,222,111,.28)'},
+      meloncello:{image:'./img/boutique/bott.meloncello.png?v=1',alt:'Bottiglia di Meloncello Capri Blu Sorrento',kicker:'Collezione Liquori',title:'Meloncello Capri Blu',description:'Liquore cremoso e profumato al melone, presentato nella bottiglia decorata Capri Blu.',glowStrong:'rgba(255,151,34,.40)',glowSoft:'rgba(255,105,15,.16)',cardGlow:'rgba(255,142,45,.32)'},
+      cremadilimone:{image:'./img/boutique/Bott.cremadilimone.png?v=1',alt:'Bottiglia di Crema di limone Capri Blu Sorrento',kicker:'Collezione Liquori',title:'Crema di limone Capri Blu',description:'Una crema al limone morbida e vellutata, ispirata ai profumi della Penisola Sorrentina.',glowStrong:'rgba(255,244,183,.38)',glowSoft:'rgba(255,225,125,.15)',cardGlow:'rgba(255,239,174,.30)'}
     };
-
-    const order = ['limoncello','meloncello'];
-    let activeProduct = 'limoncello';
-    const shelf = document.getElementById('productShelf');
-    const showroom = document.getElementById('showroom');
-    const productImage = document.getElementById('productImage');
-    const productKicker = document.getElementById('productKicker');
-    const productTitle = document.getElementById('productTitle');
-    const productDescription = document.getElementById('productDescription');
-    const productPrev = document.getElementById('productPrev');
-    const productNext = document.getElementById('productNext');
-
-    function scrollShelf(direction) {
-      const card = shelf.querySelector('.shelf-card');
-      const distance = card ? card.getBoundingClientRect().width + 16 : 240;
-      shelf.scrollBy({ left: direction * distance, behavior: 'smooth' });
-    }
-
-    function selectProduct(key) {
-      if (!products[key] || key === activeProduct) return;
-      showroom.classList.add('is-switching');
-      window.setTimeout(function () {
-        const product = products[key];
-        activeProduct = key;
-        productImage.src = product.image;
-        productImage.alt = product.alt;
-        productKicker.textContent = product.kicker;
-        productTitle.textContent = product.title;
-        productDescription.textContent = product.description;
-        showroom.style.setProperty('--glow-strong', product.glowStrong);
-        showroom.style.setProperty('--glow-soft', product.glowSoft);
-        showroom.style.setProperty('--active-glow', product.cardGlow);
-        document.querySelectorAll('[data-product]').forEach(function (el) {
-          const active = el.dataset.product === key;
-          el.classList.toggle('is-active', active);
-          if (el.classList.contains('shelf-card')) {
-            if (active) el.setAttribute('aria-current','true'); else el.removeAttribute('aria-current');
-          }
-        });
-        const index = order.indexOf(key);
-        productPrev.disabled = index <= 0;
-        productNext.disabled = index >= order.length - 1;
-        const card = shelf.querySelector('.shelf-card[data-product="' + key + '"]');
-        if (card) card.scrollIntoView({ behavior:'smooth', block:'nearest', inline:'center' });
-        showroom.classList.remove('is-switching');
-      }, 220);
-    }
-
-    document.getElementById('shelfPrev').addEventListener('click', function () { scrollShelf(-1); });
-    document.getElementById('shelfNext').addEventListener('click', function () { scrollShelf(1); });
-    document.querySelectorAll('[data-product]').forEach(function (el) { el.addEventListener('click', function () { selectProduct(el.dataset.product); }); });
-    productPrev.addEventListener('click', function () { const i = order.indexOf(activeProduct); if (i > 0) selectProduct(order[i - 1]); });
-    productNext.addEventListener('click', function () { const i = order.indexOf(activeProduct); if (i < order.length - 1) selectProduct(order[i + 1]); });
+    const order=['limoncello','meloncello','cremadilimone'];let activeProduct='limoncello';const shelf=document.getElementById('productShelf'),showroom=document.getElementById('showroom'),productImage=document.getElementById('productImage'),productKicker=document.getElementById('productKicker'),productTitle=document.getElementById('productTitle'),productDescription=document.getElementById('productDescription'),productPrev=document.getElementById('productPrev'),productNext=document.getElementById('productNext');
+    function scrollShelf(direction){const card=shelf.querySelector('.shelf-card');const distance=card?card.getBoundingClientRect().width+16:240;shelf.scrollBy({left:direction*distance,behavior:'smooth'})}
+    function selectProduct(key){if(!products[key]||key===activeProduct)return;showroom.classList.add('is-switching');window.setTimeout(function(){const product=products[key];activeProduct=key;productImage.src=product.image;productImage.alt=product.alt;productKicker.textContent=product.kicker;productTitle.textContent=product.title;productDescription.textContent=product.description;showroom.style.setProperty('--glow-strong',product.glowStrong);showroom.style.setProperty('--glow-soft',product.glowSoft);showroom.style.setProperty('--active-glow',product.cardGlow);document.querySelectorAll('[data-product]').forEach(function(el){const active=el.dataset.product===key;el.classList.toggle('is-active',active);if(el.classList.contains('shelf-card')){if(active)el.setAttribute('aria-current','true');else el.removeAttribute('aria-current')}});const index=order.indexOf(key);productPrev.disabled=index<=0;productNext.disabled=index>=order.length-1;const card=shelf.querySelector('.shelf-card[data-product="'+key+'"]');if(card)card.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});showroom.classList.remove('is-switching')},220)}
+    document.getElementById('shelfPrev').addEventListener('click',function(){scrollShelf(-1)});document.getElementById('shelfNext').addEventListener('click',function(){scrollShelf(1)});document.querySelectorAll('[data-product]').forEach(function(el){el.addEventListener('click',function(){selectProduct(el.dataset.product)})});productPrev.addEventListener('click',function(){const i=order.indexOf(activeProduct);if(i>0)selectProduct(order[i-1])});productNext.addEventListener('click',function(){const i=order.indexOf(activeProduct);if(i<order.length-1)selectProduct(order[i+1])});
   </script>
 </body>
 </html>
