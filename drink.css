@@ -14,3 +14,11 @@
 @media(max-width:900px){.grid,.compact{grid-template-columns:repeat(3,minmax(0,1fr))}.hero .logo{width:clamp(210px,32vw,290px)}}
 @media(max-width:600px){.hero{padding:20px 6px 30px}.hero .logo{width:min(68vw,265px);height:auto;max-height:none;margin-bottom:6px}.hero h1{font-size:clamp(2.2rem,9vw,3.2rem)}.hero .tagline{font-size:.9rem}.grid,.compact{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.drink-card,.compact .drink-card{min-height:190px;padding:18px 10px}.symbol{font-size:2.7rem}.section{padding-bottom:38px}}
 @media(max-width:360px){.grid,.compact{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.drink-card h3{font-size:.86rem}.drink-card,.compact .drink-card{padding:14px 6px}}
+
+/* v3: navigazione superiore unificata e alone chiaro dietro il logo */
+.categories{position:sticky;top:10px;z-index:20;margin:0 auto 14px;max-width:1100px;justify-content:center;align-items:center}
+.categories .back{margin-right:auto;background:rgba(255,255,255,.10);border-color:rgba(242,210,123,.55);color:var(--gold);white-space:nowrap}
+.hero{position:relative;isolation:isolate}
+.hero::before{content:"";position:absolute;z-index:-1;left:50%;top:0;width:min(76vw,510px);height:min(76vw,390px);transform:translateX(-50%);border-radius:50%;background:radial-gradient(ellipse at 50% 46%,rgba(255,255,255,.53) 0%,rgba(248,252,255,.34) 28%,rgba(219,238,255,.17) 48%,rgba(178,219,255,.07) 62%,transparent 76%);filter:blur(19px);pointer-events:none}
+.hero .logo{position:relative;z-index:1;filter:drop-shadow(0 7px 15px rgba(0,0,0,.30))}
+@media(max-width:600px){.categories{top:5px;margin-bottom:9px;justify-content:center;gap:6px}.categories .back{margin-right:0;flex-basis:100%;text-align:center}.hero::before{width:min(94vw,380px);height:310px;top:-12px;filter:blur(14px)}}
