@@ -28,6 +28,27 @@ Registro cronologico degli interventi sul repository `CapriBlu/CapriBluMenu`. Do
 
 ---
 
+## 13 ottobre 2026 — Drink Collection, prima bozza
+
+**Stato:** bozza HTML/CSS creata, non ancora verificata dall'utente.
+**Branch:** `audit/cleanup-capriblumenu`.
+
+### Interventi
+- Analizzata la struttura di `shop.html`, il video di sfondo e il collegamento Drink Menu esistente nella Home.
+- Creati `drink.html` e `drink.css`, con video desktop/mobile esistenti, navigazione per categorie, schede responsive e animazioni CSS leggere.
+- Inseriti soft drink, acqua, birre, selezione N'Artigiana, spritz e sezione di anteprima vini.
+- Prezzi inseriti solo dove comunicati: soft drink €2,50; acqua plastica 0,5 L €1,50; Capri Blu 0,75 L €2,50; acqua plastica 1 L €3,00; birre da listino. Prezzi mancanti esplicitamente indicati come da definire.
+- L'acqua Capri Blu utilizza un'immagine già presente nella Boutique; le altre bevande usano simboli temporanei, in attesa delle illustrazioni realistiche in stile mediterraneo.
+- La vetrina vini separata `vini.html` non è ancora stata creata.
+- **Il pulsante Drink Menu nella Home non è stato modificato**: attende la verifica della nuova pagina prima di sostituire il PDF.
+
+### Verifiche e prossimi passi
+- Commit prima bozza: `633eb60` (HTML), `3e88c00` (CSS).
+- Da verificare su smartphone e desktop; nessun test visivo conclusivo ancora eseguito.
+- Da completare: immagini personalizzate, prezzi mancanti, conferma Ichnusa, vetrina vini e collegamento dalla Home.
+
+---
+
 ## Modello per nuove voci
 
 ### AAAA-MM-GG — Titolo
