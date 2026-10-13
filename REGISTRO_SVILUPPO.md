@@ -49,6 +49,20 @@ Registro cronologico degli interventi sul repository `CapriBlu/CapriBluMenu`. Do
 
 ---
 
+## 13 ottobre 2026 — Drink Collection, proporzioni v2
+
+**Stato:** CSS aggiornato; verifica visiva dell'utente ancora da effettuare.
+**Riferimento:** commit `56c7b8e`.
+
+- Esaminato il video di navigazione condiviso dall'utente.
+- Logo nell'intestazione aumentato in modo marcato e reso responsivo.
+- Griglia desktop limitata a quattro colonne, tablet a tre e smartphone a due per migliorare proporzioni e leggibilità.
+- Ritoccati spaziature, altezza delle schede e dimensioni di testo/illustrazioni.
+- Nessuna modifica al catalogo, ai prezzi o al pulsante Home; `main` resta invariato.
+- Da verificare: resa visiva su desktop e telefono; illustrazioni definitive ancora da realizzare.
+
+---
+
 ## Modello per nuove voci
 
 ### AAAA-MM-GG — Titolo
