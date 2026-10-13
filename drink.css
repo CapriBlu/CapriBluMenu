@@ -33,3 +33,12 @@
 .category-links{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:9px;width:100%}
 @media(max-width:850px){.categories{padding:12px}.categories .back{position:static;transform:none;flex-basis:100%;text-align:center}.category-links{justify-content:center}}
 @media(max-width:600px){.logo-medallion{width:min(94%,355px);min-height:245px;padding:18px 24px;margin-bottom:14px}.logo-medallion .logo{width:min(100%,260px)}.categories{padding:9px}.category-links{gap:6px}}
+
+/* v5 - fascia panoramica satinata: nessun ovale o alone */
+.logo-medallion{width:min(100%,1050px);min-height:0;margin:0 auto 14px;padding:13px 28px 10px;border-radius:24px;border:1px solid rgba(255,255,255,.16);background:linear-gradient(100deg,rgba(227,242,255,.035),rgba(235,245,255,.20) 36%,rgba(245,250,255,.23) 50%,rgba(235,245,255,.20) 64%,rgba(227,242,255,.035));box-shadow:0 12px 30px rgba(0,15,40,.15);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.logo-medallion::after{content:none;display:none}
+.logo-medallion .logo{width:clamp(220px,26vw,350px);max-height:350px;filter:drop-shadow(0 4px 11px rgba(0,18,50,.24))}
+.hero{padding-top:18px}
+.hero h1{font-size:clamp(2.3rem,6vw,4.4rem);margin-top:3px}
+@media(max-width:900px){.logo-medallion .logo{width:clamp(210px,32vw,290px)}}
+@media(max-width:600px){.logo-medallion{width:100%;padding:12px 14px 8px;border-radius:18px;margin-bottom:12px;background:linear-gradient(100deg,rgba(227,242,255,.07),rgba(245,250,255,.24) 50%,rgba(227,242,255,.07))}.logo-medallion .logo{width:min(68vw,265px);max-height:none}.hero{padding-top:14px}.hero h1{font-size:clamp(2.2rem,9vw,3.2rem)}}
