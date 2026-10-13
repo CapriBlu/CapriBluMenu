@@ -80,3 +80,31 @@
 @media(prefers-reduced-transparency:reduce){
   .glass-showroom .logo-medallion{background:rgba(222,236,250,.82);-webkit-backdrop-filter:none;backdrop-filter:none}
 }
+
+/* v8 - una sola superficie di vetro per tutta la pagina */
+.glass-showroom{
+  background:linear-gradient(150deg,rgba(233,244,255,.27),rgba(219,237,251,.22) 42%,rgba(215,235,251,.25));
+  border:1px solid rgba(255,255,255,.40);
+  box-shadow:0 24px 65px rgba(0,12,37,.20),inset 0 1px 0 rgba(255,255,255,.30);
+  -webkit-backdrop-filter:blur(12px) saturate(115%);
+  backdrop-filter:blur(12px) saturate(115%);
+}
+.glass-showroom .logo-medallion{
+  width:100%;max-width:100%;margin:0 auto;padding:6px 0 0;
+  border:0;border-radius:0;background:transparent;box-shadow:none;
+  -webkit-backdrop-filter:none;backdrop-filter:none;
+}
+.glass-showroom .logo-medallion .logo{
+  opacity:1;filter:drop-shadow(0 3px 7px rgba(240,249,255,.32));
+}
+.glass-showroom .hero{padding:4px 10px 5px}
+.glass-showroom .section:first-child{padding-top:8px}
+.glass-showroom .section-head{margin-bottom:19px}
+@media(max-width:600px){
+  .glass-showroom{background:rgba(225,239,252,.24);-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px)}
+  .glass-showroom .logo-medallion{padding:0;margin:0 auto}
+  .glass-showroom .hero{padding:0 4px 5px}
+}
+@media(prefers-reduced-transparency:reduce){
+  .glass-showroom{background:rgba(35,76,119,.94);-webkit-backdrop-filter:none;backdrop-filter:none}
+}
