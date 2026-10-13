@@ -42,3 +42,17 @@
 .hero h1{font-size:clamp(2.3rem,6vw,4.4rem);margin-top:3px}
 @media(max-width:900px){.logo-medallion .logo{width:clamp(210px,32vw,290px)}}
 @media(max-width:600px){.logo-medallion{width:100%;padding:12px 14px 8px;border-radius:18px;margin-bottom:12px;background:linear-gradient(100deg,rgba(227,242,255,.07),rgba(245,250,255,.24) 50%,rgba(227,242,255,.07))}.logo-medallion .logo{width:min(68vw,265px);max-height:none}.hero{padding-top:14px}.hero h1{font-size:clamp(2.2rem,9vw,3.2rem)}}
+
+/* v6 - vetrina unica in vetro satinato, dal logo al footer */
+.glass-showroom{position:relative;isolation:isolate;margin:16px auto 12px;padding:18px 34px 24px;border:1px solid rgba(230,244,255,.25);border-radius:30px;background:linear-gradient(165deg,rgba(227,242,255,.14),rgba(10,52,102,.23) 38%,rgba(9,43,87,.30) 78%,rgba(229,243,255,.10));box-shadow:0 24px 70px rgba(0,13,38,.26),inset 0 1px rgba(255,255,255,.22);-webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px)}
+.logo-medallion{width:100%;margin:0 auto 5px;padding:4px 12px 0;min-height:0;border:0;border-radius:0;background:none;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+.logo-medallion .logo{width:clamp(220px,26vw,350px);max-height:350px}
+.hero{padding:8px 10px 10px}
+.hero .tagline{margin:7px auto 4px;font-size:clamp(.9rem,1.4vw,1.03rem)}
+.hero .ornament{font-size:1rem}
+.section{padding-top:20px;padding-bottom:40px}
+.glass-showroom .drink-card{background:linear-gradient(145deg,rgba(13,68,131,.80),rgba(3,25,62,.86))}
+.glass-showroom .cantina{margin-bottom:15px}
+.glass-showroom footer{padding-bottom:5px}
+@media(max-width:600px){.glass-showroom{margin:10px auto;padding:12px 10px 16px;border-radius:21px;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}.logo-medallion{padding:0;margin-bottom:4px}.logo-medallion .logo{width:min(68vw,265px)}.hero{padding:6px 4px 10px}.section{padding-top:16px;padding-bottom:32px}}
+@media(prefers-reduced-transparency:reduce){.glass-showroom{background:rgba(8,37,76,.93);-webkit-backdrop-filter:none;backdrop-filter:none}}
