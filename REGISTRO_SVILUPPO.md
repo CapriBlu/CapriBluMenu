@@ -113,6 +113,18 @@ Registro cronologico degli interventi sul repository `CapriBlu/CapriBluMenu`. Do
 
 ---
 
+## 13 ottobre 2026 — Drink Collection, logo su vetro cristallo v7
+
+**Stato:** implementato, verifica visiva in attesa.
+**Commit:** `42df3b4` (CSS), `4469881` (cache CSS).
+
+- Dallo screenshot il logo appariva poco leggibile sul fondo blu scuro della vetrina.
+- Introdotta una piccola superficie in vetro chiaro satinato dietro al logo, con bordo singolo discreto, riflesso e blur, senza ripristinare la precedente forma ovale.
+- Il marchio resta quasi completamente opaco per mantenere leggibili le lettere blu; l'effetto semitrasparente riguarda soprattutto il vetro dietro di esso.
+- Invariati layout generale, navigazione, catalogo e prezzi.
+
+---
+
 ## Modello per nuove voci
 
 ### AAAA-MM-GG — Titolo
