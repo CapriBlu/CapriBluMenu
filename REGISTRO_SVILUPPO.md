@@ -125,6 +125,19 @@ Registro cronologico degli interventi sul repository `CapriBlu/CapriBluMenu`. Do
 
 ---
 
+## 13 ottobre 2026 — Drink Collection, vetro uniforme v8
+
+**Stato:** implementato, verifica visiva da effettuare.
+**Commit:** `7eaa102` (HTML), `e53047c` (CSS).
+
+- Rimossa la card chiara separata attorno al logo: il logo ora è inserito direttamente nella stessa superficie di vetro semitrasparente che racchiude tutta la pagina.
+- Resa più luminosa e uniforme la vetrina principale, mantenendo il video sullo sfondo.
+- Eliminate le diciture decorative «Un sorso di Costiera, tra tradizione e freschezza.» e «Freschezza mediterranea», oltre al piccolo ornamento sotto il logo.
+- Ridotta la distanza verticale tra logo e sezione Soft Drink.
+- Navigazione, prodotti, prezzi e Home invariati; `main` non modificato.
+
+---
+
 ## Modello per nuove voci
 
 ### AAAA-MM-GG — Titolo
