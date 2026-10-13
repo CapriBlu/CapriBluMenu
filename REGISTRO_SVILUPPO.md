@@ -100,6 +100,19 @@ Registro cronologico degli interventi sul repository `CapriBlu/CapriBluMenu`. Do
 
 ---
 
+## 13 ottobre 2026 — Drink Collection, vetrina continua v6
+
+**Stato:** implementato, in attesa di verifica visiva.
+**Commit:** `9b32ac3` (HTML), `ae0ce8e` (CSS).
+
+- Trasformata la fascia del logo in un'unica superficie semitrasparente che racchiude logo, contenuti e footer; video di Capri visibile sullo sfondo.
+- Rimossa la scritta «Capri Blu Sorrento» sopra il titolo e rimosso il titolo «Drink Collection» dall'intestazione; mantenuti logo, breve sottotitolo e ornamento.
+- Mantenuta la navigazione superiore esterna alla vetrina e centrata.
+- Regolati trasparenza, sfocatura e spaziature, con sfocatura più leggera su smartphone e fallback per preferenza di trasparenza ridotta.
+- Catalogo e prezzi invariati; il pulsante Home resta collegato al PDF fino alla verifica.
+
+---
+
 ## Modello per nuove voci
 
 ### AAAA-MM-GG — Titolo
