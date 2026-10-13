@@ -88,6 +88,18 @@ Registro cronologico degli interventi sul repository `CapriBlu/CapriBluMenu`. Do
 
 ---
 
+## 13 ottobre 2026 — Drink Collection, fascia panoramica v5
+
+**Stato:** implementato, da verificare visivamente.
+**Commit:** `ae78691` (CSS), `e24fad3` (versione foglio di stile).
+
+- Sostituita la card ovale con una fascia orizzontale in vetro satinato, semitrasparente, coordinata con la barra superiore.
+- Eliminati il doppio bordo e l'alone circolare; mantenuto il logo centrato e ben visibile.
+- Resa l'intestazione leggermente più compatta e ridotto il titolo per migliorare la gerarchia visiva.
+- Navigazione e catalogo invariati; il pulsante della Home continua a puntare al PDF fino all'approvazione.
+
+---
+
 ## Modello per nuove voci
 
 ### AAAA-MM-GG — Titolo
