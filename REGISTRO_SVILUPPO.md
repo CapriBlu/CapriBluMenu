@@ -76,6 +76,18 @@ Registro cronologico degli interventi sul repository `CapriBlu/CapriBluMenu`. Do
 
 ---
 
+## 13 ottobre 2026 — Drink Collection, medaglione e navigazione v4
+
+**Stato:** implementato; verifica visiva da effettuare.
+**Commit:** `232eba8` (HTML), `19b076b` (CSS).
+
+- Eliminato l'alone diffuso dietro il logo e inserito il marchio in una card ovale semitrasparente con bordo sottile, sfocatura del video e ombra delicata.
+- Centrati i pulsanti dei reparti nella barra superiore, mantenendo il pulsante «Torna al menu» separato a sinistra su desktop.
+- Su tablet e smartphone, il pulsante indietro occupa una riga dedicata e le categorie restano centrate.
+- Aggiornato il parametro di versione CSS a `v=4`; nessuna modifica a prezzi, catalogo o Home.
+
+---
+
 ## Modello per nuove voci
 
 ### AAAA-MM-GG — Titolo
