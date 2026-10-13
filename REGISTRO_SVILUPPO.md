@@ -63,6 +63,19 @@ Registro cronologico degli interventi sul repository `CapriBlu/CapriBluMenu`. Do
 
 ---
 
+## 13 ottobre 2026 — Drink Collection, navigazione e logo v3
+
+**Stato:** implementato, in attesa di verifica visiva.
+**Commit:** `fe3b2db` (HTML), `37987d0` (CSS).
+
+- Spostata la barra delle categorie sopra il logo e integrato al suo interno il collegamento «Torna al menu».
+- Aggiunto un alone bianco sfumato dietro al logo per separarlo dal video senza alterare la dimensione approvata.
+- Barra di navigazione mantenuta sticky; su schermi piccoli il pulsante indietro occupa una riga per garantire la leggibilità.
+- Aggiornata la versione del foglio di stile per evitare la cache precedente.
+- Nessun cambiamento a prezzi, catalogo o pulsante Drink Menu della Home; `main` invariato.
+
+---
+
 ## Modello per nuove voci
 
 ### AAAA-MM-GG — Titolo
