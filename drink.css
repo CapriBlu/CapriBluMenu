@@ -115,3 +115,26 @@
 .craft-photo{display:block;flex:0 0 auto;width:76px;height:76px;object-fit:contain;border-radius:12px}
 .wine-photo{display:block;width:min(210px,70%);height:140px;object-fit:contain;margin:0 auto 10px;filter:drop-shadow(0 8px 10px rgba(0,0,0,.25))}
 @media(max-width:600px){.drink-photo{height:94px;max-width:130px}.compact .drink-photo{height:86px;max-width:120px}.craft-photo{width:60px;height:60px}.wine-photo{height:115px}}
+
+/* v10 - fotografie a tutta scheda, centrate e con testo sempre leggibile */
+.glass-showroom .drink-card:has(> .drink-photo){justify-content:flex-end;isolation:isolate;padding:142px 14px 18px;min-height:265px;background:#0a2e5a}
+.glass-showroom .drink-card:has(> .drink-photo) .drink-photo,
+.glass-showroom .compact .drink-card:has(> .drink-photo) .drink-photo{
+ position:absolute;inset:0;width:100%;height:100%;max-width:none;margin:0;
+ object-fit:cover;object-position:center center;border-radius:inherit;
+ filter:none;z-index:-2;display:block;
+}
+.glass-showroom .drink-card:has(> .drink-photo)::after{
+ content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+ background:linear-gradient(to bottom,rgba(2,17,38,.04) 0%,rgba(2,17,38,.08) 35%,rgba(2,17,38,.72) 72%,rgba(2,17,38,.94) 100%);
+}
+.glass-showroom .drink-card:has(> .drink-photo) h3,
+.glass-showroom .drink-card:has(> .drink-photo) .detail,
+.glass-showroom .drink-card:has(> .drink-photo) .price{
+ position:relative;z-index:1;text-shadow:0 2px 8px rgba(0,0,0,.8)
+}
+.glass-showroom .drink-card:has(> .drink-photo) h3{margin-top:0;color:white}
+.glass-showroom .drink-card:has(> .drink-photo) .detail{color:#f4f8ff}
+@media(max-width:600px){
+ .glass-showroom .drink-card:has(> .drink-photo){min-height:235px;padding:125px 8px 15px}
+}
