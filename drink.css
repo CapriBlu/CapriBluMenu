@@ -138,3 +138,16 @@
 @media(max-width:600px){
  .glass-showroom .drink-card:has(> .drink-photo){min-height:235px;padding:125px 8px 15px}
 }
+
+/* v11 - vetrina fotografica dei vini */
+.wine-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:27px auto 0;text-align:left}
+.wine-card{min-width:0;border:1px solid rgba(255,255,255,.30);border-radius:22px;overflow:hidden;background:linear-gradient(145deg,rgba(10,57,106,.83),rgba(3,23,53,.91));box-shadow:0 12px 28px rgba(0,0,0,.2)}
+.wine-card>img{display:block;width:100%;height:265px;object-fit:contain;object-position:center;padding:12px 10px 0}
+.wine-info{padding:12px 14px 19px}
+.wine-info h3{font:700 1.2rem/1.2 Georgia,serif;color:var(--cream);margin:0 0 8px}
+.wine-maker{color:var(--gold);font-size:.84rem;min-height:2.7em}
+.wine-info p{margin:6px 0;font-size:.88rem}
+.wine-info .wine-tasting{font-size:.85rem;line-height:1.55;color:#e6effb;margin-top:13px}
+@media(max-width:900px){.wine-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.wine-grid{gap:10px}.wine-card>img{height:220px;padding:9px 5px 0}.wine-info{padding:10px}.wine-info h3{font-size:1.03rem}.wine-info p{font-size:.78rem}}
+@media(max-width:360px){.wine-grid{grid-template-columns:1fr}}
