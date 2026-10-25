@@ -1,55 +1,33 @@
-/* Pagina indipendente della cantina */
-body{background:#061e42 url("./img/LOGO.capriblu.png") center/0 no-repeat}
-.wine-page{max-width:1150px;margin:auto;padding:22px 20px 40px}
-.wine-header{display:flex;gap:12px;justify-content:space-between}
-.wine-brand{text-align:center;padding:25px 0 14px}
-.wine-brand img{display:block;width:160px;max-width:45vw;margin:0 auto 10px}
-.wine-brand h1{font:clamp(2.5rem,6vw,4.5rem) Georgia,serif;margin:4px auto;color:#fff9ed}
-.wine-brand p{color:#e3edfa}
-.wine-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
-.wine-card{cursor:pointer;min-width:0;display:flex;flex-direction:column;align-items:stretch;text-align:center;background:linear-gradient(160deg,rgba(35,82,130,.9),rgba(5,26,58,.98));border:1px solid rgba(242,210,123,.38);border-radius:24px;overflow:hidden;box-shadow:0 14px 35px #0005;transition:transform .2s,border-color .2s}
-.wine-card:hover{transform:translateY(-5px);border-color:#f2d27b}
-.wine-card:focus-visible{outline:3px solid #f2d27b;outline-offset:3px}
-.wine-card>img{width:100%;height:310px;object-fit:contain;padding:13px 8px 0;display:block}
-.wine-info{padding:14px 15px 22px;flex:1}
-.wine-info h3{font:700 1.18rem/1.25 Georgia,serif;color:#fff9ed;margin:0 0 8px}
-.wine-maker{color:#f2d27b!important;font-size:.83rem}
-.wine-info p{font-size:.85rem;margin:7px 0}
-.wine-tasting{color:#dbe6f4}
-.wine-info .price{color:#f2d27b;font-size:1.5rem;margin-top:17px}
-#wine-dialog{position:fixed;inset:0;margin:auto;width:min(880px,94vw);max-width:94vw;max-height:92vh;padding:26px;border:1px solid #f2d27b77;border-radius:24px;color:white;background:linear-gradient(140deg,#164979,#071e40);box-shadow:0 24px 90px #000b;overflow:auto}
-#wine-dialog::backdrop{background:rgba(1,9,27,.82);backdrop-filter:blur(5px)}
-.wine-close{position:absolute;top:10px;right:12px;border:1px solid #fff7;border-radius:50%;background:#0c315e;color:white;font-size:2rem;width:45px;height:45px;cursor:pointer;z-index:2}
-.wine-dialog-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:24px}
-.wine-expanded-image{width:100%;height:min(65vh,630px);object-fit:contain}
-.wine-dialog-body .wine-info{padding:20px;text-align:left}
-.wine-dialog-body h3{font-size:clamp(1.5rem,3vw,2.4rem)}
-.wine-dialog-body p{font-size:1rem}
-@media(max-width:900px){.wine-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:600px){.wine-page{padding:12px}.wine-grid{gap:11px}.wine-card>img{height:225px}.wine-info{padding:10px}.wine-info h3{font-size:1rem}.wine-info p{font-size:.78rem}#wine-dialog{padding:38px 12px 14px}.wine-dialog-body{grid-template-columns:1fr;gap:0}.wine-expanded-image{height:43vh}.wine-dialog-body .wine-info{text-align:center;padding:10px}}
-@media(max-width:360px){.wine-grid{grid-template-columns:1fr}}
-@media(prefers-reduced-motion:reduce){.wine-card{transition:none}}
-
-/* v2 - atmosfera Boutique: video panoramico, vetro satinato e bottiglie protagoniste */
-html{min-height:100%;background:#06142d}
-body{position:relative;min-height:100vh;background:#06142d}
-.bg-video{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none}
-.wine-video-mobile{display:none}
-.wine-video-overlay{position:fixed;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(3,15,40,.52),rgba(3,15,40,.64) 45%,rgba(3,15,40,.76))}
-.wine-page{position:relative;z-index:2;max-width:1240px}
-.wine-header{margin-bottom:20px}
-.wine-showroom{padding:26px 28px 32px;background:linear-gradient(155deg,rgba(220,239,255,.17),rgba(7,42,91,.38) 65%,rgba(207,230,255,.12));border:1px solid rgba(255,255,255,.29);border-radius:32px;box-shadow:0 25px 65px rgba(0,9,32,.3),inset 0 1px rgba(255,255,255,.21);-webkit-backdrop-filter:blur(12px) saturate(120%);backdrop-filter:blur(12px) saturate(120%)}
-.wine-brand{padding:9px 0 28px}
-.wine-brand img{width:min(260px,52vw);filter:drop-shadow(0 6px 15px rgba(0,0,0,.25))}
-.wine-brand h1{font-size:clamp(2.25rem,5vw,4rem);margin-top:8px}
-.wine-brand p{max-width:680px;margin:12px auto 0;line-height:1.5}
-.wine-grid{gap:20px}
-.wine-card{background:linear-gradient(150deg,rgba(24,78,140,.58),rgba(3,24,58,.71));border-color:rgba(255,255,255,.28);box-shadow:0 12px 30px rgba(0,0,0,.21)}
-.wine-card>img{height:360px;padding:16px 12px 0;filter:drop-shadow(0 17px 16px rgba(0,0,0,.33));transition:transform .3s}
-.wine-card:hover>img{transform:scale(1.035)}
-.wine-info h3{font-size:1.2rem}
-.wine-info .price{display:block;margin:16px auto 0;font:700 1.6rem Georgia,serif}
-#wine-dialog{background:linear-gradient(160deg,rgba(35,88,149,.97),rgba(3,20,50,.98));border-color:rgba(255,255,255,.4)}
-.wine-expanded-image{filter:drop-shadow(0 18px 22px rgba(0,0,0,.28))}
-@media(max-width:600px){.wine-video-desktop{display:none}.wine-video-mobile{display:block}.wine-video-overlay{background:linear-gradient(180deg,rgba(3,15,40,.45),rgba(3,15,40,.74))}.wine-page{padding:12px 10px 30px}.wine-showroom{padding:16px 10px 18px;border-radius:23px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}.wine-brand{padding:5px 0 19px}.wine-brand img{width:min(215px,56vw)}.wine-brand p{font-size:.9rem}.wine-grid{gap:10px}.wine-card>img{height:250px;padding:10px 6px 0}.wine-info .price{font-size:1.3rem}}
-@media(prefers-reduced-motion:reduce){.wine-card>img{transition:none}.wine-card:hover>img{transform:none}}
+/* Cantina Boutique v3: scena centrale e selettore espandibile */
+:root{--gold:#f2d27b}*{box-sizing:border-box}
+html{background:#06142d}body{margin:0;background:#06142d;color:#fff;font-family:Arial,Helvetica,sans-serif;line-height:1.5}
+.bg-video{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none}.wine-video-mobile{display:none}
+.wine-video-overlay{position:fixed;inset:0;z-index:1;background:linear-gradient(180deg,rgba(2,15,38,.48),rgba(3,17,43,.7));pointer-events:none}
+.wine-page{position:relative;z-index:2;max-width:1160px;margin:auto;padding:20px 18px 40px}
+.wine-header{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:18px}
+.back{display:inline-flex;align-items:center;min-height:44px;padding:10px 17px;border:1px solid #ffffff70;border-radius:30px;color:#fff;background:#092c57a8;text-decoration:none}
+.back:hover,.back:focus-visible{border-color:var(--gold);color:var(--gold)}
+.wine-showroom{padding:24px 30px 28px;border:1px solid #ffffff4d;border-radius:32px;background:linear-gradient(140deg,rgba(226,241,255,.19),rgba(8,45,92,.33) 54%,rgba(8,36,80,.3));box-shadow:0 24px 65px #0005;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.wine-brand{text-align:center;margin:0 auto 22px}.wine-brand>img{display:block;width:clamp(150px,22vw,235px);max-width:60vw;margin:0 auto 10px;filter:drop-shadow(0 8px 13px #0005)}
+.eyebrow{color:var(--gold);font-size:.75rem;letter-spacing:.19em;font-weight:700;text-transform:uppercase}
+.wine-brand h1{font:clamp(2.2rem,5vw,3.7rem)/1.12 Georgia,serif;margin:8px 0;color:#fff9ed}
+.wine-brand p{color:#edf4ff;max-width:620px;margin:10px auto}
+.wine-feature{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:16px;align-items:center;border:1px solid #ffffff38;border-radius:28px;background:linear-gradient(150deg,rgba(6,35,76,.32),rgba(3,24,55,.55));padding:14px 22px 24px}
+.wine-stage{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;align-items:center;min-width:0}
+.wine-visual{height:440px;position:relative;display:flex;align-items:center;justify-content:center;isolation:isolate}
+.wine-visual img{position:relative;z-index:2;display:block;max-width:90%;width:auto;height:96%;object-fit:contain;filter:drop-shadow(0 22px 18px #0008)}
+.wine-glow{position:absolute;z-index:0;width:88%;height:75%;border-radius:50%;background:radial-gradient(ellipse,rgba(200,229,255,.18),rgba(130,191,244,.08) 42%,transparent 72%);filter:blur(14px)}
+.wine-shadow{position:absolute;bottom:3%;width:55%;height:19px;filter:blur(10px);border-radius:50%;background:#0007}
+.wine-arrow{position:relative;z-index:3;width:42px;height:52px;border-radius:30px;border:1px solid #ffffff77;background:#0d4276aa;color:white;font-size:32px;cursor:pointer}
+.wine-arrow:hover,.wine-arrow:focus-visible{border-color:var(--gold);color:var(--gold)}
+.wine-feature-details{min-width:0;text-align:left;padding:12px 8px 12px 14px}
+.wine-feature-details h2{font:clamp(1.8rem,3vw,2.8rem)/1.12 Georgia,serif;color:#fff9ed;margin:11px 0}
+.wine-producer{color:var(--gold);font-weight:600}.wine-facts{display:flex;flex-wrap:wrap;gap:9px;margin:21px 0}.wine-facts span{padding:9px 12px;border-radius:12px;background:#ffffff16;border:1px solid #ffffff3a;font-size:.92rem}.wine-facts b{display:block;color:#f2d27b;font-size:.76rem;text-transform:uppercase;letter-spacing:.08em}
+.wine-description{color:#eaf2ff;line-height:1.7}.wine-price{margin:25px 0 0;padding-top:13px;border-top:1px solid #ffffff3c}.wine-price span{display:block;font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:#cedfed}.wine-price strong{font:700 2.2rem Georgia,serif;color:var(--gold)}
+.wine-shelf{display:flex;gap:12px;margin:20px auto 0;overflow-x:auto;padding:8px 2px 14px;scrollbar-color:#c8d8e9 #123a64}
+.wine-thumb{flex:1 0 0;min-width:140px;display:flex;align-items:center;gap:10px;padding:10px 12px;min-height:93px;border:1px solid #ffffff4c;border-radius:18px;background:rgba(4,31,69,.6);color:white;cursor:pointer;text-align:left;font-weight:700;font-size:.86rem}
+.wine-thumb img{width:49px;height:72px;object-fit:contain;filter:drop-shadow(0 8px 7px #0007)}.wine-thumb.active{border-color:var(--gold);background:rgba(55,100,155,.57);box-shadow:0 0 0 1px #f2d27b55}.wine-thumb:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+footer{text-align:center;margin-top:24px;color:#e5effc}footer a{color:var(--gold)}
+@media(max-width:800px){.wine-feature{grid-template-columns:1fr}.wine-feature-details{text-align:center;padding:10px}.wine-facts{justify-content:center}.wine-visual{height:370px}.wine-shelf{margin-top:15px}.wine-thumb{min-width:145px}}
+@media(max-width:600px){.wine-video-desktop{display:none}.wine-video-mobile{display:block}.wine-page{padding:12px 10px 28px}.wine-showroom{padding:14px 10px 18px;border-radius:23px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}.wine-brand{margin-bottom:14px}.wine-brand>img{width:175px}.wine-brand p{font-size:.88rem}.wine-feature{padding:8px 6px 15px;gap:4px;border-radius:20px}.wine-stage{grid-template-columns:38px minmax(0,1fr) 38px}.wine-arrow{width:37px;height:49px}.wine-visual{height:320px}.wine-feature-details h2{font-size:1.85rem}.wine-description{font-size:.9rem}.wine-thumb{min-width:125px;padding:8px;font-size:.78rem;gap:6px}.wine-thumb img{width:39px;height:60px}.wine-shelf{gap:8px}}
+@media(prefers-reduced-transparency:reduce){.wine-showroom{background:#153e6e;backdrop-filter:none}}
