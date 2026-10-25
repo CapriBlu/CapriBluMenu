@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#092b55"><meta name="description" content="La selezione di vini di Capri Blu Sorrento.">
-<title>La Cantina | Capri Blu Sorrento</title><link rel="icon" href="./img/LOGO.capriblu.png"><link rel="stylesheet" href="./drink.css?v=11"><link rel="stylesheet" href="./vini.css?v=5"></head>
+<title>La Cantina | Capri Blu Sorrento</title><link rel="icon" href="./img/LOGO.capriblu.png"><link rel="stylesheet" href="./drink.css?v=11"><link rel="stylesheet" href="./vini.css?v=6"></head>
 <body>
 <video class="bg-video wine-video-desktop" autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src="./img/capri_blu_pc_25s_1080p_hq.mp4?v=1" type="video/mp4"></video>
 <video class="bg-video wine-video-mobile" autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src="./img/vid.webM.mobile.webm" type="video/webm"><source src="./img/capri_blu_pc_25s_1080p_hq.mp4?v=1" type="video/mp4"></video>
@@ -21,59 +21,78 @@
 <script>
 (function(){
 const wines=[{"image":"./img/vino/Furore%20Rosso.png","alt":"Furore Rosso Marisa Cuomo","name":"Furore Rosso","maker":"Marisa Cuomo · Costa d'Amalfi DOC","grapes":"Piedirosso e Aglianico","year":"2024","description":"Rosso morbido e mediterraneo, con sentori di ciliegia matura, liquirizia e un finale delicatamente speziato.","price":"€ 50,00"},{"image":"./img/vino/jungano.png","alt":"Jungano Aglianico San Salvatore 2020","name":"Jungano","maker":"San Salvatore 1988 · Paestum IGP","grapes":"Aglianico 100%","year":"2020","description":"Intenso ed elegante, con frutti rossi, violetta e spezie; al palato avvolgente, fresco e persistente.","price":"€ 40,00"},{"image":"./img/vino/Taurasi.png","alt":"Taurasi Vigna Cinque Querce Salvatore Molettieri 2016","name":"Taurasi Vigna Cinque Querce","maker":"Salvatore Molettieri · Taurasi DOCG","grapes":"Aglianico 100%","year":"2016","description":"Strutturato e complesso, con prugna matura, spezie, liquirizia e note balsamiche. Finale lungo e raffinato.","price":"€ 70,00"},{"image":"./img/vino/Brunello.png","alt":"Brunello di Montalcino CastelGiocondo Frescobaldi 2020","name":"Brunello di Montalcino CastelGiocondo","maker":"Frescobaldi · Brunello di Montalcino DOCG","grapes":"Sangiovese 100%","year":"2020","description":"Elegante e armonioso, con piccoli frutti rossi, liquirizia e spezie dolci. Tannini fini e finale persistente.","price":"€ 60,00"},{"image":"./img/vino/Nuance%20Taurasi.png","alt":"Nuance Taurasi","name":"Nuance Taurasi","maker":"Cantine Forno · Taurasi DOCG","grapes":"Aglianico 100%","year":"2020","description":"Rosso intenso e strutturato, con richiami di frutti scuri, prugna, spezie e una piacevole persistenza.","price":"€ 35,00"},{"image":"./img/vino/Cadetto.png","alt":"Cadetto Rosso 2023","name":"Cadetto Rosso","maker":"Lungarotti · Umbria IGT","grapes":"Sangiovese e altre uve rosse locali","year":"2023","description":"Rosso giovane e morbido, con profumi di violetta, spezie leggere, marasca e visciola. Piacevole e versatile a tavola.","price":"€ 25,00"},{"image":"./img/vino/Merlot.png","alt":"Casalforte Merlot Veneto IGT","name":"Casalforte Merlot","maker":"Cantine Riondo · Veneto IGT","grapes":"Merlot 100%","year":"2023","description":"Morbido e avvolgente, con note di ciliegia matura, frutti di bosco, prugna e un delicato accento speziato.","price":"€ 25,00"},{"image":"./img/vino/Nuance%20Aglianico.png","alt":"Nuance Sannio Aglianico DOC","name":"Nuance Sannio Aglianico","maker":"Cantine Forno · Sannio DOC","grapes":"Aglianico 100%","year":"2025","description":"Rubino vivace, profumi di ciliegia, mora, lampone e sfumature di spezie e tabacco. Al palato equilibrato, morbido e persistente.","price":"€ 25,00"}];
-let selected=0;
+let selected=-1;
+let position=0;
+let last=0;
+let pauseUntil=0;
 const $=id=>document.getElementById(id);
-const thumbs=[...document.querySelectorAll('.wine-thumb')];
-function render(index){
- selected=(index+wines.length)%wines.length;
- const w=wines[selected];
- const img=$('featuredWineImage');img.src=w.image;img.alt=w.alt;
+const shelf=document.querySelector('.wine-shelf');
+const thumbs=[...shelf.querySelectorAll('.wine-thumb')];
+const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+const stepSeconds=7.5;
+function cyclicDistance(i,p){
+ let d=((i-p+wines.length/2)%wines.length+wines.length)%wines.length-wines.length/2;
+ return d;
+}
+function showWine(index){
+ const i=(index+wines.length)%wines.length;
+ if(i===selected)return;
+ selected=i;
+ const w=wines[i];
+ const img=$('featuredWineImage'); img.src=w.image;img.alt=w.alt;
  $('wineTitle').textContent=w.name;$('wineMaker').textContent=w.maker;
  $('wineGrapes').innerHTML='<b>Uvaggio</b> '+w.grapes;
  $('wineVintage').innerHTML='<b>Annata</b> '+w.year;
  $('wineDescription').textContent=w.description;$('winePrice').textContent=w.price;
- $('wineCounter').textContent='ETICHETTA '+(selected+1)+' DI '+wines.length;
+ $('wineCounter').textContent='ETICHETTA '+(i+1)+' DI '+wines.length;
+}
+function paint(){
+ const width=shelf.clientWidth;
+ const spacing=width<=470?Math.min(100,width*.29):width<=800?Math.min(155,width*.225):Math.min(198,width*.19);
+ let closest=0,minimum=Infinity;
  thumbs.forEach((button,i)=>{
-  let distance=i-selected;
-  if(distance>wines.length/2) distance-=wines.length;
-  if(distance< -wines.length/2) distance+=wines.length;
-  if(wines.length%2===0 && distance===wines.length/2) distance=-distance;
-  const visible=Math.abs(distance)<=2;
-  button.style.setProperty('--offset',distance);
-  button.style.setProperty('--scale',distance===0?1.2:Math.abs(distance)===1?1:0.8);
-  button.style.setProperty('--opacity',distance===0?1:Math.abs(distance)===1?0.87:0.65);
-  button.classList.toggle('active',i===selected);
-  button.classList.toggle('is-hidden',!visible);
-  button.setAttribute('aria-pressed',i===selected?'true':'false');
+  const d=cyclicDistance(i,position);
+  const a=Math.abs(d);
+  const scale=a<=1?1.2-.2*a:a<=2?1-.2*(a-1):.8;
+  const opacity=a<=1?1-.12*a:a<=2?.88-.35*(a-1):Math.max(0,.53-(a-2)*.5);
+  button.style.setProperty('--x',Math.round(d*spacing*100)/100+'px');
+  button.style.setProperty('--scale',scale.toFixed(3));
+  button.style.setProperty('--opacity',opacity.toFixed(3));
+  button.style.zIndex=String(Math.max(1,10-Math.round(a*2)));
+  const visible=a<2.8;
+  button.style.pointerEvents=visible?'auto':'none';
   button.tabIndex=visible?0:-1;
   button.setAttribute('aria-hidden',visible?'false':'true');
+  if(a<minimum){minimum=a;closest=i}
  });
+ showWine(closest);
+ thumbs.forEach((b,i)=>{const active=i===selected;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active))});
 }
-$('winePrev').addEventListener('click',()=>render(selected-1));
-$('wineNext').addEventListener('click',()=>render(selected+1));
-const shelf=document.querySelector('.wine-shelf');
-const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
-let timer=null;
-function stopAuto(){if(timer!==null){window.clearInterval(timer);timer=null}}
-function startAuto(){
- stopAuto();
- if(reduced.matches||document.hidden||shelf.matches(':hover')||shelf.contains(document.activeElement))return;
- timer=window.setInterval(()=>{
-  if(document.hidden||shelf.matches(':hover')||shelf.contains(document.activeElement)){stopAuto();return}
-  render(selected+1);
- },5200);
+function choose(i){
+ const d=cyclicDistance(i,position);
+ position=(position+d+wines.length)%wines.length;
+ pauseUntil=performance.now()+5500;
+ paint();
 }
-thumbs.forEach((button,i)=>button.addEventListener('click',()=>{render(i);startAuto()}));
-$('winePrev').addEventListener('click',startAuto);
-$('wineNext').addEventListener('click',startAuto);
-shelf.addEventListener('mouseenter',stopAuto);
-shelf.addEventListener('mouseleave',startAuto);
-shelf.addEventListener('focusin',stopAuto);
-shelf.addEventListener('focusout',()=>window.setTimeout(startAuto,0));
-document.addEventListener('visibilitychange',()=>document.hidden?stopAuto():startAuto());
-if(reduced.addEventListener)reduced.addEventListener('change',startAuto);
-render(0);
-startAuto();
-document.addEventListener('keydown',e=>{if(e.target.closest('input,textarea,select'))return;if(e.key==='ArrowRight')render(selected+1);if(e.key==='ArrowLeft')render(selected-1)});
+thumbs.forEach((button,i)=>button.addEventListener('click',()=>choose(i)));
+$('winePrev').addEventListener('click',()=>choose((selected-1+wines.length)%wines.length));
+$('wineNext').addEventListener('click',()=>choose((selected+1)%wines.length));
+shelf.addEventListener('pointerenter',()=>{pauseUntil=Infinity});
+shelf.addEventListener('pointerleave',()=>{pauseUntil=performance.now()+1400});
+shelf.addEventListener('focusin',()=>{pauseUntil=Infinity});
+shelf.addEventListener('focusout',()=>{setTimeout(()=>{if(!shelf.contains(document.activeElement))pauseUntil=performance.now()+3000},0)});
+document.addEventListener('keydown',e=>{
+ if(e.target.closest('input,textarea,select'))return;
+ if(e.key==='ArrowRight'){e.preventDefault();choose((selected+1)%wines.length)}
+ if(e.key==='ArrowLeft'){e.preventDefault();choose((selected-1+wines.length)%wines.length)}
+});
+function frame(now){
+ const delta=last?Math.min((now-last)/1000,.08):0;last=now;
+ if(!reduced.matches&&!document.hidden&&now>pauseUntil)position=(position+delta/stepSeconds)%wines.length;
+ paint();
+ requestAnimationFrame(frame);
+}
+window.addEventListener('resize',paint);
+requestAnimationFrame(frame);
 })();
 </script></body></html>
