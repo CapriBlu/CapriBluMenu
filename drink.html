@@ -7,7 +7,7 @@
 <meta name="description" content="Le bevande di Capri Blu Sorrento: soft drink, birre, spritz e la nostra cantina.">
 <title>Drink Collection | Capri Blu Sorrento</title>
 <link rel="icon" href="./img/LOGO.capriblu.png" type="image/png">
-<link rel="stylesheet" href="./drink.css?v=11">
+<link rel="stylesheet" href="./drink.css?v=12">
 </head>
 <body>
 <video class="bg-video desktop" autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source media="(min-width: 601px)" src="./img/capri_blu_pc_25s_1080p_hq.mp4?v=1" type="video/mp4"></video>
@@ -16,7 +16,7 @@
 <div class="page">
 <nav class="categories" aria-label="Navigazione Drink Menu">
 <a class="back" href="./index.html">← Torna al menu</a>
-<div class="category-links"><a href="#soft">Soft drink</a><a href="#acqua">Acqua</a><a href="#birre">Birre</a><a href="#spritz">Spritz</a><a href="./vini.html">Vini</a></div>
+<div class="category-links"><a class="nav-item" href="#soft"><span aria-hidden="true">🥤</span> Bibite</a><a class="nav-item" href="#acqua"><span aria-hidden="true">💧</span> Acqua</a><a class="nav-item nav-cantina" href="./vini.html"><span aria-hidden="true">🍷</span> Cantina</a><a class="nav-item" href="#birre"><span aria-hidden="true">🍺</span> Birre</a><a class="nav-item" href="#spritz"><span aria-hidden="true">🍹</span> Spritz</a></div>
 </nav>
 <div class="glass-showroom">
 <header class="hero">
@@ -65,5 +65,19 @@
 <footer><img src="./img/LOGO.capriblu.png" alt="" loading="lazy"><p>Capri Blu Sorrento · La dolce vita, un sorso alla volta.</p><a href="./index.html">Torna alla Home ↑</a></footer>
 </div><!-- /glass-showroom -->
 </div>
-</body>
+<script>
+(function(){
+ const links=[...document.querySelectorAll('.category-links a[href^="#"]')];
+ const sections=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
+ function updateActive(){
+  const threshold=window.innerWidth<650?178:145;
+  let current=sections[0];
+  for(const section of sections){if(section.getBoundingClientRect().top<=threshold)current=section}
+  links.forEach(a=>{const active=a.getAttribute('href')==='#'+current.id;a.classList.toggle('is-active',active);if(active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')});
+ }
+ window.addEventListener('scroll',updateActive,{passive:true});
+ window.addEventListener('resize',updateActive);
+ updateActive();
+})();
+</script></body>
 </html>
