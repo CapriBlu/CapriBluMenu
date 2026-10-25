@@ -151,3 +151,19 @@
 @media(max-width:900px){.wine-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.wine-grid{gap:10px}.wine-card>img{height:220px;padding:9px 5px 0}.wine-info{padding:10px}.wine-info h3{font-size:1.03rem}.wine-info p{font-size:.78rem}}
 @media(max-width:360px){.wine-grid{grid-template-columns:1fr}}
+
+/* v12 - navigazione Boutique leggibile, Cantina protagonista */
+.categories{min-height:76px;gap:16px;padding:12px 14px 12px 160px;border-radius:22px;background:rgba(5,34,75,.89);border:1px solid rgba(214,237,255,.37);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}
+.categories .back{left:15px;min-height:46px;display:inline-flex;align-items:center;justify-content:center;padding:10px 15px;font-size:.89rem}
+.category-links{display:flex;align-items:center;justify-content:center;gap:9px;flex-wrap:nowrap}
+.category-links .nav-item{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:47px;padding:11px 16px;white-space:nowrap;border:1px solid rgba(255,255,255,.32);border-radius:999px;background:rgba(255,255,255,.09);color:#fff;font-size:1rem;font-weight:700;transition:background .25s,border-color .25s,box-shadow .25s}
+.category-links .nav-item.is-active{background:rgba(28,113,193,.6);border-color:rgba(242,210,123,.95);box-shadow:inset 0 -2px rgba(242,210,123,.65),0 0 14px rgba(115,192,255,.18)}
+.category-links .nav-cantina{isolation:isolate;min-height:57px;padding:12px 25px;margin:0 7px;font-size:1.17rem;color:#fff8df;background:linear-gradient(120deg,rgba(27,91,160,.9),rgba(6,50,109,.95));border-color:rgba(242,210,123,.75);box-shadow:0 7px 24px rgba(0,0,0,.23),inset 0 0 15px rgba(255,233,170,.1)}
+.category-links .nav-cantina:before{content:"";position:absolute;inset:-2px;border-radius:inherit;padding:2px;background:conic-gradient(from var(--shine-angle,0deg),transparent 0deg,transparent 282deg,rgba(255,255,255,.15) 305deg,#fff4b8 325deg,rgba(255,255,255,.25) 344deg,transparent 360deg);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;pointer-events:none;animation:cantinaOrbit 9s linear infinite}
+@property --shine-angle{syntax:"<angle>";initial-value:0deg;inherits:false}
+@keyframes cantinaOrbit{to{--shine-angle:360deg}}
+.category-links .nav-cantina:hover,.category-links .nav-cantina:focus-visible{background:rgba(34,110,190,.95);border-color:#ffe6a0}
+.section{scroll-margin-top:125px}
+@media(max-width:1000px){.categories{padding:10px;flex-direction:column;gap:8px}.categories .back{position:static;transform:none;min-height:38px;padding:5px 12px;font-size:.79rem}.category-links{gap:7px}.category-links .nav-item{min-height:43px;padding:9px 12px;font-size:.91rem}.category-links .nav-cantina{min-height:51px;padding:10px 21px;font-size:1.07rem}}
+@media(max-width:650px){.categories{top:4px;padding:8px 6px;gap:6px;border-radius:16px}.categories .back{flex-basis:auto;margin:0}.category-links{width:100%;justify-content:flex-start;overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-width:none;padding:4px 5px 7px}.category-links::-webkit-scrollbar{display:none}.category-links .nav-item{flex:none;font-size:.87rem;padding:10px 13px;min-height:45px}.category-links .nav-cantina{font-size:1rem;min-height:51px;padding:11px 20px;margin:0 4px}.section{scroll-margin-top:150px}}
+@media(prefers-reduced-motion:reduce){.category-links .nav-cantina:before{animation:none;background:linear-gradient(120deg,transparent,rgba(255,239,174,.55),transparent)}}
