@@ -149,8 +149,8 @@
       "categoryId": "pizze-tradizione",
       "priceCents": 1190,
       "order": 0,
-      "thumbnail": null,
-      "image": null,
+      "thumbnail": "pizze-tradizione/thumbnails/tricolore.webp",
+      "image": "pizze-tradizione/full/tricolore.webp",
       "allergenCodes": [
         1,
         7,
@@ -183,15 +183,18 @@
         "pdf": "pdf/menu_autunno.pdf",
         "page": 4
       },
-      "reviewStatus": "transcribed"
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "path": "img/menu/pizze-tradizione/full/Tricolore.zoomout.png"
+      }
     },
     {
       "id": "cinque-formaggi",
       "categoryId": "pizze-tradizione",
       "priceCents": 1190,
       "order": 1,
-      "thumbnail": null,
-      "image": null,
+      "thumbnail": "pizze-tradizione/thumbnails/cinque-formaggi.webp",
+      "image": "pizze-tradizione/full/cinque-formaggi.webp",
       "allergenCodes": [
         1,
         7
@@ -207,15 +210,18 @@
         "pdf": "pdf/menu_autunno.pdf",
         "page": 4
       },
-      "reviewStatus": "transcribed"
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "path": "img/menu/pizze-tradizione/full/5 formagi.jpeg"
+      }
     },
     {
       "id": "salsiccia-e-friarielli",
       "categoryId": "pizze-tradizione",
       "priceCents": 1190,
       "order": 2,
-      "thumbnail": null,
-      "image": null,
+      "thumbnail": "pizze-tradizione/thumbnails/salsiccia-e-friarielli.webp",
+      "image": "pizze-tradizione/full/salsiccia-e-friarielli.webp",
       "allergenCodes": [
         1,
         7
@@ -246,7 +252,10 @@
         "pdf": "pdf/menu_autunno.pdf",
         "page": 4
       },
-      "reviewStatus": "transcribed"
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "path": "img/menu/pizze-tradizione/full/Broccoli e Salsiccia.jpg"
+      }
     },
     {
       "id": "napoletana-rivisitata",
@@ -277,8 +286,8 @@
       "categoryId": "pizze-tradizione",
       "priceCents": 1090,
       "order": 4,
-      "thumbnail": null,
-      "image": null,
+      "thumbnail": "pizze-tradizione/thumbnails/bufalina.webp",
+      "image": "pizze-tradizione/full/bufalina.webp",
       "allergenCodes": [
         1,
         7
@@ -309,7 +318,10 @@
         "pdf": "pdf/menu_autunno.pdf",
         "page": 4
       },
-      "reviewStatus": "transcribed"
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "path": "img/menu/pizze-tradizione/full/Bufalina.jpg"
+      }
     },
     {
       "id": "pancetta-e-cipolla",
@@ -357,8 +369,8 @@
       "categoryId": "pizze-tradizione",
       "priceCents": 1090,
       "order": 6,
-      "thumbnail": null,
-      "image": null,
+      "thumbnail": "pizze-tradizione/thumbnails/capricciosa.webp",
+      "image": "pizze-tradizione/full/capricciosa.webp",
       "allergenCodes": [
         1,
         7,
@@ -375,15 +387,18 @@
         "pdf": "pdf/menu_autunno.pdf",
         "page": 5
       },
-      "reviewStatus": "transcribed"
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "path": "img/menu/pizze-tradizione/full/capricciosa.jpeg"
+      }
     },
     {
       "id": "crocco-pizza",
       "categoryId": "pizze-tradizione",
       "priceCents": 1000,
       "order": 7,
-      "thumbnail": null,
-      "image": null,
+      "thumbnail": "pizze-tradizione/thumbnails/crocco-pizza.webp",
+      "image": "pizze-tradizione/full/crocco-pizza.webp",
       "allergenCodes": [
         1,
         7
@@ -399,7 +414,10 @@
         "pdf": "pdf/menu_autunno.pdf",
         "page": 5
       },
-      "reviewStatus": "transcribed"
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "path": "img/menu/pizze-tradizione/full/Crocco Pizza.jpg"
+      }
     },
     {
       "id": "patanella",
@@ -430,8 +448,8 @@
       "categoryId": "pizze-tradizione",
       "priceCents": 990,
       "order": 9,
-      "thumbnail": null,
-      "image": null,
+      "thumbnail": "pizze-tradizione/thumbnails/diavola.webp",
+      "image": "pizze-tradizione/full/diavola.webp",
       "allergenCodes": [
         1,
         7,
@@ -448,7 +466,10 @@
         "pdf": "pdf/menu_autunno.pdf",
         "page": 5
       },
-      "reviewStatus": "transcribed"
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "path": "img/menu/pizze-tradizione/full/diavola.jpeg"
+      }
     },
     {
       "id": "scarpariello",
@@ -535,8 +556,8 @@
       "categoryId": "pizze-tradizione",
       "priceCents": 890,
       "order": 12,
-      "thumbnail": null,
-      "image": null,
+      "thumbnail": "pizze-tradizione/thumbnails/provola-e-pepe.webp",
+      "image": "pizze-tradizione/full/provola-e-pepe.webp",
       "allergenCodes": [
         1,
         7
@@ -567,15 +588,18 @@
         "pdf": "pdf/menu_autunno.pdf",
         "page": 6
       },
-      "reviewStatus": "transcribed"
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "path": "img/menu/pizze-tradizione/full/Provola e pepe.jpg"
+      }
     },
     {
       "id": "wurstel-e-patatine",
       "categoryId": "pizze-tradizione",
       "priceCents": 800,
       "order": 13,
-      "thumbnail": null,
-      "image": null,
+      "thumbnail": "pizze-tradizione/thumbnails/wurstel-e-patatine.webp",
+      "image": "pizze-tradizione/full/wurstel-e-patatine.webp",
       "allergenCodes": [
         1,
         7
@@ -591,15 +615,18 @@
         "pdf": "pdf/menu_autunno.pdf",
         "page": 6
       },
-      "reviewStatus": "transcribed"
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "path": "img/menu/pizze-tradizione/full/wrustel&patatine.jpg"
+      }
     },
     {
       "id": "margherita",
       "categoryId": "pizze-tradizione",
       "priceCents": 750,
       "order": 14,
-      "thumbnail": null,
-      "image": null,
+      "thumbnail": "pizze-tradizione/thumbnails/margherita.webp",
+      "image": "pizze-tradizione/full/margherita.webp",
       "allergenCodes": [
         1,
         7
@@ -627,7 +654,10 @@
         "pdf": "pdf/menu_autunno.pdf",
         "page": 6
       },
-      "reviewStatus": "transcribed"
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "path": "img/menu/pizze-tradizione/full/Margherita.jpg"
+      }
     },
     {
       "id": "marinara",
@@ -658,8 +688,8 @@
       "categoryId": "pizze-tradizione",
       "priceCents": 690,
       "order": 16,
-      "thumbnail": null,
-      "image": null,
+      "thumbnail": "pizze-tradizione/thumbnails/cosacca.webp",
+      "image": "pizze-tradizione/full/cosacca.webp",
       "allergenCodes": [
         1,
         7
@@ -675,7 +705,10 @@
         "pdf": "pdf/menu_autunno.pdf",
         "page": 6
       },
-      "reviewStatus": "transcribed"
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "path": "img/menu/pizze-tradizione/full/Cosacca.jpeg"
+      }
     }
   ],
   "supplements": [],

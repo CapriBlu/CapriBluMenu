@@ -37,7 +37,7 @@ function render(){
   const items=currentItems();$('count').textContent=`${items.length} ${text.itemCount}`;
   $('items').replaceChildren(...items.map((item,index)=>{
     const content=itemText(item.id);const card=create('article','pizza-card'+(!item.available?' unavailable':''));
-    if(item.thumbnail)card.append(imageElement(item.thumbnail,'thumbnail',content.name));
+    if(item.thumbnail){const photoButton=create('button','photo-button');photoButton.type='button';photoButton.dataset.item=item.id;photoButton.setAttribute('aria-label',`${text.details}: ${content.name}`);photoButton.append(imageElement(item.thumbnail,'thumbnail',content.name));card.append(photoButton);}
     const body=create('div','card-body');const meta=create('div','card-meta');meta.append(create('span','item-number',String(index+1).padStart(2,'0')));
     if(item.variants.length)meta.append(create('span','format-badge',text.standard+' / '+text.ruota));
     const title=create('h3','',content.name);title.id=`name-${item.id}`;card.setAttribute('aria-labelledby',title.id);
@@ -57,8 +57,9 @@ function renderDetail(){
   $('detail-title').textContent=content.name;$('detail-description').textContent=content.description;
   $('close-detail').setAttribute('aria-label',text.close);$('formats-label').textContent=text.formats;
   const image=$('detail-image').firstElementChild;
-  if(item.image && image?.dataset.item!==item.id){const next=imageElement(item.image,'fullImage',content.name);next.dataset.item=item.id;$('detail-image').replaceChildren(next);}
-  else if(!item.image)$('detail-image').replaceChildren();else image.alt=content.name;
+  const photo=state.variant?null:item.image;
+  if(photo && image?.dataset.item!==item.id){const next=imageElement(photo,'fullImage',content.name);next.dataset.item=item.id;$('detail-image').replaceChildren(next);}
+  else if(!photo)$('detail-image').replaceChildren();else image.alt=content.name;
   $('formats').hidden=item.variants.length===0;
   $('format-options').replaceChildren(...[{id:'',label:text.standard},...item.variants.map(variant=>({id:variant.id,label:locale().variants[variant.id]||locales[config.fallbackLanguage].variants[variant.id]}))].map(format=>{
     const button=create('button','',format.label);button.type='button';button.dataset.variant=format.id;button.setAttribute('aria-pressed',String((state.variant||'')===format.id));return button;

@@ -56,4 +56,6 @@ Nel relativo record di `menu/data/catalog.json` impostare i percorsi relativi a 
 
 Non impostare i percorsi prima di aver caricato i file: i controlli segnalano le immagini mancanti.
 Le foto sono condivise tra tutte le lingue.
+Le prime 11 pizze tradizionali sono già associate: i file WebP con nome corrispondente all'id sono le versioni usate dal menu. Gli originali JPG/JPEG/PNG caricati sono conservati e registrati in photoSource nel catalogo; non vengono scaricati durante la consultazione.
+"Broccoli e Salsiccia.jpg" è associata a Salsiccia e Friarielli. Per ulteriori caricamenti mantenere il nome del piatto, così da identificarlo senza ambiguità.
 I file `.gitkeep` servono a mantenere le cartelle vuote su GitHub e possono rimanere anche dopo il caricamento delle foto.

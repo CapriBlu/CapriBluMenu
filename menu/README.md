@@ -2,7 +2,9 @@
 
 Anteprima autonoma in `menu/index.html`, con 17 Pizze della Tradizione dalle pagine 4-6 del PDF autunnale e 8 varianti Ruota di Carro dalle pagine 16-17.
 La gallery pubblicata non è ancora collegata all'anteprima. Le altre categorie sono predisposte ma non ancora popolate.
-Prezzi e testi italiano/inglese sono trascritti dal PDF. La copertina Margherita è usata nell'intestazione della categoria; le foto individuali non sono ancora associate.
+Prezzi e testi italiano/inglese sono trascritti dal PDF. Sono associate 11 foto alle pizze tradizionali, con miniature WebP leggere e versioni grandi caricate su richiesta. Gli originali caricati restano in full/ con i loro nomi.
+Le immagini mantengono l'inquadratura completa; toccando la foto si apre il dettaglio. I formati Ruota di Carro non mostrano le foto delle pizze tradizionali, perché non sono ancora associate foto specifiche a quei formati.
+Mancano le foto di Napoletana rivisitata, Pancetta e Cipolla, Patanella, Scarpariello, Napoletana e Marinara.
 I codici allergeni sono da verificare: il documento non include la legenda e contiene incongruenze registrate in `data/review.json`.
 
 ## Struttura
