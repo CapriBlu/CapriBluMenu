@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#142b4d">
+  <title>Menu | Capri Blu Sorrento</title>
+  <link rel="icon" href="../img/LOGO.capriblu.png">
+  <link rel="stylesheet" href="./assets/css/menu.css">
+  <script type="module" src="./assets/js/menu.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="home" href="../index.html" aria-label="Capri Blu Sorrento — Home">CAPRI BLU <span>SORRENTO</span></a>
+    <div class="language-control"><label for="language" id="language-label">Lingua</label><select id="language"><option value="it">Italiano</option><option value="en">English</option></select></div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow" id="edition">Autunno 2026</p><h1 id="heading">La nostra tradizione,<br>una pizza alla volta.</h1><p id="intro">Stiamo preparando il nuovo menu: qui trovi la prima categoria completa.</p><a class="pdf-link" id="pdf-link" href="../pdf/menu_autunno.pdf">Menu completo in PDF <span aria-hidden="true">↗</span></a></div>
+      <div class="hero-photo"><img id="hero-image" src="../img/galleria/pizze-tradizione/pizze-tradizione-margherita-cover.webp" width="640" height="640" alt="Pizza Margherita Capri Blu"><span id="photo-caption" class="photo-caption" aria-hidden="true">FATTA CON PASSIONE · SORRENTO</span></div>
+    </section>
+    <div class="menu-content">
+      <div class="menu-toolbar"><p class="preview-label" id="preview-label">Anteprima del menu</p><nav id="categories" aria-label="Categorie"></nav></div>
+      <div class="section-heading"><h2 id="category-title">Pizze della Tradizione</h2><p id="count" aria-live="polite"></p></div>
+      <p id="status" role="status">Caricamento del menu…</p>
+      <div id="items" class="pizza-grid"></div>
+      <button id="retry" type="button" hidden>Riprova</button>
+      <footer><p id="cover-charge">Coperto € 2,00 a persona</p><p id="frozen-note">* Prodotto congelato all’origine.</p><a href="../galleria.html" id="back-link">Indietro</a></footer>
+    </div>
+  </main>
+  <dialog id="detail" aria-labelledby="detail-title">
+    <div class="dialog-head"><span class="eyebrow">CAPRI BLU · SORRENTO</span><button type="button" id="close-detail" aria-label="Chiudi">×</button></div>
+    <div class="language-control"><label for="detail-language" id="detail-language-label">Lingua</label><select id="detail-language"><option value="it">Italiano</option><option value="en">English</option></select></div>
+    <div id="detail-image"></div><h2 id="detail-title"></h2><p id="detail-description"></p>
+    <fieldset id="formats"><legend id="formats-label">Formato</legend><div id="format-options"></div></fieldset>
+    <p id="detail-price" class="detail-price"></p><p id="detail-availability"></p><p id="allergen-note" class="allergen-note"></p>
+  </dialog>
+  <noscript><p class="noscript">Per consultare il menu interattivo abilita JavaScript. <a href="../pdf/menu_autunno.pdf">Apri il menu completo in PDF / Full menu PDF</a></p></noscript>
+</body>
+</html>

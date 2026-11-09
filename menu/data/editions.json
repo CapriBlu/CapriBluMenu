@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "editions": [
+    {
+      "id": "autunno-2026",
+      "status": "preview",
+      "sourcePdf": "../pdf/menu_autunno.pdf",
+      "coverChargeCents": 200,
+      "coverChargeSourcePage": 18
+    }
+  ]
+}

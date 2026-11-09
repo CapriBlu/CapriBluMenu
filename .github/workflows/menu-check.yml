@@ -1,0 +1,27 @@
+name: Controlli menu interattivo
+on:
+  push:
+    paths:
+      - 'menu/**'
+      - 'img/menu/**'
+      - 'pdf/**'
+      - '.github/workflows/menu-check.yml'
+  pull_request:
+    paths:
+      - 'menu/**'
+      - 'img/menu/**'
+      - 'pdf/**'
+      - '.github/workflows/menu-check.yml'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verifica catalogo e risorse
+        run: node menu/scripts/validate.mjs
+      - name: Verifica stagioni, varianti e traduzioni
+        run: node --test menu/tests/model.test.mjs
+      - name: Verifica sintassi interfaccia
+        run: node --check menu/assets/js/menu.js

@@ -10,7 +10,26 @@
     "close": "Chiudi",
     "unavailable": "Non disponibile",
     "imageUnavailable": "Foto non disponibile",
-    "emptyCategory": "Nessun piatto disponibile in questa categoria."
+    "emptyCategory": "Nessun piatto disponibile in questa categoria.",
+    "preview": "Anteprima del menu",
+    "season": "Autunno 2026",
+    "intro": "La nostra tradizione, una pizza alla volta.",
+    "previewNote": "Stiamo preparando il nuovo menu: qui trovi la prima categoria completa.",
+    "allItems": "Tutte le pizze",
+    "itemCount": "pizze",
+    "details": "Scopri la pizza",
+    "formats": "Formato",
+    "standard": "Tradizionale",
+    "ruota": "Ruota di Carro",
+    "allergensPending": "Per informazioni sugli allergeni, rivolgiti al personale.",
+    "pdf": "Menu completo in PDF",
+    "coverCharge": "Coperto",
+    "perPerson": "a persona",
+    "frozen": "* Prodotto congelato all’origine.",
+    "error": "Non è stato possibile caricare il menu. Puoi consultare il PDF completo.",
+    "retry": "Riprova",
+    "available": "Disponibile",
+    "loading": "Caricamento del menu…"
   },
   "categories": {
     "fritti": "Fritti",
@@ -23,5 +42,82 @@
     "montanare": "Montanare",
     "rutiello-pizza": "Rutiello Pizza"
   },
-  "items": {}
+  "items": {
+    "tricolore": {
+      "name": "Tricolore",
+      "description": "Fior di latte, pomodorini; in uscita: rucola, prosciutto crudo di Parma 24 mesi, scaglie di grana."
+    },
+    "cinque-formaggi": {
+      "name": "5 Formaggi",
+      "description": "Provola di Agerola, gorgonzola, ricotta fior di Fruscella, pecorino romano, scaglie di provolone del monaco, basilico e olio EVO."
+    },
+    "salsiccia-e-friarielli": {
+      "name": "Salsiccia e Friarielli",
+      "description": "Friarielli, salsiccia sbriciolata, provola, basilico e olio EVO."
+    },
+    "napoletana-rivisitata": {
+      "name": "Napoletana rivisitata",
+      "description": "Pomodoro giallo saltato in padella, origano, olive nere, datterini rossi, aglio, basilico e olio EVO."
+    },
+    "bufalina": {
+      "name": "Bufalina",
+      "description": "Pomodoro pelati selezione Capri Blu, mozzarella di bufala campana D.O.P., basilico e olio EVO."
+    },
+    "pancetta-e-cipolla": {
+      "name": "Pancetta e Cipolla",
+      "description": "Cipolla C.B.T., pancetta arrotolata, provola affumicata, basilico e olio EVO."
+    },
+    "capricciosa": {
+      "name": "Capricciosa",
+      "description": "Pomodoro pelati selezione Capri Blu, fior di latte di Agerola, salame Napoli, prosciutto cotto, funghi champignon, carciofini, olive nere, basilico e olio EVO."
+    },
+    "crocco-pizza": {
+      "name": "Crocco Pizza",
+      "description": "Fior di latte di Agerola, panna, prosciutto cotto, crocchè, basilico e olio EVO."
+    },
+    "patanella": {
+      "name": "Patanella",
+      "description": "Provola di Agerola, patate al forno, salsiccia sbriciolata, basilico e olio EVO."
+    },
+    "diavola": {
+      "name": "Diavola",
+      "description": "Pelati selezione Capri Blu, fior di latte di Agerola, spianata piccante, basilico e olio EVO."
+    },
+    "scarpariello": {
+      "name": "Scarpariello",
+      "description": "Pomodoro cotto allo scarpariello leggermente piccante, fior di latte; in uscita: pecorino D.O.P., basilico e olio EVO."
+    },
+    "napoletana": {
+      "name": "Napoletana",
+      "description": "Pelati selezione Capri Blu, origano di montagna, aglio, olive nere, alici di Cetara, basilico e olio EVO."
+    },
+    "provola-e-pepe": {
+      "name": "Provola e Pepe",
+      "description": "Pomodoro pelati selezione Capri Blu, provola di Agerola, pepe macinato, basilico e olio EVO."
+    },
+    "wurstel-e-patatine": {
+      "name": "Wrustel & Patatine",
+      "description": "Fior di latte di Agerola, wrustel, patatine fritte* e olio EVO."
+    },
+    "margherita": {
+      "name": "Margherita",
+      "description": "Pelati selezione Capri Blu, fior di latte di Agerola, basilico e olio EVO."
+    },
+    "marinara": {
+      "name": "Marinara",
+      "description": "Pomodoro pelati selezione Capri Blu, origano, aglio e olio EVO."
+    },
+    "cosacca": {
+      "name": "Cosacca",
+      "description": "Pomodoro pelati selezione Capri Blu, pecorino romano, basilico e olio EVO."
+    }
+  },
+  "editions": {
+    "autunno-2026": "Autunno 2026"
+  },
+  "variants": {
+    "ruota-di-carro": "Ruota di Carro"
+  },
+  "supplements": {},
+  "allergens": {}
 }

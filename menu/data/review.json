@@ -1,0 +1,49 @@
+{
+  "status": "preview",
+  "sourcePdf": "pdf/menu_autunno.pdf",
+  "transcribedPages": [
+    4,
+    5,
+    6,
+    16,
+    17,
+    18
+  ],
+  "issues": [
+    {
+      "scope": "allergens",
+      "status": "pending",
+      "note": "Il PDF non contiene una legenda. Codici trascritti senza interpretazione; nessun filtro alimentare abilitato."
+    },
+    {
+      "scope": "marinara",
+      "status": "pending",
+      "note": "Il PDF riporta i codici 1,7; non correggerli per deduzione dagli ingredienti."
+    },
+    {
+      "scope": "napoletana",
+      "status": "pending",
+      "note": "Il PDF riporta 1,7,14 e include alici. Verificare i codici con il ristorante."
+    },
+    {
+      "scope": "napoletana-rivisitata",
+      "status": "pending",
+      "note": "Il PDF riporta 1,8. Verificare i codici con il ristorante."
+    },
+    {
+      "scope": "margherita/ruota-di-carro",
+      "status": "pending",
+      "note": "La pagina 16 non riporta codici allergeni per questa variante."
+    },
+    {
+      "scope": "scarpariello",
+      "status": "pending",
+      "note": "Il testo inglese del PDF differisce dall’italiano sul momento di aggiunta del fior di latte. Conservata la traduzione del PDF."
+    },
+    {
+      "scope": "images",
+      "status": "pending",
+      "note": "Foto per piatto non ancora associate; non riutilizzare copertine generiche per rappresentare pizze diverse."
+    }
+  ]
+}

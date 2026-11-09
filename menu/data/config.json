@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "defaultLanguage": "it",
   "fallbackLanguage": "it",
   "enabledLanguages": [
@@ -10,5 +10,8 @@
   "catalog": "./data/catalog.json",
   "localesBasePath": "./locales/",
   "thumbnailBasePath": "../img/menu/thumbnails/",
-  "fullImageBasePath": "../img/menu/full/"
+  "fullImageBasePath": "../img/menu/full/",
+  "activeEdition": "autunno-2026",
+  "editions": "./data/editions.json",
+  "preview": true
 }

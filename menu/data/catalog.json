@@ -1,43 +1,591 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "currency": "EUR",
   "categories": [
     {
       "id": "fritti",
-      "order": 0
+      "order": 0,
+      "status": "draft"
     },
     {
       "id": "antipasti",
-      "order": 1
+      "order": 1,
+      "status": "draft"
     },
     {
       "id": "primi",
-      "order": 2
+      "order": 2,
+      "status": "draft"
     },
     {
       "id": "primi-mare",
-      "order": 3
+      "order": 3,
+      "status": "draft"
     },
     {
       "id": "secondi",
-      "order": 4
+      "order": 4,
+      "status": "draft"
     },
     {
       "id": "pizze-tradizione",
-      "order": 5
+      "order": 5,
+      "status": "preview"
     },
     {
       "id": "firmate-capri-blu",
-      "order": 6
+      "order": 6,
+      "status": "draft"
     },
     {
       "id": "montanare",
-      "order": 7
+      "order": 7,
+      "status": "draft"
     },
     {
       "id": "rutiello-pizza",
-      "order": 8
+      "order": 8,
+      "status": "draft"
     }
   ],
-  "items": []
+  "items": [
+    {
+      "id": "tricolore",
+      "categoryId": "pizze-tradizione",
+      "priceCents": 1190,
+      "order": 0,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7,
+        12
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [
+        {
+          "id": "ruota-di-carro",
+          "priceCents": 1290,
+          "available": true,
+          "allergenCodes": [
+            1,
+            7,
+            12
+          ],
+          "allergenStatus": "pending-review",
+          "source": {
+            "pdf": "pdf/menu_autunno.pdf",
+            "page": 17
+          }
+        }
+      ],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 4
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "cinque-formaggi",
+      "categoryId": "pizze-tradizione",
+      "priceCents": 1190,
+      "order": 1,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 4
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "salsiccia-e-friarielli",
+      "categoryId": "pizze-tradizione",
+      "priceCents": 1190,
+      "order": 2,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [
+        {
+          "id": "ruota-di-carro",
+          "priceCents": 1290,
+          "available": true,
+          "allergenCodes": [
+            1,
+            7
+          ],
+          "allergenStatus": "pending-review",
+          "source": {
+            "pdf": "pdf/menu_autunno.pdf",
+            "page": 16
+          }
+        }
+      ],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 4
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "napoletana-rivisitata",
+      "categoryId": "pizze-tradizione",
+      "priceCents": 1150,
+      "order": 3,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        8
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 4
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "bufalina",
+      "categoryId": "pizze-tradizione",
+      "priceCents": 1090,
+      "order": 4,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [
+        {
+          "id": "ruota-di-carro",
+          "priceCents": 1090,
+          "available": true,
+          "allergenCodes": [
+            1,
+            7
+          ],
+          "allergenStatus": "pending-review",
+          "source": {
+            "pdf": "pdf/menu_autunno.pdf",
+            "page": 17
+          }
+        }
+      ],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 4
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "pancetta-e-cipolla",
+      "categoryId": "pizze-tradizione",
+      "priceCents": 1090,
+      "order": 5,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7,
+        12
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [
+        {
+          "id": "ruota-di-carro",
+          "priceCents": 1190,
+          "available": true,
+          "allergenCodes": [
+            1,
+            7,
+            12
+          ],
+          "allergenStatus": "pending-review",
+          "source": {
+            "pdf": "pdf/menu_autunno.pdf",
+            "page": 16
+          }
+        }
+      ],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 4
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "capricciosa",
+      "categoryId": "pizze-tradizione",
+      "priceCents": 1090,
+      "order": 6,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7,
+        12
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 5
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "crocco-pizza",
+      "categoryId": "pizze-tradizione",
+      "priceCents": 1000,
+      "order": 7,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 5
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "patanella",
+      "categoryId": "pizze-tradizione",
+      "priceCents": 1000,
+      "order": 8,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 5
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "diavola",
+      "categoryId": "pizze-tradizione",
+      "priceCents": 990,
+      "order": 9,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7,
+        12
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 5
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "scarpariello",
+      "categoryId": "pizze-tradizione",
+      "priceCents": 990,
+      "order": 10,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [
+        {
+          "id": "ruota-di-carro",
+          "priceCents": 1090,
+          "available": true,
+          "allergenCodes": [
+            1,
+            7
+          ],
+          "allergenStatus": "pending-review",
+          "source": {
+            "pdf": "pdf/menu_autunno.pdf",
+            "page": 17
+          }
+        }
+      ],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 5
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "napoletana",
+      "categoryId": "pizze-tradizione",
+      "priceCents": 890,
+      "order": 11,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7,
+        14
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [
+        {
+          "id": "ruota-di-carro",
+          "priceCents": 990,
+          "available": true,
+          "allergenCodes": [
+            1,
+            7,
+            14
+          ],
+          "allergenStatus": "pending-review",
+          "source": {
+            "pdf": "pdf/menu_autunno.pdf",
+            "page": 16
+          }
+        }
+      ],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 6
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "provola-e-pepe",
+      "categoryId": "pizze-tradizione",
+      "priceCents": 890,
+      "order": 12,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [
+        {
+          "id": "ruota-di-carro",
+          "priceCents": 990,
+          "available": true,
+          "allergenCodes": [
+            1,
+            7
+          ],
+          "allergenStatus": "pending-review",
+          "source": {
+            "pdf": "pdf/menu_autunno.pdf",
+            "page": 16
+          }
+        }
+      ],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 6
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "wurstel-e-patatine",
+      "categoryId": "pizze-tradizione",
+      "priceCents": 800,
+      "order": 13,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 6
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "margherita",
+      "categoryId": "pizze-tradizione",
+      "priceCents": 750,
+      "order": 14,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [
+        {
+          "id": "ruota-di-carro",
+          "priceCents": 850,
+          "available": true,
+          "allergenCodes": null,
+          "allergenStatus": "pending-review",
+          "source": {
+            "pdf": "pdf/menu_autunno.pdf",
+            "page": 16
+          }
+        }
+      ],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 6
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "marinara",
+      "categoryId": "pizze-tradizione",
+      "priceCents": 690,
+      "order": 15,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 6
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "cosacca",
+      "categoryId": "pizze-tradizione",
+      "priceCents": 690,
+      "order": 16,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 6
+      },
+      "reviewStatus": "transcribed"
+    }
+  ],
+  "supplements": [],
+  "allergenLegend": {
+    "status": "pending-review",
+    "codes": []
+  }
 }

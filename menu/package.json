@@ -1,0 +1,9 @@
+{
+  "name": "capriblu-menu",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "test": "node --test tests/model.test.mjs"
+  }
+}

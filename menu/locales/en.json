@@ -10,7 +10,26 @@
     "close": "Close",
     "unavailable": "Unavailable",
     "imageUnavailable": "Photo unavailable",
-    "emptyCategory": "No dishes available in this category."
+    "emptyCategory": "No dishes available in this category.",
+    "preview": "Menu preview",
+    "season": "Autumn 2026",
+    "intro": "Our tradition, one pizza at a time.",
+    "previewNote": "We are preparing our new menu. Explore the first complete category.",
+    "allItems": "All pizzas",
+    "itemCount": "pizzas",
+    "details": "Discover this pizza",
+    "formats": "Format",
+    "standard": "Traditional",
+    "ruota": "Ruota di Carro",
+    "allergensPending": "Please ask our staff for allergen information.",
+    "pdf": "Full menu PDF",
+    "coverCharge": "Cover charge",
+    "perPerson": "per person",
+    "frozen": "* Frozen at source.",
+    "error": "The menu could not be loaded. You can read the full PDF.",
+    "retry": "Try again",
+    "available": "Available",
+    "loading": "Loading the menu…"
   },
   "categories": {
     "fritti": "Fried Bites",
@@ -23,5 +42,82 @@
     "montanare": "Montanare",
     "rutiello-pizza": "Rutiello Pizza"
   },
-  "items": {}
+  "items": {
+    "tricolore": {
+      "name": "Tricolore",
+      "description": "Fior di latte cheese and cherry tomatoes; finished with fresh arugula, 24-month cured Parma ham, and Grana Padano shavings."
+    },
+    "cinque-formaggi": {
+      "name": "5 Formaggi",
+      "description": "Smoked Provola cheese, Gorgonzola, Fruscella Ricotta, Pecorino Romano, Provolone del Monaco Shavings, Basil & EVO Oil."
+    },
+    "salsiccia-e-friarielli": {
+      "name": "Salsiccia e Friarielli",
+      "description": "Broccoli Rabe, Crumbled Sausage, Smoked Cheese, Basil & EVO Oil."
+    },
+    "napoletana-rivisitata": {
+      "name": "Napoletana rivisitata",
+      "description": "Sautéed Yellow Tomatoes, Oregano, Black Olives, Cherry Tomatoes, Garlic, Basil & EVO Oil."
+    },
+    "bufalina": {
+      "name": "Bufalina",
+      "description": "Capri Blu Selection Whole Tomatoes, Buffalo Mozzarella Campana D.O.P., Basil & EVO Oil."
+    },
+    "pancetta-e-cipolla": {
+      "name": "Pancetta e Cipolla",
+      "description": "Slow-cooked onion, rolled pancetta, smoked provola cheese, basil, and extra-virgin olive oil."
+    },
+    "capricciosa": {
+      "name": "Capricciosa",
+      "description": "Capri Blu Selection Whole Tomatoes, Fior di Latte from Agerola, Napoli Salami, Cooked Ham, Champignon Mushrooms, Baby Artichokes, Black Olives, Basil & EVO Oil."
+    },
+    "crocco-pizza": {
+      "name": "Crocco Pizza",
+      "description": "Fior di Latte from Agerola, Cream, Cooked Ham, Croquettes, Basil & EVO Oil."
+    },
+    "patanella": {
+      "name": "Patanella",
+      "description": "Smoked Provola cheese, Roasted Potatoes, Crumbled Sausage, Basil & EVO Oil."
+    },
+    "diavola": {
+      "name": "Diavola",
+      "description": "Selection Whole Tomatoes, Fior di Latte (Agerola's Fresh Cow's Milk Cheese), Spicy Salami, Basil & EVO Oil."
+    },
+    "scarpariello": {
+      "name": "Scarpariello",
+      "description": "Lightly spicy “scarpariello” cooked tomatoes, fior di latte added at the end, Pecorino DOP, basil, and extra-virgin olive oil."
+    },
+    "napoletana": {
+      "name": "Napoletana",
+      "description": "Tomatoes, Mountain Oregano, Garlic, Black Olives, Cetara Anchovies, Basil & EVO Oil."
+    },
+    "provola-e-pepe": {
+      "name": "Provola e Pepe",
+      "description": "Capri Blu Selection Whole Tomatoes, Smoked Provola cheese, Ground Black Pepper, Basil & EVO Oil."
+    },
+    "wurstel-e-patatine": {
+      "name": "Wrustel & Patatine",
+      "description": "Fior di Latte from Agerola, Wurstels, French Fries* & EVO Oil."
+    },
+    "margherita": {
+      "name": "Margherita",
+      "description": "Capri Blu Selection Whole Tomatoes, Fior di Latte (Agerola's Fresh Cow's Milk Cheese), Basil & EVO Oil."
+    },
+    "marinara": {
+      "name": "Marinara",
+      "description": "Capri Blu Selection Whole Tomatoes, Oregano, Garlic & EVO Oil."
+    },
+    "cosacca": {
+      "name": "Cosacca",
+      "description": "Capri Blu Selection Whole Tomatoes, Pecorino Romano, Basil & EVO Oil."
+    }
+  },
+  "editions": {
+    "autunno-2026": "Autumn 2026"
+  },
+  "variants": {
+    "ruota-di-carro": "Ruota di Carro"
+  },
+  "supplements": {},
+  "allergens": {}
 }
