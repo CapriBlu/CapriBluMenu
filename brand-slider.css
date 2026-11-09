@@ -23,10 +23,12 @@
   overflow: hidden;
   padding: 8px 12px;
   background: transparent;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1rem, 3.9vw, 1.375rem);
+  font-family: "Barlow Condensed", "Arial Narrow", sans-serif;
+  font-size: clamp(1.125rem, 4.8vw, 1.75rem);
+  font-weight: 300;
+  text-transform: uppercase;
   line-height: 1.4;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.08em;
 }
 
 .brand-slider-phrase {
@@ -46,20 +48,10 @@
   transform: translateY(-120%);
 }
 
-.brand-slider-toggle {
-  min-height: 44px;
-  padding: 8px 12px;
-  border: 0;
-  border-radius: 12px;
-  background: transparent;
-  color: #ffe39a;
-  font: 0.75rem/1.4 Arial, sans-serif;
-  cursor: pointer;
-}
-
-.brand-slider-toggle:focus-visible {
-  outline: 2px solid #ffe39a;
+.brand-slider:focus-visible {
+  outline: 1px solid #ffe39a;
   outline-offset: 3px;
+  border-radius: 4px;
 }
 
 @media (prefers-reduced-motion: reduce) {
