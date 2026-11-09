@@ -3,7 +3,7 @@
 Anteprima autonoma in `menu/index.html`, con 17 Pizze della Tradizione dalle pagine 4-6 del PDF autunnale e 8 varianti Ruota di Carro dalle pagine 16-17.
 La gallery pubblicata non è ancora collegata all'anteprima. Le altre categorie sono predisposte ma non ancora popolate.
 Prezzi e testi italiano/inglese sono trascritti dal PDF. Sono associate 11 foto alle pizze tradizionali, con miniature WebP leggere e versioni grandi caricate su richiesta. Gli originali caricati restano in full/ con i loro nomi.
-Le immagini mantengono l'inquadratura completa; toccando la foto si apre il dettaglio. I formati Ruota di Carro non mostrano le foto delle pizze tradizionali, perché non sono ancora associate foto specifiche a quei formati.
+Le miniature nelle card hanno uno zoom visivo e un ritaglio centrale per avvicinare la pizza. Le foto grandi mantengono l'inquadratura completa nel dettaglio. I formati Ruota di Carro non mostrano le foto delle pizze tradizionali, perché non sono ancora associate foto specifiche a quei formati.
 Mancano le foto di Napoletana rivisitata, Pancetta e Cipolla, Patanella, Scarpariello, Napoletana e Marinara.
 I codici allergeni sono da verificare: il documento non include la legenda e contiene incongruenze registrate in `data/review.json`.
 
@@ -98,7 +98,7 @@ Nessun filtro alimentare è attivo finché legenda e codici allergeni non sarann
 
 ### Interfaccia compatta e sfondo
 
-Le card mostrano foto, nome e prezzo; ingredienti e formati si consultano nel dettaglio. La griglia passa da cinque colonne sul desktop a due sul telefono, con passaggi intermedi a quattro e tre colonne. L'intestazione resta invariata.
+Le card mostrano foto a tutta superficie con zoom, titolo bianco, etichetta del prezzo e una breve anteprima degli ingredienti su una sfumatura scura. Il pulsante Scopri la pizza apre ingredienti completi e formati. La griglia passa da quattro colonne sul desktop a tre sui tablet e due sul telefono. Il ritaglio riguarda soltanto la visualizzazione: non aumenta il peso delle foto. L'intestazione resta invariata.
 Il video di sfondo usa un solo file: WebM mobile sui dispositivi compatibili fino a 600 px, altrimenti MP4. I due video non vengono precaricati insieme. Il pulsante fisso permette di fermare e riprendere lo sfondo e segue la lingua selezionata.
 Con preferenza per movimento ridotto o risparmio dati il video non parte automaticamente; resta l'immagine di copertina. La riproduzione si sospende quando la pagina passa in secondo piano.
 

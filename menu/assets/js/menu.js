@@ -36,14 +36,18 @@ function render(){
   }));
   const items=currentItems();$('count').textContent=`${items.length} ${text.itemCount}`;
   $('items').replaceChildren(...items.map(item=>{
-    const content=itemText(item.id);const card=create('article','pizza-card'+(!item.available?' unavailable':''));
-    if(item.thumbnail){const photoButton=create('button','photo-button');photoButton.type='button';photoButton.dataset.item=item.id;photoButton.setAttribute('aria-label',`${text.details}: ${content.name}`);photoButton.append(imageElement(item.thumbnail,'thumbnail',content.name));card.append(photoButton);}
-    else {const placeholder=create('div','photo-placeholder','CB');placeholder.setAttribute('aria-hidden','true');card.append(placeholder);}
-    const body=create('div','card-body');
+    const content=itemText(item.id);const card=create('article','pizza-card'+(!item.available?' unavailable':''));card.dataset.item=item.id;
+    const visual=create('div','card-visual');
+    const photoButton=create('button','photo-button');photoButton.type='button';photoButton.dataset.item=item.id;photoButton.setAttribute('aria-label',`${text.details}: ${content.name}`);
+    if(item.thumbnail)photoButton.append(imageElement(item.thumbnail,'thumbnail',content.name));
+    else {const placeholder=create('div','photo-placeholder','CB');placeholder.setAttribute('aria-hidden','true');photoButton.append(placeholder);}
+    visual.append(photoButton);
+    const body=create('div','card-body');const titleRow=create('div','card-title-row');
     const title=create('h3','',content.name);title.id=`name-${item.id}`;card.setAttribute('aria-labelledby',title.id);
-    const bottom=create('div','card-bottom');bottom.append(create('span','price',money(item.priceCents)));
-    const open=create('button','detail-button','↗');open.type='button';open.dataset.item=item.id;open.setAttribute('aria-label',`${text.details}: ${content.name}`);bottom.append(open);
-    body.append(title);if(!item.available)body.append(create('p','',text.unavailable));body.append(bottom);card.append(body);return card;
+    titleRow.append(title,create('span','price',money(item.priceCents)));
+    body.append(titleRow,create('p','card-description',content.description));if(!item.available)body.append(create('p','',text.unavailable));visual.append(body);
+    const bottom=create('div','card-bottom');const open=create('button','detail-button',text.details);open.type='button';open.dataset.item=item.id;open.setAttribute('aria-label',`${text.details}: ${content.name}`);bottom.append(open);
+    card.append(visual,bottom);return card;
   }));
   const edition=editions.editions.find(edition=>edition.id===config.activeEdition);
   $('cover-charge').textContent=`${text.coverCharge} ${money(edition.coverChargeCents)} ${text.perPerson}`;

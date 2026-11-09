@@ -48,3 +48,36 @@ footer{border-color:#ffffff40;padding-bottom:58px}
   .background-toggle{right:12px;bottom:12px}
 }
 @media(max-width:350px){.card-body{padding:8px}.pizza-card h3{font-size:13px}.price{font-size:14px}.photo-button img,.photo-placeholder{height:116px}}
+
+/* Photo-led cards matching the supplied totem reference. */
+.pizza-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.pizza-card{border-radius:18px;background:#07334f;border:1px solid #7895a580;box-shadow:0 8px 24px #00152633}
+.card-visual{position:relative;overflow:hidden;isolation:isolate}
+.photo-button{overflow:hidden;background:#123e59}
+.photo-button img,.photo-placeholder{height:310px}
+.photo-button img{object-fit:cover;object-position:50% 58%;transform:scale(1.2);transform-origin:50% 58%}
+.pizza-card[data-item="tricolore"] .photo-button img{object-position:50% 64%;transform-origin:50% 64%;transform:scale(1.28)}
+.pizza-card[data-item="diavola"] .photo-button img{object-position:50% 56%;transform-origin:50% 56%;transform:scale(1.85)}
+.photo-placeholder{background:linear-gradient(145deg,#164e73,#062941);color:#ffffff35;font-size:46px}
+.card-body{position:absolute;inset:0;z-index:1;justify-content:flex-end;padding:14px 12px 12px;gap:8px;pointer-events:none;background:linear-gradient(180deg,transparent 28%,#00132008 40%,#001320c9 73%,#001320f2 100%)}
+.card-title-row{display:flex;align-items:flex-end;justify-content:space-between;gap:8px;min-width:0}
+.pizza-card h3{font:700 23px/1.04 Georgia,'Times New Roman',serif;color:#fff;min-height:0;overflow-wrap:anywhere;text-shadow:0 1px 4px #0005;flex:1;min-width:0}
+.card-body .price{color:white;background:#082b43;border:1px solid #7895a580;border-radius:10px;padding:7px 8px;font:700 14px/1.1 Arial,sans-serif;white-space:nowrap;flex-shrink:0}
+.pizza-card .card-description{color:#f0f3f6;font:12px/1.4 Arial,sans-serif;margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.card-bottom{background:linear-gradient(135deg,#0d4264,#052b45);padding:11px 12px;margin:0}
+.detail-button{width:100%;height:auto;min-height:44px;border-radius:11px;border:1px solid #71accb80;background:linear-gradient(#21648c,#12466b);color:white;font-size:13px;font-weight:700;padding:10px 8px}
+.detail-button:hover{background:linear-gradient(#2784b6,#155c86)}
+@media(max-width:1000px) and (min-width:601px){.pizza-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.photo-button img,.photo-placeholder{height:290px}.pizza-card h3{font-size:21px}}
+@media(max-width:600px){
+  .pizza-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .pizza-card{border-radius:15px}
+  .photo-button img,.photo-placeholder{height:242px}
+  .card-body{padding:12px 10px;gap:7px}
+  .card-title-row{display:block}
+  .pizza-card h3{font-size:20px;min-height:0}
+  .card-body .price{position:absolute;top:10px;right:8px;font-size:12px;padding:6px 7px;border-radius:8px}
+  .pizza-card .card-description{font-size:11px;line-height:1.35;-webkit-line-clamp:2}
+  .card-bottom{padding:9px 8px}
+  .detail-button{font-size:12px;padding:10px 5px}
+}
+@media(max-width:350px){.photo-button img,.photo-placeholder{height:225px}.pizza-card h3{font-size:18px}.card-body{padding:10px 8px}.pizza-card .card-description{font-size:10px}}
