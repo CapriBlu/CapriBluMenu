@@ -2,8 +2,8 @@
 const files = {
       // fr: 'pdf/menu-fr.pdf',
       //es: 'pdf/menu-es.pdf',
-      it: 'pdf/menu-it-eng.pdf',
-      //en: 'pdf/menu-it-eng.pdf'
+      it: 'pdf/menu_autunno.pdf',
+      //en: 'pdf/menu_autunno.pdf'
     };
 
 
