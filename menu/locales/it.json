@@ -29,7 +29,9 @@
     "error": "Non è stato possibile caricare il menu. Puoi consultare il PDF completo.",
     "retry": "Riprova",
     "available": "Disponibile",
-    "loading": "Caricamento del menu…"
+    "loading": "Caricamento del menu…",
+    "explore": "Esplora il menu",
+    "downloadPdf": "Scarica il PDF"
   },
   "categories": {
     "fritti": "I Fritti",

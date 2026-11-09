@@ -29,7 +29,9 @@
     "error": "The menu could not be loaded. You can read the full PDF.",
     "retry": "Try again",
     "available": "Available",
-    "loading": "Loading the menu…"
+    "loading": "Loading the menu…",
+    "explore": "Explore the menu",
+    "downloadPdf": "Download PDF"
   },
   "categories": {
     "fritti": "Fried Bites",

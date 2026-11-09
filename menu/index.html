@@ -7,8 +7,8 @@
   <meta name="theme-color" content="#142b4d">
   <title>Menu | Capri Blu Sorrento</title>
   <link rel="icon" href="../img/LOGO.capriblu.png">
-  <link rel="stylesheet" href="./assets/css/menu.css?v=brand-logo-1">
-  <script type="module" src="./assets/js/menu.js?v=totem-3"></script>
+  <link rel="stylesheet" href="./assets/css/menu.css?v=minimal-1">
+  <script type="module" src="./assets/js/menu.js?v=minimal-1"></script>
   <script type="module" src="./assets/js/background.js?v=1"></script>
 </head>
 <body>
@@ -20,11 +20,12 @@
     <div class="language-control"><label for="language" id="language-label">Lingua</label><select id="language"><option value="it">Italiano</option><option value="en">English</option></select></div>
   </header>
   <main>
-    <section class="hero">
-      <div class="hero-copy"><p class="eyebrow" id="edition">Autunno 2026</p><h1 id="heading">La nostra tradizione,<br>una pizza alla volta.</h1><p id="intro">Stiamo preparando il nuovo menu: qui trovi la prima categoria completa.</p><a class="pdf-link" id="pdf-link" href="../pdf/menu_autunno.pdf">Menu completo in PDF <span aria-hidden="true">↗</span></a></div>
-      <div class="hero-photo"><img id="hero-image" src="../img/galleria/pizze-tradizione/pizze-tradizione-margherita-cover.webp" width="640" height="640" alt="Pizza Margherita Capri Blu"><span id="photo-caption" class="photo-caption" aria-hidden="true">FATTA CON PASSIONE · SORRENTO</span></div>
-    </section>
-    <div class="menu-content">
+    <h1 class="visually-hidden" id="heading">Menu</h1>
+    <nav class="menu-actions" aria-label="Menu">
+      <a class="explore-link" id="explore-link" href="#menu-content">Esplora il menu ↓</a>
+      <a class="pdf-link" id="pdf-link" href="../pdf/menu_autunno.pdf" download="Menu-Capri-Blu-Sorrento.pdf">Scarica il PDF ↓</a>
+    </nav>
+    <div class="menu-content" id="menu-content">
       <div class="menu-toolbar"><p class="preview-label" id="preview-label">Anteprima del menu</p><nav id="categories" aria-label="Categorie"></nav></div>
       <div class="section-heading"><h2 id="category-title">Pizze della Tradizione</h2><p id="count" aria-live="polite"></p></div>
       <p id="status" role="status">Caricamento del menu…</p>

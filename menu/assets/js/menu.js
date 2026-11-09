@@ -25,12 +25,10 @@ function render(){
   const text=ui();document.documentElement.lang=state.language;document.title=`${text.menu} | Capri Blu Sorrento`;
   $('language').value=state.language;$('language-label').textContent=text.language;
   $('detail-language').value=state.language;$('detail-language-label').textContent=text.language;
-  $('photo-caption').textContent=state.language==='en'?'MADE WITH PASSION · SORRENTO':'FATTA CON PASSIONE · SORRENTO';
-  $('edition').textContent=locale().editions[config.activeEdition]||locales[config.fallbackLanguage].editions[config.activeEdition];
-  $('heading').textContent=text.intro;$('intro').textContent=text.previewNote;$('preview-label').textContent=text.preview;
-  $('pdf-link').textContent=text.pdf+' ↗';$('pdf-link').href=new URL(config.sourcePdf,base);
+  $('heading').textContent=text.menu;$('explore-link').textContent=text.explore+' ↓';$('preview-label').textContent=text.preview;
+  $('pdf-link').textContent=text.downloadPdf+' ↓';$('pdf-link').href=new URL(config.sourcePdf,base);
   $('category-title').textContent=categoryText(state.category);
-  $('categories').setAttribute('aria-label',text.menu);
+  $('categories').setAttribute('aria-label',text.menu);document.querySelector('.menu-actions').setAttribute('aria-label',text.menu);
   $('categories').replaceChildren(...catalog.categories.filter(category=>visibleItems(catalog,config.activeEdition,category.id).length).sort((a,b)=>a.order-b.order).map(category=>{
     const button=create('button','',categoryText(category.id));button.type='button';button.dataset.category=category.id;button.setAttribute('aria-pressed',String(category.id===state.category));return button;
   }));
