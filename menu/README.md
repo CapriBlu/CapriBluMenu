@@ -96,6 +96,14 @@ Nessun filtro alimentare è attivo finché legenda e codici allergeni non sarann
 
 ## Controlli
 
+### Interfaccia compatta e sfondo
+
+Le card mostrano foto, nome e prezzo; ingredienti e formati si consultano nel dettaglio. La griglia passa da cinque colonne sul desktop a due sul telefono, con passaggi intermedi a quattro e tre colonne. L'intestazione resta invariata.
+Il video di sfondo usa un solo file: WebM mobile sui dispositivi compatibili fino a 600 px, altrimenti MP4. I due video non vengono precaricati insieme. Il pulsante fisso permette di fermare e riprendere lo sfondo e segue la lingua selezionata.
+Con preferenza per movimento ridotto o risparmio dati il video non parte automaticamente; resta l'immagine di copertina. La riproduzione si sospende quando la pagina passa in secondo piano.
+
+### Comandi
+
 Dalla cartella principale del repository:
 
 ```text

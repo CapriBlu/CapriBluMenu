@@ -7,10 +7,14 @@
   <meta name="theme-color" content="#142b4d">
   <title>Menu | Capri Blu Sorrento</title>
   <link rel="icon" href="../img/LOGO.capriblu.png">
-  <link rel="stylesheet" href="./assets/css/menu.css">
-  <script type="module" src="./assets/js/menu.js"></script>
+  <link rel="stylesheet" href="./assets/css/menu.css?v=totem-2">
+  <script type="module" src="./assets/js/menu.js?v=totem-2"></script>
+  <script type="module" src="./assets/js/background.js?v=1"></script>
 </head>
 <body>
+  <video id="menu-background" class="menu-background" autoplay muted loop playsinline preload="none" poster="../img/galleria/pizze-tradizione/pizze-tradizione-margherita-cover.webp" aria-hidden="true" tabindex="-1" disablepictureinpicture></video>
+  <div class="background-shade" aria-hidden="true"></div>
+  <button id="background-toggle" class="background-toggle" type="button" hidden>Pausa sfondo</button>
   <header class="topbar">
     <a class="home" href="../index.html" aria-label="Capri Blu Sorrento — Home">CAPRI BLU <span>SORRENTO</span></a>
     <div class="language-control"><label for="language" id="language-label">Lingua</label><select id="language"><option value="it">Italiano</option><option value="en">English</option></select></div>

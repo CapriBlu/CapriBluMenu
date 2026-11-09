@@ -35,15 +35,15 @@ function render(){
     const button=create('button','',categoryText(category.id));button.type='button';button.dataset.category=category.id;button.setAttribute('aria-pressed',String(category.id===state.category));return button;
   }));
   const items=currentItems();$('count').textContent=`${items.length} ${text.itemCount}`;
-  $('items').replaceChildren(...items.map((item,index)=>{
+  $('items').replaceChildren(...items.map(item=>{
     const content=itemText(item.id);const card=create('article','pizza-card'+(!item.available?' unavailable':''));
     if(item.thumbnail){const photoButton=create('button','photo-button');photoButton.type='button';photoButton.dataset.item=item.id;photoButton.setAttribute('aria-label',`${text.details}: ${content.name}`);photoButton.append(imageElement(item.thumbnail,'thumbnail',content.name));card.append(photoButton);}
-    const body=create('div','card-body');const meta=create('div','card-meta');meta.append(create('span','item-number',String(index+1).padStart(2,'0')));
-    if(item.variants.length)meta.append(create('span','format-badge',text.standard+' / '+text.ruota));
+    else {const placeholder=create('div','photo-placeholder','CB');placeholder.setAttribute('aria-hidden','true');card.append(placeholder);}
+    const body=create('div','card-body');
     const title=create('h3','',content.name);title.id=`name-${item.id}`;card.setAttribute('aria-labelledby',title.id);
     const bottom=create('div','card-bottom');bottom.append(create('span','price',money(item.priceCents)));
     const open=create('button','detail-button','↗');open.type='button';open.dataset.item=item.id;open.setAttribute('aria-label',`${text.details}: ${content.name}`);bottom.append(open);
-    body.append(meta,title,create('p','',content.description));if(!item.available)body.append(create('p','',text.unavailable));body.append(bottom);card.append(body);return card;
+    body.append(title);if(!item.available)body.append(create('p','',text.unavailable));body.append(bottom);card.append(body);return card;
   }));
   const edition=editions.editions.find(edition=>edition.id===config.activeEdition);
   $('cover-charge').textContent=`${text.coverCharge} ${money(edition.coverChargeCents)} ${text.perPerson}`;
