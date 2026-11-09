@@ -162,3 +162,6 @@ footer{border-color:#ffffff40;padding-bottom:58px}
   .preview-label{font-size:10px;margin:0}
   .section-heading{margin:22px 0 16px}
 }
+
+.menu-actions{flex-wrap:wrap;column-gap:24px;row-gap:4px}
+@media(max-width:600px){.menu-actions{column-gap:18px}}

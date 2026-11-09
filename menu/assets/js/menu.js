@@ -28,6 +28,7 @@ function render(){
   $('heading').textContent=text.menu;$('explore-link').textContent=text.explore+' ↓';$('preview-label').textContent=text.preview;
   $('pdf-link').textContent=text.downloadPdf+' ↓';$('pdf-link').href=new URL(config.sourcePdf,base);
   $('category-title').textContent=categoryText(state.category);
+  $('drinks-link').textContent=text.drinks+' ↗';const drinksURL=new URL('../drink.html',base);drinksURL.searchParams.set('lang',state.language);$('drinks-link').href=drinksURL;
   $('categories').setAttribute('aria-label',text.menu);document.querySelector('.menu-actions').setAttribute('aria-label',text.menu);
   $('categories').replaceChildren(...catalog.categories.filter(category=>visibleItems(catalog,config.activeEdition,category.id).length).sort((a,b)=>a.order-b.order).map(category=>{
     const button=create('button','',categoryText(category.id));button.type='button';button.dataset.category=category.id;button.setAttribute('aria-pressed',String(category.id===state.category));return button;
