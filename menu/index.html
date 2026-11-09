@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#142b4d">
   <title>Menu | Capri Blu Sorrento</title>
   <link rel="icon" href="../img/LOGO.capriblu.png">
-  <link rel="stylesheet" href="./assets/css/menu.css?v=totem-3">
+  <link rel="stylesheet" href="./assets/css/menu.css?v=detail-blue-1">
   <script type="module" src="./assets/js/menu.js?v=totem-3"></script>
   <script type="module" src="./assets/js/background.js?v=1"></script>
 </head>
@@ -34,11 +34,20 @@
     </div>
   </main>
   <dialog id="detail" aria-labelledby="detail-title">
-    <div class="dialog-head"><span class="eyebrow">CAPRI BLU · SORRENTO</span><button type="button" id="close-detail" aria-label="Chiudi">×</button></div>
-    <div class="language-control"><label for="detail-language" id="detail-language-label">Lingua</label><select id="detail-language"><option value="it">Italiano</option><option value="en">English</option></select></div>
-    <div id="detail-image"></div><h2 id="detail-title"></h2><p id="detail-description"></p>
-    <fieldset id="formats"><legend id="formats-label">Formato</legend><div id="format-options"></div></fieldset>
-    <p id="detail-price" class="detail-price"></p><p id="detail-availability"></p><p id="allergen-note" class="allergen-note"></p>
+    <div class="dialog-head">
+      <span class="eyebrow">CAPRI BLU <span>SORRENTO</span></span>
+      <div class="language-control"><label for="detail-language" id="detail-language-label">Lingua</label><select id="detail-language"><option value="it">Italiano</option><option value="en">English</option></select></div>
+      <button type="button" id="close-detail" aria-label="Chiudi" autofocus>×</button>
+    </div>
+    <div class="detail-layout">
+      <div id="detail-image"></div>
+      <div class="detail-copy">
+        <div class="detail-title-row"><h2 id="detail-title"></h2><p id="detail-price" class="detail-price"></p></div>
+        <p id="detail-description"></p>
+        <fieldset id="formats"><legend id="formats-label">Formato</legend><div id="format-options"></div></fieldset>
+        <p id="detail-availability"></p><p id="allergen-note" class="allergen-note"></p>
+      </div>
+    </div>
   </dialog>
   <noscript><p class="noscript">Per consultare il menu interattivo abilita JavaScript. <a href="../pdf/menu_autunno.pdf">Apri il menu completo in PDF / Full menu PDF</a></p></noscript>
 </body>

@@ -81,3 +81,46 @@ footer{border-color:#ffffff40;padding-bottom:58px}
   .detail-button{font-size:12px;padding:10px 5px}
 }
 @media(max-width:350px){.photo-button img,.photo-placeholder{height:225px}.pizza-card h3{font-size:18px}.card-body{padding:10px 8px}.pizza-card .card-description{font-size:10px}}
+
+/* Dish details share the blue palette and typography of the menu cards. */
+#detail{color-scheme:dark;width:calc(100% - 40px);max-width:940px;max-height:calc(100dvh - 40px);padding:0;border:1px solid #7895a580;border-radius:22px;color:#fff;background:linear-gradient(135deg,#104463,#062a43);box-shadow:0 28px 100px #00101dcc;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#608398 #082c45}
+#detail::backdrop{background:#031421b8;backdrop-filter:blur(8px)}
+#detail .dialog-head{position:sticky;top:0;z-index:2;gap:16px;padding:18px 24px;background:#082d46f5;border-bottom:1px solid #ffffff26}
+#detail .dialog-head .eyebrow{color:#fff;font:700 16px/1.2 Georgia,serif;letter-spacing:2px;margin-right:auto}
+#detail .dialog-head .eyebrow span{display:block;margin-top:5px;font:10px/1.2 Arial,sans-serif;letter-spacing:4px;color:#c1d5e2}
+#detail .language-control{gap:8px;color:#c1d5e2;font-size:12px}
+#detail .language-control select{color:#fff;background:#103e5a;border-color:#7895a580;padding:8px 24px 8px 12px;min-height:44px}
+#close-detail{flex-shrink:0;color:#fff;background:#ffffff0d;border-color:#7895a580;min-width:44px;line-height:1}
+#close-detail:hover{background:#236388}
+#detail :is(button,select):focus-visible{outline:3px solid #eed9a8;outline-offset:3px}
+.detail-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:32px;padding:26px}
+#detail-image{min-width:0;background:#041f32;border:1px solid #ffffff1a;border-radius:15px;overflow:hidden}
+#detail-image img{display:block;width:100%;height:420px;max-height:56dvh;object-fit:contain;margin:0;border-radius:0}
+#detail-image:empty{display:none}
+.detail-layout:has(#detail-image:empty){grid-template-columns:1fr;max-width:680px;margin:auto}
+.detail-copy{min-width:0;padding:6px 0}
+.detail-title-row{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+#detail h2{font:700 clamp(28px,3vw,38px)/1.1 Georgia,serif;margin:0;overflow-wrap:anywhere}
+#detail .detail-price{flex-shrink:0;white-space:nowrap;margin:0;padding:10px 12px;font:700 17px/1.2 Arial,sans-serif;border:1px solid #7895a580;border-radius:10px;background:#041f32}
+#detail-description{color:#e2eaf0;font-size:15px;line-height:1.75;margin:20px 0 24px}
+#detail fieldset{border-color:#ffffff30;margin:0;padding:18px 0 0}
+#detail legend{color:#bcd0de;font-size:11px;letter-spacing:1.5px;text-transform:uppercase}
+#detail #format-options{gap:8px}
+#detail #format-options button{min-height:44px;border-radius:10px;background:#103f5e;border-color:#7895a580;color:#e2eaf0;font-size:13px;padding:10px 14px}
+#detail #format-options button[aria-pressed=true]{color:#fff;border-color:#7bc5ef;background:linear-gradient(#2278aa,#115582);box-shadow:inset 0 1px #ffffff20}
+#detail-availability:empty{display:none}
+#detail .allergen-note{color:#bcd0de;border-color:#ffffff26;font-size:12px;line-height:1.65;margin:24px 0 0;padding-top:16px}
+@media(max-width:700px){
+  #detail{width:calc(100% - 20px);max-height:calc(100dvh - 20px);border-radius:18px}
+  #detail .dialog-head{padding:12px 14px;gap:10px}
+  #detail .dialog-head .eyebrow{font-size:14px}
+  #detail .language-control label{position:absolute;clip-path:inset(50%);width:1px;height:1px;overflow:hidden}
+  #detail .language-control select{max-width:112px;font-size:12px}
+  .detail-layout{grid-template-columns:1fr;gap:20px;padding:16px}
+  #detail-image img{height:auto;max-height:36dvh;min-height:0}
+  .detail-copy{padding:0}
+  #detail h2{font-size:30px}
+  #detail .detail-price{font-size:15px;padding:9px 10px}
+  #detail-description{font-size:14px;line-height:1.65;margin:16px 0 22px}
+  #detail .allergen-note{margin-top:20px}
+}
