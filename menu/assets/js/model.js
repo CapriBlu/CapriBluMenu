@@ -15,7 +15,13 @@ export function validateMenu(config, catalog, editions, locales) {
   const priceOK = value => Number.isSafeInteger(value) && value >= 0;
   const unique = values => new Set(values).size === values.length;
   const codesOK = codes => codes === null || (Array.isArray(codes) && unique(codes) && codes.every(code => Number.isInteger(code) && code >= 1 && code <= 14));
-  const fileOK = value => value === null || (typeof value === 'string' && /^[a-z0-9][a-z0-9.-]*\.(webp|avif|jpg|jpeg|png)$/.test(value));
+  const fileOK = (value, kind) => {
+    if (value === null) return true;
+    if (typeof value !== 'string') return false;
+    const parts = value.split('/');
+    return parts.length === 3 && categoryIds.includes(parts[0]) && parts[1] === kind &&
+      !parts[2].includes('..') && /^[a-z0-9][a-z0-9.-]*\.(webp|avif|jpg|jpeg|png)$/.test(parts[2]);
+  };
   fail(config.schemaVersion === 2 && catalog.schemaVersion === 2, 'Unsupported schema version');
   fail(config.enabledLanguages.includes(config.defaultLanguage) && config.enabledLanguages.includes(config.fallbackLanguage), 'Default/fallback language must be enabled');
   fail(unique(config.enabledLanguages), 'Duplicate language');
@@ -41,7 +47,7 @@ export function validateMenu(config, catalog, editions, locales) {
     fail(categoryIds.includes(item.categoryId), `Unknown category: ${item.id}`);
     fail(item.editionIds.length > 0 && item.editionIds.every(id=>editionIds.includes(id)), `Unknown edition: ${item.id}`);
     fail(item.supplementIds.every(id=>supplementIds.includes(id)), `Unknown supplement: ${item.id}`);
-    fail(fileOK(item.thumbnail) && fileOK(item.image), `Invalid image filename: ${item.id}`);
+    fail(fileOK(item.thumbnail, 'thumbnails') && fileOK(item.image, 'full'), `Invalid image path: ${item.id}`);
     fail(Number.isInteger(item.order) && item.order>=0, `Invalid order: ${item.id}`);
     checkOffer(item,item.id);
     fail(unique(item.variants.map(variant=>variant.id)), `Duplicate variant: ${item.id}`);

@@ -34,13 +34,21 @@
   "categories": {
     "fritti": "Fried Bites",
     "antipasti": "Appetizers",
+    "antipasti-mare": "Seafood Appetizers",
     "primi": "First Courses",
     "primi-mare": "Seafood Specialties",
-    "secondi": "Main Courses",
+    "secondi-terra": "Main Courses",
+    "secondi-mare": "Seafood Main Courses",
     "pizze-tradizione": "Traditional Pizzas",
     "firmate-capri-blu": "Signature Pizzas",
-    "montanare": "Montanare",
-    "rutiello-pizza": "Rutiello Pizza"
+    "montanare": "Montanare Pizza",
+    "rutiello-pizza": "Pizza Rutiello",
+    "ruota-di-carro": "Pizza Ruota di Carro",
+    "contorni": "Side Dishes",
+    "insalatone": "Grand Gourmet Salads",
+    "dessert": "Sweet Temptations",
+    "drinks-beverage": "Drinks & Beverage",
+    "spritz": "Our Spritz"
   },
   "items": {
     "tricolore": {

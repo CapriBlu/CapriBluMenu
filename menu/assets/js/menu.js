@@ -18,7 +18,7 @@ function itemText(id){return translatedItem(locales,state.language,config.fallba
 function categoryText(id){return locale().categories[id]||locales[config.fallbackLanguage].categories[id];}
 function currentItems(){return visibleItems(catalog,config.activeEdition,state.category);}
 function imageElement(filename,kind,alt){
-  const image=create('img');image.src=new URL(config[kind==='thumbnail'?'thumbnailBasePath':'fullImageBasePath']+filename,base);image.alt=alt;image.loading=kind==='thumbnail'?'lazy':'eager';image.decoding='async';image.width=640;image.height=480;
+  const image=create('img');image.src=new URL(config.imagesBasePath+filename,base);image.alt=alt;image.loading=kind==='thumbnail'?'lazy':'eager';image.decoding='async';image.width=640;image.height=480;
   image.addEventListener('error',()=>image.remove(),{once:true});return image;
 }
 function render(){

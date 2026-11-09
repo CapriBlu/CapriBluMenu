@@ -12,8 +12,8 @@ try {
   const errors=validateMenu(config,catalog,editions,locales);
   const resources=new Set([config.sourcePdf,...editions.editions.map(edition=>edition.sourcePdf)]);
   for (const item of catalog.items) {
-    if(item.thumbnail)resources.add(config.thumbnailBasePath+item.thumbnail);
-    if(item.image)resources.add(config.fullImageBasePath+item.image);
+    if(item.thumbnail)resources.add(config.imagesBasePath+item.thumbnail);
+    if(item.image)resources.add(config.imagesBasePath+item.image);
     resources.add('../'+item.source.pdf);
     for(const variant of item.variants)resources.add('../'+variant.source.pdf);
   }

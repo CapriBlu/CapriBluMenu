@@ -9,9 +9,8 @@
   "sourcePdf": "../pdf/menu_autunno.pdf",
   "catalog": "./data/catalog.json",
   "localesBasePath": "./locales/",
-  "thumbnailBasePath": "../img/menu/thumbnails/",
-  "fullImageBasePath": "../img/menu/full/",
   "activeEdition": "autunno-2026",
   "editions": "./data/editions.json",
-  "preview": true
+  "preview": true,
+  "imagesBasePath": "../img/menu/"
 }

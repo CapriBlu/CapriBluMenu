@@ -24,8 +24,9 @@ menu/
   scripts/            Validazione dati e file collegati
   tests/              Test del catalogo
 img/menu/
-  thumbnails/         Miniature per le schede
-  full/               Immagini grandi aperte su richiesta
+  [reparto]/
+    thumbnails/       Miniature per le schede
+    full/             Immagini grandi aperte su richiesta
 pdf/menu_autunno.pdf   Fonte dei contenuti italiano/inglese
 ```
 
@@ -42,8 +43,8 @@ Ogni elemento di items contiene:
 - id: identificatore stabile, minuscolo e con trattini.
 - categoryId: id di una categoria esistente.
 - priceCents: prezzo intero in centesimi di euro (1200 significa 12,00 EUR).
-- thumbnail: nome del file nella cartella thumbnails.
-- image: nome del file nella cartella full; null se non disponibile.
+- thumbnail: percorso reparto/thumbnails/nome-file.webp, relativo a img/menu/; null se non disponibile.
+- image: percorso reparto/full/nome-file.webp, relativo a img/menu/; null se non disponibile.
 - allergenCodes: codici come riportati nel PDF; null se non presenti.
 - allergenStatus: pending-review oppure verified; verified richiede anche una legenda verificata.
 - available: disponibilità del piatto.
@@ -53,7 +54,10 @@ Ogni elemento di items contiene:
 - supplementIds: riferimenti all'elenco condiviso supplements, inizialmente vuoto.
 - source: percorso PDF e pagina di origine.
 
-I nomi dei file delle immagini devono seguire l'id del piatto, per esempio `margherita.webp`.
+I nomi dei file delle immagini devono seguire l'id del piatto, per esempio `pizze-tradizione/thumbnails/margherita.webp`.
+imagesBasePath in config.json indica la cartella img/menu/. I reparti corrispondono alle intestazioni del PDF: l'elenco completo con le pagine di origine è in img/menu/README.md.
+Antipasti di mare, secondi di terra e secondi di mare hanno cartelle e categorie distinte. La precedente categoria non popolata secondi è stata rinominata secondi-terra; le pagine della vecchia gallery restano indipendenti.
+Le foto del formato Ruota di Carro hanno un proprio reparto; il collegamento di foto specifiche alle varianti sarà aggiunto quando saranno disponibili.
 Prezzi, immagini e codici allergeni non si duplicano nei file delle lingue.
 Non utilizzare un elenco allergeni vuoto per rappresentare informazioni mancanti.
 

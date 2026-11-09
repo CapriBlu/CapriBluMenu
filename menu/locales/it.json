@@ -32,15 +32,23 @@
     "loading": "Caricamento del menu…"
   },
   "categories": {
-    "fritti": "Fritti",
+    "fritti": "I Fritti",
     "antipasti": "Antipasti",
-    "primi": "Primi",
-    "primi-mare": "Primi di Mare",
-    "secondi": "Secondi",
-    "pizze-tradizione": "Pizze della Tradizione",
+    "antipasti-mare": "Antipasti di Mare",
+    "primi": "Primi Piatti",
+    "primi-mare": "Primi Piatti di Mare",
+    "secondi-terra": "Secondi di Terra",
+    "secondi-mare": "Secondi di Mare",
+    "pizze-tradizione": "Pizze",
     "firmate-capri-blu": "Firmate Capri Blu",
     "montanare": "Montanare",
-    "rutiello-pizza": "Rutiello Pizza"
+    "rutiello-pizza": "Rutiello",
+    "ruota-di-carro": "Ruota di Carro",
+    "contorni": "Contorni",
+    "insalatone": "Insalatone",
+    "dessert": "Dessert",
+    "drinks-beverage": "Drinks & Beverage",
+    "spritz": "Our Spritz"
   },
   "items": {
     "tricolore": {

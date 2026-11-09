@@ -34,3 +34,13 @@ test('Missing language fields fall back to Italian',()=>{
   const texts=structuredClone(locales);delete texts.en.items.margherita.description;
   assert.equal(translatedItem(texts,'en','it','margherita').description,texts.it.items.margherita.description);
 });
+test('Image paths support department folders and reject traversal, wrong size folders and unknown departments',()=>{
+  const changed=structuredClone(catalog),item=changed.items.find(item=>item.id==='margherita');
+  item.thumbnail='pizze-tradizione/thumbnails/margherita.webp';
+  item.image='pizze-tradizione/full/margherita.webp';
+  assert.deepEqual(validateMenu(config,changed,editions,locales),[]);
+  for(const bad of ['../full/margherita.webp','pizze-tradizione/../margherita.webp','unknown/thumbnails/margherita.webp','pizze-tradizione/full/margherita.webp','pizze-tradizione/thumbnails/../../menu.js']){
+    item.thumbnail=bad;
+    assert.ok(validateMenu(config,changed,editions,locales).some(error=>error.includes('Invalid image path')),bad);
+  }
+});
