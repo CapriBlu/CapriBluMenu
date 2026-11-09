@@ -40,5 +40,5 @@ Queste indicazioni si applicano a grafica, immagini, testi, contenuti e sviluppo
 - Prima di dichiarare pubblicato un aggiornamento, verificare l'esito della pubblicazione e la versione realmente online.
 - Obiettivo: un risultato coerente e rifinito gia alla prima proposta.
 
-## Feedback ancora da applicare
-L'utente ha giudicato troppo grezza la home con il nuovo pulsante unico. Il riquadro esterno, il pulsante massiccio e la predominanza delle immagini TheFork/Google devono essere rivalutati. La proposta di alleggerirli e ancora da realizzare e verificare: non presentarla come lavoro completato.
+## Direzione approvata per la home
+L'utente ha approvato un render con composizione aperta sul video originale: logo originale centrale senza i badge laterali, slide testuali, pulsante avorio sottile con testo su una riga e freccia discreta, nessun riquadro esterno. TheFork e Google sono collegamenti secondari compatti con icona e testo, non grandi immagini decorative. La scelta della lingua resta discreta in alto a destra. Il render usa uno sfondo illustrativo: sul sito mantenere il video esistente, non sostituirlo con l'immagine generata.

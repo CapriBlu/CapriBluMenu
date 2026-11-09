@@ -4,8 +4,8 @@
   if (!select || !link) return;
   const supported = ['it', 'en'];
   const copy = {
-    it: {language:'Lingua', menu:'Scopri il nostro menu', slider:"L'anima di Capri Blu", actions:'Collegamenti utili', book:'Prenota con TheFork', review:'Lascia una recensione su Google', phrases:['Sorrento','Pizzeria & Trattoria Napoletana','Sapori Autentici','Cucina Mediterranea',"Un Agrumeto Tutto l'Anno"]},
-    en: {language:'Language', menu:'Discover our menu', slider:'The soul of Capri Blu', actions:'Useful links', book:'Book with TheFork', review:'Leave a review on Google', phrases:['Sorrento','Neapolitan Pizzeria & Trattoria','Authentic Flavours','Mediterranean Cuisine','A Citrus Grove All Year Round']}
+    it: {language:'Lingua', menu:'Scopri il nostro menu', slider:"L'anima di Capri Blu", actions:'Collegamenti utili', book:'Prenota con TheFork', review:'Recensioni Google', phrases:['Sorrento','Pizzeria & Trattoria Napoletana','Sapori Autentici','Cucina Mediterranea',"Un Agrumeto Tutto l'Anno"]},
+    en: {language:'Language', menu:'Discover our menu', slider:'The soul of Capri Blu', actions:'Useful links', book:'Book with TheFork', review:'Google reviews', phrases:['Sorrento','Neapolitan Pizzeria & Trattoria','Authentic Flavours','Mediterranean Cuisine','A Citrus Grove All Year Round']}
   };
   let saved;
   try { saved = localStorage.getItem('capriblu-menu-language'); } catch {}
@@ -28,10 +28,10 @@
     }
     const actions = document.querySelector('.quick-buttons');
     if (actions) actions.setAttribute('aria-label', text.actions);
-    const book = document.querySelector('.thefork-button img');
-    const review = document.querySelector('.google-button img');
-    if (book) book.alt = text.book;
-    if (review) review.alt = text.review;
+    const book = document.getElementById('book-label');
+    const review = document.getElementById('review-label');
+    if (book) book.textContent = text.book;
+    if (review) review.textContent = text.review;
   }
   select.addEventListener('change', () => {
     language = select.value;

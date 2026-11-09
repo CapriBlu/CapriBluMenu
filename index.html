@@ -12,10 +12,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&amp;display=swap">
   <link rel="stylesheet" href="./brand-slider.css?v=3">
   <script src="./script/brand-slider.js?v=2" defer></script>
-  <link rel="stylesheet" href="./home-entry.css?v=1">
-  <script src="./script/home-entry.js?v=1" defer></script>
+  <link rel="stylesheet" href="./home-entry.css?v=refined-2">
+  <script src="./script/home-entry.js?v=refined-2" defer></script>
 </head>
-<body>
+<body class="home-page">
   <video class="bg-video bg-video-desktop" autoplay muted loop playsinline preload="auto" aria-hidden="true">
     <source src="./img/capri_blu_pc_25s_1080p_hq.mp4?v=1" type="video/mp4">
   </video>
@@ -33,11 +33,6 @@
       <select id="home-language"><option value="it">Italiano</option><option value="en">English</option></select>
     </div>
     <header class="top-brand" aria-label="Capri Blu Sorrento">
-      <img
-        class="top-pasta top-pasta-left"
-        src="./img/pasta-lovers1.png"
-        alt="Pasta Lovers"
-      >
 
       <a
         class="brand-logo-link"
@@ -52,11 +47,6 @@
         >
       </a>
 
-      <img
-        class="top-pasta top-pasta-right"
-        src="./img/pizza.lovers.png?v=2026070502"
-        alt="Pizza Lovers"
-      >
     </header>
 
     <section class="brand-slider" tabindex="0" lang="it" aria-label="L'anima di Capri Blu">
@@ -76,28 +66,28 @@
       </div>
     </section>
 
-    <main class="card home-entry">
+    <main class="home-entry">
 
       <div class="buttons">
         <a class="discover-menu-button" id="discover-menu" href="./menu/?lang=it&amp;v=home-entry-1"><span id="discover-menu-label">Scopri il nostro menu</span><span aria-hidden="true">→</span></a>
 
-<div class="quick-buttons" aria-label="Quick actions">
+        <div class="quick-buttons" aria-label="Quick actions">
           <a
-            class="image-button quick-button thefork-button"
+            class="secondary-link thefork-button"
             href="https://www.thefork.it/ristorante/capri-blu-sorrento-r861548"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="./img/Gem.Bott.fork.png?v=1" alt="Book with TheFork">
+            <svg class="secondary-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 3v5a3 3 0 0 0 6 0V3M8 3v18M18 3c-3 3-4 6-4 9h4m0-9v18"/></svg><span id="book-label">Prenota con TheFork</span>
           </a>
 
           <a
-            class="image-button quick-button google-button"
+            class="secondary-link google-button"
             href="https://www.google.com/search?q=capri+blu+sorrento"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="./img/gem.bott.google.png?v=1" alt="Leave a Review on Google">
+            <span class="google-letter" aria-hidden="true">G</span><span id="review-label">Recensioni Google</span>
           </a>
         </div>
       </div>
