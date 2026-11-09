@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "defaultLanguage": "it",
+  "fallbackLanguage": "it",
+  "enabledLanguages": [
+    "it",
+    "en"
+  ],
+  "sourcePdf": "../pdf/menu_autunno.pdf",
+  "catalog": "./data/catalog.json",
+  "localesBasePath": "./locales/",
+  "thumbnailBasePath": "../img/menu/thumbnails/",
+  "fullImageBasePath": "../img/menu/full/"
+}

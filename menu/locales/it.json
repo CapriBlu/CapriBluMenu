@@ -1,0 +1,27 @@
+{
+  "language": "it",
+  "label": "Italiano",
+  "ui": {
+    "menu": "Menu",
+    "back": "Indietro",
+    "language": "Lingua",
+    "ingredients": "Ingredienti",
+    "allergens": "Allergeni",
+    "close": "Chiudi",
+    "unavailable": "Non disponibile",
+    "imageUnavailable": "Foto non disponibile",
+    "emptyCategory": "Nessun piatto disponibile in questa categoria."
+  },
+  "categories": {
+    "fritti": "Fritti",
+    "antipasti": "Antipasti",
+    "primi": "Primi",
+    "primi-mare": "Primi di Mare",
+    "secondi": "Secondi",
+    "pizze-tradizione": "Pizze della Tradizione",
+    "firmate-capri-blu": "Firmate Capri Blu",
+    "montanare": "Montanare",
+    "rutiello-pizza": "Rutiello Pizza"
+  },
+  "items": {}
+}

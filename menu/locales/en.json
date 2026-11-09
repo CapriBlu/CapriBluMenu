@@ -1,0 +1,27 @@
+{
+  "language": "en",
+  "label": "English",
+  "ui": {
+    "menu": "Menu",
+    "back": "Back",
+    "language": "Language",
+    "ingredients": "Ingredients",
+    "allergens": "Allergens",
+    "close": "Close",
+    "unavailable": "Unavailable",
+    "imageUnavailable": "Photo unavailable",
+    "emptyCategory": "No dishes available in this category."
+  },
+  "categories": {
+    "fritti": "Fried Bites",
+    "antipasti": "Appetizers",
+    "primi": "First Courses",
+    "primi-mare": "Seafood Specialties",
+    "secondi": "Main Courses",
+    "pizze-tradizione": "Traditional Pizzas",
+    "firmate-capri-blu": "Signature Pizzas",
+    "montanare": "Montanare",
+    "rutiello-pizza": "Rutiello Pizza"
+  },
+  "items": {}
+}

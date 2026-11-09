@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "currency": "EUR",
+  "categories": [
+    {
+      "id": "fritti",
+      "order": 0
+    },
+    {
+      "id": "antipasti",
+      "order": 1
+    },
+    {
+      "id": "primi",
+      "order": 2
+    },
+    {
+      "id": "primi-mare",
+      "order": 3
+    },
+    {
+      "id": "secondi",
+      "order": 4
+    },
+    {
+      "id": "pizze-tradizione",
+      "order": 5
+    },
+    {
+      "id": "firmate-capri-blu",
+      "order": 6
+    },
+    {
+      "id": "montanare",
+      "order": 7
+    },
+    {
+      "id": "rutiello-pizza",
+      "order": 8
+    }
+  ],
+  "items": []
+}
