@@ -1,7 +1,7 @@
 # Menu interattivo Capri Blu
 
 Anteprima autonoma in `menu/index.html`, con 17 Pizze della Tradizione dalle pagine 4-6 del PDF autunnale e 8 varianti Ruota di Carro dalle pagine 16-17.
-La gallery pubblicata non è ancora collegata all'anteprima. Le altre categorie sono predisposte ma non ancora popolate.
+Il pulsante Menu Interattivo della home apre menu/index.html. Il collegamento Indietro del menu torna alla home. Le altre categorie sono predisposte ma non ancora popolate.
 Prezzi e testi italiano/inglese sono trascritti dal PDF. Sono associate 11 foto alle pizze tradizionali, con miniature WebP leggere e versioni grandi caricate su richiesta. Gli originali caricati restano in full/ con i loro nomi.
 Le miniature nelle card hanno uno zoom visivo e un ritaglio centrale per avvicinare la pizza. Le foto grandi mantengono l'inquadratura completa nel dettaglio. I formati Ruota di Carro non mostrano le foto delle pizze tradizionali, perché non sono ancora associate foto specifiche a quei formati.
 Mancano le foto di Napoletana rivisitata, Pancetta e Cipolla, Patanella, Scarpariello, Napoletana e Marinara.
@@ -85,7 +85,7 @@ Le traduzioni dei codici allergeni verranno aggiunte dopo aver verificato la leg
 1. Verificare i punti in review.json e la legenda allergeni con il ristorante.
 2. Preparare e associare le immagini effettive dei piatti.
 3. Trascrivere le altre categorie e completare la revisione bilingue.
-4. Collegare galleria.html quando il menu completo è pronto.
+4. Completare le altre categorie nel menu interattivo già collegato alla home.
 
 ## Stagioni, disponibilità e supplementi
 
