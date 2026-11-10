@@ -40,3 +40,11 @@
 }
 @media(max-width:350px){.home-page{padding-left:15px;padding-right:15px}.discover-menu-button{font-size:19px;padding:15px 17px;gap:12px}.secondary-link{font-size:12px;padding:8px 10px;gap:6px}.home-page .brand-slider-viewport{font-size:17px}}
 @media(prefers-reduced-motion:reduce){.discover-menu-button,.secondary-link{transition:none}}
+
+/* Keep both original Lovers badges alongside the centered restaurant logo. */
+.home-page .top-brand{display:grid;grid-template-columns:110px 310px 110px;justify-content:center;align-items:center;gap:20px}
+.home-page .brand-logo-link{width:100%;min-width:0}
+.home-page .brand-logo{width:100%;max-width:100%}
+.home-page .top-pasta{width:90px;max-width:100%;height:auto;justify-self:center;animation:none;filter:none}
+.home-page .top-pasta-right{width:110px}
+@media(max-width:600px){.home-page .top-brand{grid-template-columns:minmax(0,1fr) minmax(0,3fr) minmax(0,1fr);gap:10px}.home-page .top-pasta,.home-page .top-pasta-right{width:100%;max-width:72px}}
