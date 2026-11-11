@@ -184,3 +184,10 @@ footer{border-color:#ffffff40;padding-bottom:58px}
 #detail-position{margin:0;color:#d8e6ef;font-size:12px;line-height:1.4;text-align:center;overflow-wrap:anywhere}
 @media(max-width:600px){#detail .detail-navigation{padding:10px 12px;gap:8px;grid-template-columns:1fr minmax(55px,.9fr) 1fr}.detail-navigation button{padding:10px 8px;font-size:12px;gap:6px}#detail-position{font-size:11px}}
 @media(max-width:350px){.detail-navigation button{font-size:11px;gap:4px}}
+
+/* Reuse the homepage's animated brand captions without increasing the header weight. */
+.menu-brand{display:flex;flex-direction:column;align-items:center;width:min(100%,600px);min-width:0}
+.topbar .brand-slider{max-width:100%;margin-top:5px;color:#fff8ed;text-align:center}
+.topbar .brand-slider-viewport{font-size:16px;line-height:1.4;letter-spacing:.1em;padding:5px 8px;min-height:33px}
+.topbar{padding-bottom:12px}
+@media(max-width:600px){.topbar{padding-bottom:12px}.topbar .brand-slider-viewport{font-size:14px;min-height:49px;padding:5px 0;letter-spacing:.08em}.topbar .brand-slider{margin-top:3px}}

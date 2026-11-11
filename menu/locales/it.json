@@ -35,7 +35,8 @@
     "drinks": "Bevande",
     "previousItem": "Precedente",
     "nextItem": "Successiva",
-    "browseItems": "Sfoglia le pizze"
+    "browseItems": "Sfoglia le pizze",
+    "brandSlider": "L'anima di Capri Blu"
   },
   "categories": {
     "fritti": "I Fritti",
@@ -133,5 +134,12 @@
     "ruota-di-carro": "Ruota di Carro"
   },
   "supplements": {},
-  "allergens": {}
+  "allergens": {},
+  "brandPhrases": [
+    "Sorrento",
+    "Pizzeria & Trattoria Napoletana",
+    "Sapori Autentici",
+    "Cucina Mediterranea",
+    "Un Agrumeto Tutto l'Anno"
+  ]
 }

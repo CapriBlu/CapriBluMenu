@@ -23,6 +23,11 @@ function imageElement(filename,kind,alt){
 }
 function render(){
   const text=ui();document.documentElement.lang=state.language;document.title=`${text.menu} | Capri Blu Sorrento`;
+  const brand=document.querySelector('.brand-slider');
+  brand.lang=state.language;brand.setAttribute('aria-label',text.brandSlider);
+  const phrases=locale().brandPhrases||locales[config.fallbackLanguage].brandPhrases;
+  brand.querySelectorAll('.brand-slider-phrase').forEach((element,index)=>element.textContent=phrases[index]);
+  brand.querySelectorAll('.brand-slider-description li').forEach((element,index)=>element.textContent=phrases[index]);
   $('language').value=state.language;$('language-label').textContent=text.language;
   $('detail-language').value=state.language;$('detail-language-label').textContent=text.language;
   $('heading').textContent=text.menu;$('explore-link').textContent=text.explore+' ↓';$('preview-label').textContent=text.preview;

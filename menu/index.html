@@ -7,8 +7,13 @@
   <meta name="theme-color" content="#142b4d">
   <title>Menu | Capri Blu Sorrento</title>
   <link rel="icon" href="../img/LOGO.capriblu.png">
-  <link rel="stylesheet" href="./assets/css/menu.css?v=menu-navigation-1">
-  <script type="module" src="./assets/js/menu.js?v=menu-navigation-1"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&amp;display=swap">
+  <link rel="stylesheet" href="../brand-slider.css?v=3">
+  <script src="../script/brand-slider.js?v=2" defer></script>
+  <link rel="stylesheet" href="./assets/css/menu.css?v=menu-slider-1">
+  <script type="module" src="./assets/js/menu.js?v=menu-slider-1"></script>
   <script type="module" src="./assets/js/background.js?v=1"></script>
 </head>
 <body>
@@ -16,7 +21,13 @@
   <div class="background-shade" aria-hidden="true"></div>
   <button id="background-toggle" class="background-toggle" type="button" hidden>Pausa sfondo</button>
   <header class="topbar">
-    <a class="home" href="../index.html" aria-label="Capri Blu Sorrento — Home"><img class="menu-brand-logo" src="../img/LOGO.capriblu.png?v=1" width="883" height="515" alt="Capri Blu"><span>SORRENTO</span></a>
+    <div class="menu-brand">
+      <a class="home" href="../index.html" aria-label="Capri Blu Sorrento — Home"><img class="menu-brand-logo" src="../img/LOGO.capriblu.png?v=1" width="883" height="515" alt="Capri Blu"></a>
+      <section class="brand-slider" tabindex="0" lang="it" aria-label="L'anima di Capri Blu">
+        <ul class="brand-slider-description"><li>Sorrento</li><li>Pizzeria &amp; Trattoria Napoletana</li><li>Sapori Autentici</li><li>Cucina Mediterranea</li><li>Un Agrumeto Tutto l'Anno</li></ul>
+        <div class="brand-slider-viewport" aria-hidden="true"><span class="brand-slider-phrase is-active">Sorrento</span><span class="brand-slider-phrase">Pizzeria &amp; Trattoria Napoletana</span><span class="brand-slider-phrase">Sapori Autentici</span><span class="brand-slider-phrase">Cucina Mediterranea</span><span class="brand-slider-phrase">Un Agrumeto Tutto l'Anno</span></div>
+      </section>
+    </div>
     <div class="language-control"><label for="language" id="language-label">Lingua</label><select id="language"><option value="it">Italiano</option><option value="en">English</option></select></div>
   </header>
   <main>

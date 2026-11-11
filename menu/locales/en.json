@@ -35,7 +35,8 @@
     "drinks": "Drinks",
     "previousItem": "Previous",
     "nextItem": "Next",
-    "browseItems": "Browse pizzas"
+    "browseItems": "Browse pizzas",
+    "brandSlider": "The soul of Capri Blu"
   },
   "categories": {
     "fritti": "Fried Bites",
@@ -133,5 +134,12 @@
     "ruota-di-carro": "Ruota di Carro"
   },
   "supplements": {},
-  "allergens": {}
+  "allergens": {},
+  "brandPhrases": [
+    "Sorrento",
+    "Neapolitan Pizzeria & Trattoria",
+    "Authentic Flavours",
+    "Mediterranean Cuisine",
+    "A Citrus Grove All Year Round"
+  ]
 }
