@@ -5,7 +5,7 @@ const state = {language:'it',category:null,item:null,variant:null};
 let config,catalog,editions,locales;
 const dialog = $('detail');
 const create = (tag, className, text) => {const element=document.createElement(tag);if(className)element.className=className;if(text!==undefined)element.textContent=text;return element;};
-const getJSON = async path => {const response=await fetch(new URL(path,base));if(!response.ok)throw new Error(`Menu resource: ${response.status}`);return response.json();};
+const getJSON = async path => {const resource=new URL(path,base);resource.searchParams.set('v',new URL(import.meta.url).searchParams.get('v')||'1');const response=await fetch(resource);if(!response.ok)throw new Error(`Menu resource: ${response.status}`);return response.json();};
 const ui = () => ({...locales[config.fallbackLanguage].ui,...locales[state.language].ui});
 const locale = () => locales[state.language];
 const money = cents => new Intl.NumberFormat(state.language === 'en' ? 'en-IE' : 'it-IT',{style:'currency',currency:catalog.currency}).format(cents/100);
