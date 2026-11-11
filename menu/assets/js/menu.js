@@ -8,7 +8,7 @@ const create = (tag, className, text) => {const element=document.createElement(t
 const getJSON = async path => {const resource=new URL(path,base);resource.searchParams.set('v',new URL(import.meta.url).searchParams.get('v')||'1');const response=await fetch(resource);if(!response.ok)throw new Error(`Menu resource: ${response.status}`);return response.json();};
 const ui = () => ({...locales[config.fallbackLanguage].ui,...locales[state.language].ui});
 const locale = () => locales[state.language];
-const money = cents => new Intl.NumberFormat(state.language === 'en' ? 'en-IE' : 'it-IT',{style:'currency',currency:catalog.currency}).format(cents/100);
+const money = cents => new Intl.NumberFormat(({it:'it-IT',en:'en-IE',es:'es-ES',pt:'pt-PT'})[state.language]||'it-IT',{style:'currency',currency:catalog.currency}).format(cents/100);
 function syncURL(){
   const url=new URL(location.href);url.searchParams.set('lang',state.language);url.searchParams.set('category',state.category);
   for(const key of ['item','variant']){if(state[key])url.searchParams.set(key,state[key]);else url.searchParams.delete(key);}

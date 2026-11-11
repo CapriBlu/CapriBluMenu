@@ -1,0 +1,145 @@
+{
+  "language": "pt",
+  "label": "Português",
+  "ui": {
+    "menu": "Menu",
+    "back": "Voltar",
+    "language": "Idioma",
+    "ingredients": "Ingredientes",
+    "allergens": "Alergénios",
+    "close": "Fechar",
+    "unavailable": "Indisponível",
+    "imageUnavailable": "Fotografia indisponível",
+    "emptyCategory": "Não há pratos disponíveis nesta categoria.",
+    "preview": "Prévia do menu",
+    "season": "Outono 2026",
+    "intro": "A nossa tradição, uma pizza de cada vez.",
+    "previewNote": "Estamos a preparar o novo menu: descubra a primeira categoria completa.",
+    "allItems": "Todas as pizzas",
+    "itemCount": "pizzas",
+    "details": "Descubra esta pizza",
+    "formats": "Formato",
+    "standard": "Tradicional",
+    "ruota": "Ruota di Carro",
+    "allergensPending": "Para informações sobre alergénios, consulte a nossa equipa.",
+    "pdf": "Menu completo em PDF",
+    "coverCharge": "Serviço de mesa",
+    "perPerson": "por pessoa",
+    "frozen": "* Produto congelado na origem.",
+    "error": "Não foi possível carregar o menu. Pode consultar o PDF completo.",
+    "retry": "Tentar novamente",
+    "available": "Disponível",
+    "loading": "A carregar o menu…",
+    "explore": "Explore o menu",
+    "downloadPdf": "Descarregar PDF",
+    "drinks": "Bebidas",
+    "previousItem": "Anterior",
+    "nextItem": "Seguinte",
+    "browseItems": "Explorar pizzas",
+    "brandSlider": "A alma de Capri Blu"
+  },
+  "categories": {
+    "fritti": "Fritos",
+    "antipasti": "Entradas",
+    "antipasti-mare": "Entradas do mar",
+    "primi": "Primeiros pratos",
+    "primi-mare": "Primeiros pratos do mar",
+    "secondi-terra": "Pratos principais de carne",
+    "secondi-mare": "Pratos principais de peixe",
+    "pizze-tradizione": "Pizzas tradicionais",
+    "firmate-capri-blu": "Especialidades Capri Blu",
+    "montanare": "Montanare",
+    "rutiello-pizza": "Rutiello",
+    "ruota-di-carro": "Ruota di Carro",
+    "contorni": "Acompanhamentos",
+    "insalatone": "Saladas",
+    "dessert": "Sobremesas",
+    "drinks-beverage": "Bebidas",
+    "spritz": "Os nossos Spritz"
+  },
+  "items": {
+    "tricolore": {
+      "name": "Tricolore",
+      "description": "Fior di latte, tomate-cereja; à saída do forno: rúcula, presunto de Parma curado 24 meses e lascas de grana."
+    },
+    "cinque-formaggi": {
+      "name": "5 Formaggi",
+      "description": "Provola de Agerola, gorgonzola, ricotta fior di Fruscella, pecorino romano, lascas de provolone del monaco, manjericão e azeite virgem extra."
+    },
+    "salsiccia-e-friarielli": {
+      "name": "Salsiccia e Friarielli",
+      "description": "Friarielli, salsicha esfarelada, provola, manjericão e azeite virgem extra."
+    },
+    "napoletana-rivisitata": {
+      "name": "Napoletana rivisitata",
+      "description": "Tomate amarelo salteado, orégãos, azeitonas pretas, tomate-cereja vermelho, alho, manjericão e azeite virgem extra."
+    },
+    "bufalina": {
+      "name": "Bufalina",
+      "description": "Tomate pelado seleção Capri Blu, mozzarella de búfala campana D.O.P., manjericão e azeite virgem extra."
+    },
+    "pancetta-e-cipolla": {
+      "name": "Pancetta e Cipolla",
+      "description": "Cebola cozinhada a baixa temperatura, pancetta enrolada, provola fumada, manjericão e azeite virgem extra."
+    },
+    "capricciosa": {
+      "name": "Capricciosa",
+      "description": "Tomate pelado seleção Capri Blu, fior di latte de Agerola, salame Napoli, fiambre, cogumelos champignon, alcachofras, azeitonas pretas, manjericão e azeite virgem extra."
+    },
+    "crocco-pizza": {
+      "name": "Crocco Pizza",
+      "description": "Fior di latte de Agerola, natas, fiambre, crocchè de batata, manjericão e azeite virgem extra."
+    },
+    "patanella": {
+      "name": "Patanella",
+      "description": "Provola de Agerola, batatas assadas, salsicha esfarelada, manjericão e azeite virgem extra."
+    },
+    "diavola": {
+      "name": "Diavola",
+      "description": "Tomate pelado seleção Capri Blu, fior di latte de Agerola, salame picante, manjericão e azeite virgem extra."
+    },
+    "scarpariello": {
+      "name": "Scarpariello",
+      "description": "Tomate cozinhado à scarpariello, ligeiramente picante, fior di latte; à saída do forno: pecorino D.O.P., manjericão e azeite virgem extra."
+    },
+    "napoletana": {
+      "name": "Napoletana",
+      "description": "Tomate pelado seleção Capri Blu, orégãos da montanha, alho, azeitonas pretas, anchovas de Cetara, manjericão e azeite virgem extra."
+    },
+    "provola-e-pepe": {
+      "name": "Provola e Pepe",
+      "description": "Tomate pelado seleção Capri Blu, provola de Agerola, pimenta moída, manjericão e azeite virgem extra."
+    },
+    "wurstel-e-patatine": {
+      "name": "Wrustel & Patatine",
+      "description": "Fior di latte de Agerola, salsichas tipo Frankfurt, batatas fritas* e azeite virgem extra."
+    },
+    "margherita": {
+      "name": "Margherita",
+      "description": "Tomate pelado seleção Capri Blu, fior di latte de Agerola, manjericão e azeite virgem extra."
+    },
+    "marinara": {
+      "name": "Marinara",
+      "description": "Tomate pelado seleção Capri Blu, orégãos, alho e azeite virgem extra."
+    },
+    "cosacca": {
+      "name": "Cosacca",
+      "description": "Tomate pelado seleção Capri Blu, pecorino romano, manjericão e azeite virgem extra."
+    }
+  },
+  "editions": {
+    "autunno-2026": "Outono 2026"
+  },
+  "variants": {
+    "ruota-di-carro": "Ruota di Carro"
+  },
+  "supplements": {},
+  "allergens": {},
+  "brandPhrases": [
+    "Sorrento",
+    "Pizzaria e Trattoria Napolitana",
+    "Sabores autênticos",
+    "Cozinha mediterrânica",
+    "Um jardim de citrinos todo o ano"
+  ]
+}

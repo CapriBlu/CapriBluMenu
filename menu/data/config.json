@@ -4,7 +4,9 @@
   "fallbackLanguage": "it",
   "enabledLanguages": [
     "it",
-    "en"
+    "en",
+    "es",
+    "pt"
   ],
   "sourcePdf": "../pdf/menu_autunno.pdf",
   "catalog": "./data/catalog.json",
