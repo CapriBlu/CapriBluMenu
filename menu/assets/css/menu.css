@@ -310,3 +310,48 @@ footer{border-color:#ffffff40;padding-bottom:58px}
 #categories #more-options .category-shortcut{border-color:transparent;border-radius:12px;background:none;box-shadow:none;justify-content:flex-start;white-space:normal;text-align:left}
 #categories #more-options .category-shortcut:hover,#categories #more-options .category-shortcut[aria-pressed=true]{background:#b9dce81a;border-color:#bed8e055}
 @media(max-width:600px){#menu-navigation{padding:9px 10px 11px;border-radius:20px}}
+
+/* Compact navigation: utilities in the header, departments on one line. */
+.topbar{position:relative}
+.topbar>#navigation-home{position:absolute;top:18px;left:5%;min-height:42px;background:#0b2f496b;border-color:#d7e7ec70;backdrop-filter:blur(12px)}
+.topbar>.menu-search{position:absolute;top:18px;right:5%;width:min(26vw,310px);max-width:none;margin:0;border-radius:999px;background:#0b2f497a;border-color:#d7e7ec70;gap:9px;padding:0 14px}
+.topbar #menu-search{min-height:42px;font-size:13px;padding:10px 0}
+.topbar .menu-search>svg{width:18px;height:18px}
+.topbar #clear-search{width:25px;height:34px}
+.menu-actions{align-items:center;gap:22px;padding:0 5% 20px}
+.menu-actions #drinks-link{display:inline-flex;align-items:center;justify-content:center;min-width:146px;min-height:48px;padding:11px 28px;border:1px solid #b5dfee9c;border-radius:999px;background:linear-gradient(120deg,#1c719db3,#16527f8c);box-shadow:inset 0 1px #ffffff26;backdrop-filter:blur(12px);font:400 20px/1.2 Georgia,serif;color:#fff8ed;text-decoration:none}
+.menu-actions #drinks-link:hover{background:linear-gradient(120deg,#2589b9c2,#216995a6);border-color:#d5eef5}
+.menu-actions .language-control{color:#edf2f3;gap:8px}
+.menu-actions .language-control select{min-height:42px;padding:8px 26px 8px 13px;border-color:#bed8e04d;background:#0a29445c;color:#fff8ed;color-scheme:dark;backdrop-filter:blur(8px)}
+.menu-actions .pdf-link{margin:0;min-height:40px;padding:10px 0;font-size:12px}
+#menu-navigation{display:flex;align-items:center;gap:12px;padding:9px 12px;border-radius:999px;margin-bottom:22px}
+#all-categories{min-height:42px;border-color:transparent;background:none;padding:8px 12px}
+#categories{flex:1;flex-wrap:nowrap;gap:10px;min-width:0}
+#quick-categories{flex:1;overflow-x:auto;scrollbar-width:thin;scrollbar-color:#b9d4de40 transparent;gap:7px;padding:0}
+#quick-categories .category-shortcut{flex-shrink:0}
+#categories .category-shortcut,#more-label{min-height:40px;padding:9px 14px;font-size:12px}
+#more-label{max-width:160px;overflow-wrap:anywhere;white-space:normal;text-align:center}
+#category-title,#overview-title{scroll-margin-top:85px}
+@media(max-width:1100px){
+ .topbar{padding-top:72px}
+ .topbar>.menu-search{width:min(340px,55vw)}
+}
+@media(max-width:600px){
+ .topbar{padding:65px 12px 8px}
+ .topbar>#navigation-home{top:10px;left:12px;min-height:40px;padding:8px 12px;font-size:12px}
+ .topbar>.menu-search{top:10px;right:12px;width:calc(100% - 115px);gap:7px;padding:0 12px}
+ .topbar #menu-search{min-height:40px;font-size:12px}
+ .menu-actions{gap:12px;row-gap:6px;padding:0 12px 16px}
+ .menu-actions #drinks-link{min-width:124px;min-height:44px;font-size:18px;padding:10px 24px}
+ .menu-actions .language-control{font-size:12px;gap:7px}
+ .menu-actions .language-control select{min-height:40px;font-size:12px}
+ .menu-actions .pdf-link{font-size:11px;min-height:34px}
+ #menu-navigation{gap:5px;padding:7px 6px;border-radius:24px;margin-bottom:18px}
+ #all-categories{font-size:11px;padding:8px;min-height:40px;flex-shrink:0}
+ #categories{gap:5px}
+ #quick-categories{gap:6px}
+ #categories .category-shortcut,#more-label{font-size:11px;padding:9px 11px;min-height:40px}
+ #more-label{max-width:106px;gap:6px}
+ #category-title,#overview-title{scroll-margin-top:82px}
+}
+@media(max-width:380px){.menu-actions .pdf-link{flex-basis:100%;justify-content:center;border:0;padding:4px 0;min-height:26px}}

@@ -32,7 +32,7 @@ function render(){
   brand.querySelectorAll('.brand-slider-description li').forEach((el,i)=>el.textContent=phrases[i]);
   $('language').value=$('detail-language').value=state.language;
   $('language-label').textContent=$('detail-language-label').textContent=text.language;
-  $('heading').textContent=text.menu;$('explore-link').textContent=text.explore+' ↓';
+  $('heading').textContent=text.menu;
   $('pdf-link').textContent=text.downloadPdf+' ↓';$('pdf-link').href=new URL(config.sourcePdf,base);
   $('drinks-link').textContent=text.drinks;$('drinks-link').href=new URL('?lang='+state.language+'&category=drinks-beverage',base);
   $('wine-link').textContent=text.wineList;
@@ -137,7 +137,6 @@ $('more-categories').addEventListener('keydown',event=>{if(event.key==='Escape')
 
 $('category-hub').addEventListener('click',event=>{const link=event.target.closest('a[data-category]');if(!link||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey||event.button!==0)return;event.preventDefault();chooseCategory(link.dataset.category);});
 $('all-categories').addEventListener('click',()=>chooseCategory(null));
-$('explore-link').addEventListener('click',event=>{event.preventDefault();chooseCategory(null);});
 $('drinks-link').addEventListener('click',event=>{event.preventDefault();chooseCategory('drinks-beverage');});
 $('menu-search').addEventListener('input',event=>{if(!locales)return;state.query=event.target.value.slice(0,120);state.item=null;state.variant=null;render();});
 $('clear-search').addEventListener('click',()=>{state.query='';render();$('menu-search').focus();});

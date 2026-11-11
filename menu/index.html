@@ -12,8 +12,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&amp;display=swap">
   <link rel="stylesheet" href="../brand-slider.css?v=3">
   <script src="../script/brand-slider.js?v=2" defer></script>
-  <link rel="stylesheet" href="./assets/css/menu.css?v=soft-navigation-1">
-  <script type="module" src="./assets/js/menu.js?v=soft-navigation-1"></script>
+  <link rel="stylesheet" href="./assets/css/menu.css?v=compact-navigation-2">
+  <script type="module" src="./assets/js/menu.js?v=compact-navigation-2"></script>
   <script type="module" src="./assets/js/background.js?v=complete-menu-1"></script>
 </head>
 <body>
@@ -21,6 +21,13 @@
   <div class="background-shade" aria-hidden="true"></div>
   <button id="background-toggle" class="background-toggle" type="button" hidden>Pausa sfondo</button>
   <header class="topbar">
+    <a id="navigation-home" href="../index.html">Home ↗</a>
+      <div class="menu-search">
+        <label class="visually-hidden" id="search-label" for="menu-search">Cerca nel menu</label>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6"></circle><path d="m15 15 5 5"></path></svg>
+        <input type="search" id="menu-search" placeholder="Un piatto, un ingrediente…" autocomplete="off">
+        <button type="button" id="clear-search" aria-label="Cancella ricerca" hidden>×</button>
+      </div>
     <div class="lovers-cycle lovers-left" role="img" aria-label="Pizza Lovers e Pasta Lovers"><img class="lovers-pizza" src="../img/pizza.lovers.png?v=2026070502" alt=""><img class="lovers-pasta" src="../img/pasta-lovers1.png" alt=""></div>
     <div class="menu-brand">
       <a class="home" href="../index.html" aria-label="Capri Blu Sorrento — Home"><img class="menu-brand-logo" src="../img/LOGO.capriblu.png?v=1" width="883" height="515" alt="Capri Blu"></a>
@@ -30,24 +37,18 @@
       </section>
     </div>
 <div class="lovers-cycle lovers-right" role="img" aria-label="Pizza Lovers e Pasta Lovers"><img class="lovers-pizza" src="../img/pizza.lovers.png?v=2026070502" alt=""><img class="lovers-pasta" src="../img/pasta-lovers1.png" alt=""></div>
-    <div class="language-control"><label for="language" id="language-label">Lingua</label><select id="language"><option value="it">Italiano</option><option value="en">English</option><option value="es">Español</option><option value="pt">Português</option></select></div>
+
   </header>
   <main>
     <h1 class="visually-hidden" id="heading">Menu</h1>
     <nav class="menu-actions" aria-label="Menu">
-      <a class="explore-link" id="explore-link" href="#menu-content">Esplora il menu ↓</a>
       <a class="explore-link" id="drinks-link" href="../drink.html">Bevande ↗</a>
+    <div class="language-control"><label for="language" id="language-label">Lingua</label><select id="language"><option value="it">Italiano</option><option value="en">English</option><option value="es">Español</option><option value="pt">Português</option></select></div>
       <a class="pdf-link" id="pdf-link" href="../pdf/menu_autunno.pdf" download="Menu-Capri-Blu-Sorrento.pdf">Scarica il PDF ↓</a>
     </nav>
     <div class="menu-content" id="menu-content">
-      <div class="menu-search">
-        <label class="visually-hidden" id="search-label" for="menu-search">Cerca nel menu</label>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6"></circle><path d="m15 15 5 5"></path></svg>
-        <input type="search" id="menu-search" placeholder="Un piatto, un ingrediente…" autocomplete="off">
-        <button type="button" id="clear-search" aria-label="Cancella ricerca" hidden>×</button>
-      </div>
       <div class="menu-toolbar" id="menu-navigation">
-        <div class="navigation-return"><button id="all-categories" type="button">← Categorie</button><a id="navigation-home" href="../index.html">Home ↗</a></div>
+        <button id="all-categories" type="button">← Categorie</button>
         <nav id="categories" aria-label="Categorie">
           <div id="quick-categories"></div>
           <details id="more-categories"><summary id="more-label">Altri reparti</summary><div id="more-options"></div></details>
