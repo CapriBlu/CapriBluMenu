@@ -215,3 +215,5 @@ footer{border-color:#ffffff40;padding-bottom:58px}
 .lovers-cycle{width:100px;height:88px;margin-top:0}
 .lovers-cycle img{height:88px}
 @media(max-width:600px){.topbar{grid-template-columns:70px 118px 70px;column-gap:5px}.lovers-cycle{width:70px;height:70px;margin-top:0}.lovers-cycle img{height:70px}}
+
+.menu-brand{padding-bottom:64px}.topbar .brand-slider{top:94px}@media(max-width:600px){.menu-brand{padding-bottom:68px}.topbar .brand-slider{top:78px}}
