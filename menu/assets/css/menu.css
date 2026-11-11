@@ -191,3 +191,13 @@ footer{border-color:#ffffff40;padding-bottom:58px}
 .topbar .brand-slider-viewport{font-size:16px;line-height:1.4;letter-spacing:.1em;padding:5px 8px;min-height:33px}
 .topbar{padding-bottom:12px}
 @media(max-width:600px){.topbar{padding-bottom:12px}.topbar .brand-slider-viewport{font-size:14px;min-height:49px;padding:5px 0;letter-spacing:.08em}.topbar .brand-slider{margin-top:3px}}
+
+/* Alternating original Lovers marks framing the menu brand. */
+.topbar{display:grid;grid-template-columns:90px minmax(0,460px) 90px;justify-content:center;align-items:center;column-gap:22px}
+.menu-brand{width:100%}
+.lovers-cycle{display:grid;width:82px;height:76px;align-items:center;justify-items:center}
+.lovers-cycle img{grid-area:1/1;width:100%;height:70px;object-fit:contain;animation:lovers-fade 8s ease-in-out infinite}
+.lovers-cycle .lovers-pasta{animation-delay:-4s}
+@keyframes lovers-fade{0%,40%{opacity:1}50%,90%{opacity:0}100%{opacity:1}}
+@media(max-width:600px){.topbar{grid-template-columns:48px minmax(0,1fr) 48px;column-gap:8px;padding-left:12px;padding-right:12px}.lovers-cycle{width:48px;height:60px}.lovers-cycle img{height:55px}.topbar .brand-slider-viewport{font-size:12px;letter-spacing:.04em;min-height:48px}}
+@media(prefers-reduced-motion:reduce){.lovers-cycle img{animation:none}.lovers-cycle .lovers-pasta{display:none}}
