@@ -165,3 +165,22 @@ footer{border-color:#ffffff40;padding-bottom:58px}
 
 .menu-actions{flex-wrap:wrap;column-gap:24px;row-gap:4px}
 @media(max-width:600px){.menu-actions{column-gap:18px}}
+
+/* A smaller header fades into the video instead of forming a solid band. */
+.topbar{min-height:112px;padding:16px 5% 20px;background:linear-gradient(180deg,#faf8f2bf,#faf8f259 72%,#faf8f200);border:0}
+.topbar .menu-brand-logo{width:112px}
+.topbar .home span{font-size:8px;letter-spacing:4px}
+.topbar>.language-control{top:18px;color:#142b4d;text-shadow:none}
+.topbar .language-control select{color:#fff8ed;background:#0a2944b3;border:1px solid #e5edf080;min-height:40px;font-size:13px;color-scheme:dark}
+.menu-actions{background:transparent;border:0;padding:6px 5% 14px;gap:24px}
+.menu-actions a{font-size:13px;min-height:40px}
+.menu-actions .pdf-link{border-bottom-color:#d7e6ef60}
+@media(max-width:600px){.topbar{min-height:132px;padding:42px 16px 20px}.topbar .menu-brand-logo{width:102px}.topbar>.language-control{top:8px;right:12px}.topbar .language-control select{min-height:36px;font-size:12px}.menu-actions{gap:14px;padding:0 12px 12px}.menu-actions a{font-size:12px}}
+/* Previous/next controls stay reachable while the dish details scroll. */
+#detail .detail-navigation{position:sticky;bottom:0;z-index:2;display:grid;grid-template-columns:1fr minmax(80px,1.2fr) 1fr;align-items:center;gap:12px;padding:14px 24px;background:#082d46f5;border-top:1px solid #ffffff26}
+.detail-navigation button{display:flex;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:10px 14px;border:1px solid #7895a580;border-radius:10px;background:#103f5e;color:#fff;font-size:13px}
+.detail-navigation button:hover{background:#21648c}
+.detail-navigation button span[aria-hidden]{font-size:22px;line-height:1}
+#detail-position{margin:0;color:#d8e6ef;font-size:12px;line-height:1.4;text-align:center;overflow-wrap:anywhere}
+@media(max-width:600px){#detail .detail-navigation{padding:10px 12px;gap:8px;grid-template-columns:1fr minmax(55px,.9fr) 1fr}.detail-navigation button{padding:10px 8px;font-size:12px;gap:6px}#detail-position{font-size:11px}}
+@media(max-width:350px){.detail-navigation button{font-size:11px;gap:4px}}

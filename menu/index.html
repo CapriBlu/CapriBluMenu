@@ -7,8 +7,8 @@
   <meta name="theme-color" content="#142b4d">
   <title>Menu | Capri Blu Sorrento</title>
   <link rel="icon" href="../img/LOGO.capriblu.png">
-  <link rel="stylesheet" href="./assets/css/menu.css?v=home-entry-1">
-  <script type="module" src="./assets/js/menu.js?v=home-entry-1"></script>
+  <link rel="stylesheet" href="./assets/css/menu.css?v=menu-navigation-1">
+  <script type="module" src="./assets/js/menu.js?v=menu-navigation-1"></script>
   <script type="module" src="./assets/js/background.js?v=1"></script>
 </head>
 <body>
@@ -50,6 +50,11 @@
         <p id="detail-availability"></p><p id="allergen-note" class="allergen-note"></p>
       </div>
     </div>
+    <nav class="detail-navigation" aria-label="Navigazione pizze">
+      <button type="button" id="previous-item"><span aria-hidden="true">←</span><span id="previous-item-label">Precedente</span></button>
+      <p id="detail-position" role="status" aria-live="polite" aria-atomic="true"></p>
+      <button type="button" id="next-item"><span id="next-item-label">Successiva</span><span aria-hidden="true">→</span></button>
+    </nav>
   </dialog>
   <noscript><p class="noscript">Per consultare il menu interattivo abilita JavaScript. <a href="../pdf/menu_autunno.pdf">Apri il menu completo in PDF / Full menu PDF</a></p></noscript>
 </body>

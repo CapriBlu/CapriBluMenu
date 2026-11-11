@@ -32,7 +32,10 @@
     "loading": "Loading the menu…",
     "explore": "Explore the menu",
     "downloadPdf": "Download PDF",
-    "drinks": "Drinks"
+    "drinks": "Drinks",
+    "previousItem": "Previous",
+    "nextItem": "Next",
+    "browseItems": "Browse pizzas"
   },
   "categories": {
     "fritti": "Fried Bites",

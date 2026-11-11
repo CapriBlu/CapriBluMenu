@@ -70,6 +70,21 @@ function renderDetail(){
   $('detail-price').textContent=money(offer.priceCents);
   $('detail-availability').textContent=!item.available||!offer.available?text.unavailable:'';
   $('allergen-note').textContent=text.allergensPending;
+  const items=currentItems(),index=items.findIndex(entry=>entry.id===item.id);
+  $('previous-item-label').textContent=text.previousItem;
+  $('next-item-label').textContent=text.nextItem;
+  $('previous-item').setAttribute('aria-label',text.previousItem+': '+itemText(items[(index-1+items.length)%items.length].id).name);
+  $('next-item').setAttribute('aria-label',text.nextItem+': '+itemText(items[(index+1)%items.length].id).name);
+  document.querySelector('.detail-navigation').setAttribute('aria-label',text.browseItems);
+  $('detail-position').textContent=content.name+' · '+(index+1)+' / '+items.length;
+  $('previous-item').disabled=$('next-item').disabled=items.length<2;
+}
+function navigateItem(direction){
+  const items=currentItems(),index=items.findIndex(item=>item.id===state.item);
+  if(!dialog.open||index<0||items.length<2)return;
+  state.item=items[(index+direction+items.length)%items.length].id;
+  state.variant=null;
+  renderDetail();dialog.scrollTop=0;syncURL();
 }
 function closeDetail(){if(dialog.open)dialog.close();state.item=null;state.variant=null;syncURL();}
 async function boot(){
@@ -94,6 +109,12 @@ $('categories').addEventListener('click',event=>{const button=event.target.close
 $('format-options').addEventListener('click',event=>{const button=event.target.closest('button[data-variant]');if(!button)return;state.variant=button.dataset.variant||null;renderDetail();syncURL();});
 for (const id of ['language','detail-language']) $(id).addEventListener('change',event=>{if(!locales)return;state.language=event.target.value;try{localStorage.setItem('capriblu-menu-language',state.language);}catch{}render();});
 $('close-detail').addEventListener('click',closeDetail);
+$('previous-item').addEventListener('click',()=>navigateItem(-1));
+$('next-item').addEventListener('click',()=>navigateItem(1));
+dialog.addEventListener('keydown',event=>{
+  if(event.altKey||event.ctrlKey||event.metaKey||event.shiftKey||event.target.closest('select,input,textarea,[contenteditable]'))return;
+  if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();navigateItem(event.key==='ArrowLeft'?-1:1);}
+});
 dialog.addEventListener('cancel',()=>{state.item=null;state.variant=null;syncURL();});
 dialog.addEventListener('click',event=>{if(event.target===dialog){const rect=dialog.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)closeDetail();}});
 $('retry').addEventListener('click',boot);

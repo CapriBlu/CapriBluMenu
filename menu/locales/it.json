@@ -32,7 +32,10 @@
     "loading": "Caricamento del menu…",
     "explore": "Esplora il menu",
     "downloadPdf": "Scarica il PDF",
-    "drinks": "Bevande"
+    "drinks": "Bevande",
+    "previousItem": "Precedente",
+    "nextItem": "Successiva",
+    "browseItems": "Sfoglia le pizze"
   },
   "categories": {
     "fritti": "I Fritti",

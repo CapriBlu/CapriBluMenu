@@ -44,3 +44,6 @@ Queste indicazioni si applicano a grafica, immagini, testi, contenuti e sviluppo
 L'utente ha approvato un render con composizione aperta sul video originale: logo originale centrale con Pasta Lovers a sinistra e Pizza Lovers a destra, slide testuali, pulsante avorio sottile con testo su una riga e freccia discreta, nessun riquadro esterno. TheFork e Google sono collegamenti secondari compatti con icona e testo, non grandi immagini decorative. La scelta della lingua resta discreta in alto a destra. Il render usa uno sfondo illustrativo: sul sito mantenere il video esistente, non sostituirlo con l'immagine generata.
 
 Pasta Lovers e Pizza Lovers sono elementi di identita richiesti dall’utente: conservarli ai lati del logo anche nei restyling, adattandoli al telefono.
+
+## Aggiornamento menu
+L’intestazione del menu deve restare compatta e sfumata sul video, senza una fascia avorio piena o una barra blu pesante. La scheda aperta deve permettere di passare alla pizza precedente e successiva senza richiuderla, mantenendo lingua e aggiornando foto, ingredienti e prezzo. Le nuove direttive sul pulsante della home sono in attesa: non modificarlo insieme a interventi sul menu.
