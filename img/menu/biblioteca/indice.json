@@ -1,0 +1,1721 @@
+{
+  "version": 1,
+  "photos": [
+    {
+      "source": ".Beverage\\aperol spritz.jpg",
+      "thumbnail": "beverage/thumbnails/aperol-spritz.webp",
+      "image": "beverage/full/aperol-spritz.webp",
+      "thumbnailBytes": 30452,
+      "imageBytes": 121134,
+      "transparent": false,
+      "originalDimensions": [
+        1200,
+        1800
+      ]
+    },
+    {
+      "source": ".Beverage\\bionda spina.jpg",
+      "thumbnail": "beverage/thumbnails/bionda-spina.webp",
+      "image": "beverage/full/bionda-spina.webp",
+      "thumbnailBytes": 14024,
+      "imageBytes": 26334,
+      "transparent": false,
+      "originalDimensions": [
+        848,
+        565
+      ]
+    },
+    {
+      "source": ".Beverage\\Birra Nartigiana.jpg",
+      "thumbnail": "beverage/thumbnails/birra-nartigiana.webp",
+      "image": "beverage/full/birra-nartigiana.webp",
+      "thumbnailBytes": 23418,
+      "imageBytes": 35702,
+      "transparent": false,
+      "originalDimensions": [
+        408,
+        751
+      ]
+    },
+    {
+      "source": ".Beverage\\blu spritz.jpeg",
+      "thumbnail": "beverage/thumbnails/blu-spritz.webp",
+      "image": "beverage/full/blu-spritz.webp",
+      "thumbnailBytes": 34018,
+      "imageBytes": 118756,
+      "transparent": false,
+      "originalDimensions": [
+        1512,
+        2016
+      ]
+    },
+    {
+      "source": ".Beverage\\cocacola.jpg",
+      "thumbnail": "beverage/thumbnails/cocacola.webp",
+      "image": "beverage/full/cocacola.webp",
+      "thumbnailBytes": 10822,
+      "imageBytes": 66170,
+      "transparent": false,
+      "originalDimensions": [
+        960,
+        1702
+      ]
+    },
+    {
+      "source": ".Beverage\\cocacola0.jpg",
+      "thumbnail": "beverage/thumbnails/cocacola0.webp",
+      "image": "beverage/full/cocacola0.webp",
+      "thumbnailBytes": 8594,
+      "imageBytes": 9790,
+      "transparent": false,
+      "originalDimensions": [
+        392,
+        510
+      ]
+    },
+    {
+      "source": ".Beverage\\estate limone.jpg",
+      "thumbnail": "beverage/thumbnails/estate-limone.webp",
+      "image": "beverage/full/estate-limone.webp",
+      "thumbnailBytes": 11456,
+      "imageBytes": 13396,
+      "transparent": false,
+      "originalDimensions": [
+        600,
+        600
+      ]
+    },
+    {
+      "source": ".Beverage\\estate pesca.webp",
+      "thumbnail": "beverage/thumbnails/estate-pesca.webp",
+      "image": "beverage/full/estate-pesca.webp",
+      "thumbnailBytes": 17800,
+      "imageBytes": 34720,
+      "transparent": false,
+      "originalDimensions": [
+        530,
+        940
+      ]
+    },
+    {
+      "source": ".Beverage\\fanta.jpg",
+      "thumbnail": "beverage/thumbnails/fanta.webp",
+      "image": "beverage/full/fanta.webp",
+      "thumbnailBytes": 6500,
+      "imageBytes": 24434,
+      "transparent": false,
+      "originalDimensions": [
+        2560,
+        2560
+      ]
+    },
+    {
+      "source": ".Beverage\\heineken.jpg",
+      "thumbnail": "beverage/thumbnails/heineken.webp",
+      "image": "beverage/full/heineken.webp",
+      "thumbnailBytes": 13478,
+      "imageBytes": 15386,
+      "transparent": false,
+      "originalDimensions": [
+        554,
+        554
+      ]
+    },
+    {
+      "source": ".Beverage\\lemonsoda.jpg",
+      "thumbnail": "beverage/thumbnails/lemonsoda.webp",
+      "image": "beverage/full/lemonsoda.webp",
+      "thumbnailBytes": 17800,
+      "imageBytes": 20278,
+      "transparent": false,
+      "originalDimensions": [
+        443,
+        519
+      ]
+    },
+    {
+      "source": ".Beverage\\limoncello spritz.jpg",
+      "thumbnail": "beverage/thumbnails/limoncello-spritz.webp",
+      "image": "beverage/full/limoncello-spritz.webp",
+      "thumbnailBytes": 9298,
+      "imageBytes": 32694,
+      "transparent": false,
+      "originalDimensions": [
+        800,
+        1200
+      ]
+    },
+    {
+      "source": ".Beverage\\nastro azzurro.jpg",
+      "thumbnail": "beverage/thumbnails/nastro-azzurro.webp",
+      "image": "beverage/full/nastro-azzurro.webp",
+      "thumbnailBytes": 23390,
+      "imageBytes": 26972,
+      "transparent": false,
+      "originalDimensions": [
+        460,
+        434
+      ]
+    },
+    {
+      "source": ".Beverage\\spremuta arancia.jpg",
+      "thumbnail": "beverage/thumbnails/spremuta-arancia.webp",
+      "image": "beverage/full/spremuta-arancia.webp",
+      "thumbnailBytes": 28426,
+      "imageBytes": 87048,
+      "transparent": false,
+      "originalDimensions": [
+        1080,
+        1080
+      ]
+    },
+    {
+      "source": ".Beverage\\spremuta-di-limone_700x525.jpg",
+      "thumbnail": "beverage/thumbnails/spremuta-di-limone-700x525.webp",
+      "image": "beverage/full/spremuta-di-limone-700x525.webp",
+      "thumbnailBytes": 26962,
+      "imageBytes": 37936,
+      "transparent": false,
+      "originalDimensions": [
+        699,
+        466
+      ]
+    },
+    {
+      "source": ".Beverage\\sprite.webp",
+      "thumbnail": "beverage/thumbnails/sprite.webp",
+      "image": "beverage/full/sprite.webp",
+      "thumbnailBytes": 7482,
+      "imageBytes": 15636,
+      "transparent": false,
+      "originalDimensions": [
+        1000,
+        1000
+      ]
+    },
+    {
+      "source": ".Beverage\\tenents.jpg",
+      "thumbnail": "beverage/thumbnails/tenents.webp",
+      "image": "beverage/full/tenents.webp",
+      "thumbnailBytes": 10760,
+      "imageBytes": 24336,
+      "transparent": false,
+      "originalDimensions": [
+        700,
+        1167
+      ]
+    },
+    {
+      "source": ".Beverage\\vino della casa.webp",
+      "thumbnail": "beverage/thumbnails/vino-della-casa.webp",
+      "image": "beverage/full/vino-della-casa.webp",
+      "thumbnailBytes": 19660,
+      "imageBytes": 22214,
+      "transparent": false,
+      "originalDimensions": [
+        474,
+        356
+      ]
+    },
+    {
+      "source": "Antipasti\\crudo.mozzarella.jpg",
+      "thumbnail": "antipasti/thumbnails/crudo-mozzarella.webp",
+      "image": "antipasti/full/crudo-mozzarella.webp",
+      "thumbnailBytes": 12086,
+      "imageBytes": 14446,
+      "transparent": false,
+      "originalDimensions": [
+        399,
+        501
+      ]
+    },
+    {
+      "source": "Antipasti\\fior di zucca ripieni in tempura.jpg",
+      "thumbnail": "antipasti/thumbnails/fior-di-zucca-ripieni-in-tempura.webp",
+      "image": "antipasti/full/fior-di-zucca-ripieni-in-tempura.webp",
+      "thumbnailBytes": 23832,
+      "imageBytes": 35996,
+      "transparent": false,
+      "originalDimensions": [
+        768,
+        434
+      ]
+    },
+    {
+      "source": "Antipasti\\insalata caprese.jpg",
+      "thumbnail": "antipasti/thumbnails/insalata-caprese.webp",
+      "image": "antipasti/full/insalata-caprese.webp",
+      "thumbnailBytes": 17588,
+      "imageBytes": 25740,
+      "transparent": false,
+      "originalDimensions": [
+        738,
+        414
+      ]
+    },
+    {
+      "source": "Antipasti\\insalata di seppie e finocchi.jpeg",
+      "thumbnail": "antipasti/thumbnails/insalata-di-seppie-e-finocchi.webp",
+      "image": "antipasti/full/insalata-di-seppie-e-finocchi.webp",
+      "thumbnailBytes": 30208,
+      "imageBytes": 106620,
+      "transparent": false,
+      "originalDimensions": [
+        1200,
+        1600
+      ]
+    },
+    {
+      "source": "Antipasti\\parmigiana di melanzane.jpg",
+      "thumbnail": "antipasti/thumbnails/parmigiana-di-melanzane.webp",
+      "image": "antipasti/full/parmigiana-di-melanzane.webp",
+      "thumbnailBytes": 36996,
+      "imageBytes": 42976,
+      "transparent": false,
+      "originalDimensions": [
+        492,
+        624
+      ]
+    },
+    {
+      "source": "contorni\\insalata mista.webp",
+      "thumbnail": "contorni/thumbnails/insalata-mista.webp",
+      "image": "contorni/full/insalata-mista.webp",
+      "thumbnailBytes": 21220,
+      "imageBytes": 23402,
+      "transparent": false,
+      "originalDimensions": [
+        474,
+        316
+      ]
+    },
+    {
+      "source": "contorni\\insalata rucola scaglie.jpg",
+      "thumbnail": "contorni/thumbnails/insalata-rucola-scaglie.webp",
+      "image": "contorni/full/insalata-rucola-scaglie.webp",
+      "thumbnailBytes": 35248,
+      "imageBytes": 90590,
+      "transparent": false,
+      "originalDimensions": [
+        1080,
+        720
+      ]
+    },
+    {
+      "source": "contorni\\insalata-verde-lattuga-1-710x473.jpg",
+      "thumbnail": "contorni/thumbnails/insalata-verde-lattuga-1-710x473.webp",
+      "image": "contorni/full/insalata-verde-lattuga-1-710x473.webp",
+      "thumbnailBytes": 23716,
+      "imageBytes": 32262,
+      "transparent": false,
+      "originalDimensions": [
+        710,
+        473
+      ]
+    },
+    {
+      "source": "contorni\\patate al forno.webp",
+      "thumbnail": "contorni/thumbnails/patate-al-forno.webp",
+      "image": "contorni/full/patate-al-forno.webp",
+      "thumbnailBytes": 58130,
+      "imageBytes": 127848,
+      "transparent": false,
+      "originalDimensions": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "source": "contorni\\patate forno.avif",
+      "thumbnail": "contorni/thumbnails/patate-forno.webp",
+      "image": "contorni/full/patate-forno.webp",
+      "thumbnailBytes": 31560,
+      "imageBytes": 69730,
+      "transparent": false,
+      "originalDimensions": [
+        1024,
+        682
+      ]
+    },
+    {
+      "source": "contorni\\patatine fritte.webp",
+      "thumbnail": "contorni/thumbnails/patatine-fritte.webp",
+      "image": "contorni/full/patatine-fritte.webp",
+      "thumbnailBytes": 34188,
+      "imageBytes": 73190,
+      "transparent": false,
+      "originalDimensions": [
+        1200,
+        800
+      ]
+    },
+    {
+      "source": "contorni\\verdure grigliate.webp",
+      "thumbnail": "contorni/thumbnails/verdure-grigliate.webp",
+      "image": "contorni/full/verdure-grigliate.webp",
+      "thumbnailBytes": 42130,
+      "imageBytes": 44296,
+      "transparent": false,
+      "originalDimensions": [
+        474,
+        474
+      ]
+    },
+    {
+      "source": "Dolci\\Pizza Black&White.jpg",
+      "thumbnail": "dolci/thumbnails/pizza-black-white.webp",
+      "image": "dolci/full/pizza-black-white.webp",
+      "thumbnailBytes": 61704,
+      "imageBytes": 257998,
+      "transparent": false,
+      "originalDimensions": [
+        3653,
+        4566
+      ]
+    },
+    {
+      "source": "Dolci\\tiramisu.jpg",
+      "thumbnail": "dolci/thumbnails/tiramisu-jpg-9776cb.webp",
+      "image": "dolci/full/tiramisu-jpg-9776cb.webp",
+      "thumbnailBytes": 12800,
+      "imageBytes": 15048,
+      "transparent": false,
+      "originalDimensions": [
+        536,
+        373
+      ]
+    },
+    {
+      "source": "Dolci\\tiramisu.webp",
+      "thumbnail": "dolci/thumbnails/tiramisu-webp-1962fb.webp",
+      "image": "dolci/full/tiramisu-webp-1962fb.webp",
+      "thumbnailBytes": 49216,
+      "imageBytes": 142784,
+      "transparent": false,
+      "originalDimensions": [
+        765,
+        1020
+      ]
+    },
+    {
+      "source": "Firmate Capri Blu\\Bologna.jpg",
+      "thumbnail": "firmate-capri-blu/thumbnails/bologna.webp",
+      "image": "firmate-capri-blu/full/bologna.webp",
+      "thumbnailBytes": 58000,
+      "imageBytes": 243768,
+      "transparent": false,
+      "originalDimensions": [
+        4000,
+        5000
+      ]
+    },
+    {
+      "source": "Firmate Capri Blu\\Cacio & Pepe Pizza.jpg",
+      "thumbnail": "firmate-capri-blu/thumbnails/cacio-pepe-pizza.webp",
+      "image": "firmate-capri-blu/full/cacio-pepe-pizza.webp",
+      "thumbnailBytes": 66780,
+      "imageBytes": 281850,
+      "transparent": false,
+      "originalDimensions": [
+        4000,
+        5000
+      ]
+    },
+    {
+      "source": "Firmate Capri Blu\\capriblu 2.0.jpg",
+      "thumbnail": "firmate-capri-blu/thumbnails/capriblu-2-0.webp",
+      "image": "firmate-capri-blu/full/capriblu-2-0.webp",
+      "thumbnailBytes": 59080,
+      "imageBytes": 237406,
+      "transparent": false,
+      "originalDimensions": [
+        1891,
+        2836
+      ]
+    },
+    {
+      "source": "Firmate Capri Blu\\La Fico Blu.jpeg",
+      "thumbnail": "firmate-capri-blu/thumbnails/la-fico-blu.webp",
+      "image": "firmate-capri-blu/full/la-fico-blu.webp",
+      "thumbnailBytes": 17784,
+      "imageBytes": 66676,
+      "transparent": false,
+      "originalDimensions": [
+        945,
+        2048
+      ]
+    },
+    {
+      "source": "Firmate Capri Blu\\Montanara Genovese.jpg",
+      "thumbnail": "firmate-capri-blu/thumbnails/montanara-genovese.webp",
+      "image": "firmate-capri-blu/full/montanara-genovese.webp",
+      "thumbnailBytes": 54220,
+      "imageBytes": 248806,
+      "transparent": false,
+      "originalDimensions": [
+        4000,
+        6000
+      ]
+    },
+    {
+      "source": "Firmate Capri Blu\\Montanara Sorrento.jpg",
+      "thumbnail": "firmate-capri-blu/thumbnails/montanara-sorrento.webp",
+      "image": "firmate-capri-blu/full/montanara-sorrento.webp",
+      "thumbnailBytes": 55990,
+      "imageBytes": 255092,
+      "transparent": false,
+      "originalDimensions": [
+        3847,
+        4809
+      ]
+    },
+    {
+      "source": "Firmate Capri Blu\\Napoletana Rivisitata.jpg",
+      "thumbnail": "firmate-capri-blu/thumbnails/napoletana-rivisitata.webp",
+      "image": "firmate-capri-blu/full/napoletana-rivisitata.webp",
+      "thumbnailBytes": 81984,
+      "imageBytes": 458570,
+      "transparent": false,
+      "originalDimensions": [
+        3826,
+        4782
+      ]
+    },
+    {
+      "source": "Firmate Capri Blu\\Parmigiana Della Nonna.png",
+      "thumbnail": "firmate-capri-blu/thumbnails/parmigiana-della-nonna.webp",
+      "image": "firmate-capri-blu/full/parmigiana-della-nonna.webp",
+      "thumbnailBytes": 66948,
+      "imageBytes": 169900,
+      "transparent": false,
+      "originalDimensions": [
+        853,
+        848
+      ]
+    },
+    {
+      "source": "Firmate Capri Blu\\Patanella.jpg",
+      "thumbnail": "firmate-capri-blu/thumbnails/patanella.webp",
+      "image": "firmate-capri-blu/full/patanella.webp",
+      "thumbnailBytes": 61406,
+      "imageBytes": 255154,
+      "transparent": false,
+      "originalDimensions": [
+        4000,
+        5000
+      ]
+    },
+    {
+      "source": "Firmate Capri Blu\\porkins.jpg",
+      "thumbnail": "firmate-capri-blu/thumbnails/porkins.webp",
+      "image": "firmate-capri-blu/full/porkins.webp",
+      "thumbnailBytes": 58732,
+      "imageBytes": 249228,
+      "transparent": false,
+      "originalDimensions": [
+        3148,
+        3935
+      ]
+    },
+    {
+      "source": "Firmate Capri Blu\\pulecenella.jpeg",
+      "thumbnail": "firmate-capri-blu/thumbnails/pulecenella-jpeg-67ec76.webp",
+      "image": "firmate-capri-blu/full/pulecenella-jpeg-67ec76.webp",
+      "thumbnailBytes": 27824,
+      "imageBytes": 112246,
+      "transparent": false,
+      "originalDimensions": [
+        924,
+        2000
+      ]
+    },
+    {
+      "source": "Firmate Capri Blu\\Pulecenella.jpg",
+      "thumbnail": "firmate-capri-blu/thumbnails/pulecenella-jpg-67c561.webp",
+      "image": "firmate-capri-blu/full/pulecenella-jpg-67c561.webp",
+      "thumbnailBytes": 65934,
+      "imageBytes": 360666,
+      "transparent": false,
+      "originalDimensions": [
+        4000,
+        5000
+      ]
+    },
+    {
+      "source": "Firmate Capri Blu\\Regina Giovanna.png",
+      "thumbnail": "firmate-capri-blu/thumbnails/regina-giovanna.webp",
+      "image": "firmate-capri-blu/full/regina-giovanna.webp",
+      "thumbnailBytes": 55952,
+      "imageBytes": 88540,
+      "transparent": false,
+      "originalDimensions": [
+        682,
+        803
+      ]
+    },
+    {
+      "source": "Firmate Capri Blu\\Ruotiello Ciurilla.jpg",
+      "thumbnail": "firmate-capri-blu/thumbnails/ruotiello-ciurilla.webp",
+      "image": "firmate-capri-blu/full/ruotiello-ciurilla.webp",
+      "thumbnailBytes": 59390,
+      "imageBytes": 246060,
+      "transparent": false,
+      "originalDimensions": [
+        3913,
+        3913
+      ]
+    },
+    {
+      "source": "Firmate Capri Blu\\Ruotiello Marinara Antica.jpg",
+      "thumbnail": "firmate-capri-blu/thumbnails/ruotiello-marinara-antica.webp",
+      "image": "firmate-capri-blu/full/ruotiello-marinara-antica.webp",
+      "thumbnailBytes": 57484,
+      "imageBytes": 245310,
+      "transparent": false,
+      "originalDimensions": [
+        4000,
+        5000
+      ]
+    },
+    {
+      "source": "Firmate Capri Blu\\Ruotiello Patanella.jpg",
+      "thumbnail": "firmate-capri-blu/thumbnails/ruotiello-patanella.webp",
+      "image": "firmate-capri-blu/full/ruotiello-patanella.webp",
+      "thumbnailBytes": 60966,
+      "imageBytes": 247328,
+      "transparent": false,
+      "originalDimensions": [
+        4000,
+        4000
+      ]
+    },
+    {
+      "source": "Firmate Capri Blu\\Ruotiello Regina Giovanna.jpg",
+      "thumbnail": "firmate-capri-blu/thumbnails/ruotiello-regina-giovanna.webp",
+      "image": "firmate-capri-blu/full/ruotiello-regina-giovanna.webp",
+      "thumbnailBytes": 71126,
+      "imageBytes": 417202,
+      "transparent": false,
+      "originalDimensions": [
+        6048,
+        6048
+      ]
+    },
+    {
+      "source": "Firmate Capri Blu\\Sole di Napoli.jpg",
+      "thumbnail": "firmate-capri-blu/thumbnails/sole-di-napoli.webp",
+      "image": "firmate-capri-blu/full/sole-di-napoli.webp",
+      "thumbnailBytes": 49376,
+      "imageBytes": 229342,
+      "transparent": false,
+      "originalDimensions": [
+        3369,
+        4211
+      ]
+    },
+    {
+      "source": "Fritti\\2 Frittatine di pasta.jpg",
+      "thumbnail": "fritti/thumbnails/2-frittatine-di-pasta.webp",
+      "image": "fritti/full/2-frittatine-di-pasta.webp",
+      "thumbnailBytes": 34448,
+      "imageBytes": 172438,
+      "transparent": false,
+      "originalDimensions": [
+        2048,
+        1034
+      ]
+    },
+    {
+      "source": "Fritti\\2 Montanarine fritte con pomodoro di San Marzano.jpg",
+      "thumbnail": "fritti/thumbnails/2-montanarine-fritte-con-pomodoro-di-san-marzano.webp",
+      "image": "fritti/full/2-montanarine-fritte-con-pomodoro-di-san-marzano.webp",
+      "thumbnailBytes": 37208,
+      "imageBytes": 156900,
+      "transparent": false,
+      "originalDimensions": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "source": "Fritti\\2 Patate Dippers.jpg",
+      "thumbnail": "fritti/thumbnails/2-patate-dippers.webp",
+      "image": "fritti/full/2-patate-dippers.webp",
+      "thumbnailBytes": 20758,
+      "imageBytes": 34458,
+      "transparent": false,
+      "originalDimensions": [
+        853,
+        853
+      ]
+    },
+    {
+      "source": "Fritti\\2 Porzione di Patate Dolci.jpg",
+      "thumbnail": "fritti/thumbnails/2-porzione-di-patate-dolci.webp",
+      "image": "fritti/full/2-porzione-di-patate-dolci.webp",
+      "thumbnailBytes": 52548,
+      "imageBytes": 165212,
+      "transparent": false,
+      "originalDimensions": [
+        1254,
+        836
+      ]
+    },
+    {
+      "source": "Fritti\\Alici Fritte.png",
+      "thumbnail": "fritti/thumbnails/alici-fritte.webp",
+      "image": "fritti/full/alici-fritte.webp",
+      "thumbnailBytes": 59826,
+      "imageBytes": 109782,
+      "transparent": false,
+      "originalDimensions": [
+        682,
+        827
+      ]
+    },
+    {
+      "source": "Fritti\\calamaretti fritti.jpg",
+      "thumbnail": "fritti/thumbnails/calamaretti-fritti.webp",
+      "image": "fritti/full/calamaretti-fritti.webp",
+      "thumbnailBytes": 59504,
+      "imageBytes": 244114,
+      "transparent": false,
+      "originalDimensions": [
+        3745,
+        3745
+      ]
+    },
+    {
+      "source": "Fritti\\Fritto Arancini Crocche Frittatina di pasta.jpg",
+      "thumbnail": "fritti/thumbnails/fritto-arancini-crocche-frittatina-di-pasta.webp",
+      "image": "fritti/full/fritto-arancini-crocche-frittatina-di-pasta.webp",
+      "thumbnailBytes": 48004,
+      "imageBytes": 206474,
+      "transparent": false,
+      "originalDimensions": [
+        3902,
+        4877
+      ]
+    },
+    {
+      "source": "Fritti\\Frittura Gamberi Calamari.png",
+      "thumbnail": "fritti/thumbnails/frittura-gamberi-calamari.webp",
+      "image": "fritti/full/frittura-gamberi-calamari.webp",
+      "thumbnailBytes": 38240,
+      "imageBytes": 62412,
+      "transparent": false,
+      "originalDimensions": [
+        670,
+        846
+      ]
+    },
+    {
+      "source": "Fritti\\gamberoni pane panko.jpg",
+      "thumbnail": "fritti/thumbnails/gamberoni-pane-panko.webp",
+      "image": "fritti/full/gamberoni-pane-panko.webp",
+      "thumbnailBytes": 59310,
+      "imageBytes": 245320,
+      "transparent": false,
+      "originalDimensions": [
+        4000,
+        5000
+      ]
+    },
+    {
+      "source": "Fritti\\mozzarella-in-carrozza1.webp",
+      "thumbnail": "fritti/thumbnails/mozzarella-in-carrozza1.webp",
+      "image": "fritti/full/mozzarella-in-carrozza1.webp",
+      "thumbnailBytes": 35110,
+      "imageBytes": 145802,
+      "transparent": false,
+      "originalDimensions": [
+        1599,
+        900
+      ]
+    },
+    {
+      "source": "Fritti\\WhatsApp Image 2026-08-15 at 21.47.55.jpeg",
+      "thumbnail": "fritti/thumbnails/whatsapp-image-2026-08-15-at-21-47-55.webp",
+      "image": "fritti/full/whatsapp-image-2026-08-15-at-21-47-55.webp",
+      "thumbnailBytes": 26236,
+      "imageBytes": 98340,
+      "transparent": false,
+      "originalDimensions": [
+        1512,
+        2016
+      ]
+    },
+    {
+      "source": "Insalatone\\insalatona.jpg",
+      "thumbnail": "insalatone/thumbnails/insalatona.webp",
+      "image": "insalatone/full/insalatona.webp",
+      "thumbnailBytes": 50836,
+      "imageBytes": 58038,
+      "transparent": false,
+      "originalDimensions": [
+        554,
+        554
+      ]
+    },
+    {
+      "source": "Insalatone\\inslaata vegetariana.png",
+      "thumbnail": "insalatone/thumbnails/inslaata-vegetariana.webp",
+      "image": "insalatone/full/inslaata-vegetariana.webp",
+      "thumbnailBytes": 53908,
+      "imageBytes": 190186,
+      "transparent": false,
+      "originalDimensions": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "source": "Piatti special\\Png Special 2 nov.png",
+      "thumbnail": "piatti-special/thumbnails/png-special-2-nov.webp",
+      "image": "piatti-special/full/png-special-2-nov.webp",
+      "thumbnailBytes": 60766,
+      "imageBytes": 282676,
+      "transparent": true,
+      "originalDimensions": [
+        1663,
+        946
+      ]
+    },
+    {
+      "source": "Piatti special\\post di oggi.png",
+      "thumbnail": "piatti-special/thumbnails/post-di-oggi.webp",
+      "image": "piatti-special/full/post-di-oggi.webp",
+      "thumbnailBytes": 57116,
+      "imageBytes": 218548,
+      "transparent": false,
+      "originalDimensions": [
+        1069,
+        1471
+      ]
+    },
+    {
+      "source": "Piatti special\\Spaghetti Pomodorino Frecso e cozze 1 nov.jpeg",
+      "thumbnail": "piatti-special/thumbnails/spaghetti-pomodorino-frecso-e-cozze-1-nov.webp",
+      "image": "piatti-special/full/spaghetti-pomodorino-frecso-e-cozze-1-nov.webp",
+      "thumbnailBytes": 26906,
+      "imageBytes": 103346,
+      "transparent": false,
+      "originalDimensions": [
+        1204,
+        1600
+      ]
+    },
+    {
+      "source": "Piazze Tradizione\\5 formagi.jpeg",
+      "thumbnail": "piazze-tradizione/thumbnails/5-formagi.webp",
+      "image": "piazze-tradizione/full/5-formagi.webp",
+      "thumbnailBytes": 40146,
+      "imageBytes": 154320,
+      "transparent": false,
+      "originalDimensions": [
+        1512,
+        2016
+      ]
+    },
+    {
+      "source": "Piazze Tradizione\\Broccoli e Salsiccia.jpg",
+      "thumbnail": "piazze-tradizione/thumbnails/broccoli-e-salsiccia.webp",
+      "image": "piazze-tradizione/full/broccoli-e-salsiccia.webp",
+      "thumbnailBytes": 57896,
+      "imageBytes": 253800,
+      "transparent": false,
+      "originalDimensions": [
+        3862,
+        4827
+      ]
+    },
+    {
+      "source": "Piazze Tradizione\\Bufalina zoom out .jpg",
+      "thumbnail": "piazze-tradizione/thumbnails/bufalina-zoom-out.webp",
+      "image": "piazze-tradizione/full/bufalina-zoom-out.webp",
+      "thumbnailBytes": 60938,
+      "imageBytes": 206248,
+      "transparent": false,
+      "originalDimensions": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "source": "Piazze Tradizione\\Bufalina.jpg",
+      "thumbnail": "piazze-tradizione/thumbnails/bufalina.webp",
+      "image": "piazze-tradizione/full/bufalina.webp",
+      "thumbnailBytes": 60902,
+      "imageBytes": 296546,
+      "transparent": false,
+      "originalDimensions": [
+        3945,
+        3945
+      ]
+    },
+    {
+      "source": "Piazze Tradizione\\capricciosa.jpeg",
+      "thumbnail": "piazze-tradizione/thumbnails/capricciosa.webp",
+      "image": "piazze-tradizione/full/capricciosa.webp",
+      "thumbnailBytes": 55204,
+      "imageBytes": 214496,
+      "transparent": false,
+      "originalDimensions": [
+        1512,
+        2016
+      ]
+    },
+    {
+      "source": "Piazze Tradizione\\Cosacca.jpeg",
+      "thumbnail": "piazze-tradizione/thumbnails/cosacca.webp",
+      "image": "piazze-tradizione/full/cosacca.webp",
+      "thumbnailBytes": 58260,
+      "imageBytes": 252372,
+      "transparent": false,
+      "originalDimensions": [
+        1512,
+        2016
+      ]
+    },
+    {
+      "source": "Piazze Tradizione\\Crocco Pizza.jpg",
+      "thumbnail": "piazze-tradizione/thumbnails/crocco-pizza.webp",
+      "image": "piazze-tradizione/full/crocco-pizza.webp",
+      "thumbnailBytes": 59248,
+      "imageBytes": 276536,
+      "transparent": false,
+      "originalDimensions": [
+        4000,
+        4000
+      ]
+    },
+    {
+      "source": "Piazze Tradizione\\diavola.jpeg",
+      "thumbnail": "piazze-tradizione/thumbnails/diavola.webp",
+      "image": "piazze-tradizione/full/diavola.webp",
+      "thumbnailBytes": 27572,
+      "imageBytes": 157850,
+      "transparent": false,
+      "originalDimensions": [
+        924,
+        2000
+      ]
+    },
+    {
+      "source": "Piazze Tradizione\\focaccia caprese.png",
+      "thumbnail": "piazze-tradizione/thumbnails/focaccia-caprese.webp",
+      "image": "piazze-tradizione/full/focaccia-caprese.webp",
+      "thumbnailBytes": 59234,
+      "imageBytes": 69682,
+      "transparent": false,
+      "originalDimensions": [
+        581,
+        532
+      ]
+    },
+    {
+      "source": "Piazze Tradizione\\Margherita.jpg",
+      "thumbnail": "piazze-tradizione/thumbnails/margherita.webp",
+      "image": "piazze-tradizione/full/margherita.webp",
+      "thumbnailBytes": 58432,
+      "imageBytes": 253712,
+      "transparent": false,
+      "originalDimensions": [
+        1891,
+        2836
+      ]
+    },
+    {
+      "source": "Piazze Tradizione\\marinara.antica.jpeg",
+      "thumbnail": "piazze-tradizione/thumbnails/marinara-antica.webp",
+      "image": "piazze-tradizione/full/marinara-antica.webp",
+      "thumbnailBytes": 26134,
+      "imageBytes": 96618,
+      "transparent": false,
+      "originalDimensions": [
+        945,
+        2048
+      ]
+    },
+    {
+      "source": "Piazze Tradizione\\Nerano.jpg",
+      "thumbnail": "piazze-tradizione/thumbnails/nerano.webp",
+      "image": "piazze-tradizione/full/nerano.webp",
+      "thumbnailBytes": 63370,
+      "imageBytes": 332746,
+      "transparent": false,
+      "originalDimensions": [
+        3706,
+        4632
+      ]
+    },
+    {
+      "source": "Piazze Tradizione\\Ortolana.jpeg",
+      "thumbnail": "piazze-tradizione/thumbnails/ortolana.webp",
+      "image": "piazze-tradizione/full/ortolana.webp",
+      "thumbnailBytes": 52064,
+      "imageBytes": 223338,
+      "transparent": false,
+      "originalDimensions": [
+        1512,
+        2016
+      ]
+    },
+    {
+      "source": "Piazze Tradizione\\Piennolo Pizza.jpg",
+      "thumbnail": "piazze-tradizione/thumbnails/piennolo-pizza.webp",
+      "image": "piazze-tradizione/full/piennolo-pizza.webp",
+      "thumbnailBytes": 60730,
+      "imageBytes": 232132,
+      "transparent": false,
+      "originalDimensions": [
+        3925,
+        3925
+      ]
+    },
+    {
+      "source": "Piazze Tradizione\\Provola e pepe.jpg",
+      "thumbnail": "piazze-tradizione/thumbnails/provola-e-pepe.webp",
+      "image": "piazze-tradizione/full/provola-e-pepe.webp",
+      "thumbnailBytes": 59036,
+      "imageBytes": 253142,
+      "transparent": false,
+      "originalDimensions": [
+        3820,
+        4775
+      ]
+    },
+    {
+      "source": "Piazze Tradizione\\Ripieno al forno Napoletano Classico.jpg",
+      "thumbnail": "piazze-tradizione/thumbnails/ripieno-al-forno-napoletano-classico.webp",
+      "image": "piazze-tradizione/full/ripieno-al-forno-napoletano-classico.webp",
+      "thumbnailBytes": 66258,
+      "imageBytes": 318276,
+      "transparent": false,
+      "originalDimensions": [
+        4000,
+        5000
+      ]
+    },
+    {
+      "source": "Piazze Tradizione\\ripieno al forno.webp",
+      "thumbnail": "piazze-tradizione/thumbnails/ripieno-al-forno.webp",
+      "image": "piazze-tradizione/full/ripieno-al-forno.webp",
+      "thumbnailBytes": 50698,
+      "imageBytes": 140970,
+      "transparent": false,
+      "originalDimensions": [
+        765,
+        1020
+      ]
+    },
+    {
+      "source": "Piazze Tradizione\\Siciliana.jpg",
+      "thumbnail": "piazze-tradizione/thumbnails/siciliana.webp",
+      "image": "piazze-tradizione/full/siciliana.webp",
+      "thumbnailBytes": 60966,
+      "imageBytes": 246422,
+      "transparent": false,
+      "originalDimensions": [
+        3237,
+        4046
+      ]
+    },
+    {
+      "source": "Piazze Tradizione\\Siciliana.Zoomout.png",
+      "thumbnail": "piazze-tradizione/thumbnails/siciliana-zoomout.webp",
+      "image": "piazze-tradizione/full/siciliana-zoomout.webp",
+      "thumbnailBytes": 60566,
+      "imageBytes": 238366,
+      "transparent": false,
+      "originalDimensions": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "source": "Piazze Tradizione\\Tricolore.jpg",
+      "thumbnail": "piazze-tradizione/thumbnails/tricolore.webp",
+      "image": "piazze-tradizione/full/tricolore.webp",
+      "thumbnailBytes": 55348,
+      "imageBytes": 252116,
+      "transparent": false,
+      "originalDimensions": [
+        3393,
+        4241
+      ]
+    },
+    {
+      "source": "Piazze Tradizione\\Tricolore.zoomout.png",
+      "thumbnail": "piazze-tradizione/thumbnails/tricolore-zoomout.webp",
+      "image": "piazze-tradizione/full/tricolore-zoomout.webp",
+      "thumbnailBytes": 55850,
+      "imageBytes": 189578,
+      "transparent": false,
+      "originalDimensions": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "source": "Piazze Tradizione\\wrustel&patatine.jpg",
+      "thumbnail": "piazze-tradizione/thumbnails/wrustel-patatine.webp",
+      "image": "piazze-tradizione/full/wrustel-patatine.webp",
+      "thumbnailBytes": 37474,
+      "imageBytes": 44962,
+      "transparent": false,
+      "originalDimensions": [
+        640,
+        512
+      ]
+    },
+    {
+      "source": "primi\\ChatGPT Image 29 lug 2026, 15_24_47 (1).png",
+      "thumbnail": "primi/thumbnails/chatgpt-image-29-lug-2026-15-24-47-1.webp",
+      "image": "primi/full/chatgpt-image-29-lug-2026-15-24-47-1.webp",
+      "thumbnailBytes": 45044,
+      "imageBytes": 201460,
+      "transparent": false,
+      "originalDimensions": [
+        1021,
+        1541
+      ]
+    },
+    {
+      "source": "primi\\ChatGPT Image 29 lug 2026, 15_24_47 (2).png",
+      "thumbnail": "primi/thumbnails/chatgpt-image-29-lug-2026-15-24-47-2.webp",
+      "image": "primi/full/chatgpt-image-29-lug-2026-15-24-47-2.webp",
+      "thumbnailBytes": 42932,
+      "imageBytes": 187466,
+      "transparent": false,
+      "originalDimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "source": "primi\\Gnocchi Sorrentina.jpg",
+      "thumbnail": "primi/thumbnails/gnocchi-sorrentina.webp",
+      "image": "primi/full/gnocchi-sorrentina.webp",
+      "thumbnailBytes": 32876,
+      "imageBytes": 94488,
+      "transparent": false,
+      "originalDimensions": [
+        1200,
+        630
+      ]
+    },
+    {
+      "source": "primi\\gnocchi zucchine e totani.jpg",
+      "thumbnail": "primi/thumbnails/gnocchi-zucchine-e-totani.webp",
+      "image": "primi/full/gnocchi-zucchine-e-totani.webp",
+      "thumbnailBytes": 57240,
+      "imageBytes": 198920,
+      "transparent": false,
+      "originalDimensions": [
+        1126,
+        1397
+      ]
+    },
+    {
+      "source": "primi\\gnocchi zucchine e totani1.jpeg",
+      "thumbnail": "primi/thumbnails/gnocchi-zucchine-e-totani1.webp",
+      "image": "primi/full/gnocchi-zucchine-e-totani1.webp",
+      "thumbnailBytes": 39202,
+      "imageBytes": 160764,
+      "transparent": false,
+      "originalDimensions": [
+        1512,
+        2016
+      ]
+    },
+    {
+      "source": "primi\\Gnocchi zucchine e Totani2.jpg",
+      "thumbnail": "primi/thumbnails/gnocchi-zucchine-e-totani2.webp",
+      "image": "primi/full/gnocchi-zucchine-e-totani2.webp",
+      "thumbnailBytes": 48436,
+      "imageBytes": 108360,
+      "transparent": false,
+      "originalDimensions": [
+        903,
+        602
+      ]
+    },
+    {
+      "source": "primi\\Lasagna.jpg",
+      "thumbnail": "primi/thumbnails/lasagna.webp",
+      "image": "primi/full/lasagna.webp",
+      "thumbnailBytes": 59660,
+      "imageBytes": 244366,
+      "transparent": false,
+      "originalDimensions": [
+        3765,
+        4706
+      ]
+    },
+    {
+      "source": "primi\\Linguina all Astice.png",
+      "thumbnail": "primi/thumbnails/linguina-all-astice.webp",
+      "image": "primi/full/linguina-all-astice.webp",
+      "thumbnailBytes": 49838,
+      "imageBytes": 83278,
+      "transparent": false,
+      "originalDimensions": [
+        671,
+        853
+      ]
+    },
+    {
+      "source": "primi\\Linguina all Astice.zoomout.png",
+      "thumbnail": "primi/thumbnails/linguina-all-astice-zoomout.webp",
+      "image": "primi/full/linguina-all-astice-zoomout.webp",
+      "thumbnailBytes": 42276,
+      "imageBytes": 162570,
+      "transparent": false,
+      "originalDimensions": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "source": "primi\\macceroni cacio pepe.jpeg",
+      "thumbnail": "primi/thumbnails/macceroni-cacio-pepe.webp",
+      "image": "primi/full/macceroni-cacio-pepe.webp",
+      "thumbnailBytes": 43536,
+      "imageBytes": 165454,
+      "transparent": false,
+      "originalDimensions": [
+        1600,
+        1200
+      ]
+    },
+    {
+      "source": "primi\\maccheroni alla bolognese.jpg",
+      "thumbnail": "primi/thumbnails/maccheroni-alla-bolognese.webp",
+      "image": "primi/full/maccheroni-alla-bolognese.webp",
+      "thumbnailBytes": 44856,
+      "imageBytes": 208738,
+      "transparent": false,
+      "originalDimensions": [
+        3000,
+        2000
+      ]
+    },
+    {
+      "source": "primi\\Ravioli al Baccala.jpg",
+      "thumbnail": "primi/thumbnails/ravioli-al-baccala.webp",
+      "image": "primi/full/ravioli-al-baccala.webp",
+      "thumbnailBytes": 37654,
+      "imageBytes": 171358,
+      "transparent": false,
+      "originalDimensions": [
+        4000,
+        4000
+      ]
+    },
+    {
+      "source": "primi\\ravioli capresi.jpg",
+      "thumbnail": "primi/thumbnails/ravioli-capresi.webp",
+      "image": "primi/full/ravioli-capresi.webp",
+      "thumbnailBytes": 28834,
+      "imageBytes": 33530,
+      "transparent": false,
+      "originalDimensions": [
+        576,
+        347
+      ]
+    },
+    {
+      "source": "primi\\Risotto alla pescatora .jpeg",
+      "thumbnail": "primi/thumbnails/risotto-alla-pescatora.webp",
+      "image": "primi/full/risotto-alla-pescatora.webp",
+      "thumbnailBytes": 32532,
+      "imageBytes": 118906,
+      "transparent": false,
+      "originalDimensions": [
+        1512,
+        2016
+      ]
+    },
+    {
+      "source": "primi\\Risotto frutti di mare.jpeg",
+      "thumbnail": "primi/thumbnails/risotto-frutti-di-mare.webp",
+      "image": "primi/full/risotto-frutti-di-mare.webp",
+      "thumbnailBytes": 39896,
+      "imageBytes": 147920,
+      "transparent": false,
+      "originalDimensions": [
+        1080,
+        1920
+      ]
+    },
+    {
+      "source": "primi\\Scialatielli Allo Scoglio 2.jpg",
+      "thumbnail": "primi/thumbnails/scialatielli-allo-scoglio-2.webp",
+      "image": "primi/full/scialatielli-allo-scoglio-2.webp",
+      "thumbnailBytes": 58258,
+      "imageBytes": 126060,
+      "transparent": false,
+      "originalDimensions": [
+        720,
+        960
+      ]
+    },
+    {
+      "source": "primi\\scialatielli allo scoglio1.jpeg",
+      "thumbnail": "primi/thumbnails/scialatielli-allo-scoglio1.webp",
+      "image": "primi/full/scialatielli-allo-scoglio1.webp",
+      "thumbnailBytes": 40678,
+      "imageBytes": 151932,
+      "transparent": false,
+      "originalDimensions": [
+        1512,
+        2016
+      ]
+    },
+    {
+      "source": "primi\\spag luciana.jpg",
+      "thumbnail": "primi/thumbnails/spag-luciana.webp",
+      "image": "primi/full/spag-luciana.webp",
+      "thumbnailBytes": 40104,
+      "imageBytes": 190188,
+      "transparent": false,
+      "originalDimensions": [
+        4000,
+        5000
+      ]
+    },
+    {
+      "source": "primi\\spag vongole.jpg",
+      "thumbnail": "primi/thumbnails/spag-vongole.webp",
+      "image": "primi/full/spag-vongole.webp",
+      "thumbnailBytes": 55450,
+      "imageBytes": 248374,
+      "transparent": false,
+      "originalDimensions": [
+        4000,
+        5000
+      ]
+    },
+    {
+      "source": "primi\\spag.polpette.jpeg",
+      "thumbnail": "primi/thumbnails/spag-polpette.webp",
+      "image": "primi/full/spag-polpette.webp",
+      "thumbnailBytes": 42404,
+      "imageBytes": 180272,
+      "transparent": false,
+      "originalDimensions": [
+        1512,
+        2016
+      ]
+    },
+    {
+      "source": "primi\\spaghetti alle vongole 1.jpeg",
+      "thumbnail": "primi/thumbnails/spaghetti-alle-vongole-1.webp",
+      "image": "primi/full/spaghetti-alle-vongole-1.webp",
+      "thumbnailBytes": 40000,
+      "imageBytes": 146584,
+      "transparent": false,
+      "originalDimensions": [
+        1512,
+        2016
+      ]
+    },
+    {
+      "source": "primi\\spaghetti alle vongole 2.jpg",
+      "thumbnail": "primi/thumbnails/spaghetti-alle-vongole-2.webp",
+      "image": "primi/full/spaghetti-alle-vongole-2.webp",
+      "thumbnailBytes": 45318,
+      "imageBytes": 226012,
+      "transparent": false,
+      "originalDimensions": [
+        3000,
+        2056
+      ]
+    },
+    {
+      "source": "primi\\Spaghetti Capri Blu.jpg",
+      "thumbnail": "primi/thumbnails/spaghetti-capri-blu.webp",
+      "image": "primi/full/spaghetti-capri-blu.webp",
+      "thumbnailBytes": 32076,
+      "imageBytes": 148492,
+      "transparent": false,
+      "originalDimensions": [
+        4000,
+        5000
+      ]
+    },
+    {
+      "source": "primi\\Spaghetti Carbonara.png",
+      "thumbnail": "primi/thumbnails/spaghetti-carbonara.webp",
+      "image": "primi/full/spaghetti-carbonara.webp",
+      "thumbnailBytes": 35732,
+      "imageBytes": 176014,
+      "transparent": false,
+      "originalDimensions": [
+        1458,
+        1066
+      ]
+    },
+    {
+      "source": "primi\\WhatsApp Image 2026-07-29 at 13.07.44.jpeg",
+      "thumbnail": "primi/thumbnails/whatsapp-image-2026-07-29-at-13-07-44.webp",
+      "image": "primi/full/whatsapp-image-2026-07-29-at-13-07-44.webp",
+      "thumbnailBytes": 40286,
+      "imageBytes": 182046,
+      "transparent": false,
+      "originalDimensions": [
+        1512,
+        2016
+      ]
+    },
+    {
+      "source": "Secondi\\2 Cotoletta con le patatine.jpg",
+      "thumbnail": "secondi/thumbnails/2-cotoletta-con-le-patatine.webp",
+      "image": "secondi/full/2-cotoletta-con-le-patatine.webp",
+      "thumbnailBytes": 36832,
+      "imageBytes": 96280,
+      "transparent": false,
+      "originalDimensions": [
+        1000,
+        667
+      ]
+    },
+    {
+      "source": "Secondi\\2 Tagliata di Manzo con pomodorini, rucola e scaglie 2.jpg",
+      "thumbnail": "secondi/thumbnails/2-tagliata-di-manzo-con-pomodorini-rucola-e-scaglie-2.webp",
+      "image": "secondi/full/2-tagliata-di-manzo-con-pomodorini-rucola-e-scaglie-2.webp",
+      "thumbnailBytes": 41826,
+      "imageBytes": 114240,
+      "transparent": false,
+      "originalDimensions": [
+        1200,
+        800
+      ]
+    },
+    {
+      "source": "Secondi\\2 Tegamino con polipetti alla luciana e crostone di pane.jpg",
+      "thumbnail": "secondi/thumbnails/2-tegamino-con-polipetti-alla-luciana-e-crostone-di-pane.webp",
+      "image": "secondi/full/2-tegamino-con-polipetti-alla-luciana-e-crostone-di-pane.webp",
+      "thumbnailBytes": 34612,
+      "imageBytes": 89102,
+      "transparent": false,
+      "originalDimensions": [
+        1024,
+        683
+      ]
+    },
+    {
+      "source": "Secondi\\2 Tegamino con Polpette al Rag� o Cacio e pepe 4pz..jpg",
+      "thumbnail": "secondi/thumbnails/2-tegamino-con-polpette-al-ragu-o-cacio-e-pepe-4pz.webp",
+      "image": "secondi/full/2-tegamino-con-polpette-al-ragu-o-cacio-e-pepe-4pz.webp",
+      "thumbnailBytes": 48280,
+      "imageBytes": 251724,
+      "transparent": false,
+      "originalDimensions": [
+        1702,
+        2560
+      ]
+    },
+    {
+      "source": "Secondi\\2 Zuppa di Cozze.jpg",
+      "thumbnail": "secondi/thumbnails/2-zuppa-di-cozze.webp",
+      "image": "secondi/full/2-zuppa-di-cozze.webp",
+      "thumbnailBytes": 78090,
+      "imageBytes": 234692,
+      "transparent": false,
+      "originalDimensions": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "source": "Secondi\\polpette al ragu.jpg",
+      "thumbnail": "secondi/thumbnails/polpette-al-ragu.webp",
+      "image": "secondi/full/polpette-al-ragu.webp",
+      "thumbnailBytes": 24144,
+      "imageBytes": 28678,
+      "transparent": false,
+      "originalDimensions": [
+        596,
+        335
+      ]
+    },
+    {
+      "source": "Secondi\\zuppa di mare.jpg",
+      "thumbnail": "secondi/thumbnails/zuppa-di-mare.webp",
+      "image": "secondi/full/zuppa-di-mare.webp",
+      "thumbnailBytes": 51808,
+      "imageBytes": 227796,
+      "transparent": false,
+      "originalDimensions": [
+        4000,
+        5000
+      ]
+    },
+    {
+      "source": "Vino\\gia aggiunte\\Brunello Di montalcino Castel Giocondo.jpeg",
+      "thumbnail": "vino/thumbnails/brunello-di-montalcino-castel-giocondo.webp",
+      "image": "vino/full/brunello-di-montalcino-castel-giocondo.webp",
+      "thumbnailBytes": 25310,
+      "imageBytes": 89770,
+      "transparent": false,
+      "originalDimensions": [
+        1536,
+        2040
+      ]
+    },
+    {
+      "source": "Vino\\gia aggiunte\\cadetto.jpeg",
+      "thumbnail": "vino/thumbnails/cadetto-jpeg-45f259.webp",
+      "image": "vino/full/cadetto-jpeg-45f259.webp",
+      "thumbnailBytes": 25358,
+      "imageBytes": 97466,
+      "transparent": false,
+      "originalDimensions": [
+        1536,
+        2040
+      ]
+    },
+    {
+      "source": "Vino\\gia aggiunte\\Furore Rosso.jpeg",
+      "thumbnail": "vino/thumbnails/furore-rosso-jpeg-744033.webp",
+      "image": "vino/full/furore-rosso-jpeg-744033.webp",
+      "thumbnailBytes": 27162,
+      "imageBytes": 100394,
+      "transparent": false,
+      "originalDimensions": [
+        1536,
+        2040
+      ]
+    },
+    {
+      "source": "Vino\\gia aggiunte\\jungano aglianico.jpeg",
+      "thumbnail": "vino/thumbnails/jungano-aglianico.webp",
+      "image": "vino/full/jungano-aglianico.webp",
+      "thumbnailBytes": 30810,
+      "imageBytes": 109568,
+      "transparent": false,
+      "originalDimensions": [
+        1536,
+        2040
+      ]
+    },
+    {
+      "source": "Vino\\gia aggiunte\\nuance aglianico.jpeg",
+      "thumbnail": "vino/thumbnails/nuance-aglianico-jpeg-388fc1.webp",
+      "image": "vino/full/nuance-aglianico-jpeg-388fc1.webp",
+      "thumbnailBytes": 28442,
+      "imageBytes": 101650,
+      "transparent": false,
+      "originalDimensions": [
+        1536,
+        2040
+      ]
+    },
+    {
+      "source": "Vino\\gia aggiunte\\nuance taursai.jpeg",
+      "thumbnail": "vino/thumbnails/nuance-taursai.webp",
+      "image": "vino/full/nuance-taursai.webp",
+      "thumbnailBytes": 30396,
+      "imageBytes": 117256,
+      "transparent": false,
+      "originalDimensions": [
+        1536,
+        2040
+      ]
+    },
+    {
+      "source": "Vino\\gia aggiunte\\Taurasi Salvatore Molettieri.jpeg",
+      "thumbnail": "vino/thumbnails/taurasi-salvatore-molettieri.webp",
+      "image": "vino/full/taurasi-salvatore-molettieri.webp",
+      "thumbnailBytes": 30644,
+      "imageBytes": 116390,
+      "transparent": false,
+      "originalDimensions": [
+        1536,
+        2040
+      ]
+    },
+    {
+      "source": "Vino\\Merlot.jpeg",
+      "thumbnail": "vino/thumbnails/merlot-jpeg-962a2d.webp",
+      "image": "vino/full/merlot-jpeg-962a2d.webp",
+      "thumbnailBytes": 16842,
+      "imageBytes": 60386,
+      "transparent": false,
+      "originalDimensions": [
+        1536,
+        2040
+      ]
+    },
+    {
+      "source": "Vino\\Nua Bruta .jpeg",
+      "thumbnail": "vino/thumbnails/nua-bruta.webp",
+      "image": "vino/full/nua-bruta.webp",
+      "thumbnailBytes": 23028,
+      "imageBytes": 93332,
+      "transparent": false,
+      "originalDimensions": [
+        1536,
+        2040
+      ]
+    },
+    {
+      "source": "Vino\\Nuance Falanghina.jpeg",
+      "thumbnail": "vino/thumbnails/nuance-falanghina.webp",
+      "image": "vino/full/nuance-falanghina.webp",
+      "thumbnailBytes": 24154,
+      "imageBytes": 98530,
+      "transparent": false,
+      "originalDimensions": [
+        1536,
+        2040
+      ]
+    },
+    {
+      "source": "Vino\\Nuance Fiano.jpeg",
+      "thumbnail": "vino/thumbnails/nuance-fiano.webp",
+      "image": "vino/full/nuance-fiano.webp",
+      "thumbnailBytes": 23028,
+      "imageBytes": 93332,
+      "transparent": false,
+      "originalDimensions": [
+        1536,
+        2040
+      ]
+    },
+    {
+      "source": "Vino\\Nuance Ros�.jpeg",
+      "thumbnail": "vino/thumbnails/nuance-rose.webp",
+      "image": "vino/full/nuance-rose.webp",
+      "thumbnailBytes": 22916,
+      "imageBytes": 90806,
+      "transparent": false,
+      "originalDimensions": [
+        1536,
+        2040
+      ]
+    },
+    {
+      "source": "Vino\\png sito\\Cadetto.png",
+      "thumbnail": "vino/thumbnails/cadetto-png-5cf1ea.webp",
+      "image": "vino/full/cadetto-png-5cf1ea.webp",
+      "thumbnailBytes": 22936,
+      "imageBytes": 108818,
+      "transparent": true,
+      "originalDimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "source": "Vino\\png sito\\gia aggiunte\\Brunello.png",
+      "thumbnail": "vino/thumbnails/brunello.webp",
+      "image": "vino/full/brunello.webp",
+      "thumbnailBytes": 23122,
+      "imageBytes": 95174,
+      "transparent": true,
+      "originalDimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "source": "Vino\\png sito\\gia aggiunte\\Furore Rosso.png",
+      "thumbnail": "vino/thumbnails/furore-rosso-png-ed5eaf.webp",
+      "image": "vino/full/furore-rosso-png-ed5eaf.webp",
+      "thumbnailBytes": 23248,
+      "imageBytes": 95274,
+      "transparent": true,
+      "originalDimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "source": "Vino\\png sito\\gia aggiunte\\jungano.png",
+      "thumbnail": "vino/thumbnails/jungano.webp",
+      "image": "vino/full/jungano.webp",
+      "thumbnailBytes": 20476,
+      "imageBytes": 71748,
+      "transparent": true,
+      "originalDimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "source": "Vino\\png sito\\gia aggiunte\\Taurasi.png",
+      "thumbnail": "vino/thumbnails/taurasi.webp",
+      "image": "vino/full/taurasi.webp",
+      "thumbnailBytes": 26438,
+      "imageBytes": 120240,
+      "transparent": true,
+      "originalDimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "source": "Vino\\png sito\\Merlot.png",
+      "thumbnail": "vino/thumbnails/merlot-png-0d0dea.webp",
+      "image": "vino/full/merlot-png-0d0dea.webp",
+      "thumbnailBytes": 19802,
+      "imageBytes": 74994,
+      "transparent": true,
+      "originalDimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "source": "Vino\\png sito\\Nuance Aglianico.png",
+      "thumbnail": "vino/thumbnails/nuance-aglianico-png-5805d9.webp",
+      "image": "vino/full/nuance-aglianico-png-5805d9.webp",
+      "thumbnailBytes": 27616,
+      "imageBytes": 112754,
+      "transparent": true,
+      "originalDimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "source": "Vino\\png sito\\Nuance Taurasi.png",
+      "thumbnail": "vino/thumbnails/nuance-taurasi.webp",
+      "image": "vino/full/nuance-taurasi.webp",
+      "thumbnailBytes": 30880,
+      "imageBytes": 131366,
+      "transparent": true,
+      "originalDimensions": [
+        1024,
+        1536
+      ]
+    },
+    {
+      "source": "Vino\\Shammat Prosecco Extra Dry.jpeg",
+      "thumbnail": "vino/thumbnails/shammat-prosecco-extra-dry.webp",
+      "image": "vino/full/shammat-prosecco-extra-dry.webp",
+      "thumbnailBytes": 22172,
+      "imageBytes": 89830,
+      "transparent": false,
+      "originalDimensions": [
+        1536,
+        2040
+      ]
+    }
+  ],
+  "optimization": {
+    "images": 142,
+    "original_bytes": 147675319,
+    "thumbnail_bytes": 5656478,
+    "full_bytes": 20622422,
+    "transparent_images": 9,
+    "exact_duplicate_files": 1,
+    "originals_verified_unchanged": true,
+    "thumbnail_min_bytes": 6500,
+    "thumbnail_max_bytes": 81984,
+    "full_max_bytes": 458570
+  }
+}
