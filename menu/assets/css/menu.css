@@ -209,3 +209,9 @@ footer{border-color:#ffffff40;padding-bottom:58px}
 .lovers-cycle{width:64px;align-self:start;margin-top:10px}
 .lovers-cycle img{height:56px}
 @media(max-width:600px){.topbar{grid-template-columns:48px 118px 48px;column-gap:10px}.menu-brand{padding-bottom:50px}.topbar .brand-slider{top:60px;width:calc(100vw - 28px)}.lovers-cycle{width:48px;margin-top:5px}.lovers-cycle img{height:48px}}
+
+/* Give the Lovers marks a readable size beside the original logo. */
+.topbar{grid-template-columns:100px 150px 100px;column-gap:10px}
+.lovers-cycle{width:100px;height:88px;margin-top:0}
+.lovers-cycle img{height:88px}
+@media(max-width:600px){.topbar{grid-template-columns:70px 118px 70px;column-gap:5px}.lovers-cycle{width:70px;height:70px;margin-top:0}.lovers-cycle img{height:70px}}
