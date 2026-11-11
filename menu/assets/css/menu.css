@@ -201,3 +201,11 @@ footer{border-color:#ffffff40;padding-bottom:58px}
 @keyframes lovers-fade{0%,40%{opacity:1}50%,90%{opacity:0}100%{opacity:1}}
 @media(max-width:600px){.topbar{grid-template-columns:48px minmax(0,1fr) 48px;column-gap:8px;padding-left:12px;padding-right:12px}.lovers-cycle{width:48px;height:60px}.lovers-cycle img{height:55px}.topbar .brand-slider-viewport{font-size:12px;letter-spacing:.04em;min-height:48px}}
 @media(prefers-reduced-motion:reduce){.lovers-cycle img{animation:none}.lovers-cycle .lovers-pasta{display:none}}
+
+/* Frame the Capri Blu mark itself, rather than the full header width. */
+.topbar{grid-template-columns:64px 150px 64px;column-gap:14px}
+.menu-brand{position:relative;padding-bottom:38px}
+.topbar .brand-slider{position:absolute;top:66px;left:50%;transform:translateX(-50%);width:min(540px,88vw);max-width:none}
+.lovers-cycle{width:64px;align-self:start;margin-top:10px}
+.lovers-cycle img{height:56px}
+@media(max-width:600px){.topbar{grid-template-columns:48px 118px 48px;column-gap:10px}.menu-brand{padding-bottom:50px}.topbar .brand-slider{top:60px;width:calc(100vw - 28px)}.lovers-cycle{width:48px;margin-top:5px}.lovers-cycle img{height:48px}}
