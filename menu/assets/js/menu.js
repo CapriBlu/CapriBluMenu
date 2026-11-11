@@ -49,7 +49,8 @@ function render(){
   $('more-options').replaceChildren(...categories.filter(c=>!primary.includes(c.id)).map(categoryButton));
   $('more-label').textContent=state.category&&!primary.includes(state.category)?categoryText(state.category):text.moreCategories;
   $('more-categories').open=false;
-  $('category-hub').replaceChildren(...['pizzeria','cucina','bevande'].map(group=>{
+  const overview=!state.category&&!state.query.trim();
+  $('category-hub').replaceChildren(...(overview?['pizzeria','cucina','bevande'].map(group=>{
     const section=create('section','category-group');section.append(create('h3','',text[{pizzeria:'groupPizzeria',cucina:'groupCucina',bevande:'groupBevande'}[group]]));
     const grid=create('div','category-grid');
     for(const category of categories.filter(c=>c.group===group)){
@@ -60,8 +61,8 @@ function render(){
       const caption=create('span','category-caption');caption.append(create('span','category-name',categoryText(category.id)),create('span','category-count',count+' '+text.itemCount));link.append(caption);grid.append(link);
     }
     section.append(grid);return section;
-  }));
-  const overview=!state.category&&!state.query.trim();$('category-overview').hidden=!overview;$('menu-listing').hidden=overview;
+  }):[]));
+  $('category-overview').hidden=!overview;$('menu-listing').hidden=overview;
   $('category-title').textContent=state.category?categoryText(state.category):text.results;
   const items=overview?[]:currentItems();$('count').textContent=items.length+' '+(items.length===1?text.itemSingular:text.itemCount);
   $('no-results').textContent=text.noResults;$('no-results').hidden=overview||items.length>0;
@@ -125,6 +126,7 @@ async function boot(){
     const item=currentItems().find(item=>item.id===params.get('item'));
     state.item=item?.id||null;state.variant=item?.variants.some(variant=>variant.id===params.get('variant'))?params.get('variant'):null;
     render();if(state.item)dialog.showModal();
+    document.documentElement.dataset.menuReady='true';document.dispatchEvent(new Event('menu-ready'));
   }catch(error){
     console.error(error);$('status').textContent='Non è stato possibile caricare il menu. Apri il PDF completo. / The menu could not be loaded. Open the full PDF.';$('status').hidden=false;$('retry').hidden=false;
   }

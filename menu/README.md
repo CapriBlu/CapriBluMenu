@@ -40,3 +40,9 @@ node --check menu/assets/js/menu.js
 \`\`\`
 
 I controlli verificano dati, traduzioni, fonti, presenza dei file, separazione dei formati e prezzi chiave. Servire il repository con un server HTTP per la prova locale; non aprire il file direttamente dal disco.
+
+## Ottimizzazione telefono — 11 novembre 2026
+
+Su telefono la navigazione occupa due righe: ritorno/selettore e scorciatoie scorrevoli. Il comando dello sfondo si trova accanto al PDF e non copre le schede. Le schede mantengono due colonne con foto separata da nome e ingredienti; la scheda aperta conserva il testo completo. Intestazione più compatta e ricerca a 16px per evitare lo zoom automatico sui browser mobili.
+
+Il video viene avviato dopo il rendering del menu, in un momento libero del browser. Non parte automaticamente con risparmio dati, connessione 2G o movimento ridotto; resta avviabile manualmente. Le copertine dei reparti non vengono create quando è visibile una lista di piatti. Questi interventi riducono la concorrenza iniziale delle risorse; non costituiscono una misurazione dei tempi su rete mobile reale.

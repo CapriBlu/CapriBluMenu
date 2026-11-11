@@ -1,7 +1,8 @@
 const video = document.getElementById('menu-background');
 const toggle = document.getElementById('background-toggle');
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-const saveData = Boolean(navigator.connection?.saveData);
+const saveData = Boolean(navigator.connection?.saveData) || ['slow-2g','2g'].includes(navigator.connection?.effectiveType);
+let menuReady = document.documentElement.dataset.menuReady === 'true';
 let wantsPlayback = !reducedMotion.matches && !saveData;
 
 function label() {
@@ -31,13 +32,20 @@ video.addEventListener('play', label);
 video.addEventListener('pause', label);
 video.addEventListener('error', () => { toggle.hidden = true; });
 document.addEventListener('visibilitychange', () => {
-  if (document.hidden) video.pause(); else if (wantsPlayback) void play();
+  if (document.hidden) video.pause(); else if (wantsPlayback && (menuReady || video.src)) void play();
 });
 reducedMotion.addEventListener('change', () => {
   wantsPlayback = !reducedMotion.matches && !saveData;
-  if (wantsPlayback && !document.hidden) void play(); else video.pause();
+  if (wantsPlayback && menuReady && !document.hidden) void play(); else video.pause();
   label();
 });
 new MutationObserver(label).observe(document.documentElement, {attributes: true, attributeFilter: ['lang']});
 label();
-if (wantsPlayback && !document.hidden) void play();
+function startAfterMenu() {
+  menuReady = true;
+  const start = () => { if (wantsPlayback && !document.hidden) void play(); };
+  if ('requestIdleCallback' in window) requestIdleCallback(start, {timeout:1800});
+  else setTimeout(start, 400);
+}
+if (menuReady) startAfterMenu();
+else document.addEventListener('menu-ready', startAfterMenu, {once:true});
