@@ -49,7 +49,11 @@
     "groupCucina": "Kitchen",
     "groupBevande": "Drinks",
     "wineList": "Wine list",
-    "itemSingular": "choice"
+    "itemSingular": "choice",
+    "categoryBack": "Categories",
+    "homeLabel": "Home",
+    "moreCategories": "More categories",
+    "drinksShortcut": "Drinks & Beverage"
   },
   "categories": {
     "fritti": "Fried Bites",

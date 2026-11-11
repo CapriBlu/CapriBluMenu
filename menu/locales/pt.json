@@ -49,7 +49,11 @@
     "groupCucina": "Cozinha",
     "groupBevande": "Bebidas",
     "wineList": "Carta de vinhos",
-    "itemSingular": "proposta"
+    "itemSingular": "proposta",
+    "categoryBack": "Categorias",
+    "homeLabel": "Início",
+    "moreCategories": "Mais categorias",
+    "drinksShortcut": "Bebidas"
   },
   "categories": {
     "fritti": "Fritos",

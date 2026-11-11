@@ -41,11 +41,15 @@ function render(){
   if($('menu-search').value!==state.query)$('menu-search').value=state.query;
   $('clear-search').hidden=!state.query;$('clear-search').setAttribute('aria-label',text.clearSearch);
   $('overview-title').textContent=text.overviewTitle;$('overview-subtitle').textContent=text.chooseCategory;
-  $('all-categories').textContent='← '+text.allCategories;$('category-select-label').textContent=text.chooseCategory;
+  $('all-categories').textContent='← '+text.categoryBack;$('all-categories').setAttribute('aria-pressed',String(!state.category&&!state.query));$('navigation-home').textContent=text.homeLabel+' ↗';$('navigation-home').href=new URL('../index.html?lang='+state.language,base);
   $('categories').setAttribute('aria-label',text.chooseCategory);$('category-hub').setAttribute('aria-label',text.chooseCategory);
   const categories=catalog.categories.filter(c=>visibleItems(catalog,config.activeEdition,c.id).length).sort((a,b)=>a.order-b.order);
-  const all=create('option','',text.allCategories);all.value='';
-  $('category-select').replaceChildren(all,...categories.map(c=>{const option=create('option','',categoryText(c.id));option.value=c.id;return option;}));$('category-select').value=state.category||'';
+  const primary=['pizze-tradizione','fritti','antipasti','primi','drinks-beverage'];
+  const categoryButton=category=>{const button=create('button','category-shortcut',category.id==='drinks-beverage'?text.drinksShortcut:categoryText(category.id));button.type='button';button.dataset.category=category.id;button.setAttribute('aria-pressed',String(state.category===category.id));return button;};
+  $('quick-categories').replaceChildren(...primary.map(id=>categories.find(c=>c.id===id)).filter(Boolean).map(categoryButton));
+  $('more-options').replaceChildren(...categories.filter(c=>!primary.includes(c.id)).map(categoryButton));
+  $('more-label').textContent=state.category&&!primary.includes(state.category)?categoryText(state.category):text.moreCategories;
+  $('more-categories').open=false;
   $('category-hub').replaceChildren(...['pizzeria','cucina','bevande'].map(group=>{
     const section=create('section','category-group');section.append(create('h3','',text[{pizzeria:'groupPizzeria',cucina:'groupCucina',bevande:'groupBevande'}[group]]));
     const grid=create('div','category-grid');
@@ -127,7 +131,10 @@ async function boot(){
   }
 }
 $('items').addEventListener('click',event=>{const button=event.target.closest('button[data-item]');if(!button)return;state.item=button.dataset.item;state.variant=null;renderDetail();dialog.showModal();syncURL();});
-$('category-select').addEventListener('change',event=>chooseCategory(event.target.value));
+$('categories').addEventListener('click',event=>{const button=event.target.closest('button[data-category]');if(button)chooseCategory(button.dataset.category);});
+document.addEventListener('click',event=>{if(!event.target.closest('#more-categories'))$('more-categories').open=false;});
+$('more-categories').addEventListener('keydown',event=>{if(event.key==='Escape'){$('more-categories').open=false;$('more-label').focus();}});
+
 $('category-hub').addEventListener('click',event=>{const link=event.target.closest('a[data-category]');if(!link||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey||event.button!==0)return;event.preventDefault();chooseCategory(link.dataset.category);});
 $('all-categories').addEventListener('click',()=>chooseCategory(null));
 $('explore-link').addEventListener('click',event=>{event.preventDefault();chooseCategory(null);});

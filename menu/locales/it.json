@@ -49,7 +49,11 @@
     "groupCucina": "Cucina",
     "groupBevande": "Da bere",
     "wineList": "Carta dei vini",
-    "itemSingular": "proposta"
+    "itemSingular": "proposta",
+    "categoryBack": "Categorie",
+    "homeLabel": "Home",
+    "moreCategories": "Altri reparti",
+    "drinksShortcut": "Drink & Beverage"
   },
   "categories": {
     "fritti": "I Fritti",

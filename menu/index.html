@@ -12,8 +12,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&amp;display=swap">
   <link rel="stylesheet" href="../brand-slider.css?v=3">
   <script src="../script/brand-slider.js?v=2" defer></script>
-  <link rel="stylesheet" href="./assets/css/menu.css?v=complete-menu-1">
-  <script type="module" src="./assets/js/menu.js?v=complete-menu-1"></script>
+  <link rel="stylesheet" href="./assets/css/menu.css?v=soft-navigation-1">
+  <script type="module" src="./assets/js/menu.js?v=soft-navigation-1"></script>
   <script type="module" src="./assets/js/background.js?v=complete-menu-1"></script>
 </head>
 <body>
@@ -46,6 +46,13 @@
         <input type="search" id="menu-search" placeholder="Un piatto, un ingrediente…" autocomplete="off">
         <button type="button" id="clear-search" aria-label="Cancella ricerca" hidden>×</button>
       </div>
+      <div class="menu-toolbar" id="menu-navigation">
+        <div class="navigation-return"><button id="all-categories" type="button">← Categorie</button><a id="navigation-home" href="../index.html">Home ↗</a></div>
+        <nav id="categories" aria-label="Categorie">
+          <div id="quick-categories"></div>
+          <details id="more-categories"><summary id="more-label">Altri reparti</summary><div id="more-options"></div></details>
+        </nav>
+      </div>
       <p id="status" role="status">Caricamento del menu…</p>
       <button id="retry" type="button" hidden>Riprova</button>
       <section id="category-overview" aria-labelledby="overview-title" hidden>
@@ -53,10 +60,6 @@
         <nav id="category-hub" aria-label="Categorie del menu"></nav>
       </section>
       <section id="menu-listing" aria-labelledby="category-title" hidden>
-        <div class="menu-toolbar">
-          <button id="all-categories" type="button">← Tutte le categorie</button>
-          <nav id="categories" aria-label="Categorie"><label class="visually-hidden" id="category-select-label" for="category-select">Categoria</label><select id="category-select"></select></nav>
-        </div>
         <div class="section-heading"><h2 id="category-title" tabindex="-1"></h2><p id="count" aria-live="polite"></p></div>
         <p id="no-results" role="status" hidden></p>
         <div id="items" class="pizza-grid"></div>
