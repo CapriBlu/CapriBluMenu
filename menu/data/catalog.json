@@ -5,142 +5,176 @@
     {
       "id": "fritti",
       "order": 0,
-      "status": "draft",
+      "status": "ready",
       "sourcePages": [
         12
-      ]
+      ],
+      "group": "cucina",
+      "cover": "biblioteca/fritti/thumbnails/fritto-arancini-crocche-frittatina-di-pasta.webp"
     },
     {
       "id": "antipasti",
       "order": 1,
-      "status": "draft",
+      "status": "ready",
       "sourcePages": [
         8
-      ]
+      ],
+      "group": "cucina",
+      "cover": "biblioteca/antipasti/thumbnails/crudo-mozzarella.webp"
     },
     {
       "id": "antipasti-mare",
       "order": 2,
-      "status": "draft",
+      "status": "ready",
       "sourcePages": [
         8
-      ]
+      ],
+      "group": "cucina",
+      "cover": "biblioteca/fritti/thumbnails/calamaretti-fritti.webp"
     },
     {
       "id": "primi",
       "order": 3,
-      "status": "draft",
+      "status": "ready",
       "sourcePages": [
         9
-      ]
+      ],
+      "group": "cucina",
+      "cover": "biblioteca/primi/thumbnails/ravioli-capresi.webp"
     },
     {
       "id": "primi-mare",
       "order": 4,
-      "status": "draft",
+      "status": "ready",
       "sourcePages": [
         10
-      ]
+      ],
+      "group": "cucina",
+      "cover": "biblioteca/primi/thumbnails/linguina-all-astice-zoomout.webp"
     },
     {
       "id": "secondi-terra",
       "order": 5,
-      "status": "draft",
+      "status": "ready",
       "sourcePages": [
         11
-      ]
+      ],
+      "group": "cucina",
+      "cover": "biblioteca/secondi/thumbnails/2-tagliata-di-manzo-con-pomodorini-rucola-e-scaglie-2.webp"
     },
     {
       "id": "secondi-mare",
       "order": 6,
-      "status": "draft",
+      "status": "ready",
       "sourcePages": [
         11
-      ]
+      ],
+      "group": "cucina",
+      "cover": "biblioteca/secondi/thumbnails/2-zuppa-di-cozze.webp"
     },
     {
       "id": "pizze-tradizione",
       "order": 7,
-      "status": "preview",
+      "status": "ready",
       "sourcePages": [
         4,
         5,
         6
-      ]
+      ],
+      "group": "pizzeria",
+      "cover": "pizze-tradizione/thumbnails/tricolore.webp"
     },
     {
       "id": "firmate-capri-blu",
       "order": 8,
-      "status": "draft",
+      "status": "ready",
       "sourcePages": [
         1,
         2
-      ]
+      ],
+      "group": "pizzeria",
+      "cover": "biblioteca/firmate-capri-blu/thumbnails/capriblu-2-0.webp"
     },
     {
       "id": "montanare",
       "order": 9,
-      "status": "draft",
+      "status": "ready",
       "sourcePages": [
         3
-      ]
+      ],
+      "group": "pizzeria",
+      "cover": "biblioteca/firmate-capri-blu/thumbnails/montanara-sorrento.webp"
     },
     {
       "id": "rutiello-pizza",
       "order": 10,
-      "status": "draft",
+      "status": "ready",
       "sourcePages": [
         13
-      ]
+      ],
+      "group": "pizzeria",
+      "cover": "biblioteca/firmate-capri-blu/thumbnails/ruotiello-marinara-antica.webp"
     },
     {
       "id": "ruota-di-carro",
       "order": 11,
-      "status": "draft",
+      "status": "ready",
       "sourcePages": [
         16,
         17
-      ]
+      ],
+      "group": "pizzeria",
+      "cover": null
     },
     {
       "id": "contorni",
       "order": 12,
-      "status": "draft",
+      "status": "ready",
       "sourcePages": [
         14
-      ]
+      ],
+      "group": "cucina",
+      "cover": "biblioteca/contorni/thumbnails/verdure-grigliate.webp"
     },
     {
       "id": "insalatone",
       "order": 13,
-      "status": "draft",
+      "status": "ready",
       "sourcePages": [
         14
-      ]
+      ],
+      "group": "cucina",
+      "cover": "biblioteca/insalatone/thumbnails/inslaata-vegetariana.webp"
     },
     {
       "id": "dessert",
       "order": 14,
-      "status": "draft",
+      "status": "ready",
       "sourcePages": [
         15
-      ]
+      ],
+      "group": "cucina",
+      "cover": "biblioteca/dolci/thumbnails/tiramisu-webp-1962fb.webp"
     },
     {
       "id": "drinks-beverage",
       "order": 15,
-      "status": "draft",
+      "status": "ready",
       "sourcePages": [
         7
-      ]
+      ],
+      "group": "bevande",
+      "cover": "biblioteca/beverage/thumbnails/cocacola.webp"
     },
     {
       "id": "spritz",
       "order": 16,
-      "status": "draft",
+      "status": "ready",
       "sourcePages": [
         7
-      ]
+      ],
+      "group": "bevande",
+      "cover": "biblioteca/beverage/thumbnails/aperol-spritz.webp"
     }
   ],
   "items": [
@@ -262,8 +296,8 @@
       "categoryId": "pizze-tradizione",
       "priceCents": 1150,
       "order": 3,
-      "thumbnail": null,
-      "image": null,
+      "thumbnail": "biblioteca/firmate-capri-blu/thumbnails/napoletana-rivisitata.webp",
+      "image": "biblioteca/firmate-capri-blu/full/napoletana-rivisitata.webp",
       "allergenCodes": [
         1,
         8
@@ -279,7 +313,10 @@
         "pdf": "pdf/menu_autunno.pdf",
         "page": 4
       },
-      "reviewStatus": "transcribed"
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Firmate Capri Blu\\Napoletana Rivisitata.jpg"
+      }
     },
     {
       "id": "bufalina",
@@ -424,8 +461,8 @@
       "categoryId": "pizze-tradizione",
       "priceCents": 1000,
       "order": 8,
-      "thumbnail": null,
-      "image": null,
+      "thumbnail": "biblioteca/firmate-capri-blu/thumbnails/patanella.webp",
+      "image": "biblioteca/firmate-capri-blu/full/patanella.webp",
       "allergenCodes": [
         1,
         7
@@ -441,7 +478,10 @@
         "pdf": "pdf/menu_autunno.pdf",
         "page": 5
       },
-      "reviewStatus": "transcribed"
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Firmate Capri Blu\\Patanella.jpg"
+      }
     },
     {
       "id": "diavola",
@@ -709,6 +749,2625 @@
       "photoSource": {
         "path": "img/menu/pizze-tradizione/full/Cosacca.jpeg"
       }
+    },
+    {
+      "id": "domenica-alle-tre",
+      "categoryId": "firmate-capri-blu",
+      "priceCents": 1490,
+      "order": 0,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 1
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "scarola-maretata",
+      "categoryId": "firmate-capri-blu",
+      "priceCents": 1490,
+      "order": 1,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 1
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "capri-blu-due",
+      "categoryId": "firmate-capri-blu",
+      "priceCents": 1390,
+      "order": 2,
+      "thumbnail": "biblioteca/firmate-capri-blu/thumbnails/capriblu-2-0.webp",
+      "image": "biblioteca/firmate-capri-blu/full/capriblu-2-0.webp",
+      "allergenCodes": [
+        1,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 1
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Firmate Capri Blu\\capriblu 2.0.jpg"
+      }
+    },
+    {
+      "id": "monte-faito",
+      "categoryId": "firmate-capri-blu",
+      "priceCents": 1390,
+      "order": 3,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7,
+        8
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [
+        {
+          "id": "ruota-di-carro",
+          "priceCents": 1490,
+          "available": true,
+          "allergenCodes": [
+            1,
+            7,
+            8
+          ],
+          "allergenStatus": "pending-review",
+          "source": {
+            "pdf": "pdf/menu_autunno.pdf",
+            "page": 17
+          }
+        }
+      ],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 1
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "zuccotta",
+      "categoryId": "firmate-capri-blu",
+      "priceCents": 1390,
+      "order": 4,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 1
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "arrosto-blu",
+      "categoryId": "firmate-capri-blu",
+      "priceCents": 1390,
+      "order": 5,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 2
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "sole-di-napoli",
+      "categoryId": "firmate-capri-blu",
+      "priceCents": 1390,
+      "order": 6,
+      "thumbnail": "biblioteca/firmate-capri-blu/thumbnails/sole-di-napoli.webp",
+      "image": "biblioteca/firmate-capri-blu/full/sole-di-napoli.webp",
+      "allergenCodes": [
+        1,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [
+        {
+          "id": "ruota-di-carro",
+          "priceCents": 1490,
+          "available": true,
+          "allergenCodes": [
+            1,
+            7
+          ],
+          "allergenStatus": "pending-review",
+          "source": {
+            "pdf": "pdf/menu_autunno.pdf",
+            "page": 16
+          }
+        }
+      ],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 2
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Firmate Capri Blu\\Sole di Napoli.jpg"
+      }
+    },
+    {
+      "id": "parmigiana-di-patate-pizza",
+      "categoryId": "firmate-capri-blu",
+      "priceCents": 1390,
+      "order": 7,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 2
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "porkins",
+      "categoryId": "firmate-capri-blu",
+      "priceCents": 1290,
+      "order": 8,
+      "thumbnail": "biblioteca/firmate-capri-blu/thumbnails/porkins.webp",
+      "image": "biblioteca/firmate-capri-blu/full/porkins.webp",
+      "allergenCodes": [
+        3,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 2
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Firmate Capri Blu\\porkins.jpg"
+      }
+    },
+    {
+      "id": "bologna",
+      "categoryId": "firmate-capri-blu",
+      "priceCents": 1190,
+      "order": 9,
+      "thumbnail": "biblioteca/firmate-capri-blu/thumbnails/bologna.webp",
+      "image": "biblioteca/firmate-capri-blu/full/bologna.webp",
+      "allergenCodes": [
+        1,
+        7,
+        8
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 2
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Firmate Capri Blu\\Bologna.jpg"
+      }
+    },
+    {
+      "id": "cacio-e-pepe-pizza",
+      "categoryId": "firmate-capri-blu",
+      "priceCents": 1190,
+      "order": 10,
+      "thumbnail": "biblioteca/firmate-capri-blu/thumbnails/cacio-pepe-pizza.webp",
+      "image": "biblioteca/firmate-capri-blu/full/cacio-pepe-pizza.webp",
+      "allergenCodes": [
+        1,
+        7,
+        8
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 2
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Firmate Capri Blu\\Cacio & Pepe Pizza.jpg"
+      }
+    },
+    {
+      "id": "montanara-classica",
+      "categoryId": "montanare",
+      "priceCents": 1090,
+      "order": 0,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 3
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "montanara-sorrento",
+      "categoryId": "montanare",
+      "priceCents": 1490,
+      "order": 1,
+      "thumbnail": "biblioteca/firmate-capri-blu/thumbnails/montanara-sorrento.webp",
+      "image": "biblioteca/firmate-capri-blu/full/montanara-sorrento.webp",
+      "allergenCodes": [
+        1,
+        7,
+        8
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 3
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Firmate Capri Blu\\Montanara Sorrento.jpg"
+      }
+    },
+    {
+      "id": "ripieno-classico-fritto",
+      "categoryId": "montanare",
+      "priceCents": 990,
+      "order": 2,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7,
+        14
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 3
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "ripieno-napoletano-fritto",
+      "categoryId": "montanare",
+      "priceCents": 990,
+      "order": 3,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7,
+        12
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 3
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "montanara-genovese",
+      "categoryId": "montanare",
+      "priceCents": 1390,
+      "order": 4,
+      "thumbnail": "biblioteca/firmate-capri-blu/thumbnails/montanara-genovese.webp",
+      "image": "biblioteca/firmate-capri-blu/full/montanara-genovese.webp",
+      "allergenCodes": [
+        1,
+        7,
+        12
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 3
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Firmate Capri Blu\\Montanara Genovese.jpg"
+      }
+    },
+    {
+      "id": "mozzarella-crudo",
+      "categoryId": "antipasti",
+      "priceCents": 1400,
+      "order": 0,
+      "thumbnail": "biblioteca/antipasti/thumbnails/crudo-mozzarella.webp",
+      "image": "biblioteca/antipasti/full/crudo-mozzarella.webp",
+      "allergenCodes": [
+        7,
+        12
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 8
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Antipasti\\crudo.mozzarella.jpg"
+      }
+    },
+    {
+      "id": "insalata-caprese",
+      "categoryId": "antipasti",
+      "priceCents": 1200,
+      "order": 1,
+      "thumbnail": "biblioteca/antipasti/thumbnails/insalata-caprese.webp",
+      "image": "biblioteca/antipasti/full/insalata-caprese.webp",
+      "allergenCodes": [
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 8
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Antipasti\\insalata caprese.jpg"
+      }
+    },
+    {
+      "id": "parmigiana-patate-antipasto",
+      "categoryId": "antipasti",
+      "priceCents": 1200,
+      "order": 2,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7,
+        12
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 8
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "soute-frutti-mare",
+      "categoryId": "antipasti-mare",
+      "priceCents": 2500,
+      "order": 0,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        14
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 8
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "calamaretti-fritti",
+      "categoryId": "antipasti-mare",
+      "priceCents": 1600,
+      "order": 1,
+      "thumbnail": "biblioteca/fritti/thumbnails/calamaretti-fritti.webp",
+      "image": "biblioteca/fritti/full/calamaretti-fritti.webp",
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 8
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Fritti\\calamaretti fritti.jpg"
+      }
+    },
+    {
+      "id": "alici-fritte",
+      "categoryId": "antipasti-mare",
+      "priceCents": 1500,
+      "order": 2,
+      "thumbnail": "biblioteca/fritti/thumbnails/alici-fritte.webp",
+      "image": "biblioteca/fritti/full/alici-fritte.webp",
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 8
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Fritti\\Alici Fritte.png"
+      }
+    },
+    {
+      "id": "gamberi-panko",
+      "categoryId": "antipasti-mare",
+      "priceCents": 1200,
+      "order": 3,
+      "thumbnail": "biblioteca/fritti/thumbnails/gamberoni-pane-panko.webp",
+      "image": "biblioteca/fritti/full/gamberoni-pane-panko.webp",
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 8
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Fritti\\gamberoni pane panko.jpg"
+      }
+    },
+    {
+      "id": "risotto-zucca-speck-noci",
+      "categoryId": "primi",
+      "priceCents": 2000,
+      "order": 0,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        7,
+        8
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 9
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "pappardelle-salsiccia-porcini",
+      "categoryId": "primi",
+      "priceCents": 2000,
+      "order": 1,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        3,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 9
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "mezzo-zito-genovese",
+      "categoryId": "primi",
+      "priceCents": 1800,
+      "order": 2,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7,
+        8
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 9
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "lasagna-salsiccia-friarielli",
+      "categoryId": "primi",
+      "priceCents": 1700,
+      "order": 3,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        3,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 9
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "pappardelle-bolognese",
+      "categoryId": "primi",
+      "priceCents": 1700,
+      "order": 4,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        3,
+        7,
+        9
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 9
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "ravioli-caprese",
+      "categoryId": "primi",
+      "priceCents": 1600,
+      "order": 5,
+      "thumbnail": "biblioteca/primi/thumbnails/ravioli-capresi.webp",
+      "image": "biblioteca/primi/full/ravioli-capresi.webp",
+      "allergenCodes": [
+        1,
+        3,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 9
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "primi\\ravioli capresi.jpg"
+      }
+    },
+    {
+      "id": "lasagna-ragu",
+      "categoryId": "primi",
+      "priceCents": 1500,
+      "order": 6,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        3,
+        7,
+        9,
+        12
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 9
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "spaghetti-carbonara",
+      "categoryId": "primi",
+      "priceCents": 1400,
+      "order": 7,
+      "thumbnail": "biblioteca/primi/thumbnails/spaghetti-carbonara.webp",
+      "image": "biblioteca/primi/full/spaghetti-carbonara.webp",
+      "allergenCodes": [
+        1,
+        3,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 9
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "primi\\Spaghetti Carbonara.png"
+      }
+    },
+    {
+      "id": "spaghetti-nonna",
+      "categoryId": "primi",
+      "priceCents": 1400,
+      "order": 8,
+      "thumbnail": "biblioteca/primi/thumbnails/spag-polpette.webp",
+      "image": "biblioteca/primi/full/spag-polpette.webp",
+      "allergenCodes": [
+        1,
+        3,
+        7,
+        9,
+        12
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 9
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "primi\\spag.polpette.jpeg"
+      }
+    },
+    {
+      "id": "gnocchi-sorrentina",
+      "categoryId": "primi",
+      "priceCents": 1300,
+      "order": 9,
+      "thumbnail": "biblioteca/primi/thumbnails/gnocchi-sorrentina.webp",
+      "image": "biblioteca/primi/full/gnocchi-sorrentina.webp",
+      "allergenCodes": [
+        1,
+        3,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 9
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "primi\\Gnocchi Sorrentina.jpg"
+      }
+    },
+    {
+      "id": "linguine-astice",
+      "categoryId": "primi-mare",
+      "priceCents": 2890,
+      "order": 0,
+      "thumbnail": "biblioteca/primi/thumbnails/linguina-all-astice-zoomout.webp",
+      "image": "biblioteca/primi/full/linguina-all-astice-zoomout.webp",
+      "allergenCodes": [
+        1,
+        2
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 10
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "primi\\Linguina all Astice.zoomout.png"
+      }
+    },
+    {
+      "id": "ravioli-baccala",
+      "categoryId": "primi-mare",
+      "priceCents": 2500,
+      "order": 1,
+      "thumbnail": "biblioteca/primi/thumbnails/ravioli-al-baccala.webp",
+      "image": "biblioteca/primi/full/ravioli-al-baccala.webp",
+      "allergenCodes": [
+        1,
+        3,
+        4
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 10
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "primi\\Ravioli al Baccala.jpg"
+      }
+    },
+    {
+      "id": "scialatielli-scoglio",
+      "categoryId": "primi-mare",
+      "priceCents": 2600,
+      "order": 2,
+      "thumbnail": "biblioteca/primi/thumbnails/scialatielli-allo-scoglio-2.webp",
+      "image": "biblioteca/primi/full/scialatielli-allo-scoglio-2.webp",
+      "allergenCodes": [
+        1,
+        2,
+        4,
+        14
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 10
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "primi\\Scialatielli Allo Scoglio 2.jpg"
+      }
+    },
+    {
+      "id": "spaghetti-luciana",
+      "categoryId": "primi-mare",
+      "priceCents": 2400,
+      "order": 3,
+      "thumbnail": "biblioteca/primi/thumbnails/spag-luciana.webp",
+      "image": "biblioteca/primi/full/spag-luciana.webp",
+      "allergenCodes": [
+        1,
+        4,
+        14
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 10
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "primi\\spag luciana.jpg"
+      }
+    },
+    {
+      "id": "spaghetti-vongole",
+      "categoryId": "primi-mare",
+      "priceCents": 2000,
+      "order": 4,
+      "thumbnail": "biblioteca/primi/thumbnails/spaghetti-alle-vongole-2.webp",
+      "image": "biblioteca/primi/full/spaghetti-alle-vongole-2.webp",
+      "allergenCodes": [
+        1,
+        14
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 10
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "primi\\spaghetti alle vongole 2.jpg"
+      }
+    },
+    {
+      "id": "tagliata-manzo",
+      "categoryId": "secondi-terra",
+      "priceCents": 2300,
+      "order": 0,
+      "thumbnail": "biblioteca/secondi/thumbnails/2-tagliata-di-manzo-con-pomodorini-rucola-e-scaglie-2.webp",
+      "image": "biblioteca/secondi/full/2-tagliata-di-manzo-con-pomodorini-rucola-e-scaglie-2.webp",
+      "allergenCodes": [
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 11
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Secondi\\2 Tagliata di Manzo con pomodorini, rucola e scaglie 2.jpg"
+      }
+    },
+    {
+      "id": "cotoletta-pollo",
+      "categoryId": "secondi-terra",
+      "priceCents": 1500,
+      "order": 1,
+      "thumbnail": "biblioteca/secondi/thumbnails/2-cotoletta-con-le-patatine.webp",
+      "image": "biblioteca/secondi/full/2-cotoletta-con-le-patatine.webp",
+      "allergenCodes": [
+        1,
+        3
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 11
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Secondi\\2 Cotoletta con le patatine.jpg"
+      }
+    },
+    {
+      "id": "tegamino-polpette",
+      "categoryId": "secondi-terra",
+      "priceCents": 1400,
+      "order": 2,
+      "thumbnail": "biblioteca/secondi/thumbnails/polpette-al-ragu.webp",
+      "image": "biblioteca/secondi/full/polpette-al-ragu.webp",
+      "allergenCodes": [
+        1,
+        3
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 11
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Secondi\\polpette al ragu.jpg"
+      }
+    },
+    {
+      "id": "scaloppina-pollo",
+      "categoryId": "secondi-terra",
+      "priceCents": 1400,
+      "order": 3,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        3
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 11
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "zuppa-cozze",
+      "categoryId": "secondi-mare",
+      "priceCents": 2400,
+      "order": 0,
+      "thumbnail": "biblioteca/secondi/thumbnails/2-zuppa-di-cozze.webp",
+      "image": "biblioteca/secondi/full/2-zuppa-di-cozze.webp",
+      "allergenCodes": [
+        1,
+        14
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 11
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Secondi\\2 Zuppa di Cozze.jpg"
+      }
+    },
+    {
+      "id": "frittura-gamberi-calamari",
+      "categoryId": "secondi-mare",
+      "priceCents": 2200,
+      "order": 1,
+      "thumbnail": "biblioteca/fritti/thumbnails/frittura-gamberi-calamari.webp",
+      "image": "biblioteca/fritti/full/frittura-gamberi-calamari.webp",
+      "allergenCodes": [
+        1,
+        14,
+        2
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 11
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Fritti\\Frittura Gamberi Calamari.png"
+      }
+    },
+    {
+      "id": "tegamino-polipetti",
+      "categoryId": "secondi-mare",
+      "priceCents": 2000,
+      "order": 2,
+      "thumbnail": "biblioteca/secondi/thumbnails/2-tegamino-con-polipetti-alla-luciana-e-crostone-di-pane.webp",
+      "image": "biblioteca/secondi/full/2-tegamino-con-polipetti-alla-luciana-e-crostone-di-pane.webp",
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 11
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Secondi\\2 Tegamino con polipetti alla luciana e crostone di pane.jpg"
+      }
+    },
+    {
+      "id": "baccala-tempura",
+      "categoryId": "secondi-mare",
+      "priceCents": 2400,
+      "order": 3,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 11
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "baccala-umido",
+      "categoryId": "secondi-mare",
+      "priceCents": 2400,
+      "order": 4,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 11
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "cuoppo",
+      "categoryId": "fritti",
+      "priceCents": 1400,
+      "order": 0,
+      "thumbnail": "biblioteca/fritti/thumbnails/fritto-arancini-crocche-frittatina-di-pasta.webp",
+      "image": "biblioteca/fritti/full/fritto-arancini-crocche-frittatina-di-pasta.webp",
+      "allergenCodes": [
+        1,
+        7,
+        8,
+        3
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 12
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Fritti\\Fritto Arancini Crocche Frittatina di pasta.jpg"
+      }
+    },
+    {
+      "id": "tris-classico",
+      "categoryId": "fritti",
+      "priceCents": 600,
+      "order": 1,
+      "thumbnail": "biblioteca/fritti/thumbnails/2-montanarine-fritte-con-pomodoro-di-san-marzano.webp",
+      "image": "biblioteca/fritti/full/2-montanarine-fritte-con-pomodoro-di-san-marzano.webp",
+      "allergenCodes": [
+        1,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 12
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Fritti\\2 Montanarine fritte con pomodoro di San Marzano.jpg"
+      }
+    },
+    {
+      "id": "tris-genovese",
+      "categoryId": "fritti",
+      "priceCents": 1000,
+      "order": 2,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 12
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "frittatine-pasta",
+      "categoryId": "fritti",
+      "priceCents": 600,
+      "order": 3,
+      "thumbnail": "biblioteca/fritti/thumbnails/2-frittatine-di-pasta.webp",
+      "image": "biblioteca/fritti/full/2-frittatine-di-pasta.webp",
+      "allergenCodes": [
+        1,
+        7,
+        3,
+        8
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 12
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Fritti\\2 Frittatine di pasta.jpg"
+      }
+    },
+    {
+      "id": "mozzarella-carrozza",
+      "categoryId": "fritti",
+      "priceCents": 800,
+      "order": 4,
+      "thumbnail": "biblioteca/fritti/thumbnails/mozzarella-in-carrozza1.webp",
+      "image": "biblioteca/fritti/full/mozzarella-in-carrozza1.webp",
+      "allergenCodes": [
+        1,
+        7,
+        8,
+        3
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 12
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Fritti\\mozzarella-in-carrozza1.webp"
+      }
+    },
+    {
+      "id": "duetto-crocche",
+      "categoryId": "fritti",
+      "priceCents": 1000,
+      "order": 5,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7,
+        3,
+        8,
+        12
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 12
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "patate-dippers",
+      "categoryId": "fritti",
+      "priceCents": 800,
+      "order": 6,
+      "thumbnail": "biblioteca/fritti/thumbnails/2-patate-dippers.webp",
+      "image": "biblioteca/fritti/full/2-patate-dippers.webp",
+      "allergenCodes": [
+        1,
+        12
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [
+        {
+          "id": "maionese-lime",
+          "priceCents": 890,
+          "available": true,
+          "allergenCodes": [
+            1,
+            12
+          ],
+          "allergenStatus": "pending-review",
+          "source": {
+            "pdf": "pdf/menu_autunno.pdf",
+            "page": 12
+          }
+        }
+      ],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 12
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Fritti\\2 Patate Dippers.jpg"
+      }
+    },
+    {
+      "id": "patate-dolci",
+      "categoryId": "fritti",
+      "priceCents": 900,
+      "order": 7,
+      "thumbnail": "biblioteca/fritti/thumbnails/2-porzione-di-patate-dolci.webp",
+      "image": "biblioteca/fritti/full/2-porzione-di-patate-dolci.webp",
+      "allergenCodes": [
+        12
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 12
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Fritti\\2 Porzione di Patate Dolci.jpg"
+      }
+    },
+    {
+      "id": "rutiello-marinara-antica",
+      "categoryId": "rutiello-pizza",
+      "priceCents": 1090,
+      "order": 0,
+      "thumbnail": "biblioteca/firmate-capri-blu/thumbnails/ruotiello-marinara-antica.webp",
+      "image": "biblioteca/firmate-capri-blu/full/ruotiello-marinara-antica.webp",
+      "allergenCodes": [
+        1,
+        7,
+        4
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 13
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Firmate Capri Blu\\Ruotiello Marinara Antica.jpg"
+      }
+    },
+    {
+      "id": "rutiello-domenica",
+      "categoryId": "rutiello-pizza",
+      "priceCents": 1590,
+      "order": 1,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 13
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "rutiello-scarola",
+      "categoryId": "rutiello-pizza",
+      "priceCents": 1490,
+      "order": 2,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 13
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "rutiello-patanella",
+      "categoryId": "rutiello-pizza",
+      "priceCents": 1190,
+      "order": 3,
+      "thumbnail": "biblioteca/firmate-capri-blu/thumbnails/ruotiello-patanella.webp",
+      "image": "biblioteca/firmate-capri-blu/full/ruotiello-patanella.webp",
+      "allergenCodes": [
+        1,
+        7,
+        12
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 13
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Firmate Capri Blu\\Ruotiello Patanella.jpg"
+      }
+    },
+    {
+      "id": "rutiello-salsiccia-friarielli",
+      "categoryId": "rutiello-pizza",
+      "priceCents": 1290,
+      "order": 4,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 13
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "rutiello-genovese",
+      "categoryId": "rutiello-pizza",
+      "priceCents": 1490,
+      "order": 5,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 13
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "verdure-grigliate",
+      "categoryId": "contorni",
+      "priceCents": 800,
+      "order": 0,
+      "thumbnail": "biblioteca/contorni/thumbnails/verdure-grigliate.webp",
+      "image": "biblioteca/contorni/full/verdure-grigliate.webp",
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 14
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "contorni\\verdure grigliate.webp"
+      }
+    },
+    {
+      "id": "insalata-verde",
+      "categoryId": "contorni",
+      "priceCents": 500,
+      "order": 1,
+      "thumbnail": "biblioteca/contorni/thumbnails/insalata-verde-lattuga-1-710x473.webp",
+      "image": "biblioteca/contorni/full/insalata-verde-lattuga-1-710x473.webp",
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 14
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "contorni\\insalata-verde-lattuga-1-710x473.jpg"
+      }
+    },
+    {
+      "id": "insalata-mista",
+      "categoryId": "contorni",
+      "priceCents": 600,
+      "order": 2,
+      "thumbnail": "biblioteca/contorni/thumbnails/insalata-mista.webp",
+      "image": "biblioteca/contorni/full/insalata-mista.webp",
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 14
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "contorni\\insalata mista.webp"
+      }
+    },
+    {
+      "id": "patate-forno",
+      "categoryId": "contorni",
+      "priceCents": 600,
+      "order": 3,
+      "thumbnail": "biblioteca/contorni/thumbnails/patate-al-forno.webp",
+      "image": "biblioteca/contorni/full/patate-al-forno.webp",
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 14
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "contorni\\patate al forno.webp"
+      }
+    },
+    {
+      "id": "caesar-salad",
+      "categoryId": "insalatone",
+      "priceCents": 1390,
+      "order": 0,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        3,
+        7,
+        10
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 14
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "insalata-capri-blu",
+      "categoryId": "insalatone",
+      "priceCents": 1290,
+      "order": 1,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        3,
+        4
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 14
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "insalata-vegetariana",
+      "categoryId": "insalatone",
+      "priceCents": 1190,
+      "order": 2,
+      "thumbnail": "biblioteca/insalatone/thumbnails/inslaata-vegetariana.webp",
+      "image": "biblioteca/insalatone/full/inslaata-vegetariana.webp",
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 14
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Insalatone\\inslaata vegetariana.png"
+      }
+    },
+    {
+      "id": "rucola-pomodorini-scaglie",
+      "categoryId": "insalatone",
+      "priceCents": 1100,
+      "order": 3,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 14
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "tiramisu",
+      "categoryId": "dessert",
+      "priceCents": 700,
+      "order": 0,
+      "thumbnail": "biblioteca/dolci/thumbnails/tiramisu-webp-1962fb.webp",
+      "image": "biblioteca/dolci/full/tiramisu-webp-1962fb.webp",
+      "allergenCodes": [
+        1,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 15
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Dolci\\tiramisu.webp"
+      }
+    },
+    {
+      "id": "delizia-limone",
+      "categoryId": "dessert",
+      "priceCents": 700,
+      "order": 1,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        3,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 15
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "panna-cotta",
+      "categoryId": "dessert",
+      "priceCents": 700,
+      "order": 2,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 15
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "cheesecake",
+      "categoryId": "dessert",
+      "priceCents": 700,
+      "order": 3,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 15
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "ricotta-pera",
+      "categoryId": "dessert",
+      "priceCents": 700,
+      "order": 4,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 15
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "pizza-nutella",
+      "categoryId": "dessert",
+      "priceCents": 1000,
+      "order": 5,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 15
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "pizza-black-white",
+      "categoryId": "dessert",
+      "priceCents": 1200,
+      "order": 6,
+      "thumbnail": "biblioteca/dolci/thumbnails/pizza-black-white.webp",
+      "image": "biblioteca/dolci/full/pizza-black-white.webp",
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 15
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": "Dolci\\Pizza Black&White.jpg"
+      }
+    },
+    {
+      "id": "straccetti-nutella",
+      "categoryId": "dessert",
+      "priceCents": 1000,
+      "order": 7,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 15
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "coca-cola",
+      "categoryId": "drinks-beverage",
+      "priceCents": 250,
+      "order": 0,
+      "thumbnail": "biblioteca/beverage/thumbnails/cocacola.webp",
+      "image": "biblioteca/beverage/full/cocacola.webp",
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 7
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": ".Beverage\\cocacola.jpg"
+      }
+    },
+    {
+      "id": "coca-cola-zero",
+      "categoryId": "drinks-beverage",
+      "priceCents": 250,
+      "order": 1,
+      "thumbnail": "biblioteca/beverage/thumbnails/cocacola0.webp",
+      "image": "biblioteca/beverage/full/cocacola0.webp",
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 7
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": ".Beverage\\cocacola0.jpg"
+      }
+    },
+    {
+      "id": "sprite",
+      "categoryId": "drinks-beverage",
+      "priceCents": 250,
+      "order": 2,
+      "thumbnail": "biblioteca/beverage/thumbnails/sprite.webp",
+      "image": "biblioteca/beverage/full/sprite.webp",
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 7
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": ".Beverage\\sprite.webp"
+      }
+    },
+    {
+      "id": "fanta",
+      "categoryId": "drinks-beverage",
+      "priceCents": 250,
+      "order": 3,
+      "thumbnail": "biblioteca/beverage/thumbnails/fanta.webp",
+      "image": "biblioteca/beverage/full/fanta.webp",
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 7
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": ".Beverage\\fanta.jpg"
+      }
+    },
+    {
+      "id": "lemonsoda",
+      "categoryId": "drinks-beverage",
+      "priceCents": 250,
+      "order": 4,
+      "thumbnail": "biblioteca/beverage/thumbnails/lemonsoda.webp",
+      "image": "biblioteca/beverage/full/lemonsoda.webp",
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 7
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": ".Beverage\\lemonsoda.jpg"
+      }
+    },
+    {
+      "id": "acqua",
+      "categoryId": "drinks-beverage",
+      "priceCents": 250,
+      "order": 5,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 7
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "nastro-azzurro",
+      "categoryId": "drinks-beverage",
+      "priceCents": 350,
+      "order": 6,
+      "thumbnail": "biblioteca/beverage/thumbnails/nastro-azzurro.webp",
+      "image": "biblioteca/beverage/full/nastro-azzurro.webp",
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 7
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": ".Beverage\\nastro azzurro.jpg"
+      }
+    },
+    {
+      "id": "heineken",
+      "categoryId": "drinks-beverage",
+      "priceCents": 400,
+      "order": 7,
+      "thumbnail": "biblioteca/beverage/thumbnails/heineken.webp",
+      "image": "biblioteca/beverage/full/heineken.webp",
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 7
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": ".Beverage\\heineken.jpg"
+      }
+    },
+    {
+      "id": "tennents",
+      "categoryId": "drinks-beverage",
+      "priceCents": 400,
+      "order": 8,
+      "thumbnail": "biblioteca/beverage/thumbnails/tenents.webp",
+      "image": "biblioteca/beverage/full/tenents.webp",
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 7
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": ".Beverage\\tenents.jpg"
+      }
+    },
+    {
+      "id": "birra-spina",
+      "categoryId": "drinks-beverage",
+      "priceCents": 400,
+      "order": 9,
+      "thumbnail": "biblioteca/beverage/thumbnails/bionda-spina.webp",
+      "image": "biblioteca/beverage/full/bionda-spina.webp",
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [
+        {
+          "id": "quaranta-cl",
+          "priceCents": 650,
+          "available": true,
+          "allergenCodes": null,
+          "allergenStatus": "pending-review",
+          "source": {
+            "pdf": "pdf/menu_autunno.pdf",
+            "page": 7
+          }
+        }
+      ],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 7
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": ".Beverage\\bionda spina.jpg"
+      }
+    },
+    {
+      "id": "birra-nartigiana",
+      "categoryId": "drinks-beverage",
+      "priceCents": 650,
+      "order": 10,
+      "thumbnail": "biblioteca/beverage/thumbnails/birra-nartigiana.webp",
+      "image": "biblioteca/beverage/full/birra-nartigiana.webp",
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 7
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": ".Beverage\\Birra Nartigiana.jpg"
+      }
+    },
+    {
+      "id": "vino-locale",
+      "categoryId": "drinks-beverage",
+      "priceCents": 600,
+      "order": 11,
+      "thumbnail": "biblioteca/beverage/thumbnails/vino-della-casa.webp",
+      "image": "biblioteca/beverage/full/vino-della-casa.webp",
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [
+        {
+          "id": "mezzo-litro",
+          "priceCents": 1500,
+          "available": true,
+          "allergenCodes": null,
+          "allergenStatus": "pending-review",
+          "source": {
+            "pdf": "pdf/menu_autunno.pdf",
+            "page": 7
+          }
+        },
+        {
+          "id": "un-litro",
+          "priceCents": 2500,
+          "available": true,
+          "allergenCodes": null,
+          "allergenStatus": "pending-review",
+          "source": {
+            "pdf": "pdf/menu_autunno.pdf",
+            "page": 7
+          }
+        }
+      ],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 7
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": ".Beverage\\vino della casa.webp"
+      }
+    },
+    {
+      "id": "aperol-spritz",
+      "categoryId": "spritz",
+      "priceCents": 900,
+      "order": 0,
+      "thumbnail": "biblioteca/beverage/thumbnails/aperol-spritz.webp",
+      "image": "biblioteca/beverage/full/aperol-spritz.webp",
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 7
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": ".Beverage\\aperol spritz.jpg"
+      }
+    },
+    {
+      "id": "blu-spritz",
+      "categoryId": "spritz",
+      "priceCents": 1000,
+      "order": 1,
+      "thumbnail": "biblioteca/beverage/thumbnails/blu-spritz.webp",
+      "image": "biblioteca/beverage/full/blu-spritz.webp",
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 7
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": ".Beverage\\blu spritz.jpeg"
+      }
+    },
+    {
+      "id": "limoncello-spritz",
+      "categoryId": "spritz",
+      "priceCents": 800,
+      "order": 2,
+      "thumbnail": "biblioteca/beverage/thumbnails/limoncello-spritz.webp",
+      "image": "biblioteca/beverage/full/limoncello-spritz.webp",
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 7
+      },
+      "reviewStatus": "transcribed",
+      "photoSource": {
+        "file": ".Beverage\\limoncello spritz.jpg"
+      }
+    },
+    {
+      "id": "ruota-margherita",
+      "categoryId": "ruota-di-carro",
+      "priceCents": 850,
+      "order": 0,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": null,
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 16
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "ruota-salsiccia-e-friarielli",
+      "categoryId": "ruota-di-carro",
+      "priceCents": 1290,
+      "order": 1,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 16
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "ruota-provola-e-pepe",
+      "categoryId": "ruota-di-carro",
+      "priceCents": 990,
+      "order": 2,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 16
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "ruota-napoletana",
+      "categoryId": "ruota-di-carro",
+      "priceCents": 990,
+      "order": 3,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7,
+        14
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 16
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "ruota-pancetta-e-cipolla",
+      "categoryId": "ruota-di-carro",
+      "priceCents": 1190,
+      "order": 4,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7,
+        12
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 16
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "ruota-sole-di-napoli",
+      "categoryId": "ruota-di-carro",
+      "priceCents": 1490,
+      "order": 5,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 16
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "ruota-scarpariello",
+      "categoryId": "ruota-di-carro",
+      "priceCents": 1090,
+      "order": 6,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 17
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "ruota-tricolore",
+      "categoryId": "ruota-di-carro",
+      "priceCents": 1290,
+      "order": 7,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7,
+        12
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 17
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "ruota-monte-faito",
+      "categoryId": "ruota-di-carro",
+      "priceCents": 1490,
+      "order": 8,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7,
+        8
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 17
+      },
+      "reviewStatus": "transcribed"
+    },
+    {
+      "id": "ruota-bufalina",
+      "categoryId": "ruota-di-carro",
+      "priceCents": 1090,
+      "order": 9,
+      "thumbnail": null,
+      "image": null,
+      "allergenCodes": [
+        1,
+        7
+      ],
+      "allergenStatus": "pending-review",
+      "available": true,
+      "editionIds": [
+        "autunno-2026"
+      ],
+      "supplementIds": [],
+      "variants": [],
+      "source": {
+        "pdf": "pdf/menu_autunno.pdf",
+        "page": 17
+      },
+      "reviewStatus": "transcribed"
     }
   ],
   "supplements": [],

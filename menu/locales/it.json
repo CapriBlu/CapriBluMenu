@@ -11,14 +11,14 @@
     "unavailable": "Non disponibile",
     "imageUnavailable": "Foto non disponibile",
     "emptyCategory": "Nessun piatto disponibile in questa categoria.",
-    "preview": "Anteprima del menu",
+    "preview": "Menu autunnale",
     "season": "Autunno 2026",
     "intro": "La nostra tradizione, una pizza alla volta.",
     "previewNote": "Stiamo preparando il nuovo menu: qui trovi la prima categoria completa.",
     "allItems": "Tutte le pizze",
-    "itemCount": "pizze",
-    "details": "Scopri la pizza",
-    "formats": "Formato",
+    "itemCount": "proposte",
+    "details": "Scopri di più",
+    "formats": "Formato / opzione",
     "standard": "Tradizionale",
     "ruota": "Ruota di Carro",
     "allergensPending": "Per informazioni sugli allergeni, rivolgiti al personale.",
@@ -35,8 +35,21 @@
     "drinks": "Bevande",
     "previousItem": "Precedente",
     "nextItem": "Successiva",
-    "browseItems": "Sfoglia le pizze",
-    "brandSlider": "L'anima di Capri Blu"
+    "browseItems": "Sfoglia le proposte",
+    "brandSlider": "L'anima di Capri Blu",
+    "overviewTitle": "Il nostro menu",
+    "chooseCategory": "Scegli una categoria",
+    "allCategories": "Tutte le categorie",
+    "search": "Cerca nel menu",
+    "searchPlaceholder": "Un piatto, un ingrediente…",
+    "results": "Risultati della ricerca",
+    "noResults": "Nessun risultato. Prova un altro nome o ingrediente.",
+    "clearSearch": "Cancella ricerca",
+    "groupPizzeria": "Pizzeria",
+    "groupCucina": "Cucina",
+    "groupBevande": "Da bere",
+    "wineList": "Carta dei vini",
+    "itemSingular": "proposta"
   },
   "categories": {
     "fritti": "I Fritti",
@@ -125,13 +138,428 @@
     "cosacca": {
       "name": "Cosacca",
       "description": "Pomodoro pelati selezione Capri Blu, pecorino romano, basilico e olio EVO."
+    },
+    "domenica-alle-tre": {
+      "name": "Domenica alle 3",
+      "description": "Cornicione ripieno di ricotta, ragù napoletano, provola affumicata e polpette di manzo; in uscita ricotta salata grattugiata, basilico e olio EVO."
+    },
+    "scarola-maretata": {
+      "name": "Scarola Maretata",
+      "description": "Scarola saltata con olive nere, uva passa e pinoli, fior di latte; in uscita alici di Cetara, stracciata e polvere di olive nere."
+    },
+    "capri-blu-due": {
+      "name": "Capri Blu 2.0",
+      "description": "Ripieno al forno con ricotta fior di Fruscella, fior di latte di Agerola, rucola, datterini rossi e gialli, prosciutto crudo di Parma, fonduta di parmigiano 24 mesi e olio EVO."
+    },
+    "monte-faito": {
+      "name": "Monte Faito",
+      "description": "Fior di latte, porcini e gorgonzola; in uscita speck, noci di Sorrento, basilico e olio EVO."
+    },
+    "zuccotta": {
+      "name": "Zuccotta",
+      "description": "Vellutata di zucca, funghi porcini, salsiccia sbriciolata e provola affumicata; in uscita scaglie di provolone del monaco e olio EVO."
+    },
+    "arrosto-blu": {
+      "name": "Arrosto Blu",
+      "description": "Fior di latte di Agerola, datterino giallo, prosciutto crudo di Parma, stracciata di bufala, basilico e olio EVO."
+    },
+    "sole-di-napoli": {
+      "name": "Sole di Napoli",
+      "description": "Pomodoro giallo cotto in padella, bufala, pepe, scaglie di provolone del monaco, basilico e olio EVO."
+    },
+    "parmigiana-di-patate-pizza": {
+      "name": "Parmigiana di patate",
+      "description": "Parmigiana di patate, provola e pancetta paesana; in uscita crema di parmigiano."
+    },
+    "porkins": {
+      "name": "Porkin’s",
+      "description": "Pulled pork artigianale e fior di latte; in uscita patate dolci e maionese al lime."
+    },
+    "bologna": {
+      "name": "Bologna",
+      "description": "Fior di latte di Agerola, mortadella I.G.P., pesto di pistacchio di Bronte, granella di pistacchio, basilico e olio EVO."
+    },
+    "cacio-e-pepe-pizza": {
+      "name": "Cacio e Pepe",
+      "description": "Pancetta e provola; in uscita crema cacio e pepe, tarallo sbriciolato, basilico e olio EVO."
+    },
+    "montanara-classica": {
+      "name": "Montanara Classica",
+      "description": "Pomodoro pelati selezione Capri Blu, mozzarella di bufala campana D.O.P., parmigiano reggiano, basilico e olio EVO."
+    },
+    "montanara-sorrento": {
+      "name": "Montanara Sorrento",
+      "description": "Doppia cottura con pomodoro giallo saltato in padella, mozzarella di bufala campana D.O.P., fonduta di parmigiano 24 mesi, prosciutto crudo di Parma, noci di Sorrento, basilico e olio EVO."
+    },
+    "ripieno-classico-fritto": {
+      "name": "Ripieno Classico Fritto",
+      "description": "Pomodoro pelati selezione Capri Blu, ricotta fior di Fruscella, provola di Agerola, salame Napoli, prosciutto cotto, pepe macinato e pecorino."
+    },
+    "ripieno-napoletano-fritto": {
+      "name": "Ripieno Napoletano Fritto",
+      "description": "Pomodoro selezione Capri Blu, ricotta fior di Fruscella, provola di Agerola, cicoli napoletani e pepe macinato."
+    },
+    "montanara-genovese": {
+      "name": "Montanara alla Genovese",
+      "description": "Doppia cottura con ragù alla Genovese con carne e pecorino D.O.P."
+    },
+    "mozzarella-crudo": {
+      "name": "Mozzarella & Crudo",
+      "description": "Treccia e prosciutto crudo."
+    },
+    "insalata-caprese": {
+      "name": "Insalata Caprese",
+      "description": "Treccia di Sorrento con pomodoro di Sorrento, olio EVO e origano."
+    },
+    "parmigiana-patate-antipasto": {
+      "name": "Parmigiana di Patate",
+      "description": "Patate, besciamella e pancetta croccante gratinate al forno."
+    },
+    "soute-frutti-mare": {
+      "name": "Sauté ai frutti di mare",
+      "description": "Sauté ai frutti di mare."
+    },
+    "calamaretti-fritti": {
+      "name": "Calamaretti fritti",
+      "description": "Calamaretti fritti."
+    },
+    "alici-fritte": {
+      "name": "Alici fritte",
+      "description": "Alici fritte."
+    },
+    "gamberi-panko": {
+      "name": "Gamberi in pane Panko",
+      "description": "Gamberi in pane Panko, 3 pezzi."
+    },
+    "risotto-zucca-speck-noci": {
+      "name": "Risotto, Zucca, Speck e Noci",
+      "description": "Riso mantecato alla crema di zucca dolce, servito con speck e noci."
+    },
+    "pappardelle-salsiccia-porcini": {
+      "name": "Pappardelle Salsiccia e Porcini",
+      "description": "Pappardelle fresche, salsiccia rosolata e funghi porcini."
+    },
+    "mezzo-zito-genovese": {
+      "name": "Mezzo Zito alla Genovese",
+      "description": "Mezzi ziti spezzati a mano conditi con un ricco ragù alla Genovese napoletana."
+    },
+    "lasagna-salsiccia-friarielli": {
+      "name": "Lasagna Salsiccia e Friarielli",
+      "description": "Lasagna con salsiccia e friarielli."
+    },
+    "pappardelle-bolognese": {
+      "name": "Pappardelle alla Bolognese",
+      "description": "Pappardelle fresche all'uovo condite con ragù di carne e pomodoro."
+    },
+    "ravioli-caprese": {
+      "name": "Ravioli Caprese",
+      "description": "Ravioli artigianali ripieni di formaggio con pomodoro e pomodorini, basilico e olio EVO."
+    },
+    "lasagna-ragu": {
+      "name": "Lasagna al ragù",
+      "description": "Lasagna con ragù alla bolognese, formaggio e basilico."
+    },
+    "spaghetti-carbonara": {
+      "name": "Spaghetti alla Carbonara",
+      "description": "Spaghetti di pasta fresca alla Carbonara con guanciale e formaggio."
+    },
+    "spaghetti-nonna": {
+      "name": "Spaghetti della Nonna",
+      "description": "Spaghetti con ragù di pomodoro, polpette, basilico e formaggio."
+    },
+    "gnocchi-sorrentina": {
+      "name": "Gnocchi alla Sorrentina",
+      "description": "Gnocchi di patate con salsa di pomodoro, fiordilatte, parmigiano e basilico fresco."
+    },
+    "linguine-astice": {
+      "name": "Linguine con astice",
+      "description": "Linguine con astice."
+    },
+    "ravioli-baccala": {
+      "name": "Ravioli al Baccalà",
+      "description": "Ravioli artigianali al baccalà con capperi, olive nere e pomodorini."
+    },
+    "scialatielli-scoglio": {
+      "name": "Scialatielli allo Scoglio",
+      "description": "Scialatielli artigianali ai frutti di mare con gamberi e pomodorini freschi."
+    },
+    "spaghetti-luciana": {
+      "name": "Spaghetti alla Luciana",
+      "description": "Spaghetti con polipetti, olive, capperi e pomodorini."
+    },
+    "spaghetti-vongole": {
+      "name": "Spaghetti alle vongole",
+      "description": "Spaghetti con vongole, lupini e prezzemolo."
+    },
+    "tagliata-manzo": {
+      "name": "Tagliata di Manzo",
+      "description": "Tagliata di manzo con pomodorini, rucola e scaglie."
+    },
+    "cotoletta-pollo": {
+      "name": "Cotoletta di pollo",
+      "description": "Cotoletta di pollo con patate fritte."
+    },
+    "tegamino-polpette": {
+      "name": "Tegamino con Polpette al Ragù o Friarielli",
+      "description": "Tegamino con polpette al ragù o friarielli, 4 pezzi."
+    },
+    "scaloppina-pollo": {
+      "name": "Scaloppina di Pollo (Capri Blu)",
+      "description": "Scaloppina di pollo Capri Blu."
+    },
+    "zuppa-cozze": {
+      "name": "Zuppa di cozze",
+      "description": "Zuppa di cozze."
+    },
+    "frittura-gamberi-calamari": {
+      "name": "Frittura di Gamberi e Calamari",
+      "description": "Frittura di gamberi e calamari."
+    },
+    "tegamino-polipetti": {
+      "name": "Tegamino con polipetti alla luciana",
+      "description": "Tegamino con polipetti alla luciana e crostone di pane."
+    },
+    "baccala-tempura": {
+      "name": "Baccalà in tempura su letto di Scarole",
+      "description": "Baccalà in tempura su crema di scarole e pomodorini semi-dry."
+    },
+    "baccala-umido": {
+      "name": "Baccalà in umido con Pomodorini Olive e Capperi",
+      "description": "Baccalà in umido con pomodorini, olive e capperi."
+    },
+    "cuoppo": {
+      "name": "O’ cuoppo (per 2)",
+      "description": "Fritto all’italiana: patatine, frittelle di pasta, crocchè, arancini e mini-frittatine di pasta. Da condividere in due."
+    },
+    "tris-classico": {
+      "name": "Tris Classico",
+      "description": "Montanarine fritte con pomodoro di San Marzano."
+    },
+    "tris-genovese": {
+      "name": "Tris Genovese",
+      "description": "Montanarine fritte con Genovese."
+    },
+    "frittatine-pasta": {
+      "name": "Frittatine di pasta",
+      "description": "Frittatine di pasta, 2 pezzi: Classica, Carbonara o salsiccia e friarielli."
+    },
+    "mozzarella-carrozza": {
+      "name": "Mozzarella in Carrozza",
+      "description": "Mozzarella in carrozza, 2 pezzi."
+    },
+    "duetto-crocche": {
+      "name": "Duetto di Crocchè",
+      "description": "Mortadella e pistacchio oppure zucchine e provolone."
+    },
+    "patate-dippers": {
+      "name": "Patate Dippers",
+      "description": "Cacio e pepe, cheddar e bacon oppure würstel. Con maionese al lime: 8,90 €.",
+      "standardLabel": "Altri condimenti"
+    },
+    "patate-dolci": {
+      "name": "Porzione di Patate Dolci",
+      "description": "Cacio e pepe, cheddar e bacon, würstel oppure maionese al lime."
+    },
+    "rutiello-marinara-antica": {
+      "name": "Marinara Antica",
+      "description": "Pomodoro selezione Capri Blu, pomodorini, olive nere, capperi, alici di Cetara, origano, aglio, pecorino romano, basilico e olio EVO."
+    },
+    "rutiello-domenica": {
+      "name": "Domenica alle 3",
+      "description": "Ragù napoletano, polpette di manzo e provola; in uscita ciuffi di ricotta di Fruscella e basilico."
+    },
+    "rutiello-scarola": {
+      "name": "Scarola Maretata",
+      "description": "Scarola saltata con olive nere, uva passa e pinoli, fior di latte; in uscita alici di Cetara, stracciata e polvere di olive nere."
+    },
+    "rutiello-patanella": {
+      "name": "Patanella a Rutiello",
+      "description": "Provola, patate al forno con rosmarino e salsiccia sbriciolata; in uscita basilico e olio EVO."
+    },
+    "rutiello-salsiccia-friarielli": {
+      "name": "Salsiccia e Friarielli",
+      "description": "Friarielli, salsiccia sbriciolata, provola, basilico e olio EVO."
+    },
+    "rutiello-genovese": {
+      "name": "Genovese",
+      "description": "Ragù alla Genovese, pecorino D.O.P. e basilico."
+    },
+    "verdure-grigliate": {
+      "name": "Verdure grigliate di stagione",
+      "description": "Verdure miste alla griglia secondo la disponibilità di stagione."
+    },
+    "insalata-verde": {
+      "name": "Insalata Verde",
+      "description": "Insalata verde."
+    },
+    "insalata-mista": {
+      "name": "Insalata Mista",
+      "description": "Insalata mista."
+    },
+    "patate-forno": {
+      "name": "Patate al forno",
+      "description": "Patate al forno."
+    },
+    "caesar-salad": {
+      "name": "Caesar Salad",
+      "description": "Insalata mista con pollo e salsa Caesar."
+    },
+    "insalata-capri-blu": {
+      "name": "Insalata Capri Blu",
+      "description": "Insalata mista con mozzarella di bufala e tonno."
+    },
+    "insalata-vegetariana": {
+      "name": "Vegetariana",
+      "description": "Insalata mista di stagione con verdure grigliate."
+    },
+    "rucola-pomodorini-scaglie": {
+      "name": "Insalata di rucola e pomodorini e scaglie",
+      "description": "Insalata di rucola, pomodorini e scaglie."
+    },
+    "tiramisu": {
+      "name": "Tiramisù",
+      "description": "Tiramisù della casa."
+    },
+    "delizia-limone": {
+      "name": "Delizia al limone",
+      "description": "Delizia al limone."
+    },
+    "panna-cotta": {
+      "name": "Panna Cotta",
+      "description": "Frutti di bosco, caramello, pistacchio o cioccolato."
+    },
+    "cheesecake": {
+      "name": "Cheesecake",
+      "description": "Fragola o cioccolato."
+    },
+    "ricotta-pera": {
+      "name": "Ricotta e Pera",
+      "description": "Ricotta, pera e biscotto."
+    },
+    "pizza-nutella": {
+      "name": "Pizza con la Nutella",
+      "description": "Pizza con Nutella."
+    },
+    "pizza-black-white": {
+      "name": "Pizza Black & White",
+      "description": "Pizza Black & White."
+    },
+    "straccetti-nutella": {
+      "name": "Straccetti alla Nutella (per 2)",
+      "description": "Straccetti alla Nutella, per due persone."
+    },
+    "coca-cola": {
+      "name": "Coca-Cola",
+      "description": "Coca-Cola."
+    },
+    "coca-cola-zero": {
+      "name": "Coca-Cola Zero",
+      "description": "Coca-Cola Zero."
+    },
+    "sprite": {
+      "name": "Sprite",
+      "description": "Sprite."
+    },
+    "fanta": {
+      "name": "Fanta",
+      "description": "Fanta."
+    },
+    "lemonsoda": {
+      "name": "Lemonsoda",
+      "description": "Lemonsoda."
+    },
+    "acqua": {
+      "name": "Acqua",
+      "description": "Acqua."
+    },
+    "nastro-azzurro": {
+      "name": "Nastro Azzurro 33 cl",
+      "description": "Birra Nastro Azzurro, 33 cl."
+    },
+    "heineken": {
+      "name": "Heineken 33 cl",
+      "description": "Birra Heineken, 33 cl."
+    },
+    "tennents": {
+      "name": "Tennents 33 cl",
+      "description": "Birra Tennents, 33 cl."
+    },
+    "birra-spina": {
+      "name": "Birra alla spina Bionda / Rossa",
+      "description": "Birra alla spina bionda o rossa, 30 cl oppure 40 cl.",
+      "standardLabel": "30 cl"
+    },
+    "birra-nartigiana": {
+      "name": "Birra N’Artigiana",
+      "description": "Bianca, Rossa, Ambrata, Doppio Malto, Oro, 0% o Senza Glutine."
+    },
+    "vino-locale": {
+      "name": "Vino Locale / Prosecco",
+      "description": "Vino locale bianco, rosso o prosecco. Calice da 150 ml, 500 ml oppure 1 litro.",
+      "standardLabel": "Calice 150 ml"
+    },
+    "aperol-spritz": {
+      "name": "Aperol Spritz",
+      "description": "Spritz con prosecco, liquore italiano e soda."
+    },
+    "blu-spritz": {
+      "name": "Blu Spritz",
+      "description": "Spritz con prosecco, liquore italiano e soda."
+    },
+    "limoncello-spritz": {
+      "name": "Limoncello Spritz",
+      "description": "Spritz al limoncello."
+    },
+    "ruota-margherita": {
+      "name": "Margherita",
+      "description": "Pelati selezione Capri Blu, fior di latte di Agerola, basilico e olio EVO."
+    },
+    "ruota-salsiccia-e-friarielli": {
+      "name": "Salsiccia e Friarielli",
+      "description": "Friarielli, salsiccia sbriciolata, provola, basilico e olio EVO."
+    },
+    "ruota-provola-e-pepe": {
+      "name": "Provola e Pepe",
+      "description": "Pomodoro pelati selezione Capri Blu, provola di Agerola, pepe macinato, basilico e olio EVO."
+    },
+    "ruota-napoletana": {
+      "name": "Napoletana",
+      "description": "Pelati selezione Capri Blu, origano di montagna, aglio, olive nere, alici di Cetara, basilico e olio EVO."
+    },
+    "ruota-pancetta-e-cipolla": {
+      "name": "Pancetta e Cipolla",
+      "description": "Cipolla C.B.T., pancetta arrotolata, provola affumicata, basilico e olio EVO."
+    },
+    "ruota-sole-di-napoli": {
+      "name": "Sole di Napoli",
+      "description": "Pomodoro giallo cotto in padella, bufala, pepe, scaglie di provolone del monaco, basilico e olio EVO."
+    },
+    "ruota-scarpariello": {
+      "name": "Scarpariello",
+      "description": "Pomodoro cotto allo scarpariello leggermente piccante, fior di latte; in uscita: pecorino D.O.P., basilico e olio EVO."
+    },
+    "ruota-tricolore": {
+      "name": "Tricolore",
+      "description": "Fior di latte, pomodorini; in uscita: rucola, prosciutto crudo di Parma 24 mesi, scaglie di grana."
+    },
+    "ruota-monte-faito": {
+      "name": "Monte Faito",
+      "description": "Fior di latte, porcini e gorgonzola; in uscita speck, noci di Sorrento, basilico e olio EVO."
+    },
+    "ruota-bufalina": {
+      "name": "Bufalina",
+      "description": "Pomodoro pelati selezione Capri Blu, mozzarella di bufala campana D.O.P., basilico e olio EVO."
     }
   },
   "editions": {
     "autunno-2026": "Autunno 2026"
   },
   "variants": {
-    "ruota-di-carro": "Ruota di Carro"
+    "ruota-di-carro": "Ruota di Carro",
+    "quaranta-cl": "40 cl",
+    "mezzo-litro": "500 ml",
+    "un-litro": "1 litro",
+    "maionese-lime": "Maionese al lime"
   },
   "supplements": {},
   "allergens": {},

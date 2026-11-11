@@ -1,7 +1,7 @@
-import {visibleItems, selectedOffer, translatedItem, validateMenu} from './model.js';
+import {visibleItems, selectedOffer, translatedItem, validateMenu} from './model.js?v=complete-menu-1';
 const base = new URL('../../',import.meta.url);
 const $ = id => document.getElementById(id);
-const state = {language:'it',category:null,item:null,variant:null};
+const state = {language:'it',category:null,item:null,variant:null,query:''};
 let config,catalog,editions,locales;
 const dialog = $('detail');
 const create = (tag, className, text) => {const element=document.createElement(tag);if(className)element.className=className;if(text!==undefined)element.textContent=text;return element;};
@@ -10,66 +10,83 @@ const ui = () => ({...locales[config.fallbackLanguage].ui,...locales[state.langu
 const locale = () => locales[state.language];
 const money = cents => new Intl.NumberFormat(({it:'it-IT',en:'en-IE',es:'es-ES',pt:'pt-PT'})[state.language]||'it-IT',{style:'currency',currency:catalog.currency}).format(cents/100);
 function syncURL(){
-  const url=new URL(location.href);url.searchParams.set('lang',state.language);url.searchParams.set('category',state.category);
+  const url=new URL(location.href);url.searchParams.set('lang',state.language);if(state.category)url.searchParams.set('category',state.category);else url.searchParams.delete('category');if(state.query)url.searchParams.set('q',state.query);else url.searchParams.delete('q');
   for(const key of ['item','variant']){if(state[key])url.searchParams.set(key,state[key]);else url.searchParams.delete(key);}
   history.replaceState(null,'',url);
 }
 function itemText(id){return translatedItem(locales,state.language,config.fallbackLanguage,id);}
 function categoryText(id){return locale().categories[id]||locales[config.fallbackLanguage].categories[id];}
-function currentItems(){return visibleItems(catalog,config.activeEdition,state.category);}
+const normalize=value=>value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+function currentItems(){return visibleItems(catalog,config.activeEdition,state.category).filter(item=>{if(!state.query)return true;const content=itemText(item.id);return normalize(content.name+' '+content.description).includes(normalize(state.query.trim()));});}
+function chooseCategory(id){state.category=id||null;state.item=null;state.variant=null;state.query='';render();const heading=$(id?'category-title':'overview-title');heading.focus({preventScroll:true});heading.scrollIntoView({block:'start'});}
+
 function imageElement(filename,kind,alt){
   const image=create('img');image.src=new URL(config.imagesBasePath+filename,base);image.alt=alt;image.loading=kind==='thumbnail'?'lazy':'eager';image.decoding='async';image.width=640;image.height=480;
   image.addEventListener('error',()=>image.remove(),{once:true});return image;
 }
 function render(){
-  const text=ui();document.documentElement.lang=state.language;document.title=`${text.menu} | Capri Blu Sorrento`;
-  const brand=document.querySelector('.brand-slider');
-  brand.lang=state.language;brand.setAttribute('aria-label',text.brandSlider);
+  const text=ui();document.documentElement.lang=state.language;document.title=text.menu+' | Capri Blu Sorrento';
+  const brand=document.querySelector('.brand-slider');brand.lang=state.language;brand.setAttribute('aria-label',text.brandSlider);
   const phrases=locale().brandPhrases||locales[config.fallbackLanguage].brandPhrases;
-  brand.querySelectorAll('.brand-slider-phrase').forEach((element,index)=>element.textContent=phrases[index]);
-  brand.querySelectorAll('.brand-slider-description li').forEach((element,index)=>element.textContent=phrases[index]);
-  $('language').value=state.language;$('language-label').textContent=text.language;
-  $('detail-language').value=state.language;$('detail-language-label').textContent=text.language;
-  $('heading').textContent=text.menu;$('explore-link').textContent=text.explore+' ↓';$('preview-label').textContent=text.preview;
+  brand.querySelectorAll('.brand-slider-phrase').forEach((el,i)=>el.textContent=phrases[i]);
+  brand.querySelectorAll('.brand-slider-description li').forEach((el,i)=>el.textContent=phrases[i]);
+  $('language').value=$('detail-language').value=state.language;
+  $('language-label').textContent=$('detail-language-label').textContent=text.language;
+  $('heading').textContent=text.menu;$('explore-link').textContent=text.explore+' ↓';
   $('pdf-link').textContent=text.downloadPdf+' ↓';$('pdf-link').href=new URL(config.sourcePdf,base);
-  $('category-title').textContent=categoryText(state.category);
-  $('drinks-link').textContent=text.drinks+' ↗';const drinksURL=new URL('../drink.html',base);drinksURL.searchParams.set('lang',state.language);$('drinks-link').href=drinksURL;
-  $('categories').setAttribute('aria-label',text.menu);document.querySelector('.menu-actions').setAttribute('aria-label',text.menu);
-  $('categories').replaceChildren(...catalog.categories.filter(category=>visibleItems(catalog,config.activeEdition,category.id).length).sort((a,b)=>a.order-b.order).map(category=>{
-    const button=create('button','',categoryText(category.id));button.type='button';button.dataset.category=category.id;button.setAttribute('aria-pressed',String(category.id===state.category));return button;
+  $('drinks-link').textContent=text.drinks;$('drinks-link').href=new URL('?lang='+state.language+'&category=drinks-beverage',base);
+  $('wine-link').textContent=text.wineList;
+  document.querySelector('.menu-actions').setAttribute('aria-label',text.menu);
+  $('search-label').textContent=text.search;$('menu-search').placeholder=text.searchPlaceholder;
+  if($('menu-search').value!==state.query)$('menu-search').value=state.query;
+  $('clear-search').hidden=!state.query;$('clear-search').setAttribute('aria-label',text.clearSearch);
+  $('overview-title').textContent=text.overviewTitle;$('overview-subtitle').textContent=text.chooseCategory;
+  $('all-categories').textContent='← '+text.allCategories;$('category-select-label').textContent=text.chooseCategory;
+  $('categories').setAttribute('aria-label',text.chooseCategory);$('category-hub').setAttribute('aria-label',text.chooseCategory);
+  const categories=catalog.categories.filter(c=>visibleItems(catalog,config.activeEdition,c.id).length).sort((a,b)=>a.order-b.order);
+  const all=create('option','',text.allCategories);all.value='';
+  $('category-select').replaceChildren(all,...categories.map(c=>{const option=create('option','',categoryText(c.id));option.value=c.id;return option;}));$('category-select').value=state.category||'';
+  $('category-hub').replaceChildren(...['pizzeria','cucina','bevande'].map(group=>{
+    const section=create('section','category-group');section.append(create('h3','',text[{pizzeria:'groupPizzeria',cucina:'groupCucina',bevande:'groupBevande'}[group]]));
+    const grid=create('div','category-grid');
+    for(const category of categories.filter(c=>c.group===group)){
+      const count=visibleItems(catalog,config.activeEdition,category.id).length,link=create('a','category-tile');
+      const url=new URL(location.href);url.searchParams.set('category',category.id);for(const key of ['q','item','variant'])url.searchParams.delete(key);
+      link.href=url.href;link.dataset.category=category.id;
+      if(category.cover){const img=imageElement(category.cover,'thumbnail','');img.className='category-cover';link.append(img);}else{const decoration=create('span','category-decoration','CB');decoration.setAttribute('aria-hidden','true');link.append(decoration);}
+      const caption=create('span','category-caption');caption.append(create('span','category-name',categoryText(category.id)),create('span','category-count',count+' '+text.itemCount));link.append(caption);grid.append(link);
+    }
+    section.append(grid);return section;
   }));
-  const items=currentItems();$('count').textContent=`${items.length} ${text.itemCount}`;
+  const overview=!state.category&&!state.query.trim();$('category-overview').hidden=!overview;$('menu-listing').hidden=overview;
+  $('category-title').textContent=state.category?categoryText(state.category):text.results;
+  const items=overview?[]:currentItems();$('count').textContent=items.length+' '+(items.length===1?text.itemSingular:text.itemCount);
+  $('no-results').textContent=text.noResults;$('no-results').hidden=overview||items.length>0;
   $('items').replaceChildren(...items.map(item=>{
-    const content=itemText(item.id);const card=create('article','pizza-card'+(!item.available?' unavailable':''));card.dataset.item=item.id;
-    const visual=create('div','card-visual');
-    const photoButton=create('button','photo-button');photoButton.type='button';photoButton.dataset.item=item.id;photoButton.setAttribute('aria-label',`${text.details}: ${content.name}`);
-    if(item.thumbnail)photoButton.append(imageElement(item.thumbnail,'thumbnail',content.name));
-    else {const placeholder=create('div','photo-placeholder','CB');placeholder.setAttribute('aria-hidden','true');photoButton.append(placeholder);}
+    const content=itemText(item.id),category=catalog.categories.find(c=>c.id===item.categoryId);
+    const card=create('article','pizza-card'+(!item.available?' unavailable':'')+(!item.thumbnail?' no-photo':''));card.dataset.item=item.id;card.dataset.group=category.group;
+    const visual=create('div','card-visual'),photoButton=create('button','photo-button');photoButton.type='button';photoButton.dataset.item=item.id;photoButton.setAttribute('aria-label',text.details+': '+content.name);
+    if(item.thumbnail)photoButton.append(imageElement(item.thumbnail,'thumbnail',content.name));else{const placeholder=create('div','photo-placeholder','CB');placeholder.setAttribute('aria-hidden','true');photoButton.append(placeholder);}
     visual.append(photoButton);
-    const body=create('div','card-body');const titleRow=create('div','card-title-row');
-    const title=create('h3','',content.name);title.id=`name-${item.id}`;card.setAttribute('aria-labelledby',title.id);
-    titleRow.append(title,create('span','price',money(item.priceCents)));
-    body.append(titleRow,create('p','card-description',content.description));if(!item.available)body.append(create('p','',text.unavailable));visual.append(body);
-    const bottom=create('div','card-bottom');const open=create('button','detail-button',text.details);open.type='button';open.dataset.item=item.id;open.setAttribute('aria-label',`${text.details}: ${content.name}`);bottom.append(open);
-    card.append(visual,bottom);return card;
+    const body=create('div','card-body'),row=create('div','card-title-row'),title=create('h3','',content.name);title.id='name-'+item.id;card.setAttribute('aria-labelledby',title.id);
+    row.append(title,create('span','price',money(item.priceCents)));if(!state.category)body.append(create('span','result-category',categoryText(item.categoryId)));body.append(row,create('p','card-description',content.description));if(!item.available)body.append(create('p','',text.unavailable));visual.append(body);
+    const bottom=create('div','card-bottom'),open=create('button','detail-button',text.details);open.type='button';open.dataset.item=item.id;open.setAttribute('aria-label',text.details+': '+content.name);bottom.append(open);card.append(visual,bottom);return card;
   }));
-  const edition=editions.editions.find(edition=>edition.id===config.activeEdition);
-  $('cover-charge').textContent=`${text.coverCharge} ${money(edition.coverChargeCents)} ${text.perPerson}`;
+  const edition=editions.editions.find(e=>e.id===config.activeEdition);$('cover-charge').textContent=text.coverCharge+' '+money(edition.coverChargeCents)+' '+text.perPerson;
   $('frozen-note').textContent=text.frozen;$('back-link').textContent=text.back;$('retry').textContent=text.retry;
-  $('status').hidden=true;$('retry').hidden=true;
-  if(state.item)renderDetail();syncURL();
+  $('status').hidden=true;$('retry').hidden=true;if(state.item)renderDetail();syncURL();
 }
 function renderDetail(){
   const item=currentItems().find(item=>item.id===state.item);if(!item){state.item=null;state.variant=null;return;}
   const text=ui(),content=itemText(item.id),offer=selectedOffer(item,state.variant);
-  $('detail-title').textContent=content.name;$('detail-description').textContent=content.description;
+  $('detail-category').textContent=categoryText(item.categoryId);$('detail-title').textContent=content.name;$('detail-description').textContent=content.description;
   $('close-detail').setAttribute('aria-label',text.close);$('formats-label').textContent=text.formats;
   const image=$('detail-image').firstElementChild;
-  const photo=state.variant?null:item.image;
+  const photo=state.variant==='ruota-di-carro'?null:item.image;
   if(photo && image?.dataset.item!==item.id){const next=imageElement(photo,'fullImage',content.name);next.dataset.item=item.id;$('detail-image').replaceChildren(next);}
   else if(!photo)$('detail-image').replaceChildren();else image.alt=content.name;
   $('formats').hidden=item.variants.length===0;
-  $('format-options').replaceChildren(...[{id:'',label:text.standard},...item.variants.map(variant=>({id:variant.id,label:locale().variants[variant.id]||locales[config.fallbackLanguage].variants[variant.id]}))].map(format=>{
+  $('format-options').replaceChildren(...[{id:'',label:content.standardLabel||text.standard},...item.variants.map(variant=>({id:variant.id,label:locale().variants[variant.id]||locales[config.fallbackLanguage].variants[variant.id]}))].map(format=>{
     const button=create('button','',format.label);button.type='button';button.dataset.variant=format.id;button.setAttribute('aria-pressed',String((state.variant||'')===format.id));return button;
   }));
   $('detail-price').textContent=money(offer.priceCents);
@@ -81,7 +98,7 @@ function renderDetail(){
   $('previous-item').setAttribute('aria-label',text.previousItem+': '+itemText(items[(index-1+items.length)%items.length].id).name);
   $('next-item').setAttribute('aria-label',text.nextItem+': '+itemText(items[(index+1)%items.length].id).name);
   document.querySelector('.detail-navigation').setAttribute('aria-label',text.browseItems);
-  $('detail-position').textContent=content.name+' · '+(index+1)+' / '+items.length;
+  $('detail-position').textContent=(index+1)+' / '+items.length;$('detail-position').setAttribute('aria-label',content.name+' · '+(index+1)+' / '+items.length);
   $('previous-item').disabled=$('next-item').disabled=items.length<2;
 }
 function navigateItem(direction){
@@ -100,8 +117,8 @@ async function boot(){
     const errors=validateMenu(config,catalog,editions,locales);if(errors.length)throw new Error(errors.join('\n'));
     const params=new URL(location.href).searchParams;let saved;try{saved=localStorage.getItem('capriblu-menu-language');}catch{}
     state.language=[params.get('lang'),saved,config.defaultLanguage].find(language=>config.enabledLanguages.includes(language));
-    const first=catalog.categories.find(category=>visibleItems(catalog,config.activeEdition,category.id).length);
-    state.category=catalog.categories.some(category=>category.id===params.get('category')&&visibleItems(catalog,config.activeEdition,category.id).length)?params.get('category'):first.id;
+    state.category=catalog.categories.some(category=>category.id===params.get('category')&&visibleItems(catalog,config.activeEdition,category.id).length)?params.get('category'):null;
+    state.query=(params.get('q')||'').slice(0,120);
     const item=currentItems().find(item=>item.id===params.get('item'));
     state.item=item?.id||null;state.variant=item?.variants.some(variant=>variant.id===params.get('variant'))?params.get('variant'):null;
     render();if(state.item)dialog.showModal();
@@ -110,9 +127,15 @@ async function boot(){
   }
 }
 $('items').addEventListener('click',event=>{const button=event.target.closest('button[data-item]');if(!button)return;state.item=button.dataset.item;state.variant=null;renderDetail();dialog.showModal();syncURL();});
-$('categories').addEventListener('click',event=>{const button=event.target.closest('button[data-category]');if(!button)return;state.category=button.dataset.category;state.item=null;state.variant=null;render();});
+$('category-select').addEventListener('change',event=>chooseCategory(event.target.value));
+$('category-hub').addEventListener('click',event=>{const link=event.target.closest('a[data-category]');if(!link||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey||event.button!==0)return;event.preventDefault();chooseCategory(link.dataset.category);});
+$('all-categories').addEventListener('click',()=>chooseCategory(null));
+$('explore-link').addEventListener('click',event=>{event.preventDefault();chooseCategory(null);});
+$('drinks-link').addEventListener('click',event=>{event.preventDefault();chooseCategory('drinks-beverage');});
+$('menu-search').addEventListener('input',event=>{if(!locales)return;state.query=event.target.value.slice(0,120);state.item=null;state.variant=null;render();});
+$('clear-search').addEventListener('click',()=>{state.query='';render();$('menu-search').focus();});
 $('format-options').addEventListener('click',event=>{const button=event.target.closest('button[data-variant]');if(!button)return;state.variant=button.dataset.variant||null;renderDetail();syncURL();});
-for (const id of ['language','detail-language']) $(id).addEventListener('change',event=>{if(!locales)return;state.language=event.target.value;try{localStorage.setItem('capriblu-menu-language',state.language);}catch{}render();});
+for (const id of ['language','detail-language']) $(id).addEventListener('change',event=>{if(!locales)return;if(state.item){state.category=catalog.items.find(item=>item.id===state.item).categoryId;state.query='';}state.language=event.target.value;try{localStorage.setItem('capriblu-menu-language',state.language);}catch{}render();});
 $('close-detail').addEventListener('click',closeDetail);
 $('previous-item').addEventListener('click',()=>navigateItem(-1));
 $('next-item').addEventListener('click',()=>navigateItem(1));

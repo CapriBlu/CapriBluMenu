@@ -53,3 +53,6 @@ Il nuovo standard approvato sostituisce il pulsante avorio: pulsante blu Capri B
 
 ## Invito in vetro approvato
 La home usa un invito con contorno sottile, angoli morbidi, interno in vetro semitrasparente che lascia vedere il video, testo bianco caldo senza freccia. La scritta ruota nelle quattro lingue. Bandiere e nomi compaiono solo al tocco sotto, senza pannello, titolo o caselle; due righe su telefono. Questa scelta sostituisce il precedente pulsante blu pieno. Mantenere video e loghi originali.
+
+## Menu completo
+Il menu interattivo comprende ora tutte le 119 voci del PDF autunnale, suddivise in 17 reparti e 3 gruppi (Pizzeria, Cucina, Da bere), in quattro lingue. La pagina iniziale propone la scelta del reparto e una ricerca per nome o ingrediente; le immagini si caricano per reparto. Conservare i prezzi e la fonte per pagina, la distinzione delle pizze Ruota di Carro e le opzioni delle bevande. La carta dei vini separata resta collegata. Le foto non abbinate con sicurezza restano senza associazione; le incongruenze da revisione sono in menu/data/review.json.

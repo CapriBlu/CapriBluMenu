@@ -5,9 +5,9 @@ const saveData = Boolean(navigator.connection?.saveData);
 let wantsPlayback = !reducedMotion.matches && !saveData;
 
 function label() {
-  const english = document.documentElement.lang === 'en';
+  const language=document.documentElement.lang;
   const paused = video.paused;
-  toggle.textContent = english ? (paused ? 'Play background' : 'Pause background') : (paused ? 'Avvia sfondo' : 'Pausa sfondo');
+  const words={it:['Avvia sfondo','Pausa sfondo'],en:['Play background','Pause background'],es:['Reproducir fondo','Pausar fondo'],pt:['Reproduzir fundo','Pausar fundo']}[language]||['Avvia sfondo','Pausa sfondo'];toggle.textContent=words[paused?0:1];
   toggle.setAttribute('aria-label', toggle.textContent);
   toggle.setAttribute('aria-pressed', String(!paused));
 }

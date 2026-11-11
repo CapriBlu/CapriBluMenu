@@ -11,14 +11,14 @@
     "unavailable": "Unavailable",
     "imageUnavailable": "Photo unavailable",
     "emptyCategory": "No dishes available in this category.",
-    "preview": "Menu preview",
+    "preview": "Autumn menu",
     "season": "Autumn 2026",
     "intro": "Our tradition, one pizza at a time.",
     "previewNote": "We are preparing our new menu. Explore the first complete category.",
     "allItems": "All pizzas",
-    "itemCount": "pizzas",
-    "details": "Discover this pizza",
-    "formats": "Format",
+    "itemCount": "choices",
+    "details": "View details",
+    "formats": "Size / option",
     "standard": "Traditional",
     "ruota": "Ruota di Carro",
     "allergensPending": "Please ask our staff for allergen information.",
@@ -35,8 +35,21 @@
     "drinks": "Drinks",
     "previousItem": "Previous",
     "nextItem": "Next",
-    "browseItems": "Browse pizzas",
-    "brandSlider": "The soul of Capri Blu"
+    "browseItems": "Browse dishes",
+    "brandSlider": "The soul of Capri Blu",
+    "overviewTitle": "Our menu",
+    "chooseCategory": "Choose a category",
+    "allCategories": "All categories",
+    "search": "Search the menu",
+    "searchPlaceholder": "A dish, an ingredient…",
+    "results": "Search results",
+    "noResults": "No results. Try another dish or ingredient.",
+    "clearSearch": "Clear search",
+    "groupPizzeria": "Pizzeria",
+    "groupCucina": "Kitchen",
+    "groupBevande": "Drinks",
+    "wineList": "Wine list",
+    "itemSingular": "choice"
   },
   "categories": {
     "fritti": "Fried Bites",
@@ -125,13 +138,428 @@
     "cosacca": {
       "name": "Cosacca",
       "description": "Capri Blu Selection Whole Tomatoes, Pecorino Romano, Basil & EVO Oil."
+    },
+    "domenica-alle-tre": {
+      "name": "Domenica alle 3",
+      "description": "Crust stuffed with ricotta, Neapolitan ragù, smoked provola and beef meatballs; finished with grated salted ricotta, basil and EVO oil."
+    },
+    "scarola-maretata": {
+      "name": "Scarola Maretata",
+      "description": "Sautéed escarole with black olives, raisins, pine nuts and fior di latte; finished with Cetara anchovies, stracciata and black olive powder."
+    },
+    "capri-blu-due": {
+      "name": "Capri Blu 2.0",
+      "description": "Baked folded pizza with Fruscella ricotta, fior di latte from Agerola, rocket, red and yellow cherry tomatoes, Parma ham, 24-month Parmesan fondue and EVO oil."
+    },
+    "monte-faito": {
+      "name": "Monte Faito",
+      "description": "Fior di latte, porcini mushrooms and gorgonzola; finished with speck, Sorrento walnuts, basil and EVO oil."
+    },
+    "zuccotta": {
+      "name": "Zuccotta",
+      "description": "Pumpkin velouté, porcini mushrooms, crumbled sausage and smoked provola; finished with Provolone del Monaco shavings and EVO oil."
+    },
+    "arrosto-blu": {
+      "name": "Arrosto Blu",
+      "description": "Fior di latte from Agerola, yellow cherry tomatoes, Parma ham, buffalo stracciata, basil and EVO oil."
+    },
+    "sole-di-napoli": {
+      "name": "Sole di Napoli",
+      "description": "Pan-sautéed yellow tomatoes, buffalo mozzarella, black pepper, Provolone del Monaco shavings, basil and EVO oil."
+    },
+    "parmigiana-di-patate-pizza": {
+      "name": "Parmigiana di patate",
+      "description": "Potato parmigiana, provola and country pancetta; finished with Parmesan cream."
+    },
+    "porkins": {
+      "name": "Porkin’s",
+      "description": "Artisanal pulled pork and fior di latte; topped with sweet potatoes and lime mayonnaise."
+    },
+    "bologna": {
+      "name": "Bologna",
+      "description": "Fior di latte from Agerola, I.G.P. mortadella, Bronte pistachio pesto, pistachio crumble, basil and EVO oil."
+    },
+    "cacio-e-pepe-pizza": {
+      "name": "Cacio e Pepe",
+      "description": "Pancetta and provola; topped with cacio e pepe cream, crumbled tarallo, basil and EVO oil."
+    },
+    "montanara-classica": {
+      "name": "Montanara Classica",
+      "description": "Capri Blu selection whole tomatoes, buffalo mozzarella D.O.P., Parmigiano Reggiano, basil and EVO oil."
+    },
+    "montanara-sorrento": {
+      "name": "Montanara Sorrento",
+      "description": "Fried and baked with sautéed yellow tomatoes, buffalo mozzarella D.O.P., 24-month Parmesan fondue, Parma ham, Sorrento walnuts, basil and EVO oil."
+    },
+    "ripieno-classico-fritto": {
+      "name": "Ripieno Classico Fritto",
+      "description": "Deep-fried stuffed calzone with Capri Blu tomatoes, Fruscella ricotta, provola from Agerola, Napoli salami, cooked ham, ground pepper and pecorino."
+    },
+    "ripieno-napoletano-fritto": {
+      "name": "Ripieno Napoletano Fritto",
+      "description": "Deep-fried stuffed calzone with Capri Blu tomatoes, Fruscella ricotta, provola from Agerola, Neapolitan cicoli pork and ground pepper."
+    },
+    "montanara-genovese": {
+      "name": "Montanara alla Genovese",
+      "description": "Fried and baked with Genovese meat ragù and pecorino D.O.P."
+    },
+    "mozzarella-crudo": {
+      "name": "Mozzarella & Crudo",
+      "description": "Traditional Italian mozzarella and Parma ham."
+    },
+    "insalata-caprese": {
+      "name": "Insalata Caprese",
+      "description": "Sorrento treccia cheese with Sorrento tomatoes, EVO oil and oregano."
+    },
+    "parmigiana-patate-antipasto": {
+      "name": "Parmigiana di Patate",
+      "description": "Potatoes, béchamel and crispy pancetta, baked and golden-brown."
+    },
+    "soute-frutti-mare": {
+      "name": "Sauté ai frutti di mare",
+      "description": "Seafood sauté."
+    },
+    "calamaretti-fritti": {
+      "name": "Calamaretti fritti",
+      "description": "Fried squid."
+    },
+    "alici-fritte": {
+      "name": "Alici fritte",
+      "description": "Fried anchovies."
+    },
+    "gamberi-panko": {
+      "name": "Gamberi in pane Panko",
+      "description": "Crispy panko shrimp, 3 pieces."
+    },
+    "risotto-zucca-speck-noci": {
+      "name": "Risotto, Zucca, Speck e Noci",
+      "description": "Slow-cooked risotto with sweet pumpkin, speck and walnuts."
+    },
+    "pappardelle-salsiccia-porcini": {
+      "name": "Pappardelle Salsiccia e Porcini",
+      "description": "Fresh egg pasta with browned sausage and porcini mushrooms."
+    },
+    "mezzo-zito-genovese": {
+      "name": "Mezzo Zito alla Genovese",
+      "description": "Hand-broken pasta with slow-cooked Neapolitan Genovese sauce."
+    },
+    "lasagna-salsiccia-friarielli": {
+      "name": "Lasagna Salsiccia e Friarielli",
+      "description": "Baked pasta layers with Italian sausage and Neapolitan broccoli rabe."
+    },
+    "pappardelle-bolognese": {
+      "name": "Pappardelle alla Bolognese",
+      "description": "Fresh egg pappardelle with slow-cooked meat and tomato Bolognese ragù."
+    },
+    "ravioli-caprese": {
+      "name": "Ravioli Caprese",
+      "description": "Handcrafted cheese-stuffed ravioli with tomato sauce, cherry tomatoes, basil and EVO oil."
+    },
+    "lasagna-ragu": {
+      "name": "Lasagna al ragù",
+      "description": "Bolognese lasagna with cheese and basil."
+    },
+    "spaghetti-carbonara": {
+      "name": "Spaghetti alla Carbonara",
+      "description": "Fresh spaghetti Carbonara with guanciale and pecorino."
+    },
+    "spaghetti-nonna": {
+      "name": "Spaghetti della Nonna",
+      "description": "Spaghetti with tomato ragù, meatballs, basil and cheese."
+    },
+    "gnocchi-sorrentina": {
+      "name": "Gnocchi alla Sorrentina",
+      "description": "Potato gnocchi with tomato sauce, mozzarella, Parmesan and fresh basil."
+    },
+    "linguine-astice": {
+      "name": "Linguine con astice",
+      "description": "Linguine with lobster."
+    },
+    "ravioli-baccala": {
+      "name": "Ravioli al Baccalà",
+      "description": "Handmade ravioli filled with cod, served with capers, black olives and cherry tomatoes."
+    },
+    "scialatielli-scoglio": {
+      "name": "Scialatielli allo Scoglio",
+      "description": "Handmade scialatielli with seafood, shrimp, clams, mussels and fresh cherry tomato sauce."
+    },
+    "spaghetti-luciana": {
+      "name": "Spaghetti alla Luciana",
+      "description": "Spaghetti with baby octopus, olives, capers and cherry tomatoes."
+    },
+    "spaghetti-vongole": {
+      "name": "Spaghetti alle vongole",
+      "description": "Spaghetti with clams, lupini clams and fresh parsley."
+    },
+    "tagliata-manzo": {
+      "name": "Tagliata di Manzo",
+      "description": "Sliced beef steak with cherry tomatoes, rocket and Parmesan shavings."
+    },
+    "cotoletta-pollo": {
+      "name": "Cotoletta di pollo",
+      "description": "Breaded chicken cutlet with French fries."
+    },
+    "tegamino-polpette": {
+      "name": "Tegamino con Polpette al Ragù o Friarielli",
+      "description": "Small pan of meatballs, 4 pieces, served with tomato ragù or friarielli."
+    },
+    "scaloppina-pollo": {
+      "name": "Scaloppina di Pollo (Capri Blu)",
+      "description": "Capri Blu chicken escalope."
+    },
+    "zuppa-cozze": {
+      "name": "Zuppa di cozze",
+      "description": "Mussel soup."
+    },
+    "frittura-gamberi-calamari": {
+      "name": "Frittura di Gamberi e Calamari",
+      "description": "Fried shrimp and calamari."
+    },
+    "tegamino-polipetti": {
+      "name": "Tegamino con polipetti alla luciana",
+      "description": "Small pan of baby octopus Luciana style with toasted bread."
+    },
+    "baccala-tempura": {
+      "name": "Baccalà in tempura su letto di Scarole",
+      "description": "Crispy salt cod tempura on escarole cream with semi-dried cherry tomatoes."
+    },
+    "baccala-umido": {
+      "name": "Baccalà in umido con Pomodorini Olive e Capperi",
+      "description": "Braised salt cod with cherry tomatoes, black olives and capers in a Mediterranean-style broth."
+    },
+    "cuoppo": {
+      "name": "O’ cuoppo (per 2)",
+      "description": "A mix of Italian fried street food: fries, fried dough, potato croquettes, arancini and mini pasta bites. To share between two."
+    },
+    "tris-classico": {
+      "name": "Tris Classico",
+      "description": "Fried mini-pizza dough topped with San Marzano tomato sauce."
+    },
+    "tris-genovese": {
+      "name": "Tris Genovese",
+      "description": "Fried montanarine with Genovese sauce."
+    },
+    "frittatine-pasta": {
+      "name": "Frittatine di pasta",
+      "description": "Crispy pasta bites, 2 pieces: Classic, Carbonara or sausage and friarielli."
+    },
+    "mozzarella-carrozza": {
+      "name": "Mozzarella in Carrozza",
+      "description": "Traditional crispy mozzarella sandwich bites, 2 pieces."
+    },
+    "duetto-crocche": {
+      "name": "Duetto di Crocchè",
+      "description": "Duo of croquettes: mortadella and pistachio, or courgette and provolone."
+    },
+    "patate-dippers": {
+      "name": "Patate Dippers",
+      "description": "Cacio e pepe, cheddar and bacon or frankfurters. With lime mayonnaise: €8.90.",
+      "standardLabel": "Other toppings"
+    },
+    "patate-dolci": {
+      "name": "Porzione di Patate Dolci",
+      "description": "Sweet potatoes with cacio e pepe, cheddar and bacon, frankfurters or lime mayonnaise."
+    },
+    "rutiello-marinara-antica": {
+      "name": "Marinara Antica",
+      "description": "Capri Blu tomatoes, cherry tomatoes, black olives, capers, Cetara anchovies, oregano, garlic, pecorino romano, basil and EVO oil."
+    },
+    "rutiello-domenica": {
+      "name": "Domenica alle 3",
+      "description": "Neapolitan ragù, beef meatballs and provola; topped with Fruscella ricotta and basil."
+    },
+    "rutiello-scarola": {
+      "name": "Scarola Maretata",
+      "description": "Sautéed escarole with black olives, raisins, pine nuts and fior di latte; finished with Cetara anchovies, stracciata and black olive powder."
+    },
+    "rutiello-patanella": {
+      "name": "Patanella a Rutiello",
+      "description": "Provola, rosemary-roasted potatoes and crumbled sausage; finished with basil and EVO oil."
+    },
+    "rutiello-salsiccia-friarielli": {
+      "name": "Salsiccia e Friarielli",
+      "description": "Broccoli Rabe, Crumbled Sausage, Smoked Cheese, Basil & EVO Oil."
+    },
+    "rutiello-genovese": {
+      "name": "Genovese",
+      "description": "Genovese ragù, pecorino D.O.P. and basil."
+    },
+    "verdure-grigliate": {
+      "name": "Seasonal Grilled Vegetables",
+      "description": "Mixed grilled vegetables, subject to seasonal availability."
+    },
+    "insalata-verde": {
+      "name": "Green Salad",
+      "description": "Green salad."
+    },
+    "insalata-mista": {
+      "name": "Mixed Salad",
+      "description": "Mixed salad."
+    },
+    "patate-forno": {
+      "name": "Roasted Potatoes",
+      "description": "Roasted potatoes."
+    },
+    "caesar-salad": {
+      "name": "Caesar Salad",
+      "description": "Mixed salad with grilled chicken and Caesar dressing."
+    },
+    "insalata-capri-blu": {
+      "name": "Insalata Capri Blu",
+      "description": "Mixed salad with buffalo mozzarella and tuna."
+    },
+    "insalata-vegetariana": {
+      "name": "Vegetariana",
+      "description": "Mixed seasonal salad with grilled vegetables."
+    },
+    "rucola-pomodorini-scaglie": {
+      "name": "Insalata di rucola e pomodorini e scaglie",
+      "description": "Rocket and cherry tomato salad with Parmesan shavings."
+    },
+    "tiramisu": {
+      "name": "Tiramisù",
+      "description": "House tiramisu."
+    },
+    "delizia-limone": {
+      "name": "Delizia al limone",
+      "description": "Sorrento’s signature dessert: a delicate sponge cake filled with lemon cream, inspired by the Amalfi Coast."
+    },
+    "panna-cotta": {
+      "name": "Panna Cotta",
+      "description": "Forest fruits, caramel, pistachio or chocolate."
+    },
+    "cheesecake": {
+      "name": "Cheesecake",
+      "description": "Strawberry or chocolate."
+    },
+    "ricotta-pera": {
+      "name": "Ricotta e Pera",
+      "description": "Ricotta, sweet pears and biscuit: a traditional Amalfi Coast dessert."
+    },
+    "pizza-nutella": {
+      "name": "Pizza con la Nutella",
+      "description": "Pizza with Nutella."
+    },
+    "pizza-black-white": {
+      "name": "Pizza Black & White",
+      "description": "Black & White pizza."
+    },
+    "straccetti-nutella": {
+      "name": "Straccetti alla Nutella (per 2)",
+      "description": "Crispy fried dough strips with warm Nutella, for two people."
+    },
+    "coca-cola": {
+      "name": "Coca-Cola",
+      "description": "Coca-Cola."
+    },
+    "coca-cola-zero": {
+      "name": "Coca-Cola Zero",
+      "description": "Coca-Cola Zero."
+    },
+    "sprite": {
+      "name": "Sprite",
+      "description": "Sprite."
+    },
+    "fanta": {
+      "name": "Fanta",
+      "description": "Fanta."
+    },
+    "lemonsoda": {
+      "name": "Lemonsoda",
+      "description": "Lemonsoda."
+    },
+    "acqua": {
+      "name": "Water",
+      "description": "Water."
+    },
+    "nastro-azzurro": {
+      "name": "Nastro Azzurro 33 cl",
+      "description": "Nastro Azzurro beer, 33 cl."
+    },
+    "heineken": {
+      "name": "Heineken 33 cl",
+      "description": "Heineken beer, 33 cl."
+    },
+    "tennents": {
+      "name": "Tennents 33 cl",
+      "description": "Tennents beer, 33 cl."
+    },
+    "birra-spina": {
+      "name": "Blonde / Red Draught Beer",
+      "description": "Blonde or red draught beer, 30 cl or 40 cl.",
+      "standardLabel": "30 cl"
+    },
+    "birra-nartigiana": {
+      "name": "Birra N’Artigiana",
+      "description": "White, Red, Amber, Double Malt, Gold, 0% or Gluten-Free."
+    },
+    "vino-locale": {
+      "name": "Local Wine / Prosecco",
+      "description": "Local white wine, red wine or prosecco. A 150 ml glass, 500 ml or 1 litre.",
+      "standardLabel": "Glass 150 ml"
+    },
+    "aperol-spritz": {
+      "name": "Aperol Spritz",
+      "description": "The classic Italian aperitif with prosecco, Italian liqueur and soda."
+    },
+    "blu-spritz": {
+      "name": "Blu Spritz",
+      "description": "Spritz with prosecco, Italian liqueur and soda."
+    },
+    "limoncello-spritz": {
+      "name": "Limoncello Spritz",
+      "description": "Refreshing spritz with citrus liqueur from the Amalfi Coast."
+    },
+    "ruota-margherita": {
+      "name": "Margherita",
+      "description": "Capri Blu Selection Whole Tomatoes, Fior di Latte (Agerola's Fresh Cow's Milk Cheese), Basil & EVO Oil."
+    },
+    "ruota-salsiccia-e-friarielli": {
+      "name": "Salsiccia e Friarielli",
+      "description": "Broccoli Rabe, Crumbled Sausage, Smoked Cheese, Basil & EVO Oil."
+    },
+    "ruota-provola-e-pepe": {
+      "name": "Provola e Pepe",
+      "description": "Capri Blu Selection Whole Tomatoes, Smoked Provola cheese, Ground Black Pepper, Basil & EVO Oil."
+    },
+    "ruota-napoletana": {
+      "name": "Napoletana",
+      "description": "Tomatoes, Mountain Oregano, Garlic, Black Olives, Cetara Anchovies, Basil & EVO Oil."
+    },
+    "ruota-pancetta-e-cipolla": {
+      "name": "Pancetta e Cipolla",
+      "description": "Slow-cooked onion, rolled pancetta, smoked provola cheese, basil, and extra-virgin olive oil."
+    },
+    "ruota-sole-di-napoli": {
+      "name": "Sole di Napoli",
+      "description": "Pan-sautéed yellow tomatoes, buffalo mozzarella, black pepper, Provolone del Monaco shavings, basil and EVO oil."
+    },
+    "ruota-scarpariello": {
+      "name": "Scarpariello",
+      "description": "Lightly spicy “scarpariello” cooked tomatoes, fior di latte added at the end, Pecorino DOP, basil, and extra-virgin olive oil."
+    },
+    "ruota-tricolore": {
+      "name": "Tricolore",
+      "description": "Fior di latte cheese and cherry tomatoes; finished with fresh arugula, 24-month cured Parma ham, and Grana Padano shavings."
+    },
+    "ruota-monte-faito": {
+      "name": "Monte Faito",
+      "description": "Fior di latte, porcini mushrooms and gorgonzola; finished with speck, Sorrento walnuts, basil and EVO oil."
+    },
+    "ruota-bufalina": {
+      "name": "Bufalina",
+      "description": "Capri Blu Selection Whole Tomatoes, Buffalo Mozzarella Campana D.O.P., Basil & EVO Oil."
     }
   },
   "editions": {
     "autunno-2026": "Autumn 2026"
   },
   "variants": {
-    "ruota-di-carro": "Ruota di Carro"
+    "ruota-di-carro": "Ruota di Carro",
+    "quaranta-cl": "40 cl",
+    "mezzo-litro": "500 ml",
+    "un-litro": "1 litre",
+    "maionese-lime": "Lime mayonnaise"
   },
   "supplements": {},
   "allergens": {},

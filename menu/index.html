@@ -12,9 +12,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&amp;display=swap">
   <link rel="stylesheet" href="../brand-slider.css?v=3">
   <script src="../script/brand-slider.js?v=2" defer></script>
-  <link rel="stylesheet" href="./assets/css/menu.css?v=lovers-size-4">
-  <script type="module" src="./assets/js/menu.js?v=four-languages-1"></script>
-  <script type="module" src="./assets/js/background.js?v=1"></script>
+  <link rel="stylesheet" href="./assets/css/menu.css?v=complete-menu-1">
+  <script type="module" src="./assets/js/menu.js?v=complete-menu-1"></script>
+  <script type="module" src="./assets/js/background.js?v=complete-menu-1"></script>
 </head>
 <body>
   <video id="menu-background" class="menu-background" autoplay muted loop playsinline preload="none" poster="../img/galleria/pizze-tradizione/pizze-tradizione-margherita-cover.webp" aria-hidden="true" tabindex="-1" disablepictureinpicture></video>
@@ -40,12 +40,28 @@
       <a class="pdf-link" id="pdf-link" href="../pdf/menu_autunno.pdf" download="Menu-Capri-Blu-Sorrento.pdf">Scarica il PDF ↓</a>
     </nav>
     <div class="menu-content" id="menu-content">
-      <div class="menu-toolbar"><p class="preview-label" id="preview-label">Anteprima del menu</p><nav id="categories" aria-label="Categorie"></nav></div>
-      <div class="section-heading"><h2 id="category-title">Pizze della Tradizione</h2><p id="count" aria-live="polite"></p></div>
+      <div class="menu-search">
+        <label class="visually-hidden" id="search-label" for="menu-search">Cerca nel menu</label>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6"></circle><path d="m15 15 5 5"></path></svg>
+        <input type="search" id="menu-search" placeholder="Un piatto, un ingrediente…" autocomplete="off">
+        <button type="button" id="clear-search" aria-label="Cancella ricerca" hidden>×</button>
+      </div>
       <p id="status" role="status">Caricamento del menu…</p>
-      <div id="items" class="pizza-grid"></div>
       <button id="retry" type="button" hidden>Riprova</button>
-      <footer><p id="cover-charge">Coperto € 2,00 a persona</p><p id="frozen-note">* Prodotto congelato all’origine.</p><a href="../index.html" id="back-link">Indietro</a></footer>
+      <section id="category-overview" aria-labelledby="overview-title" hidden>
+        <div class="overview-heading"><p id="overview-subtitle">Scegli una categoria</p><h2 id="overview-title" tabindex="-1">Il nostro menu</h2></div>
+        <nav id="category-hub" aria-label="Categorie del menu"></nav>
+      </section>
+      <section id="menu-listing" aria-labelledby="category-title" hidden>
+        <div class="menu-toolbar">
+          <button id="all-categories" type="button">← Tutte le categorie</button>
+          <nav id="categories" aria-label="Categorie"><label class="visually-hidden" id="category-select-label" for="category-select">Categoria</label><select id="category-select"></select></nav>
+        </div>
+        <div class="section-heading"><h2 id="category-title" tabindex="-1"></h2><p id="count" aria-live="polite"></p></div>
+        <p id="no-results" role="status" hidden></p>
+        <div id="items" class="pizza-grid"></div>
+      </section>
+      <footer><p id="cover-charge"></p><p id="frozen-note"></p><a href="../vini.html" id="wine-link">Carta dei vini</a><a href="../index.html" id="back-link">Indietro</a></footer>
     </div>
   </main>
   <dialog id="detail" aria-labelledby="detail-title">
@@ -56,7 +72,7 @@
     </div>
     <div class="detail-layout">
       <div id="detail-image"></div>
-      <div class="detail-copy">
+      <div class="detail-copy"><p id="detail-category" class="detail-category"></p>
         <div class="detail-title-row"><h2 id="detail-title"></h2><p id="detail-price" class="detail-price"></p></div>
         <p id="detail-description"></p>
         <fieldset id="formats"><legend id="formats-label">Formato</legend><div id="format-options"></div></fieldset>

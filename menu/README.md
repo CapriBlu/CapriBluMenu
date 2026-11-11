@@ -1,116 +1,42 @@
-# Menu interattivo Capri Blu
+# Menu completo Capri Blu Sorrento
 
-Anteprima autonoma in `menu/index.html`, con 17 Pizze della Tradizione dalle pagine 4-6 del PDF autunnale e 8 varianti Ruota di Carro dalle pagine 16-17.
-Il pulsante Menu Interattivo della home apre menu/index.html. Il collegamento Indietro del menu torna alla home. Le altre categorie sono predisposte ma non ancora popolate.
-Prezzi e testi italiano/inglese sono trascritti dal PDF. Sono associate 11 foto alle pizze tradizionali, con miniature WebP leggere e versioni grandi caricate su richiesta. Gli originali caricati restano in full/ con i loro nomi.
-Le miniature nelle card hanno uno zoom visivo e un ritaglio centrale per avvicinare la pizza. Le foto grandi mantengono l'inquadratura completa nel dettaglio. I formati Ruota di Carro non mostrano le foto delle pizze tradizionali, perché non sono ancora associate foto specifiche a quei formati.
-Mancano le foto di Napoletana rivisitata, Pancetta e Cipolla, Patanella, Scarpariello, Napoletana e Marinara.
-I codici allergeni sono da verificare: il documento non include la legenda e contiene incongruenze registrate in `data/review.json`.
+Il menu interattivo comprende 119 voci del PDF autunnale in 17 reparti, 14 opzioni di formato/prezzo e quattro lingue (it, en, es, pt). I prezzi sono in centesimi e ciascuna voce conserva pagina e file PDF di origine.
 
-## Struttura
+## Navigazione
 
-```text
-menu/
-  index.html          Anteprima autonoma
-  data/
-    config.json       Impostazioni e percorsi delle risorse
-    catalog.json      Categorie e dati condivisi dei piatti
-    editions.json     Stagioni e coperto
-    review.json       Informazioni da verificare
-  locales/
-    it.json           Testi italiani
-    en.json           Testi inglesi
-  assets/
-    css/              Stili responsive
-    js/               Caricamento, interazioni e controlli
-  scripts/            Validazione dati e file collegati
-  tests/              Test del catalogo
-img/menu/
-  [reparto]/
-    thumbnails/       Miniature per le schede
-    full/             Immagini grandi aperte su richiesta
-pdf/menu_autunno.pdf   Fonte dei contenuti italiano/inglese
-```
+La pagina /menu/ apre la scelta dei reparti, organizzati in Pizzeria, Cucina e Da bere. Si possono cercare nomi o ingredienti e passare tra reparti dal selettore. I collegamenti diretti con lang, category, item, variant e q rimangono supportati. Le schede consentono di sfogliare le proposte con frecce e tastiera. La lingua viene mantenuta; la home conserva l'invito in vetro approvato.
 
-## Percorsi
+Il catalogo include cibo, soft drink, birre, vino locale/prosecco e spritz del PDF. La carta dei vini separata resta collegata a ../vini.html.
 
-I percorsi relativi in config.json si risolvono rispetto alla cartella `menu/`, anche se il futuro menu sarà avviato da `galleria.html`.
-Il caricatore usa una base esplicita verso `menu/`, senza dipendere dalla cartella della pagina.
-localesBasePath contiene i file `{language}.json`.
+## Immagini
 
-## Catalogo
+69 foto sono associate per corrispondenza del nome, comprese le immagini gia presenti. Le nuove associazioni usano img/menu/biblioteca/ e le copie WebP ottimizzate. Le miniature si caricano in prossimita dello scorrimento; le versioni grandi solo aprendo la scheda. Le foto non corrispondenti al menu autunnale rimangono in biblioteca senza essere pubblicate come piatti diversi.
 
-Ogni categoria ha un id stabile e un ordine.
-Ogni elemento di items contiene:
-- id: identificatore stabile, minuscolo e con trattini.
-- categoryId: id di una categoria esistente.
-- priceCents: prezzo intero in centesimi di euro (1200 significa 12,00 EUR).
-- thumbnail: percorso reparto/thumbnails/nome-file.webp, relativo a img/menu/; null se non disponibile.
-- image: percorso reparto/full/nome-file.webp, relativo a img/menu/; null se non disponibile.
-- allergenCodes: codici come riportati nel PDF; null se non presenti.
-- allergenStatus: pending-review oppure verified; verified richiede anche una legenda verificata.
-- available: disponibilità del piatto.
-- order: posizione nella categoria.
-- editionIds: stagioni in cui compare il piatto.
-- variants: formati con prezzo assoluto, disponibilità, codici allergeni e fonte propri.
-- supplementIds: riferimenti all'elenco condiviso supplements, inizialmente vuoto.
-- source: percorso PDF e pagina di origine.
+Le schede senza foto restano consultabili con nome, ingredienti e prezzo. Non sono riutilizzate foto delle pizze tradizionali per rappresentare il formato Ruota di Carro.
 
-I nomi dei file delle immagini devono seguire l'id del piatto, per esempio `pizze-tradizione/thumbnails/margherita.webp`.
-imagesBasePath in config.json indica la cartella img/menu/. I reparti corrispondono alle intestazioni del PDF: l'elenco completo con le pagine di origine è in img/menu/README.md.
-Antipasti di mare, secondi di terra e secondi di mare hanno cartelle e categorie distinte. La precedente categoria non popolata secondi è stata rinominata secondi-terra; le pagine della vecchia gallery restano indipendenti.
-Le foto del formato Ruota di Carro hanno un proprio reparto; il collegamento di foto specifiche alle varianti sarà aggiunto quando saranno disponibili.
-Prezzi, immagini e codici allergeni non si duplicano nei file delle lingue.
-Non utilizzare un elenco allergeni vuoto per rappresentare informazioni mancanti.
+## Contenuti e revisione
 
-## Traduzioni
+Il menu deriva da pdf/menu_autunno.pdf, pagine 1-18. L'italiano e il riferimento principale. L'inglese segue il PDF con normalizzazione dei refusi e senza riprodurre contraddizioni sostanziali; spagnolo e portoghese sono traduzioni dei contenuti. I nomi tradizionali dei piatti restano italiani, mentre i nomi generici delle bevande e dei contorni sono localizzati.
 
-In ogni file lingua, `items[id]` contiene `name` e `description` (ingredienti completi come nel PDF). I nomi originali delle pizze restano condivisi tra le lingue.
-Le categorie hanno gli stessi id del catalogo.
-Italiano e inglese partono dal PDF, senza inventare ingredienti o prezzi.
-Per aggiungere una lingua creare il relativo JSON, completarlo e abilitarlo in config.json solo dopo la revisione. Aggiornare anche le opzioni dei due selettori in index.html.
-Il modello prevede un fallback italiano; i controlli richiedono i campi essenziali in tutte le lingue abilitate. Il cambio lingua conserva categoria, piatto e formato. I parametri URL lang, category, item e variant riaprono lo stesso dettaglio.
-Le traduzioni dei codici allergeni verranno aggiunte dopo aver verificato la legenda del PDF.
+Le incongruenze del PDF sono in data/review.json (scaloppina pollo/vitello, gusti frittatine, codici allergeni). I codici allergeni restano pending-review e non sono presentati come verificati. Nessun filtro dietetico dedotto dagli ingredienti e attivo. L'opzione Patate Dippers con maionese al lime mantiene il prezzo di 8,90 EUR; gli altri condimenti sono al prezzo base di 8,00 EUR.
 
-## Immagini e caricamento
+## Dati
 
-- Miniature: obiettivo indicativo 30-60 KB ciascuna, da verificare sulle foto reali.
-- Foto grandi: file separati, richiesti soltanto all'apertura del dettaglio.
-- Le miniature si caricano vicino allo scorrimento; le immagini mancanti non impediscono la lettura.
-- Cambiare lingua non deve scaricare nuovamente le fotografie.
-- Le risorse del vecchio menu e della galleria restano nella loro posizione.
+- data/catalog.json: reparti, gruppi, prezzi, formati, immagini e fonti.
+- locales/{it,en,es,pt}.json: interfaccia e contenuti tradotti.
+- data/config.json: stagione attiva e lingue.
+- data/review.json: punti da verificare con il ristorante.
 
-## Passi successivi
+I percorsi immagini possono essere reparto/thumbnails/file.webp oppure biblioteca/reparto/thumbnails/file.webp (e full/ per le immagini grandi). I percorsi fuori dai reparti previsti e gli attraversamenti di directory sono rifiutati.
 
-1. Verificare i punti in review.json e la legenda allergeni con il ristorante.
-2. Preparare e associare le immagini effettive dei piatti.
-3. Trascrivere le altre categorie e completare la revisione bilingue.
-4. Completare le altre categorie nel menu interattivo già collegato alla home.
+## Verifica
 
-## Stagioni, disponibilità e supplementi
+Dalla radice del repository:
 
-activeEdition in config.json seleziona l'edizione in editions.json; soltanto i piatti associati a quella stagione sono mostrati. Per una stagione con prezzi o ricette diversi usare nuovi record con id distinti, preservando quelli delle edizioni archiviate.
-available: false mantiene visibile il piatto con l'indicazione di non disponibilità.
-Il catalogo prevede supplementi condivisi con prezzi confermati. Il relativo selettore si implementerà quando saranno disponibili i dati.
-Nessun filtro alimentare è attivo finché legenda e codici allergeni non saranno verificati.
-
-## Controlli
-
-### Interfaccia compatta e sfondo
-
-Le card mostrano foto a tutta superficie con zoom, titolo bianco, etichetta del prezzo e una breve anteprima degli ingredienti su una sfumatura scura. Il pulsante Scopri la pizza apre ingredienti completi e formati. La griglia passa da quattro colonne sul desktop a tre sui tablet e due sul telefono. Il ritaglio riguarda soltanto la visualizzazione: non aumenta il peso delle foto. L'intestazione resta invariata.
-Il video di sfondo usa un solo file: WebM mobile sui dispositivi compatibili fino a 600 px, altrimenti MP4. I due video non vengono precaricati insieme. Il pulsante fisso permette di fermare e riprendere lo sfondo e segue la lingua selezionata.
-Con preferenza per movimento ridotto o risparmio dati il video non parte automaticamente; resta l'immagine di copertina. La riproduzione si sospende quando la pagina passa in secondo piano.
-
-### Comandi
-
-Dalla cartella principale del repository:
-
-```text
+\`\`\`text
 node menu/scripts/validate.mjs
-node --test menu/tests/model.test.mjs
-```
+node --test menu/tests/*.test.mjs
+node --check menu/assets/js/menu.js
+\`\`\`
 
-I controlli verificano prezzi, id unici, categorie e stagioni esistenti, traduzioni, varianti, codici allergeni e presenza dei file collegati.
-Il workflow .github/workflows/menu-check.yml esegue i controlli alle modifiche del menu. È separato dal deploy GitHub Pages e non ne blocca automaticamente la pubblicazione.
-Per la prova locale servire la cartella principale con un server HTTP e aprire /menu/; il caricamento JSON non funziona aprendo il file direttamente dal disco.
+I controlli verificano dati, traduzioni, fonti, presenza dei file, separazione dei formati e prezzi chiave. Servire il repository con un server HTTP per la prova locale; non aprire il file direttamente dal disco.

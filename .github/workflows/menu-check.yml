@@ -22,6 +22,6 @@ jobs:
       - name: Verifica catalogo e risorse
         run: node menu/scripts/validate.mjs
       - name: Verifica stagioni, varianti e traduzioni
-        run: node --test menu/tests/model.test.mjs
+        run: node --test menu/tests/*.test.mjs
       - name: Verifica sintassi interfaccia
         run: node --check menu/assets/js/menu.js

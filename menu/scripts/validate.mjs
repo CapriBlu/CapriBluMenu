@@ -20,7 +20,7 @@ try {
   for (const path of resources) {try{await access(new URL(path,base));}catch{errors.push('Missing file: '+path);}}
   for(const language of config.enabledLanguages){
     const names=new Set();
-    for(const item of catalog.items){const name=locales[language]?.items[item.id]?.name;if(name&&names.has(name))console.warn(`Repeated display name in ${language}: ${name}`);names.add(name);}
+    for(const item of catalog.items){const name=locales[language]?.items[item.id]?.name;if(name&&names.has(item.categoryId+'/'+name))console.warn(`Repeated display name in ${language}: ${name}`);names.add(item.categoryId+'/'+name);}
   }
   if(errors.length){console.error(errors.join('\n'));process.exitCode=1;}
   else {

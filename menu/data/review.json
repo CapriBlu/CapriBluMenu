@@ -1,10 +1,22 @@
 {
-  "status": "preview",
+  "status": "transcribed",
   "sourcePdf": "pdf/menu_autunno.pdf",
   "transcribedPages": [
+    1,
+    2,
+    3,
     4,
     5,
     6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
     16,
     17,
     18
@@ -41,9 +53,24 @@
       "note": "Il testo inglese del PDF differisce dall’italiano sul momento di aggiunta del fior di latte. Conservata la traduzione del PDF."
     },
     {
+      "scope": "scaloppina-pollo",
+      "status": "pending",
+      "note": "Pagina 11: titolo italiano pollo, descrizione inglese vitello al limone. Usato il titolo italiano; omesso il dettaglio inglese contraddittorio."
+    },
+    {
+      "scope": "frittatine-pasta",
+      "status": "pending",
+      "note": "Pagina 12: italiano elenca Classica e Carbonara, inglese aggiunge salsiccia e friarielli e 2 pezzi. Trascritta anche questa opzione; confermare disponibilità."
+    },
+    {
+      "scope": "patate-dippers",
+      "status": "pending",
+      "note": "Pagina 12 verificata visivamente: base 8,00 €, maionese al lime evidenziata a 8,90 €. Conservata come opzione con prezzo assoluto."
+    },
+    {
       "scope": "images",
       "status": "pending",
-      "note": "11 foto associate alle pizze tradizionali. Foto mancanti: napoletana-rivisitata, pancetta-e-cipolla, patanella, scarpariello, napoletana, marinara. Le foto dei formati Ruota di Carro restano da associare."
+      "note": "69 foto associate per corrispondenza del nome; da revisione editoriale. Nessuna foto tradizionale riutilizzata per Ruota di Carro. Altre foto della biblioteca non corrispondono necessariamente al menu autunnale."
     }
   ]
 }

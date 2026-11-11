@@ -19,8 +19,10 @@ export function validateMenu(config, catalog, editions, locales) {
     if (value === null) return true;
     if (typeof value !== 'string') return false;
     const parts = value.split('/');
-    return parts.length === 3 && categoryIds.includes(parts[0]) && parts[1] === kind &&
-      !parts[2].includes('..') && /^[a-z0-9][a-z0-9.-]*\.(webp|avif|jpg|jpeg|png)$/.test(parts[2]);
+    const filename=parts.at(-1);
+    const standard=parts.length===3&&categoryIds.includes(parts[0])&&parts[1]===kind;
+    const library=parts.length===4&&parts[0]==='biblioteca'&&['beverage','antipasti','contorni','dolci','firmate-capri-blu','fritti','insalatone','piatti-special','piazze-tradizione','primi','secondi','vino'].includes(parts[1])&&parts[2]===kind;
+    return (standard||library)&&!filename.includes('..')&&/^[a-z0-9][a-z0-9.-]*\.(webp|avif|jpg|jpeg|png)$/.test(filename);
   };
   fail(config.schemaVersion === 2 && catalog.schemaVersion === 2, 'Unsupported schema version');
   fail(config.enabledLanguages.includes(config.defaultLanguage) && config.enabledLanguages.includes(config.fallbackLanguage), 'Default/fallback language must be enabled');
@@ -58,7 +60,8 @@ export function validateMenu(config, catalog, editions, locales) {
     const locale = locales[language];
     fail(locale?.language === language, `Missing locale: ${language}`);
     if (!locale) continue;
-    for (const key of ['menu','preview','season','intro','previewNote','details','formats','standard','allergensPending','pdf','coverCharge','perPerson','frozen','error','retry','unavailable','loading','language','back','close','itemCount']) fail(typeof locale.ui?.[key] === 'string' && locale.ui[key].trim().length > 0, `Missing interface text: ${language}/${key}`);
+    for (const key of ['menu','preview','season','intro','previewNote','details','formats','standard','allergensPending','pdf','coverCharge','perPerson','frozen','error','retry','unavailable','loading','language','back','close','itemCount','overviewTitle','chooseCategory','allCategories','search','searchPlaceholder','results','noResults','clearSearch','groupPizzeria','groupCucina','groupBevande','wineList']) fail(typeof locale.ui?.[key] === 'string' && locale.ui[key].trim().length > 0, `Missing interface text: ${language}/${key}`);
+    fail(Array.isArray(locale.brandPhrases)&&locale.brandPhrases.length===5&&locale.brandPhrases.every(value=>typeof value==='string'&&value.trim()), `Missing brand phrases: ${language}`);
     for (const id of categoryIds) fail(Boolean(locale.categories?.[id]),`Missing category translation: ${language}/${id}`);
     for (const item of catalog.items) {
       fail(Boolean(locale.items?.[item.id]?.name && locale.items?.[item.id]?.description), `Missing item translation: ${language}/${item.id}`);

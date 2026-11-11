@@ -13,6 +13,6 @@
   "localesBasePath": "./locales/",
   "activeEdition": "autunno-2026",
   "editions": "./data/editions.json",
-  "preview": true,
+  "preview": false,
   "imagesBasePath": "../img/menu/"
 }
