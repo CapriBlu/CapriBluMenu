@@ -65,3 +65,22 @@
 .home-entry .language-panel{margin-top:-12px}
 @media(max-width:600px){.home-page{padding-top:58px}.language-panel{width:350px;padding:15px}.home-entry .buttons{gap:24px}}
 @media(prefers-reduced-motion:reduce){#discover-menu-label{transition:none}}
+
+/* Approved glass invitation: fine contour, transparent interior, no app-like panel. */
+.discover-menu-button{justify-content:center;width:520px;min-height:72px;padding:17px 30px;border-radius:14px;border:1px solid #fff8e9a8;background:linear-gradient(130deg,#f5f2e714,#173c561a);color:#fff8e9;font:400 30px/1.2 Georgia,serif;box-shadow:0 3px 16px #00172e1a;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:background .25s,border-color .25s}
+.discover-menu-button:hover,.discover-menu-button[aria-expanded=true]{background:linear-gradient(130deg,#f5f2e721,#173c562b);border-color:#fff8e9dd;transform:none}
+#discover-menu-label{font:inherit;text-align:center}
+.discover-menu-button:focus-visible{outline:2px solid #fff8e9;outline-offset:6px}
+.language-panel{width:620px;padding:0;border:0;border-radius:0;background:none;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+.language-options{display:flex;align-items:center;justify-content:center;gap:24px}
+.language-options a{justify-content:center;gap:9px;padding:8px 0;border:0;border-radius:0;background:none;color:#fff8e9;font:17px/1.4 Georgia,serif;text-shadow:0 1px 5px #00172b}
+.language-options a:hover,.language-options a:focus-visible{background:none;color:#fff;text-decoration:underline;text-underline-offset:6px}
+.language-options svg{width:24px;height:17px}
+.home-entry .buttons{gap:36px}
+.home-entry .language-panel{margin-top:-4px}
+.home-entry .quick-buttons{margin-top:15px}
+.language-panel:not([hidden]){animation:language-reveal .35s ease-out both}
+@keyframes language-reveal{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){.discover-menu-button{width:100%;min-height:64px;font-size:25px;padding:16px 18px}.language-options{display:grid;grid-template-columns:1fr 1fr;gap:8px 20px;max-width:320px;margin:auto}.language-options a{font-size:16px}.home-entry .buttons{gap:29px}.home-entry .quick-buttons{margin-top:12px}}
+@media(max-width:350px){.discover-menu-button{font-size:22px;padding:15px 12px}.language-options a{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.language-panel:not([hidden]){animation:none}.discover-menu-button{transition:none}}

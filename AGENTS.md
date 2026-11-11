@@ -50,3 +50,6 @@ L’intestazione del menu deve restare compatta e sfumata sul video, senza una f
 
 ## Scelta della lingua dalla home
 Il nuovo standard approvato sostituisce il pulsante avorio: pulsante blu Capri Blu con testo chiaro, scritta che alterna italiano, inglese, spagnolo e portoghese. Il tocco apre un pannello con bandiera e nome della lingua; la scelta porta al menu e viene mantenuta. Niente selettore separato in alto sulla home. Mantenere il video originale e i loghi Pasta/Pizza Lovers. Le traduzioni del menu interattivo sono disponibili in it/en/es/pt; il PDF originale resta italiano/inglese e la pagina Drink storica ha contenuti separati.
+
+## Invito in vetro approvato
+La home usa un invito con contorno sottile, angoli morbidi, interno in vetro semitrasparente che lascia vedere il video, testo bianco caldo senza freccia. La scritta ruota nelle quattro lingue. Bandiere e nomi compaiono solo al tocco sotto, senza pannello, titolo o caselle; due righe su telefono. Questa scelta sostituisce il precedente pulsante blu pieno. Mantenere video e loghi originali.
