@@ -49,6 +49,8 @@ function render(){
   $('wine-link').textContent=text.wineList;
   document.querySelector('.topbar .home').href=$('back-link').href=new URL('../index.html?lang='+state.language,base);
   document.querySelector('.menu-actions').setAttribute('aria-label',text.menu);
+  $('toggle-search').setAttribute('aria-label',text.search);
+  if(state.query)setSearchOpen(true);
   $('search-label').textContent=text.search;$('menu-search').placeholder=text.searchPlaceholder;
   if($('menu-search').value!==state.query)$('menu-search').value=state.query;
   $('clear-search').hidden=!state.query;$('clear-search').setAttribute('aria-label',text.clearSearch);
@@ -171,6 +173,18 @@ categoryPicker.addEventListener('click',event=>{
   if(event.target!==categoryPicker)return;
   const rect=categoryPicker.getBoundingClientRect();
   if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)categoryPicker.close();
+});
+function setSearchOpen(open) {
+  document.querySelector('.topbar').classList.toggle('search-open',open);
+  $('toggle-search').setAttribute('aria-expanded',String(open));
+}
+$('toggle-search').addEventListener('click',()=>{
+  const open=$('toggle-search').getAttribute('aria-expanded')!=='true';
+  setSearchOpen(open);
+  if(open)$('menu-search').focus();
+});
+$('menu-search').addEventListener('keydown',event=>{
+  if(event.key==='Escape') {setSearchOpen(false);$('toggle-search').focus();}
 });
 $('menu-search').addEventListener('input',event=>{if(!locales)return;state.query=event.target.value.slice(0,120);state.item=null;state.variant=null;render();});
 $('clear-search').addEventListener('click',()=>{state.query='';render();$('menu-search').focus();});

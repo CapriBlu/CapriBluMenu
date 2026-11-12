@@ -62,3 +62,6 @@ Su telefono non mostrare la barra completa dei reparti. Usare un solo comando co
 
 ## Otto lingue
 Home e menu interattivo supportano it/en/es/pt/pl/de/fr/vi. Mostrare i nomi nativi e le bandiere sulla home; conservare la lingua passando fra home, reparti e dettaglio. Tradurre interfaccia, ingredienti, reparti e opzioni; mantenere i nomi tradizionali dei piatti e dei marchi. Caricare all'avvio soltanto lingua scelta e italiano di riserva, poi caricare le altre su richiesta. Il PDF originale e le pagine storiche separate non sono nuove traduzioni.
+
+## Intestazione mobile compatta
+Su telefono lingua, ricerca a icona e Home occupano una sola riga. Il campo ricerca resta chiuso finché richiesto; si apre senza sovrapporsi al logo e mantiene etichetta tradotta, query e comando Escape. Evitare una riga di ricerca sempre aperta sopra il logo.
