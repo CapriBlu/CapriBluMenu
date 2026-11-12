@@ -28,9 +28,17 @@ test('Library image paths are allowed without accepting traversal or arbitrary d
   item.thumbnail=path;assert.ok(validateMenu(config,c,editions,locales).some(e=>e.includes('Invalid image path')),path);
  }
 });
-test('New content and navigation are translated in all four languages',()=>{
- assert.deepEqual(config.enabledLanguages,['it','en','es','pt']);
+test('New content and navigation are translated in all eight languages',()=>{
+ assert.deepEqual(config.enabledLanguages,['it','en','es','pt','pl','de','fr','vi']);
  for(const l of Object.values(locales))for(const i of catalog.items)assert.ok(l.items[i.id]?.description&&l.items[i.id]?.name,i.id);
- for(const l of ['en','es','pt'])assert.notEqual(locales[l].items['gnocchi-sorrentina'].description,locales.it.items['gnocchi-sorrentina'].description);
+ for(const l of ['en','es','pt','pl','de','fr','vi'])assert.notEqual(locales[l].items['gnocchi-sorrentina'].description,locales.it.items['gnocchi-sorrentina'].description);
 });
 
+
+test('New locales cover all interface keys and translate every non-brand description',()=>{
+ const brands=new Set(['coca-cola','coca-cola-zero','sprite','fanta','lemonsoda','pizza-black-white']);
+ for(const language of ['pl','de','fr','vi']){
+  for(const key of Object.keys(locales.it.ui))assert.ok(locales[language].ui[key]?.trim(),language+'/'+key);
+  for(const item of catalog.items)if(!brands.has(item.id))assert.notEqual(locales[language].items[item.id].description,locales.it.items[item.id].description,language+'/'+item.id);
+ }
+});

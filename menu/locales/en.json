@@ -53,7 +53,8 @@
     "categoryBack": "Categories",
     "homeLabel": "Home",
     "moreCategories": "More categories",
-    "drinksShortcut": "Drinks & Beverage"
+    "drinksShortcut": "Drinks & Beverage",
+    "languageError": "The language could not be changed. Please try again."
   },
   "categories": {
     "fritti": "Fried Bites",

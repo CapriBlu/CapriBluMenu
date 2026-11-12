@@ -1,6 +1,6 @@
 # Menu completo Capri Blu Sorrento
 
-Il menu interattivo comprende 119 voci del PDF autunnale in 17 reparti, 14 opzioni di formato/prezzo e quattro lingue (it, en, es, pt). I prezzi sono in centesimi e ciascuna voce conserva pagina e file PDF di origine.
+Il menu interattivo comprende 119 voci del PDF autunnale in 17 reparti, 14 opzioni di formato/prezzo e otto lingue (it, en, es, pt, pl, de, fr, vi). I prezzi sono in centesimi e ciascuna voce conserva pagina e file PDF di origine.
 
 ## Navigazione
 
@@ -54,3 +54,9 @@ La barra completa scorre con la pagina. Dopo che è uscita dallo schermo compare
 ## Correzione navigazione e sfondo — 12 novembre 2026
 
 Su telefono la barra grande è sostituita fin dall'inizio da un unico selettore di reparto sopra i piatti. Il selettore occupa il proprio spazio nel flusso e resta raggiungibile con il contenitore sticky; non fluttua sulle schede. Il pulsante Pausa sfondo è rimosso dal markup e dal codice. Il video mantiene avvio differito, sospensione in background e rispetto di movimento ridotto/risparmio dati. Questa scelta sostituisce il comportamento descritto negli aggiornamenti precedenti.
+
+## Polacco, tedesco, francese e vietnamita — 12 novembre 2026
+
+Aggiunti pl/de/fr/vi per tutte le 119 voci, 17 reparti, testi dell'interfaccia, opzioni e frasi del marchio. Home con otto bandiere e selettori aggiornati anche nel dettaglio. I nomi tradizionali restano italiani; ingredienti e nomi generici sono tradotti dal riferimento italiano, senza aggiungere ingredienti non presenti. Le traduzioni nuove sono redazionali e non risultano revisionate da madrelingua.
+
+All'avvio si scaricano soltanto la lingua scelta e il fallback italiano. Le altre lingue si scaricano alla selezione e vengono riutilizzate nella sessione; un errore permette di ritentare mantenendo la lingua precedente. Supportati formati monetari locali, ricerca vietnamita senza diacritici e plurale polacco. PDF e carta dei vini storica restano nelle rispettive lingue originali.

@@ -53,7 +53,8 @@
     "categoryBack": "Categorie",
     "homeLabel": "Home",
     "moreCategories": "Altri reparti",
-    "drinksShortcut": "Drink & Beverage"
+    "drinksShortcut": "Drink & Beverage",
+    "languageError": "Non è stato possibile cambiare lingua. Riprova."
   },
   "categories": {
     "fritti": "I Fritti",

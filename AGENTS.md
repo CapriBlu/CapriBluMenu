@@ -59,3 +59,6 @@ Il menu interattivo comprende ora tutte le 119 voci del PDF autunnale, suddivise
 
 ## Navigazione menu su telefono
 Su telefono non mostrare la barra completa dei reparti. Usare un solo comando compatto “Categorie · reparto attuale” sopra i piatti, nel flusso della pagina, che rimane raggiungibile durante lo scorrimento senza posizionamento flottante sulle schede. Il pannello dei reparti si richiude dopo la scelta. Mantenere la lingua selezionata. Il pulsante “Pausa sfondo” va rimosso del tutto; il video rispetta movimento ridotto e risparmio dati.
+
+## Otto lingue
+Home e menu interattivo supportano it/en/es/pt/pl/de/fr/vi. Mostrare i nomi nativi e le bandiere sulla home; conservare la lingua passando fra home, reparti e dettaglio. Tradurre interfaccia, ingredienti, reparti e opzioni; mantenere i nomi tradizionali dei piatti e dei marchi. Caricare all'avvio soltanto lingua scelta e italiano di riserva, poi caricare le altre su richiesta. Il PDF originale e le pagine storiche separate non sono nuove traduzioni.

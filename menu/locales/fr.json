@@ -1,0 +1,578 @@
+{
+  "language": "fr",
+  "label": "Français",
+  "ui": {
+    "menu": "Menu",
+    "back": "Retour",
+    "language": "Langue",
+    "ingredients": "Ingrédients",
+    "allergens": "Allergènes",
+    "close": "Fermer",
+    "unavailable": "Indisponible",
+    "imageUnavailable": "Photo indisponible",
+    "emptyCategory": "Aucun plat disponible dans cette catégorie.",
+    "preview": "Menu d’automne",
+    "season": "Automne 2026",
+    "intro": "Notre tradition, une pizza à la fois.",
+    "previewNote": "Nous préparons notre nouveau menu. Découvrez la première catégorie complète.",
+    "allItems": "Toutes les pizzas",
+    "itemCount": "propositions",
+    "details": "En savoir plus",
+    "formats": "Format / option",
+    "standard": "Traditionnel",
+    "ruota": "Ruota di Carro",
+    "allergensPending": "Pour toute information sur les allergènes, veuillez vous adresser au personnel.",
+    "pdf": "Menu complet en PDF",
+    "coverCharge": "Couvert",
+    "perPerson": "par personne",
+    "frozen": "* Produit surgelé à l’origine.",
+    "error": "Le menu n’a pas pu être chargé. Vous pouvez consulter le PDF complet.",
+    "retry": "Réessayer",
+    "available": "Disponible",
+    "loading": "Chargement du menu…",
+    "explore": "Découvrir le menu",
+    "downloadPdf": "Télécharger le menu PDF",
+    "drinks": "Boissons",
+    "previousItem": "Précédent",
+    "nextItem": "Suivant",
+    "browseItems": "Parcourir les plats",
+    "brandSlider": "L’âme de Capri Blu",
+    "overviewTitle": "Notre menu",
+    "chooseCategory": "Choisir une catégorie",
+    "allCategories": "Toutes les catégories",
+    "search": "Rechercher dans le menu",
+    "searchPlaceholder": "Un plat, un ingrédient…",
+    "results": "Résultats de recherche",
+    "noResults": "Aucun résultat. Essayez un autre plat ou ingrédient.",
+    "clearSearch": "Effacer la recherche",
+    "groupPizzeria": "Pizzeria",
+    "groupCucina": "Cuisine",
+    "groupBevande": "Boissons",
+    "wineList": "Carte des vins",
+    "itemSingular": "proposition",
+    "categoryBack": "Catégories",
+    "homeLabel": "Accueil",
+    "moreCategories": "Autres catégories",
+    "drinksShortcut": "Boissons",
+    "languageError": "Impossible de changer de langue. Veuillez réessayer."
+  },
+  "categories": {
+    "fritti": "Fritures",
+    "antipasti": "Entrées",
+    "antipasti-mare": "Entrées de la mer",
+    "primi": "Pâtes et risottos",
+    "primi-mare": "Pâtes aux fruits de mer",
+    "secondi-terra": "Plats de viande",
+    "secondi-mare": "Poissons et fruits de mer",
+    "pizze-tradizione": "Pizzas traditionnelles",
+    "firmate-capri-blu": "Créations Capri Blu",
+    "montanare": "Montanare",
+    "rutiello-pizza": "Pizza Rutiello",
+    "ruota-di-carro": "Pizza Ruota di Carro",
+    "contorni": "Accompagnements",
+    "insalatone": "Grandes salades",
+    "dessert": "Desserts",
+    "drinks-beverage": "Boissons",
+    "spritz": "Nos Spritz"
+  },
+  "items": {
+    "tricolore": {
+      "name": "Tricolore",
+      "description": "Fior di latte, tomates cerises ; à la sortie du four : roquette, jambon de Parme affiné 24 mois et copeaux de grana."
+    },
+    "cinque-formaggi": {
+      "name": "5 Formaggi",
+      "description": "Provola d’Agerola, gorgonzola, ricotta fior di Fruscella, pecorino romano, copeaux de provolone del monaco, basilic et huile d’olive vierge extra."
+    },
+    "salsiccia-e-friarielli": {
+      "name": "Salsiccia e Friarielli",
+      "description": "Friarielli (brocoli-rave napolitain), saucisse émiettée, provola, basilic et huile d’olive vierge extra."
+    },
+    "napoletana-rivisitata": {
+      "name": "Napoletana rivisitata",
+      "description": "Tomates jaunes sautées, origan, olives noires, tomates datterini rouges, ail, basilic et huile d’olive vierge extra."
+    },
+    "bufalina": {
+      "name": "Bufalina",
+      "description": "Tomates pelées sélection Capri Blu, mozzarella di bufala campana D.O.P., basilic et huile d’olive vierge extra."
+    },
+    "pancetta-e-cipolla": {
+      "name": "Pancetta e Cipolla",
+      "description": "Oignons cuits à basse température, pancetta roulée, provola fumée, basilic et huile d’olive vierge extra."
+    },
+    "capricciosa": {
+      "name": "Capricciosa",
+      "description": "Tomates pelées sélection Capri Blu, fior di latte d’Agerola, salami Napoli, jambon cuit, champignons de Paris, petits artichauts, olives noires, basilic et huile d’olive vierge extra."
+    },
+    "crocco-pizza": {
+      "name": "Crocco Pizza",
+      "description": "Fior di latte d’Agerola, crème, jambon cuit, croquettes de pommes de terre, basilic et huile d’olive vierge extra."
+    },
+    "patanella": {
+      "name": "Patanella",
+      "description": "Provola d’Agerola, pommes de terre au four, saucisse émiettée, basilic et huile d’olive vierge extra."
+    },
+    "diavola": {
+      "name": "Diavola",
+      "description": "Tomates pelées sélection Capri Blu, fior di latte d’Agerola, salami spianata piquant, basilic et huile d’olive vierge extra."
+    },
+    "scarpariello": {
+      "name": "Scarpariello",
+      "description": "Tomates cuisinées à la scarpariello légèrement épicées et fior di latte ; à la sortie du four : pecorino D.O.P., basilic et huile d’olive vierge extra."
+    },
+    "napoletana": {
+      "name": "Napoletana",
+      "description": "Tomates pelées sélection Capri Blu, origan de montagne, ail, olives noires, anchois de Cetara, basilic et huile d’olive vierge extra."
+    },
+    "provola-e-pepe": {
+      "name": "Provola e Pepe",
+      "description": "Tomates pelées sélection Capri Blu, provola d’Agerola, poivre moulu, basilic et huile d’olive vierge extra."
+    },
+    "wurstel-e-patatine": {
+      "name": "Wrustel & Patatine",
+      "description": "Fior di latte d’Agerola, saucisses de Francfort, frites* et huile d’olive vierge extra."
+    },
+    "margherita": {
+      "name": "Margherita",
+      "description": "Tomates pelées sélection Capri Blu, fior di latte d’Agerola, basilic et huile d’olive vierge extra."
+    },
+    "marinara": {
+      "name": "Marinara",
+      "description": "Tomates pelées sélection Capri Blu, origan, ail et huile d’olive vierge extra."
+    },
+    "cosacca": {
+      "name": "Cosacca",
+      "description": "Tomates pelées sélection Capri Blu, pecorino romano, basilic et huile d’olive vierge extra."
+    },
+    "domenica-alle-tre": {
+      "name": "Domenica alle 3",
+      "description": "Bord farci de ricotta, ragù napolitain, provola fumée et boulettes de bœuf ; à la sortie du four : ricotta salée râpée, basilic et huile d’olive vierge extra."
+    },
+    "scarola-maretata": {
+      "name": "Scarola Maretata",
+      "description": "Scarole sautée aux olives noires, raisins secs et pignons, fior di latte ; à la sortie du four : anchois de Cetara, stracciata et poudre d’olives noires."
+    },
+    "capri-blu-due": {
+      "name": "Capri Blu 2.0",
+      "description": "Chausson au four avec ricotta fior di Fruscella, fior di latte d’Agerola, roquette, tomates datterini rouges et jaunes, jambon de Parme, fondue de parmesan affiné 24 mois et huile d’olive vierge extra."
+    },
+    "monte-faito": {
+      "name": "Monte Faito",
+      "description": "Fior di latte, cèpes et gorgonzola ; à la sortie du four : speck, noix de Sorrente, basilic et huile d’olive vierge extra."
+    },
+    "zuccotta": {
+      "name": "Zuccotta",
+      "description": "Velouté de potiron, cèpes, saucisse émiettée et provola fumée ; à la sortie du four : copeaux de provolone del monaco et huile d’olive vierge extra."
+    },
+    "arrosto-blu": {
+      "name": "Arrosto Blu",
+      "description": "Fior di latte d’Agerola, tomates datterini jaunes, jambon de Parme, stracciata de bufflonne, basilic et huile d’olive vierge extra."
+    },
+    "sole-di-napoli": {
+      "name": "Sole di Napoli",
+      "description": "Tomates jaunes cuites à la poêle, mozzarella de bufflonne, poivre, copeaux de provolone del monaco, basilic et huile d’olive vierge extra."
+    },
+    "parmigiana-di-patate-pizza": {
+      "name": "Parmigiana di patate",
+      "description": "Parmigiana de pommes de terre, provola et pancetta paysanne ; à la sortie du four, crème de parmesan."
+    },
+    "porkins": {
+      "name": "Porkin’s",
+      "description": "Effiloché de porc artisanal et fior di latte ; à la sortie du four : patates douces et mayonnaise au citron vert."
+    },
+    "bologna": {
+      "name": "Bologna",
+      "description": "Fior di latte d’Agerola, mortadelle I.G.P., pesto de pistaches de Bronte, éclats de pistache, basilic et huile d’olive vierge extra."
+    },
+    "cacio-e-pepe-pizza": {
+      "name": "Cacio e Pepe",
+      "description": "Pancetta et provola ; à la sortie du four : crème cacio e pepe, tarallo émietté, basilic et huile d’olive vierge extra."
+    },
+    "montanara-classica": {
+      "name": "Montanara Classica",
+      "description": "Tomates pelées sélection Capri Blu, mozzarella di bufala campana D.O.P., parmigiano reggiano, basilic et huile d’olive vierge extra."
+    },
+    "montanara-sorrento": {
+      "name": "Montanara Sorrento",
+      "description": "Double cuisson avec tomates jaunes sautées, mozzarella de bufflonne D.O.P., fondue de parmesan affiné 24 mois, jambon de Parme, noix de Sorrente, basilic et huile d’olive vierge extra."
+    },
+    "ripieno-classico-fritto": {
+      "name": "Ripieno Classico Fritto",
+      "description": "Tomates pelées sélection Capri Blu, ricotta fior di Fruscella, provola d’Agerola, salami Napoli, jambon cuit, poivre moulu et pecorino."
+    },
+    "ripieno-napoletano-fritto": {
+      "name": "Ripieno Napoletano Fritto",
+      "description": "Tomates sélection Capri Blu, ricotta fior di Fruscella, provola d’Agerola, grattons de porc napolitains (cicoli) et poivre moulu."
+    },
+    "montanara-genovese": {
+      "name": "Montanara alla Genovese",
+      "description": "Double cuisson avec ragù de viande alla Genovese et pecorino D.O.P."
+    },
+    "mozzarella-crudo": {
+      "name": "Mozzarella & Crudo",
+      "description": "Mozzarella tressée (treccia) et jambon cru."
+    },
+    "insalata-caprese": {
+      "name": "Insalata Caprese",
+      "description": "Treccia de Sorrente avec tomates de Sorrente, huile d’olive vierge extra et origan."
+    },
+    "parmigiana-patate-antipasto": {
+      "name": "Parmigiana di Patate",
+      "description": "Pommes de terre, béchamel et pancetta croustillante gratinées au four."
+    },
+    "soute-frutti-mare": {
+      "name": "Sauté ai frutti di mare",
+      "description": "Sauté de fruits de mer."
+    },
+    "calamaretti-fritti": {
+      "name": "Calamaretti fritti",
+      "description": "Petits calamars frits."
+    },
+    "alici-fritte": {
+      "name": "Alici fritte",
+      "description": "Anchois frits."
+    },
+    "gamberi-panko": {
+      "name": "Gamberi in pane Panko",
+      "description": "Crevettes panées au panko, 3 pièces."
+    },
+    "risotto-zucca-speck-noci": {
+      "name": "Risotto, Zucca, Speck e Noci",
+      "description": "Risotto crémeux au velouté de potiron doux, servi avec speck et noix."
+    },
+    "pappardelle-salsiccia-porcini": {
+      "name": "Pappardelle Salsiccia e Porcini",
+      "description": "Pappardelle fraîches à la saucisse dorée et aux cèpes."
+    },
+    "mezzo-zito-genovese": {
+      "name": "Mezzo Zito alla Genovese",
+      "description": "Mezzi ziti cassés à la main, accompagnés d’un riche ragù napolitain alla Genovese."
+    },
+    "lasagna-salsiccia-friarielli": {
+      "name": "Lasagna Salsiccia e Friarielli",
+      "description": "Lasagnes à la saucisse et aux friarielli (brocoli-rave napolitain)."
+    },
+    "pappardelle-bolognese": {
+      "name": "Pappardelle alla Bolognese",
+      "description": "Pappardelle fraîches aux œufs, avec ragù de viande et de tomate."
+    },
+    "ravioli-caprese": {
+      "name": "Ravioli Caprese",
+      "description": "Ravioli artisanaux farcis au fromage, avec tomates, tomates cerises, basilic et huile d’olive vierge extra."
+    },
+    "lasagna-ragu": {
+      "name": "Lasagna al ragù",
+      "description": "Lasagnes au ragù bolognaise, fromage et basilic."
+    },
+    "spaghetti-carbonara": {
+      "name": "Spaghetti alla Carbonara",
+      "description": "Spaghetti frais à la carbonara, avec guanciale et fromage."
+    },
+    "spaghetti-nonna": {
+      "name": "Spaghetti della Nonna",
+      "description": "Spaghetti au ragù de tomate, boulettes de viande, basilic et fromage."
+    },
+    "gnocchi-sorrentina": {
+      "name": "Gnocchi alla Sorrentina",
+      "description": "Gnocchi de pommes de terre avec sauce tomate, fior di latte, parmesan et basilic frais."
+    },
+    "linguine-astice": {
+      "name": "Linguine con astice",
+      "description": "Linguine au homard."
+    },
+    "ravioli-baccala": {
+      "name": "Ravioli al Baccalà",
+      "description": "Ravioli artisanaux à la morue salée, avec câpres, olives noires et tomates cerises."
+    },
+    "scialatielli-scoglio": {
+      "name": "Scialatielli allo Scoglio",
+      "description": "Scialatielli artisanaux aux fruits de mer, avec crevettes et tomates cerises fraîches."
+    },
+    "spaghetti-luciana": {
+      "name": "Spaghetti alla Luciana",
+      "description": "Spaghetti aux petits poulpes, olives, câpres et tomates cerises."
+    },
+    "spaghetti-vongole": {
+      "name": "Spaghetti alle vongole",
+      "description": "Spaghetti aux palourdes vongole et lupini, avec persil."
+    },
+    "tagliata-manzo": {
+      "name": "Tagliata di Manzo",
+      "description": "Émincé de bœuf avec tomates cerises, roquette et copeaux de fromage."
+    },
+    "cotoletta-pollo": {
+      "name": "Cotoletta di pollo",
+      "description": "Escalope de poulet panée avec frites."
+    },
+    "tegamino-polpette": {
+      "name": "Tegamino con Polpette al Ragù o Friarielli",
+      "description": "Boulettes en petit plat, au ragù ou aux friarielli, 4 pièces."
+    },
+    "scaloppina-pollo": {
+      "name": "Scaloppina di Pollo (Capri Blu)",
+      "description": "Escalope de poulet Capri Blu."
+    },
+    "zuppa-cozze": {
+      "name": "Zuppa di cozze",
+      "description": "Soupe de moules."
+    },
+    "frittura-gamberi-calamari": {
+      "name": "Frittura di Gamberi e Calamari",
+      "description": "Friture de crevettes et calamars."
+    },
+    "tegamino-polipetti": {
+      "name": "Tegamino con polipetti alla luciana",
+      "description": "Petits poulpes à la Luciana en petit plat, avec pain grillé."
+    },
+    "baccala-tempura": {
+      "name": "Baccalà in tempura su letto di Scarole",
+      "description": "Morue salée en tempura sur crème de scarole, avec tomates cerises semi-séchées."
+    },
+    "baccala-umido": {
+      "name": "Baccalà in umido con Pomodorini Olive e Capperi",
+      "description": "Morue salée mijotée avec tomates cerises, olives et câpres."
+    },
+    "cuoppo": {
+      "name": "O’ cuoppo (pour 2)",
+      "description": "Assortiment de fritures italiennes : frites, beignets de pâte, croquettes de pommes de terre, arancini et mini-croquettes de pâtes. À partager à deux."
+    },
+    "tris-classico": {
+      "name": "Tris Classico",
+      "description": "Mini-pizzas frites (montanarine) aux tomates San Marzano."
+    },
+    "tris-genovese": {
+      "name": "Tris Genovese",
+      "description": "Mini-pizzas frites (montanarine) à la sauce Genovese."
+    },
+    "frittatine-pasta": {
+      "name": "Frittatine di pasta",
+      "description": "Croquettes de pâtes, 2 pièces : classiques, carbonara ou saucisse et friarielli."
+    },
+    "mozzarella-carrozza": {
+      "name": "Mozzarella in Carrozza",
+      "description": "Sandwichs de mozzarella frits, 2 pièces."
+    },
+    "duetto-crocche": {
+      "name": "Duetto di Crocchè",
+      "description": "Mortadelle et pistache, ou courgettes et provolone."
+    },
+    "patate-dippers": {
+      "name": "Patate Dippers",
+      "description": "Cacio e pepe, cheddar et bacon ou saucisses. Avec mayonnaise au citron vert : 8,90 €.",
+      "standardLabel": "Autres garnitures"
+    },
+    "patate-dolci": {
+      "name": "Portion de patates douces",
+      "description": "Cacio e pepe, cheddar et bacon, saucisses ou mayonnaise au citron vert."
+    },
+    "rutiello-marinara-antica": {
+      "name": "Marinara Antica",
+      "description": "Tomates sélection Capri Blu, tomates cerises, olives noires, câpres, anchois de Cetara, origan, ail, pecorino romano, basilic et huile d’olive vierge extra."
+    },
+    "rutiello-domenica": {
+      "name": "Domenica alle 3",
+      "description": "Ragù napolitain, boulettes de bœuf et provola ; à la sortie du four : touches de ricotta de Fruscella et basilic."
+    },
+    "rutiello-scarola": {
+      "name": "Scarola Maretata",
+      "description": "Scarole sautée aux olives noires, raisins secs et pignons, fior di latte ; à la sortie du four : anchois de Cetara, stracciata et poudre d’olives noires."
+    },
+    "rutiello-patanella": {
+      "name": "Patanella a Rutiello",
+      "description": "Provola, pommes de terre au four au romarin et saucisse émiettée ; à la sortie du four : basilic et huile d’olive vierge extra."
+    },
+    "rutiello-salsiccia-friarielli": {
+      "name": "Salsiccia e Friarielli",
+      "description": "Friarielli (brocoli-rave napolitain), saucisse émiettée, provola, basilic et huile d’olive vierge extra."
+    },
+    "rutiello-genovese": {
+      "name": "Genovese",
+      "description": "Ragù alla Genovese, pecorino D.O.P. et basilic."
+    },
+    "verdure-grigliate": {
+      "name": "Légumes grillés de saison",
+      "description": "Légumes grillés variés selon les disponibilités de saison."
+    },
+    "insalata-verde": {
+      "name": "Salade verte",
+      "description": "Salade verte."
+    },
+    "insalata-mista": {
+      "name": "Salade composée",
+      "description": "Salade composée."
+    },
+    "patate-forno": {
+      "name": "Pommes de terre au four",
+      "description": "Pommes de terre au four."
+    },
+    "caesar-salad": {
+      "name": "Caesar Salad",
+      "description": "Salade composée avec poulet et sauce Caesar."
+    },
+    "insalata-capri-blu": {
+      "name": "Insalata Capri Blu",
+      "description": "Salade composée avec mozzarella de bufflonne et thon."
+    },
+    "insalata-vegetariana": {
+      "name": "Vegetariana",
+      "description": "Salade composée de saison avec légumes grillés."
+    },
+    "rucola-pomodorini-scaglie": {
+      "name": "Insalata di rucola e pomodorini e scaglie",
+      "description": "Salade de roquette, tomates cerises et copeaux de fromage."
+    },
+    "tiramisu": {
+      "name": "Tiramisù",
+      "description": "Tiramisù maison."
+    },
+    "delizia-limone": {
+      "name": "Delizia al limone",
+      "description": "Dessert au citron Delizia al limone."
+    },
+    "panna-cotta": {
+      "name": "Panna Cotta",
+      "description": "Fruits rouges, caramel, pistache ou chocolat."
+    },
+    "cheesecake": {
+      "name": "Cheesecake",
+      "description": "Fraise ou chocolat."
+    },
+    "ricotta-pera": {
+      "name": "Ricotta e Pera",
+      "description": "Ricotta, poire et biscuit."
+    },
+    "pizza-nutella": {
+      "name": "Pizza con la Nutella",
+      "description": "Pizza au Nutella."
+    },
+    "pizza-black-white": {
+      "name": "Pizza Black & White",
+      "description": "Pizza Black & White."
+    },
+    "straccetti-nutella": {
+      "name": "Straccetti alla Nutella (pour 2)",
+      "description": "Lamelles de pâte au Nutella, pour deux personnes."
+    },
+    "coca-cola": {
+      "name": "Coca-Cola",
+      "description": "Coca-Cola."
+    },
+    "coca-cola-zero": {
+      "name": "Coca-Cola Zero",
+      "description": "Coca-Cola Zero."
+    },
+    "sprite": {
+      "name": "Sprite",
+      "description": "Sprite."
+    },
+    "fanta": {
+      "name": "Fanta",
+      "description": "Fanta."
+    },
+    "lemonsoda": {
+      "name": "Lemonsoda",
+      "description": "Lemonsoda."
+    },
+    "acqua": {
+      "name": "Eau",
+      "description": "Eau."
+    },
+    "nastro-azzurro": {
+      "name": "Nastro Azzurro 33 cl",
+      "description": "Bière Nastro Azzurro, 33 cl."
+    },
+    "heineken": {
+      "name": "Heineken 33 cl",
+      "description": "Bière Heineken, 33 cl."
+    },
+    "tennents": {
+      "name": "Tennents 33 cl",
+      "description": "Bière Tennents, 33 cl."
+    },
+    "birra-spina": {
+      "name": "Bière blonde / rousse à la pression",
+      "description": "Bière blonde ou rousse à la pression, 30 cl ou 40 cl.",
+      "standardLabel": "30 cl"
+    },
+    "birra-nartigiana": {
+      "name": "Bière N’Artigiana",
+      "description": "Blanche, rousse, ambrée, double malt, dorée, 0 % ou sans gluten."
+    },
+    "vino-locale": {
+      "name": "Vin local / Prosecco",
+      "description": "Vin local blanc, rouge ou prosecco. Verre de 150 ml, 500 ml ou 1 litre.",
+      "standardLabel": "Verre 150 ml"
+    },
+    "aperol-spritz": {
+      "name": "Aperol Spritz",
+      "description": "Spritz au prosecco, à la liqueur italienne et à l’eau gazeuse."
+    },
+    "blu-spritz": {
+      "name": "Blu Spritz",
+      "description": "Spritz au prosecco, à la liqueur italienne et à l’eau gazeuse."
+    },
+    "limoncello-spritz": {
+      "name": "Limoncello Spritz",
+      "description": "Spritz au limoncello."
+    },
+    "ruota-margherita": {
+      "name": "Margherita",
+      "description": "Tomates pelées sélection Capri Blu, fior di latte d’Agerola, basilic et huile d’olive vierge extra."
+    },
+    "ruota-salsiccia-e-friarielli": {
+      "name": "Salsiccia e Friarielli",
+      "description": "Friarielli (brocoli-rave napolitain), saucisse émiettée, provola, basilic et huile d’olive vierge extra."
+    },
+    "ruota-provola-e-pepe": {
+      "name": "Provola e Pepe",
+      "description": "Tomates pelées sélection Capri Blu, provola d’Agerola, poivre moulu, basilic et huile d’olive vierge extra."
+    },
+    "ruota-napoletana": {
+      "name": "Napoletana",
+      "description": "Tomates pelées sélection Capri Blu, origan de montagne, ail, olives noires, anchois de Cetara, basilic et huile d’olive vierge extra."
+    },
+    "ruota-pancetta-e-cipolla": {
+      "name": "Pancetta e Cipolla",
+      "description": "Oignons cuits à basse température, pancetta roulée, provola fumée, basilic et huile d’olive vierge extra."
+    },
+    "ruota-sole-di-napoli": {
+      "name": "Sole di Napoli",
+      "description": "Tomates jaunes cuites à la poêle, mozzarella de bufflonne, poivre, copeaux de provolone del monaco, basilic et huile d’olive vierge extra."
+    },
+    "ruota-scarpariello": {
+      "name": "Scarpariello",
+      "description": "Tomates cuisinées à la scarpariello légèrement épicées et fior di latte ; à la sortie du four : pecorino D.O.P., basilic et huile d’olive vierge extra."
+    },
+    "ruota-tricolore": {
+      "name": "Tricolore",
+      "description": "Fior di latte, tomates cerises ; à la sortie du four : roquette, jambon de Parme affiné 24 mois et copeaux de grana."
+    },
+    "ruota-monte-faito": {
+      "name": "Monte Faito",
+      "description": "Fior di latte, cèpes et gorgonzola ; à la sortie du four : speck, noix de Sorrente, basilic et huile d’olive vierge extra."
+    },
+    "ruota-bufalina": {
+      "name": "Bufalina",
+      "description": "Tomates pelées sélection Capri Blu, mozzarella di bufala campana D.O.P., basilic et huile d’olive vierge extra."
+    }
+  },
+  "editions": {
+    "autunno-2026": "Automne 2026"
+  },
+  "variants": {
+    "ruota-di-carro": "Ruota di Carro",
+    "quaranta-cl": "40 cl",
+    "mezzo-litro": "500 ml",
+    "un-litro": "1 litre",
+    "maionese-lime": "Mayonnaise au citron vert"
+  },
+  "supplements": {},
+  "allergens": {},
+  "brandPhrases": [
+    "Sorrento",
+    "Pizzeria et trattoria napolitaine",
+    "Saveurs authentiques",
+    "Cuisine méditerranéenne",
+    "Un jardin d’agrumes toute l’année"
+  ]
+}

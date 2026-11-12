@@ -53,7 +53,8 @@
     "categoryBack": "Categorias",
     "homeLabel": "Início",
     "moreCategories": "Mais categorias",
-    "drinksShortcut": "Bebidas"
+    "drinksShortcut": "Bebidas",
+    "languageError": "Não foi possível mudar o idioma. Tente novamente."
   },
   "categories": {
     "fritti": "Fritos",

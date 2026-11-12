@@ -84,3 +84,8 @@
 @media(max-width:600px){.discover-menu-button{width:100%;min-height:64px;font-size:25px;padding:16px 18px}.language-options{display:grid;grid-template-columns:1fr 1fr;gap:8px 20px;max-width:320px;margin:auto}.language-options a{font-size:16px}.home-entry .buttons{gap:29px}.home-entry .quick-buttons{margin-top:12px}}
 @media(max-width:350px){.discover-menu-button{font-size:22px;padding:15px 12px}.language-options a{font-size:15px}}
 @media(prefers-reduced-motion:reduce){.language-panel:not([hidden]){animation:none}.discover-menu-button{transition:none}}
+
+/* Eight languages remain readable on desktop and phone. */
+.language-options{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px 20px;width:100%;max-width:620px;margin:auto}
+.language-options a{min-width:0}
+@media(max-width:600px){.language-options{grid-template-columns:repeat(2,minmax(0,1fr));max-width:320px;gap:6px 16px}}

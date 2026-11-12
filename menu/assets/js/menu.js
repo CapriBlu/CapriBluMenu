@@ -1,4 +1,5 @@
 import {visibleItems, selectedOffer, translatedItem, validateMenu} from './model.js?v=complete-menu-1';
+import {initialLanguages, createLocaleStore} from './locale-store.js?v=eight-languages-20261112-1';
 const base = new URL('../../',import.meta.url);
 const $ = id => document.getElementById(id);
 const state = {language:'it',category:null,item:null,variant:null,query:''};
@@ -15,9 +16,10 @@ mobileNavigation.addEventListener('change', () => {
 });
 const create = (tag, className, text) => {const element=document.createElement(tag);if(className)element.className=className;if(text!==undefined)element.textContent=text;return element;};
 const getJSON = async path => {const resource=new URL(path,base);resource.searchParams.set('v',new URL(import.meta.url).searchParams.get('v')||'1');const response=await fetch(resource);if(!response.ok)throw new Error(`Menu resource: ${response.status}`);return response.json();};
+const getLocale=createLocaleStore(language=>getJSON(config.localesBasePath+language+'.json'));
 const ui = () => ({...locales[config.fallbackLanguage].ui,...locales[state.language].ui});
 const locale = () => locales[state.language];
-const money = cents => new Intl.NumberFormat(({it:'it-IT',en:'en-IE',es:'es-ES',pt:'pt-PT'})[state.language]||'it-IT',{style:'currency',currency:catalog.currency}).format(cents/100);
+const money = cents => new Intl.NumberFormat(({it:'it-IT',en:'en-IE',es:'es-ES',pt:'pt-PT',pl:'pl-PL',de:'de-DE',fr:'fr-FR',vi:'vi-VN'})[state.language]||'it-IT',{style:'currency',currency:catalog.currency}).format(cents/100);
 function syncURL(){
   const url=new URL(location.href);url.searchParams.set('lang',state.language);if(state.category)url.searchParams.set('category',state.category);else url.searchParams.delete('category');if(state.query)url.searchParams.set('q',state.query);else url.searchParams.delete('q');
   for(const key of ['item','variant']){if(state[key])url.searchParams.set(key,state[key]);else url.searchParams.delete(key);}
@@ -25,7 +27,8 @@ function syncURL(){
 }
 function itemText(id){return translatedItem(locales,state.language,config.fallbackLanguage,id);}
 function categoryText(id){return locale().categories[id]||locales[config.fallbackLanguage].categories[id];}
-const normalize=value=>value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+const normalize=value=>value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/đ/g,'d');
+function countLabel(count){const text=ui();return count===1?text.itemSingular:state.language==='pl'&&new Intl.PluralRules('pl').select(count)==='few'?text.itemFew:text.itemCount;}
 function currentItems(){return visibleItems(catalog,config.activeEdition,state.category).filter(item=>{if(!state.query)return true;const content=itemText(item.id);return normalize(content.name+' '+content.description).includes(normalize(state.query.trim()));});}
 function chooseCategory(id){state.category=id||null;state.item=null;state.variant=null;state.query='';render();const heading=$(id?'category-title':'overview-title');heading.focus({preventScroll:true});heading.scrollIntoView({block:'start'});}
 
@@ -44,6 +47,7 @@ function render(){
   $('heading').textContent=text.menu;
   $('pdf-link').textContent=text.downloadPdf+' ↓';$('pdf-link').href=new URL(config.sourcePdf,base);
   $('wine-link').textContent=text.wineList;
+  document.querySelector('.topbar .home').href=$('back-link').href=new URL('../index.html?lang='+state.language,base);
   document.querySelector('.menu-actions').setAttribute('aria-label',text.menu);
   $('search-label').textContent=text.search;$('menu-search').placeholder=text.searchPlaceholder;
   if($('menu-search').value!==state.query)$('menu-search').value=state.query;
@@ -76,13 +80,13 @@ function render(){
       const url=new URL(location.href);url.searchParams.set('category',category.id);for(const key of ['q','item','variant'])url.searchParams.delete(key);
       link.href=url.href;link.dataset.category=category.id;
       if(category.cover){const img=imageElement(category.cover,'thumbnail','');img.className='category-cover';link.append(img);}else{const decoration=create('span','category-decoration','CB');decoration.setAttribute('aria-hidden','true');link.append(decoration);}
-      const caption=create('span','category-caption');caption.append(create('span','category-name',categoryText(category.id)),create('span','category-count',count+' '+text.itemCount));link.append(caption);grid.append(link);
+      const caption=create('span','category-caption');caption.append(create('span','category-name',categoryText(category.id)),create('span','category-count',count+' '+countLabel(count)));link.append(caption);grid.append(link);
     }
     section.append(grid);return section;
   }):[]));
   $('category-overview').hidden=!overview;$('menu-listing').hidden=overview;
   $('category-title').textContent=state.category?categoryText(state.category):text.results;
-  const items=overview?[]:currentItems();$('count').textContent=items.length+' '+(items.length===1?text.itemSingular:text.itemCount);
+  const items=overview?[]:currentItems();$('count').textContent=items.length+' '+countLabel(items.length);
   $('no-results').textContent=text.noResults;$('no-results').hidden=overview||items.length>0;
   $('items').replaceChildren(...items.map(item=>{
     const content=itemText(item.id),category=catalog.categories.find(c=>c.id===item.categoryId);
@@ -135,10 +139,11 @@ async function boot(){
   $('status').hidden=false;$('retry').hidden=true;
   try{
     config=await getJSON('./data/config.json');
-    [catalog,editions,locales]=await Promise.all([getJSON(config.catalog),getJSON(config.editions),Promise.all(config.enabledLanguages.map(async language=>[language,await getJSON(config.localesBasePath+language+'.json')])).then(Object.fromEntries)]);
-    const errors=validateMenu(config,catalog,editions,locales);if(errors.length)throw new Error(errors.join('\n'));
     const params=new URL(location.href).searchParams;let saved;try{saved=localStorage.getItem('capriblu-menu-language');}catch{}
     state.language=[params.get('lang'),saved,config.defaultLanguage].find(language=>config.enabledLanguages.includes(language));
+    const languages=initialLanguages(config,state.language);
+    [catalog,editions,locales]=await Promise.all([getJSON(config.catalog),getJSON(config.editions),Promise.all(languages.map(async language=>[language,await getLocale(language)])).then(Object.fromEntries)]);
+    const errors=validateMenu({...config,enabledLanguages:languages},catalog,editions,locales);if(errors.length)throw new Error(errors.join('\n'));
     state.category=catalog.categories.some(category=>category.id===params.get('category')&&visibleItems(catalog,config.activeEdition,category.id).length)?params.get('category'):null;
     state.query=(params.get('q')||'').slice(0,120);
     const item=currentItems().find(item=>item.id===params.get('item'));
@@ -170,7 +175,23 @@ categoryPicker.addEventListener('click',event=>{
 $('menu-search').addEventListener('input',event=>{if(!locales)return;state.query=event.target.value.slice(0,120);state.item=null;state.variant=null;render();});
 $('clear-search').addEventListener('click',()=>{state.query='';render();$('menu-search').focus();});
 $('format-options').addEventListener('click',event=>{const button=event.target.closest('button[data-variant]');if(!button)return;state.variant=button.dataset.variant||null;renderDetail();syncURL();});
-for (const id of ['language','detail-language']) $(id).addEventListener('change',event=>{if(!locales)return;if(state.item){state.category=catalog.items.find(item=>item.id===state.item).categoryId;state.query='';}state.language=event.target.value;try{localStorage.setItem('capriblu-menu-language',state.language);}catch{}render();});
+for (const id of ['language','detail-language']) $(id).addEventListener('change',async event=>{
+  if(!locales)return;
+  const language=event.target.value;
+  if(!config.enabledLanguages.includes(language))return;
+  $('language').disabled=$('detail-language').disabled=true;
+  try{
+    const next=await getLocale(language),available={...locales,[language]:next};
+    const errors=validateMenu({...config,enabledLanguages:initialLanguages(config,language)},catalog,editions,available);
+    if(errors.length)throw new Error(errors.join('\n'));
+    locales=available;
+    if(state.item){state.category=catalog.items.find(item=>item.id===state.item).categoryId;state.query='';}
+    state.language=language;try{localStorage.setItem('capriblu-menu-language',language);}catch{}render();
+  }catch(error){
+    console.error(error);$('language').value=$('detail-language').value=state.language;
+    $('status').textContent=ui().languageError;$('status').hidden=false;
+  }finally{$('language').disabled=$('detail-language').disabled=false;}
+});
 $('close-detail').addEventListener('click',closeDetail);
 $('previous-item').addEventListener('click',()=>navigateItem(-1));
 $('next-item').addEventListener('click',()=>navigateItem(1));

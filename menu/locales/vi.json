@@ -1,0 +1,578 @@
+{
+  "language": "vi",
+  "label": "Tiếng Việt",
+  "ui": {
+    "menu": "Thực đơn",
+    "back": "Quay lại",
+    "language": "Ngôn ngữ",
+    "ingredients": "Thành phần",
+    "allergens": "Chất gây dị ứng",
+    "close": "Đóng",
+    "unavailable": "Tạm hết",
+    "imageUnavailable": "Không có ảnh",
+    "emptyCategory": "Chưa có món trong danh mục này.",
+    "preview": "Thực đơn mùa thu",
+    "season": "Mùa thu 2026",
+    "intro": "Truyền thống của chúng tôi qua từng chiếc pizza.",
+    "previewNote": "Chúng tôi đang chuẩn bị thực đơn mới. Khám phá danh mục hoàn chỉnh đầu tiên.",
+    "allItems": "Tất cả pizza",
+    "itemCount": "món",
+    "details": "Xem chi tiết",
+    "formats": "Kích cỡ / lựa chọn",
+    "standard": "Truyền thống",
+    "ruota": "Ruota di Carro",
+    "allergensPending": "Vui lòng hỏi nhân viên để biết thông tin về các chất gây dị ứng.",
+    "pdf": "Thực đơn đầy đủ PDF",
+    "coverCharge": "Phí phục vụ bàn",
+    "perPerson": "mỗi người",
+    "frozen": "* Sản phẩm được cấp đông tại nguồn.",
+    "error": "Không thể tải thực đơn. Bạn có thể xem bản PDF đầy đủ.",
+    "retry": "Thử lại",
+    "available": "Còn món",
+    "loading": "Đang tải thực đơn…",
+    "explore": "Khám phá thực đơn",
+    "downloadPdf": "Tải thực đơn PDF",
+    "drinks": "Đồ uống",
+    "previousItem": "Món trước",
+    "nextItem": "Món tiếp",
+    "browseItems": "Duyệt các món",
+    "brandSlider": "Tinh thần Capri Blu",
+    "overviewTitle": "Thực đơn của chúng tôi",
+    "chooseCategory": "Chọn danh mục",
+    "allCategories": "Tất cả danh mục",
+    "search": "Tìm trong thực đơn",
+    "searchPlaceholder": "Món ăn, nguyên liệu…",
+    "results": "Kết quả tìm kiếm",
+    "noResults": "Không có kết quả. Hãy thử món ăn hoặc nguyên liệu khác.",
+    "clearSearch": "Xóa tìm kiếm",
+    "groupPizzeria": "Pizza",
+    "groupCucina": "Món ăn",
+    "groupBevande": "Đồ uống",
+    "wineList": "Danh sách rượu vang",
+    "itemSingular": "món",
+    "categoryBack": "Danh mục",
+    "homeLabel": "Trang chủ",
+    "moreCategories": "Danh mục khác",
+    "drinksShortcut": "Đồ uống",
+    "languageError": "Không thể đổi ngôn ngữ. Vui lòng thử lại."
+  },
+  "categories": {
+    "fritti": "Món chiên",
+    "antipasti": "Khai vị",
+    "antipasti-mare": "Khai vị hải sản",
+    "primi": "Mì và cơm Ý",
+    "primi-mare": "Mì hải sản",
+    "secondi-terra": "Món thịt",
+    "secondi-mare": "Cá và hải sản",
+    "pizze-tradizione": "Pizza truyền thống",
+    "firmate-capri-blu": "Pizza đặc trưng Capri Blu",
+    "montanare": "Montanare",
+    "rutiello-pizza": "Pizza Rutiello",
+    "ruota-di-carro": "Pizza Ruota di Carro",
+    "contorni": "Món ăn kèm",
+    "insalatone": "Salad phần lớn",
+    "dessert": "Tráng miệng",
+    "drinks-beverage": "Đồ uống",
+    "spritz": "Spritz của chúng tôi"
+  },
+  "items": {
+    "tricolore": {
+      "name": "Tricolore",
+      "description": "Phô mai fior di latte, cà chua bi; sau khi nướng thêm rau rocket, giăm bông Parma ủ 24 tháng và phô mai grana bào lát."
+    },
+    "cinque-formaggi": {
+      "name": "5 Formaggi",
+      "description": "Phô mai provola vùng Agerola, gorgonzola, ricotta fior di Fruscella, pecorino romano, provolone del monaco bào lát, húng quế và dầu ô liu nguyên chất."
+    },
+    "salsiccia-e-friarielli": {
+      "name": "Salsiccia e Friarielli",
+      "description": "Rau cải friarielli kiểu Napoli, xúc xích Ý vụn, phô mai provola, húng quế và dầu ô liu nguyên chất."
+    },
+    "napoletana-rivisitata": {
+      "name": "Napoletana rivisitata",
+      "description": "Cà chua vàng áp chảo, lá oregano, ô liu đen, cà chua datterini đỏ, tỏi, húng quế và dầu ô liu nguyên chất."
+    },
+    "bufalina": {
+      "name": "Bufalina",
+      "description": "Cà chua bóc vỏ tuyển chọn Capri Blu, mozzarella sữa trâu vùng Campania D.O.P., húng quế và dầu ô liu nguyên chất."
+    },
+    "pancetta-e-cipolla": {
+      "name": "Pancetta e Cipolla",
+      "description": "Hành tây nấu ở nhiệt độ thấp, thịt pancetta cuộn, phô mai provola hun khói, húng quế và dầu ô liu nguyên chất."
+    },
+    "capricciosa": {
+      "name": "Capricciosa",
+      "description": "Cà chua bóc vỏ tuyển chọn Capri Blu, fior di latte vùng Agerola, salami Napoli, giăm bông chín, nấm mỡ, atisô non, ô liu đen, húng quế và dầu ô liu nguyên chất."
+    },
+    "crocco-pizza": {
+      "name": "Crocco Pizza",
+      "description": "Fior di latte vùng Agerola, kem sữa, giăm bông chín, bánh khoai tây crocchè, húng quế và dầu ô liu nguyên chất."
+    },
+    "patanella": {
+      "name": "Patanella",
+      "description": "Provola vùng Agerola, khoai tây nướng, xúc xích Ý vụn, húng quế và dầu ô liu nguyên chất."
+    },
+    "diavola": {
+      "name": "Diavola",
+      "description": "Cà chua bóc vỏ tuyển chọn Capri Blu, fior di latte vùng Agerola, salami spianata cay, húng quế và dầu ô liu nguyên chất."
+    },
+    "scarpariello": {
+      "name": "Scarpariello",
+      "description": "Cà chua nấu kiểu scarpariello hơi cay và fior di latte; sau khi nướng thêm pecorino D.O.P., húng quế và dầu ô liu nguyên chất."
+    },
+    "napoletana": {
+      "name": "Napoletana",
+      "description": "Cà chua bóc vỏ tuyển chọn Capri Blu, oregano núi, tỏi, ô liu đen, cá cơm Cetara, húng quế và dầu ô liu nguyên chất."
+    },
+    "provola-e-pepe": {
+      "name": "Provola e Pepe",
+      "description": "Cà chua bóc vỏ tuyển chọn Capri Blu, provola vùng Agerola, tiêu xay, húng quế và dầu ô liu nguyên chất."
+    },
+    "wurstel-e-patatine": {
+      "name": "Wrustel & Patatine",
+      "description": "Fior di latte vùng Agerola, xúc xích, khoai tây chiên* và dầu ô liu nguyên chất."
+    },
+    "margherita": {
+      "name": "Margherita",
+      "description": "Cà chua bóc vỏ tuyển chọn Capri Blu, fior di latte vùng Agerola, húng quế và dầu ô liu nguyên chất."
+    },
+    "marinara": {
+      "name": "Marinara",
+      "description": "Cà chua bóc vỏ tuyển chọn Capri Blu, oregano, tỏi và dầu ô liu nguyên chất."
+    },
+    "cosacca": {
+      "name": "Cosacca",
+      "description": "Cà chua bóc vỏ tuyển chọn Capri Blu, pecorino romano, húng quế và dầu ô liu nguyên chất."
+    },
+    "domenica-alle-tre": {
+      "name": "Domenica alle 3",
+      "description": "Viền bánh nhồi ricotta, ragù Napoli, provola hun khói và thịt bò viên; sau khi nướng thêm ricotta muối bào, húng quế và dầu ô liu nguyên chất."
+    },
+    "scarola-maretata": {
+      "name": "Scarola Maretata",
+      "description": "Rau escarole xào với ô liu đen, nho khô và hạt thông, fior di latte; sau khi nướng thêm cá cơm Cetara, phô mai stracciata và bột ô liu đen."
+    },
+    "capri-blu-due": {
+      "name": "Capri Blu 2.0",
+      "description": "Bánh gập nướng với ricotta fior di Fruscella, fior di latte vùng Agerola, rau rocket, cà chua datterini đỏ và vàng, giăm bông Parma, xốt parmesan ủ 24 tháng và dầu ô liu nguyên chất."
+    },
+    "monte-faito": {
+      "name": "Monte Faito",
+      "description": "Fior di latte, nấm porcini và gorgonzola; sau khi nướng thêm thịt speck, óc chó Sorrento, húng quế và dầu ô liu nguyên chất."
+    },
+    "zuccotta": {
+      "name": "Zuccotta",
+      "description": "Kem bí đỏ, nấm porcini, xúc xích Ý vụn và provola hun khói; sau khi nướng thêm provolone del monaco bào lát và dầu ô liu nguyên chất."
+    },
+    "arrosto-blu": {
+      "name": "Arrosto Blu",
+      "description": "Fior di latte vùng Agerola, cà chua datterini vàng, giăm bông Parma, stracciata sữa trâu, húng quế và dầu ô liu nguyên chất."
+    },
+    "sole-di-napoli": {
+      "name": "Sole di Napoli",
+      "description": "Cà chua vàng nấu trên chảo, mozzarella sữa trâu, tiêu, provolone del monaco bào lát, húng quế và dầu ô liu nguyên chất."
+    },
+    "parmigiana-di-patate-pizza": {
+      "name": "Parmigiana di patate",
+      "description": "Khoai tây đút lò kiểu parmigiana, provola và pancetta đồng quê; sau khi nướng thêm kem parmesan."
+    },
+    "porkins": {
+      "name": "Porkin’s",
+      "description": "Thịt heo xé làm thủ công và fior di latte; sau khi nướng thêm khoai lang và mayonnaise chanh xanh."
+    },
+    "bologna": {
+      "name": "Bologna",
+      "description": "Fior di latte vùng Agerola, mortadella I.G.P., pesto hạt dẻ cười Bronte, hạt dẻ cười vụn, húng quế và dầu ô liu nguyên chất."
+    },
+    "cacio-e-pepe-pizza": {
+      "name": "Cacio e Pepe",
+      "description": "Pancetta và provola; sau khi nướng thêm kem phô mai tiêu cacio e pepe, bánh tarallo vụn, húng quế và dầu ô liu nguyên chất."
+    },
+    "montanara-classica": {
+      "name": "Montanara Classica",
+      "description": "Cà chua bóc vỏ tuyển chọn Capri Blu, mozzarella sữa trâu Campania D.O.P., parmigiano reggiano, húng quế và dầu ô liu nguyên chất."
+    },
+    "montanara-sorrento": {
+      "name": "Montanara Sorrento",
+      "description": "Chế biến hai lần với cà chua vàng áp chảo, mozzarella sữa trâu D.O.P., xốt parmesan ủ 24 tháng, giăm bông Parma, óc chó Sorrento, húng quế và dầu ô liu nguyên chất."
+    },
+    "ripieno-classico-fritto": {
+      "name": "Ripieno Classico Fritto",
+      "description": "Cà chua bóc vỏ tuyển chọn Capri Blu, ricotta fior di Fruscella, provola vùng Agerola, salami Napoli, giăm bông chín, tiêu xay và pecorino."
+    },
+    "ripieno-napoletano-fritto": {
+      "name": "Ripieno Napoletano Fritto",
+      "description": "Cà chua tuyển chọn Capri Blu, ricotta fior di Fruscella, provola vùng Agerola, tóp mỡ heo cicoli kiểu Napoli và tiêu xay."
+    },
+    "montanara-genovese": {
+      "name": "Montanara alla Genovese",
+      "description": "Chế biến hai lần với ragù thịt kiểu Genovese và pecorino D.O.P."
+    },
+    "mozzarella-crudo": {
+      "name": "Mozzarella & Crudo",
+      "description": "Mozzarella tết bím (treccia) và giăm bông sống ủ chín."
+    },
+    "insalata-caprese": {
+      "name": "Insalata Caprese",
+      "description": "Phô mai treccia Sorrento với cà chua Sorrento, dầu ô liu nguyên chất và oregano."
+    },
+    "parmigiana-patate-antipasto": {
+      "name": "Parmigiana di Patate",
+      "description": "Khoai tây, xốt béchamel và pancetta giòn đút lò."
+    },
+    "soute-frutti-mare": {
+      "name": "Sauté ai frutti di mare",
+      "description": "Hải sản xào kiểu sauté."
+    },
+    "calamaretti-fritti": {
+      "name": "Calamaretti fritti",
+      "description": "Mực nhỏ chiên."
+    },
+    "alici-fritte": {
+      "name": "Alici fritte",
+      "description": "Cá cơm chiên."
+    },
+    "gamberi-panko": {
+      "name": "Gamberi in pane Panko",
+      "description": "Tôm tẩm bột chiên xù panko, 3 con."
+    },
+    "risotto-zucca-speck-noci": {
+      "name": "Risotto, Zucca, Speck e Noci",
+      "description": "Cơm risotto quyện kem bí đỏ ngọt, dùng kèm thịt speck và óc chó."
+    },
+    "pappardelle-salsiccia-porcini": {
+      "name": "Pappardelle Salsiccia e Porcini",
+      "description": "Mì pappardelle tươi với xúc xích Ý áp chảo và nấm porcini."
+    },
+    "mezzo-zito-genovese": {
+      "name": "Mezzo Zito alla Genovese",
+      "description": "Mì mezzi ziti bẻ tay với ragù Genovese đậm đà kiểu Napoli."
+    },
+    "lasagna-salsiccia-friarielli": {
+      "name": "Lasagna Salsiccia e Friarielli",
+      "description": "Lasagna với xúc xích Ý và rau friarielli kiểu Napoli."
+    },
+    "pappardelle-bolognese": {
+      "name": "Pappardelle alla Bolognese",
+      "description": "Mì trứng pappardelle tươi với ragù thịt và cà chua."
+    },
+    "ravioli-caprese": {
+      "name": "Ravioli Caprese",
+      "description": "Ravioli làm thủ công nhân phô mai, cà chua, cà chua bi, húng quế và dầu ô liu nguyên chất."
+    },
+    "lasagna-ragu": {
+      "name": "Lasagna al ragù",
+      "description": "Lasagna với ragù Bolognese, phô mai và húng quế."
+    },
+    "spaghetti-carbonara": {
+      "name": "Spaghetti alla Carbonara",
+      "description": "Spaghetti tươi kiểu Carbonara với thịt má heo guanciale và phô mai."
+    },
+    "spaghetti-nonna": {
+      "name": "Spaghetti della Nonna",
+      "description": "Spaghetti với ragù cà chua, thịt viên, húng quế và phô mai."
+    },
+    "gnocchi-sorrentina": {
+      "name": "Gnocchi alla Sorrentina",
+      "description": "Gnocchi khoai tây với xốt cà chua, fior di latte, parmesan và húng quế tươi."
+    },
+    "linguine-astice": {
+      "name": "Linguine con astice",
+      "description": "Mì linguine với tôm hùm."
+    },
+    "ravioli-baccala": {
+      "name": "Ravioli al Baccalà",
+      "description": "Ravioli thủ công nhân cá tuyết muối với nụ bạch hoa, ô liu đen và cà chua bi."
+    },
+    "scialatielli-scoglio": {
+      "name": "Scialatielli allo Scoglio",
+      "description": "Mì scialatielli thủ công với hải sản, tôm và cà chua bi tươi."
+    },
+    "spaghetti-luciana": {
+      "name": "Spaghetti alla Luciana",
+      "description": "Spaghetti với bạch tuộc nhỏ, ô liu, nụ bạch hoa và cà chua bi."
+    },
+    "spaghetti-vongole": {
+      "name": "Spaghetti alle vongole",
+      "description": "Spaghetti với nghêu vongole, nghêu lupini và mùi tây."
+    },
+    "tagliata-manzo": {
+      "name": "Tagliata di Manzo",
+      "description": "Bít tết bò thái lát với cà chua bi, rau rocket và phô mai bào lát."
+    },
+    "cotoletta-pollo": {
+      "name": "Cotoletta di pollo",
+      "description": "Gà tẩm bột chiên với khoai tây chiên."
+    },
+    "tegamino-polpette": {
+      "name": "Tegamino con Polpette al Ragù o Friarielli",
+      "description": "Thịt viên dùng trong chảo nhỏ với ragù hoặc rau friarielli, 4 viên."
+    },
+    "scaloppina-pollo": {
+      "name": "Scaloppina di Pollo (Capri Blu)",
+      "description": "Gà thái mỏng kiểu Capri Blu."
+    },
+    "zuppa-cozze": {
+      "name": "Zuppa di cozze",
+      "description": "Súp vẹm."
+    },
+    "frittura-gamberi-calamari": {
+      "name": "Frittura di Gamberi e Calamari",
+      "description": "Tôm và mực chiên."
+    },
+    "tegamino-polipetti": {
+      "name": "Tegamino con polipetti alla luciana",
+      "description": "Bạch tuộc nhỏ kiểu Luciana dùng trong chảo nhỏ với bánh mì nướng."
+    },
+    "baccala-tempura": {
+      "name": "Baccalà in tempura su letto di Scarole",
+      "description": "Cá tuyết muối chiên tempura trên kem rau escarole, kèm cà chua bi sấy bán khô."
+    },
+    "baccala-umido": {
+      "name": "Baccalà in umido con Pomodorini Olive e Capperi",
+      "description": "Cá tuyết muối hầm với cà chua bi, ô liu và nụ bạch hoa."
+    },
+    "cuoppo": {
+      "name": "O’ cuoppo (cho 2 người)",
+      "description": "Đồ chiên kiểu Ý: khoai tây chiên, bánh bột chiên, crocchè khoai tây, cơm viên arancini và bánh pasta chiên nhỏ. Dành cho hai người."
+    },
+    "tris-classico": {
+      "name": "Tris Classico",
+      "description": "Pizza nhỏ montanarine chiên với cà chua San Marzano."
+    },
+    "tris-genovese": {
+      "name": "Tris Genovese",
+      "description": "Pizza nhỏ montanarine chiên với xốt Genovese."
+    },
+    "frittatine-pasta": {
+      "name": "Frittatine di pasta",
+      "description": "Bánh pasta chiên, 2 chiếc: truyền thống, Carbonara hoặc xúc xích Ý và rau friarielli."
+    },
+    "mozzarella-carrozza": {
+      "name": "Mozzarella in Carrozza",
+      "description": "Bánh mì kẹp mozzarella chiên, 2 miếng."
+    },
+    "duetto-crocche": {
+      "name": "Duetto di Crocchè",
+      "description": "Mortadella và hạt dẻ cười hoặc bí ngòi và provolone."
+    },
+    "patate-dippers": {
+      "name": "Patate Dippers",
+      "description": "Cacio e pepe, cheddar và thịt xông khói hoặc xúc xích. Với mayonnaise chanh xanh: 8,90 €.",
+      "standardLabel": "Các lựa chọn khác"
+    },
+    "patate-dolci": {
+      "name": "Khoai lang phần",
+      "description": "Cacio e pepe, cheddar và thịt xông khói, xúc xích hoặc mayonnaise chanh xanh."
+    },
+    "rutiello-marinara-antica": {
+      "name": "Marinara Antica",
+      "description": "Cà chua tuyển chọn Capri Blu, cà chua bi, ô liu đen, nụ bạch hoa, cá cơm Cetara, oregano, tỏi, pecorino romano, húng quế và dầu ô liu nguyên chất."
+    },
+    "rutiello-domenica": {
+      "name": "Domenica alle 3",
+      "description": "Ragù Napoli, thịt bò viên và provola; sau khi nướng thêm ricotta Fruscella và húng quế."
+    },
+    "rutiello-scarola": {
+      "name": "Scarola Maretata",
+      "description": "Rau escarole xào với ô liu đen, nho khô và hạt thông, fior di latte; sau khi nướng thêm cá cơm Cetara, phô mai stracciata và bột ô liu đen."
+    },
+    "rutiello-patanella": {
+      "name": "Patanella a Rutiello",
+      "description": "Provola, khoai tây nướng với hương thảo và xúc xích Ý vụn; sau khi nướng thêm húng quế và dầu ô liu nguyên chất."
+    },
+    "rutiello-salsiccia-friarielli": {
+      "name": "Salsiccia e Friarielli",
+      "description": "Rau cải friarielli kiểu Napoli, xúc xích Ý vụn, phô mai provola, húng quế và dầu ô liu nguyên chất."
+    },
+    "rutiello-genovese": {
+      "name": "Genovese",
+      "description": "Ragù Genovese, pecorino D.O.P. và húng quế."
+    },
+    "verdure-grigliate": {
+      "name": "Rau củ nướng theo mùa",
+      "description": "Rau củ hỗn hợp nướng tùy theo mùa."
+    },
+    "insalata-verde": {
+      "name": "Xà lách xanh",
+      "description": "Xà lách xanh."
+    },
+    "insalata-mista": {
+      "name": "Xà lách trộn",
+      "description": "Xà lách trộn."
+    },
+    "patate-forno": {
+      "name": "Khoai tây nướng",
+      "description": "Khoai tây nướng."
+    },
+    "caesar-salad": {
+      "name": "Caesar Salad",
+      "description": "Xà lách trộn với thịt gà và xốt Caesar."
+    },
+    "insalata-capri-blu": {
+      "name": "Insalata Capri Blu",
+      "description": "Xà lách trộn với mozzarella sữa trâu và cá ngừ."
+    },
+    "insalata-vegetariana": {
+      "name": "Vegetariana",
+      "description": "Xà lách trộn theo mùa với rau củ nướng."
+    },
+    "rucola-pomodorini-scaglie": {
+      "name": "Insalata di rucola e pomodorini e scaglie",
+      "description": "Salad rocket, cà chua bi và phô mai bào lát."
+    },
+    "tiramisu": {
+      "name": "Tiramisù",
+      "description": "Tiramisù nhà làm."
+    },
+    "delizia-limone": {
+      "name": "Delizia al limone",
+      "description": "Bánh tráng miệng chanh Delizia al limone."
+    },
+    "panna-cotta": {
+      "name": "Panna Cotta",
+      "description": "Quả mọng, caramel, hạt dẻ cười hoặc sô cô la."
+    },
+    "cheesecake": {
+      "name": "Cheesecake",
+      "description": "Dâu tây hoặc sô cô la."
+    },
+    "ricotta-pera": {
+      "name": "Ricotta e Pera",
+      "description": "Ricotta, lê và bánh quy."
+    },
+    "pizza-nutella": {
+      "name": "Pizza con la Nutella",
+      "description": "Pizza với Nutella."
+    },
+    "pizza-black-white": {
+      "name": "Pizza Black & White",
+      "description": "Pizza Black & White."
+    },
+    "straccetti-nutella": {
+      "name": "Straccetti alla Nutella (cho 2 người)",
+      "description": "Bánh bột dạng sợi với Nutella, dành cho hai người."
+    },
+    "coca-cola": {
+      "name": "Coca-Cola",
+      "description": "Coca-Cola."
+    },
+    "coca-cola-zero": {
+      "name": "Coca-Cola Zero",
+      "description": "Coca-Cola Zero."
+    },
+    "sprite": {
+      "name": "Sprite",
+      "description": "Sprite."
+    },
+    "fanta": {
+      "name": "Fanta",
+      "description": "Fanta."
+    },
+    "lemonsoda": {
+      "name": "Lemonsoda",
+      "description": "Lemonsoda."
+    },
+    "acqua": {
+      "name": "Nước uống",
+      "description": "Nước uống."
+    },
+    "nastro-azzurro": {
+      "name": "Nastro Azzurro 33 cl",
+      "description": "Bia Nastro Azzurro, 33 cl."
+    },
+    "heineken": {
+      "name": "Heineken 33 cl",
+      "description": "Bia Heineken, 33 cl."
+    },
+    "tennents": {
+      "name": "Tennents 33 cl",
+      "description": "Bia Tennents, 33 cl."
+    },
+    "birra-spina": {
+      "name": "Bia tươi vàng / đỏ",
+      "description": "Bia tươi vàng hoặc đỏ, 30 cl hoặc 40 cl.",
+      "standardLabel": "30 cl"
+    },
+    "birra-nartigiana": {
+      "name": "Bia N’Artigiana",
+      "description": "Bia trắng, đỏ, hổ phách, hai lần mạch nha, vàng, 0% hoặc không gluten."
+    },
+    "vino-locale": {
+      "name": "Vang địa phương / Prosecco",
+      "description": "Vang địa phương trắng, đỏ hoặc prosecco. Ly 150 ml, 500 ml hoặc 1 lít.",
+      "standardLabel": "Ly 150 ml"
+    },
+    "aperol-spritz": {
+      "name": "Aperol Spritz",
+      "description": "Spritz với prosecco, rượu mùi Ý và soda."
+    },
+    "blu-spritz": {
+      "name": "Blu Spritz",
+      "description": "Spritz với prosecco, rượu mùi Ý và soda."
+    },
+    "limoncello-spritz": {
+      "name": "Limoncello Spritz",
+      "description": "Spritz với limoncello."
+    },
+    "ruota-margherita": {
+      "name": "Margherita",
+      "description": "Cà chua bóc vỏ tuyển chọn Capri Blu, fior di latte vùng Agerola, húng quế và dầu ô liu nguyên chất."
+    },
+    "ruota-salsiccia-e-friarielli": {
+      "name": "Salsiccia e Friarielli",
+      "description": "Rau cải friarielli kiểu Napoli, xúc xích Ý vụn, phô mai provola, húng quế và dầu ô liu nguyên chất."
+    },
+    "ruota-provola-e-pepe": {
+      "name": "Provola e Pepe",
+      "description": "Cà chua bóc vỏ tuyển chọn Capri Blu, provola vùng Agerola, tiêu xay, húng quế và dầu ô liu nguyên chất."
+    },
+    "ruota-napoletana": {
+      "name": "Napoletana",
+      "description": "Cà chua bóc vỏ tuyển chọn Capri Blu, oregano núi, tỏi, ô liu đen, cá cơm Cetara, húng quế và dầu ô liu nguyên chất."
+    },
+    "ruota-pancetta-e-cipolla": {
+      "name": "Pancetta e Cipolla",
+      "description": "Hành tây nấu ở nhiệt độ thấp, thịt pancetta cuộn, phô mai provola hun khói, húng quế và dầu ô liu nguyên chất."
+    },
+    "ruota-sole-di-napoli": {
+      "name": "Sole di Napoli",
+      "description": "Cà chua vàng nấu trên chảo, mozzarella sữa trâu, tiêu, provolone del monaco bào lát, húng quế và dầu ô liu nguyên chất."
+    },
+    "ruota-scarpariello": {
+      "name": "Scarpariello",
+      "description": "Cà chua nấu kiểu scarpariello hơi cay và fior di latte; sau khi nướng thêm pecorino D.O.P., húng quế và dầu ô liu nguyên chất."
+    },
+    "ruota-tricolore": {
+      "name": "Tricolore",
+      "description": "Phô mai fior di latte, cà chua bi; sau khi nướng thêm rau rocket, giăm bông Parma ủ 24 tháng và phô mai grana bào lát."
+    },
+    "ruota-monte-faito": {
+      "name": "Monte Faito",
+      "description": "Fior di latte, nấm porcini và gorgonzola; sau khi nướng thêm thịt speck, óc chó Sorrento, húng quế và dầu ô liu nguyên chất."
+    },
+    "ruota-bufalina": {
+      "name": "Bufalina",
+      "description": "Cà chua bóc vỏ tuyển chọn Capri Blu, mozzarella sữa trâu vùng Campania D.O.P., húng quế và dầu ô liu nguyên chất."
+    }
+  },
+  "editions": {
+    "autunno-2026": "Mùa thu 2026"
+  },
+  "variants": {
+    "ruota-di-carro": "Ruota di Carro",
+    "quaranta-cl": "40 cl",
+    "mezzo-litro": "500 ml",
+    "un-litro": "1 lít",
+    "maionese-lime": "Mayonnaise chanh xanh"
+  },
+  "supplements": {},
+  "allergens": {},
+  "brandPhrases": [
+    "Sorrento",
+    "Pizzeria & Trattoria kiểu Napoli",
+    "Hương vị đích thực",
+    "Ẩm thực Địa Trung Hải",
+    "Vườn cam chanh quanh năm"
+  ]
+}

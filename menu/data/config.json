@@ -6,7 +6,11 @@
     "it",
     "en",
     "es",
-    "pt"
+    "pt",
+    "pl",
+    "de",
+    "fr",
+    "vi"
   ],
   "sourcePdf": "../pdf/menu_autunno.pdf",
   "catalog": "./data/catalog.json",

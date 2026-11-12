@@ -5,13 +5,17 @@
     it:{menu:'Scopri il nostro menu',book:'Prenota con TheFork',review:'Recensioni Google',slider:"L'anima di Capri Blu",phrases:['Sorrento','Pizzeria & Trattoria Napoletana','Sapori Autentici','Cucina Mediterranea',"Un Agrumeto Tutto l'Anno"]},
     en:{menu:'Discover our menu',book:'Book with TheFork',review:'Google reviews',slider:'The soul of Capri Blu',phrases:['Sorrento','Neapolitan Pizzeria & Trattoria','Authentic Flavours','Mediterranean Cuisine','A Citrus Grove All Year Round']},
     es:{menu:'Descubre nuestro menú',book:'Reserva con TheFork',review:'Reseñas de Google',slider:'El alma de Capri Blu',phrases:['Sorrento','Pizzería y Trattoria Napolitana','Sabores auténticos','Cocina mediterránea','Un jardín de cítricos todo el año']},
-    pt:{menu:'Descubra o nosso menu',book:'Reserve com TheFork',review:'Avaliações Google',slider:'A alma de Capri Blu',phrases:['Sorrento','Pizzaria e Trattoria Napolitana','Sabores autênticos','Cozinha mediterrânica','Um jardim de citrinos todo o ano']}
+    pt:{menu:'Descubra o nosso menu',book:'Reserve com TheFork',review:'Avaliações Google',slider:'A alma de Capri Blu',phrases:['Sorrento','Pizzaria e Trattoria Napolitana','Sabores autênticos','Cozinha mediterrânica','Um jardim de citrinos todo o ano']},
+    pl:{"menu": "Odkryj nasze menu", "book": "Zarezerwuj przez TheFork", "review": "Opinie Google", "choose": "Wybierz język menu", "slider": "Dusza Capri Blu", "phrases": ["Sorrento", "Pizzeria i trattoria neapolitańska", "Autentyczne smaki", "Kuchnia śródziemnomorska", "Ogród cytrusowy przez cały rok"]},
+    de:{"menu": "Unsere Speisekarte", "book": "Mit TheFork reservieren", "review": "Google-Bewertungen", "choose": "Sprache der Speisekarte wählen", "slider": "Die Seele von Capri Blu", "phrases": ["Sorrento", "Neapolitanische Pizzeria & Trattoria", "Authentische Aromen", "Mediterrane Küche", "Ein Zitrusgarten das ganze Jahr"]},
+    fr:{"menu": "Découvrez notre menu", "book": "Réserver avec TheFork", "review": "Avis Google", "choose": "Choisir la langue du menu", "slider": "L’âme de Capri Blu", "phrases": ["Sorrento", "Pizzeria et trattoria napolitaine", "Saveurs authentiques", "Cuisine méditerranéenne", "Un jardin d’agrumes toute l’année"]},
+    vi:{"menu": "Khám phá thực đơn", "book": "Đặt bàn qua TheFork", "review": "Đánh giá Google", "choose": "Chọn ngôn ngữ thực đơn", "slider": "Tinh thần Capri Blu", "phrases": ["Sorrento", "Pizzeria & Trattoria kiểu Napoli", "Hương vị đích thực", "Ẩm thực Địa Trung Hải", "Vườn cam chanh quanh năm"]}
   };
   const languages=Object.keys(copy),motion=matchMedia('(prefers-reduced-motion: reduce)');
   let saved;try{saved=localStorage.getItem('capriblu-menu-language');}catch{}
   let language=[new URL(location.href).searchParams.get('lang'),saved,'it'].find(value=>languages.includes(value)),index=languages.indexOf(language),timer,fade,hovered=false;
   function render(){
-    const text=copy[language];document.documentElement.lang=language;label.textContent=text.menu;label.lang=language;
+    const text=copy[language];document.documentElement.lang=language;label.textContent=text.menu;label.lang=language;if(text.choose){trigger.setAttribute('aria-label',text.choose);panel.setAttribute('aria-label',text.choose);}else{trigger.setAttribute('aria-label',text.menu);panel.setAttribute('aria-label',text.menu);}
     const slider=document.querySelector('.brand-slider');
     if(slider){slider.lang=language;slider.setAttribute('aria-label',text.slider);slider.querySelectorAll('.brand-slider-phrase').forEach((el,i)=>el.textContent=text.phrases[i]);slider.querySelectorAll('.brand-slider-description li').forEach((el,i)=>el.textContent=text.phrases[i]);}
     document.getElementById('book-label').textContent=text.book;document.getElementById('review-label').textContent=text.review;
