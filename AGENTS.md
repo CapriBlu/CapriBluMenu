@@ -56,3 +56,6 @@ La home usa un invito con contorno sottile, angoli morbidi, interno in vetro sem
 
 ## Menu completo
 Il menu interattivo comprende ora tutte le 119 voci del PDF autunnale, suddivise in 17 reparti e 3 gruppi (Pizzeria, Cucina, Da bere), in quattro lingue. La pagina iniziale propone la scelta del reparto e una ricerca per nome o ingrediente; le immagini si caricano per reparto. Conservare i prezzi e la fonte per pagina, la distinzione delle pizze Ruota di Carro e le opzioni delle bevande. La carta dei vini separata resta collegata. Le foto non abbinate con sicurezza restano senza associazione; le incongruenze da revisione sono in menu/data/review.json.
+
+## Navigazione menu su telefono
+La barra completa dei reparti deve scorrere con la pagina. Quando esce dallo schermo, mostrare in alto un solo comando compatto “Categorie · reparto attuale”, con pannello dei reparti che si richiude dopo la scelta. Mantenere la lingua selezionata e lasciare spazio ai piatti durante lo scorrimento.

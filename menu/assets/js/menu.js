@@ -4,6 +4,21 @@ const $ = id => document.getElementById(id);
 const state = {language:'it',category:null,item:null,variant:null,query:''};
 let config,catalog,editions,locales;
 const dialog = $('detail');
+const categoryPicker = $('category-picker');
+const mobileNavigation = matchMedia('(max-width: 600px)');
+let fullNavigationPassed = false;
+function updateCompactNavigation() {
+  $('compact-categories').hidden = !locales || !mobileNavigation.matches || !fullNavigationPassed;
+}
+const navigationObserver = new IntersectionObserver(([entry]) => {
+  fullNavigationPassed = entry.boundingClientRect.bottom <= 0;
+  updateCompactNavigation();
+}, {threshold:0});
+navigationObserver.observe($('menu-navigation'));
+mobileNavigation.addEventListener('change', () => {
+  if (categoryPicker.open) categoryPicker.close();
+  updateCompactNavigation();
+});
 const create = (tag, className, text) => {const element=document.createElement(tag);if(className)element.className=className;if(text!==undefined)element.textContent=text;return element;};
 const getJSON = async path => {const resource=new URL(path,base);resource.searchParams.set('v',new URL(import.meta.url).searchParams.get('v')||'1');const response=await fetch(resource);if(!response.ok)throw new Error(`Menu resource: ${response.status}`);return response.json();};
 const ui = () => ({...locales[config.fallbackLanguage].ui,...locales[state.language].ui});
@@ -45,6 +60,15 @@ function render(){
   const categories=catalog.categories.filter(c=>visibleItems(catalog,config.activeEdition,c.id).length).sort((a,b)=>a.order-b.order);
   const primary=['pizze-tradizione','fritti','antipasti','primi','drinks-beverage'];
   const categoryButton=category=>{const button=create('button','category-shortcut',category.id==='drinks-beverage'?text.drinksShortcut:categoryText(category.id));button.type='button';button.dataset.category=category.id;button.setAttribute('aria-pressed',String(state.category===category.id));return button;};
+  const currentCategory=state.category?categoryText(state.category):state.query?text.results:'';
+  $('compact-category-label').textContent=text.categoryBack+(currentCategory?' · '+currentCategory:'');
+  $('compact-categories').setAttribute('aria-label',text.chooseCategory+(currentCategory?': '+currentCategory:''));
+  $('category-picker-title').textContent=text.chooseCategory;
+  $('close-category-picker').setAttribute('aria-label',text.close);
+  const overviewButton=create('button','category-shortcut',text.overviewTitle);
+  overviewButton.type='button';overviewButton.dataset.category='';overviewButton.setAttribute('aria-pressed',String(!state.category&&!state.query));
+  $('category-picker-options').replaceChildren(overviewButton,...categories.map(categoryButton));
+  updateCompactNavigation();
   $('quick-categories').replaceChildren(...primary.map(id=>categories.find(c=>c.id===id)).filter(Boolean).map(categoryButton));
   $('more-options').replaceChildren(...categories.filter(c=>!primary.includes(c.id)).map(categoryButton));
   $('more-label').textContent=state.category&&!primary.includes(state.category)?categoryText(state.category):text.moreCategories;
@@ -138,6 +162,17 @@ $('more-categories').addEventListener('keydown',event=>{if(event.key==='Escape')
 
 $('category-hub').addEventListener('click',event=>{const link=event.target.closest('a[data-category]');if(!link||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey||event.button!==0)return;event.preventDefault();chooseCategory(link.dataset.category);});
 $('all-categories').addEventListener('click',()=>chooseCategory(null));
+$('compact-categories').addEventListener('click',()=>{categoryPicker.showModal();categoryPicker.scrollTop=0;});
+$('close-category-picker').addEventListener('click',()=>categoryPicker.close());
+$('category-picker-options').addEventListener('click',event=>{
+  const button=event.target.closest('button[data-category]');if(!button)return;
+  categoryPicker.close();chooseCategory(button.dataset.category);
+});
+categoryPicker.addEventListener('click',event=>{
+  if(event.target!==categoryPicker)return;
+  const rect=categoryPicker.getBoundingClientRect();
+  if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)categoryPicker.close();
+});
 $('menu-search').addEventListener('input',event=>{if(!locales)return;state.query=event.target.value.slice(0,120);state.item=null;state.variant=null;render();});
 $('clear-search').addEventListener('click',()=>{state.query='';render();$('menu-search').focus();});
 $('format-options').addEventListener('click',event=>{const button=event.target.closest('button[data-variant]');if(!button)return;state.variant=button.dataset.variant||null;renderDetail();syncURL();});

@@ -46,3 +46,7 @@ I controlli verificano dati, traduzioni, fonti, presenza dei file, separazione d
 Su telefono la navigazione occupa due righe: ritorno/selettore e scorciatoie scorrevoli. Il comando dello sfondo si trova accanto al PDF e non copre le schede. Le schede mantengono due colonne con foto separata da nome e ingredienti; la scheda aperta conserva il testo completo. Intestazione più compatta e ricerca a 16px per evitare lo zoom automatico sui browser mobili.
 
 Il video viene avviato dopo il rendering del menu, in un momento libero del browser. Non parte automaticamente con risparmio dati, connessione 2G o movimento ridotto; resta avviabile manualmente. Le copertine dei reparti non vengono create quando è visibile una lista di piatti. Questi interventi riducono la concorrenza iniziale delle risorse; non costituiscono una misurazione dei tempi su rete mobile reale.
+
+## Navigazione compatta telefono — 12 novembre 2026
+
+La barra completa scorre con la pagina. Dopo che è uscita dallo schermo compare in alto un unico comando “Categorie · reparto attuale”. Apre un pannello con tutti i 17 reparti e il ritorno alla panoramica; la scelta chiude il pannello e porta al titolo del reparto. Il comando segue la lingua selezionata e scompare tornando alla barra completa. Su desktop resta la navigazione precedente.

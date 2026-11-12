@@ -12,9 +12,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&amp;display=swap">
   <link rel="stylesheet" href="../brand-slider.css?v=3">
   <script src="../script/brand-slider.js?v=2" defer></script>
-  <link rel="stylesheet" href="./assets/css/menu.css?v=mobile-20261111-1">
-  <script type="module" src="./assets/js/menu.js?v=mobile-20261111-1"></script>
-  <script type="module" src="./assets/js/background.js?v=mobile-20261111-1"></script>
+  <link rel="stylesheet" href="./assets/css/menu.css?v=compact-nav-20261112-1">
+  <script type="module" src="./assets/js/menu.js?v=compact-nav-20261112-1"></script>
+  <script type="module" src="./assets/js/background.js?v=compact-nav-20261112-1"></script>
 </head>
 <body>
   <video id="menu-background" class="menu-background" muted loop playsinline preload="none" poster="../img/galleria/pizze-tradizione/pizze-tradizione-margherita-cover.webp" aria-hidden="true" tabindex="-1" disablepictureinpicture></video>
@@ -67,6 +67,11 @@
       <footer><p id="cover-charge"></p><p id="frozen-note"></p><a href="../vini.html" id="wine-link">Carta dei vini</a><a href="../index.html" id="back-link">Indietro</a></footer>
     </div>
   </main>
+  <button id="compact-categories" type="button" aria-haspopup="dialog" aria-controls="category-picker" hidden><span id="compact-category-label">Categorie</span><span aria-hidden="true">⌄</span></button>
+  <dialog id="category-picker" aria-labelledby="category-picker-title">
+    <div class="category-picker-head"><h2 id="category-picker-title">Scegli una categoria</h2><button id="close-category-picker" type="button" aria-label="Chiudi">×</button></div>
+    <div id="category-picker-options"></div>
+  </dialog>
   <dialog id="detail" aria-labelledby="detail-title">
     <div class="dialog-head">
       <span class="eyebrow">CAPRI BLU <span>SORRENTO</span></span>
