@@ -12,9 +12,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&amp;display=swap">
   <link rel="stylesheet" href="../brand-slider.css?v=3">
   <script src="../script/brand-slider.js?v=2" defer></script>
-  <link rel="stylesheet" href="./assets/css/menu.css?v=compact-nav-20261112-1">
-  <script type="module" src="./assets/js/menu.js?v=compact-nav-20261112-1"></script>
-  <script type="module" src="./assets/js/background.js?v=compact-nav-20261112-1"></script>
+  <link rel="stylesheet" href="./assets/css/menu.css?v=clean-nav-20261112-2">
+  <script type="module" src="./assets/js/menu.js?v=clean-nav-20261112-2"></script>
+  <script type="module" src="./assets/js/background.js?v=clean-nav-20261112-2"></script>
 </head>
 <body>
   <video id="menu-background" class="menu-background" muted loop playsinline preload="none" poster="../img/galleria/pizze-tradizione/pizze-tradizione-margherita-cover.webp" aria-hidden="true" tabindex="-1" disablepictureinpicture></video>
@@ -43,9 +43,11 @@
     <h1 class="visually-hidden" id="heading">Menu</h1>
     <nav class="menu-actions" aria-label="Menu">
       <a class="pdf-link" id="pdf-link" href="../pdf/menu_autunno.pdf" download="Menu-Capri-Blu-Sorrento.pdf">Scarica il menu PDF ↓</a>
-      <button id="background-toggle" class="background-toggle" type="button" hidden>Pausa sfondo</button>
     </nav>
     <div class="menu-content" id="menu-content">
+      <div class="mobile-category-navigation">
+      <button id="compact-categories" type="button" aria-haspopup="dialog" aria-controls="category-picker" hidden><span id="compact-category-label">Categorie</span><span aria-hidden="true">⌄</span></button>
+      </div>
       <div class="menu-toolbar" id="menu-navigation">
         <button id="all-categories" type="button">← Categorie</button>
         <nav id="categories" aria-label="Categorie">
@@ -67,7 +69,6 @@
       <footer><p id="cover-charge"></p><p id="frozen-note"></p><a href="../vini.html" id="wine-link">Carta dei vini</a><a href="../index.html" id="back-link">Indietro</a></footer>
     </div>
   </main>
-  <button id="compact-categories" type="button" aria-haspopup="dialog" aria-controls="category-picker" hidden><span id="compact-category-label">Categorie</span><span aria-hidden="true">⌄</span></button>
   <dialog id="category-picker" aria-labelledby="category-picker-title">
     <div class="category-picker-head"><h2 id="category-picker-title">Scegli una categoria</h2><button id="close-category-picker" type="button" aria-label="Chiudi">×</button></div>
     <div id="category-picker-options"></div>

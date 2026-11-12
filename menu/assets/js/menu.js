@@ -6,15 +6,9 @@ let config,catalog,editions,locales;
 const dialog = $('detail');
 const categoryPicker = $('category-picker');
 const mobileNavigation = matchMedia('(max-width: 600px)');
-let fullNavigationPassed = false;
 function updateCompactNavigation() {
-  $('compact-categories').hidden = !locales || !mobileNavigation.matches || !fullNavigationPassed;
+  $('compact-categories').hidden = !locales || !mobileNavigation.matches;
 }
-const navigationObserver = new IntersectionObserver(([entry]) => {
-  fullNavigationPassed = entry.boundingClientRect.bottom <= 0;
-  updateCompactNavigation();
-}, {threshold:0});
-navigationObserver.observe($('menu-navigation'));
 mobileNavigation.addEventListener('change', () => {
   if (categoryPicker.open) categoryPicker.close();
   updateCompactNavigation();

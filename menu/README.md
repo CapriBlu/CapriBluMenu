@@ -50,3 +50,7 @@ Il video viene avviato dopo il rendering del menu, in un momento libero del brow
 ## Navigazione compatta telefono — 12 novembre 2026
 
 La barra completa scorre con la pagina. Dopo che è uscita dallo schermo compare in alto un unico comando “Categorie · reparto attuale”. Apre un pannello con tutti i 17 reparti e il ritorno alla panoramica; la scelta chiude il pannello e porta al titolo del reparto. Il comando segue la lingua selezionata e scompare tornando alla barra completa. Su desktop resta la navigazione precedente.
+
+## Correzione navigazione e sfondo — 12 novembre 2026
+
+Su telefono la barra grande è sostituita fin dall'inizio da un unico selettore di reparto sopra i piatti. Il selettore occupa il proprio spazio nel flusso e resta raggiungibile con il contenitore sticky; non fluttua sulle schede. Il pulsante Pausa sfondo è rimosso dal markup e dal codice. Il video mantiene avvio differito, sospensione in background e rispetto di movimento ridotto/risparmio dati. Questa scelta sostituisce il comportamento descritto negli aggiornamenti precedenti.
