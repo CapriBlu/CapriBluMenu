@@ -41,16 +41,112 @@
   const link=document.getElementById('boutique-link');
   if(!link)return;
   const labels=link.querySelectorAll('.boutique-copy>span');
+  const bird=link.querySelector('.boutique-bird'),facing=link.querySelector('.bird-facing');
   const motion=matchMedia('(prefers-reduced-motion: reduce)');
-  let english=document.documentElement.lang!=='it',timer;
+  let english=document.documentElement.lang!=='it',timer,hopping=false,journey,parts=[];
   function render(){labels.forEach(label=>{label.hidden=(label.lang==='en')!==english;});}
   function sync(){
     clearInterval(timer);
-    if(motion.matches||document.hidden||link.matches(':hover, :focus-within'))return;
+    if(hopping||motion.matches||document.hidden||link.matches(':hover, :focus-within'))return;
     timer=setInterval(()=>{english=!english;render();},5000);
   }
   link.addEventListener('mouseenter',sync);link.addEventListener('mouseleave',sync);
   link.addEventListener('focus',sync);link.addEventListener('blur',sync);
-  motion.addEventListener('change',sync);document.addEventListener('visibilitychange',sync);
-  render();sync();
+  function rest(){
+    if(journey){journey.cancel();journey=null;}
+    parts.forEach(animation=>animation.cancel());parts=[];
+    link.classList.remove('is-bird-hopping');hopping=false;
+    if(facing)facing.style.transform='';
+    sync();
+  }
+  async function hopAlongPhrase(){
+    if(!bird||!bird.animate||motion.matches)return;
+    hopping=true;sync();
+    try{
+      if(document.fonts)await document.fonts.ready;
+      if(motion.matches){rest();return;}
+      // Measure after fonts load. Both labels reserve space even when hidden.
+      const distance=link.querySelector('.boutique-stage').clientWidth-bird.clientWidth;
+      // Sample actual arcs: anticipation, ballistic flight and a soft landing.
+      // Unequal strides and pauses keep the courier from moving like a metronome.
+      const segments=[];let clock=.55,last=0,floor=0;
+      const add=(to,ground,flight,height,pause=0)=>{
+        const duration=.12+flight+.19+pause;
+        segments.push({start:clock,end:clock+duration,from:last,to:to*distance,floor,ground,flight,height});
+        clock+=duration;last=to*distance;floor=ground;
+      };
+      add(.22,-24,.46,21);add(.4,-24,.36,13,.09);add(.66,-24,.48,19);
+      add(.83,-24,.34,12,.13);add(1,-24,.4,16);
+      const turnStart=clock;clock+=1.05;
+      add(.76,-24,.4,15);add(.47,-24,.46,19,.08);add(.2,-24,.41,16);
+      add(0,0,.5,23);clock+=.95;
+      const frames=[],bagFrames=[],wingFrames=[],feetFrames=[];
+      const detailFrames=Object.fromEntries(['bird-head','bird-beak','bird-eye','bird-far-eye','bird-front-beak','bird-body','bird-chest','bird-tail','bird-far-wing'].map(key=>[key,[]]));
+      let bagAngle=0,bagVelocity=0;
+      const smooth=t=>t*t*(3-2*t),mix=(a,b,t)=>a+(b-a)*t;
+      const count=Math.ceil(clock*60),dt=clock/count;
+      for(let i=0;i<=count;i++){
+        const time=i*dt,offset=i/count;
+        let x=0,y=0,angle=0,sx=1,sy=1,wing=0,feet=0,bagTarget=0;
+        const segment=segments.find(step=>time>=step.start&&time<step.end);
+        const previous=segments.filter(step=>step.end<=time).at(-1);
+        if(previous){x=previous.to;y=previous.ground;}
+        if(segment){
+          const s=segment,t=time-s.start,direction=Math.sign(s.to-s.from);
+          x=s.from;y=s.floor;
+          if(t<.12){
+            const p=smooth(t/.12);sx=1+.09*p;sy=1-.14*p;y+=2*p;angle=-3*direction*p;
+          }else if(t<.12+s.flight){
+            const p=(t-.12)/s.flight,arc=Math.sin(Math.PI*p);
+            x=mix(s.from,s.to,p);y=mix(s.floor,s.ground,smooth(p))-4*s.height*p*(1-p);
+            sx=1-.055*arc;sy=1+.075*arc;angle=direction*(-7+12*p)*arc;
+            wing=-24*arc;feet=18*arc;bagTarget=-direction*21*Math.sin(Math.PI*p*1.35);
+          }else{
+            const p=Math.min((t-.12-s.flight)/.19,1),settle=Math.sin(Math.PI*p)*Math.exp(-2*p);
+            x=s.to;y=s.ground+3*settle;sx=1+.16*settle;sy=1-.2*settle;
+            angle=direction*3*settle;bagTarget=direction*12*settle;
+          }
+        }
+        const clamp=v=>Math.max(0,Math.min(v,1));
+        let turn=smooth(clamp((time-turnStart)/1.05));
+        if(time>clock-.9)turn=1-smooth(clamp((time-clock+.9)/.9));
+        const yaw=turn*Math.PI,face=Math.cos(yaw),front=Math.sin(yaw);
+        // Turn separate volumes through a front pose; the body never flattens.
+        const headTurn=time<turnStart+1.05?smooth(clamp((time-turnStart+.1)/.9)):turn;
+        const headX=-14*headTurn,headNod=-3*front;
+        if(front>.01){y-=5*front;angle+=4*front;sx*=1+.05*front;sy*=1-.035*front;feet+=8*Math.sin(turn*4*Math.PI)*front;}
+        bagTarget+=front*16;
+        // A damped spring lets the shopping bag lag behind each hop and turn.
+        bagVelocity+=((bagTarget-bagAngle)*125-bagVelocity*12)*dt;
+        bagAngle+=bagVelocity*dt;
+        detailFrames['bird-head'].push({offset,transform:`translate(${headX}px, ${headNod}px) rotate(${-5*front}deg)`});
+        detailFrames['bird-beak'].push({offset,transform:`scaleX(${face})`,opacity:1-.45*front});
+        detailFrames['bird-front-beak'].push({offset,opacity:front**5});
+        detailFrames['bird-eye'].push({offset,transform:`translate(${-5.2*turn}px,0)`});
+        detailFrames['bird-far-eye'].push({offset,opacity:front**3});
+        detailFrames['bird-body'].push({offset,transform:`scale(${1-.14*front}, ${1+.035*front})`});
+        detailFrames['bird-chest'].push({offset,opacity:.8*front});
+        detailFrames['bird-tail'].push({offset,transform:`scaleX(${face}) rotate(${-10*front}deg)`,opacity:1-.6*front});
+        detailFrames['bird-far-wing'].push({offset,opacity:front,transform:`translate(${-2*front}px, ${-3*front}px) rotate(${-12*front}deg)`});
+        frames.push({offset,transform:`translate(${x}px, ${y}px) rotate(${angle}deg) scale(${sx}, ${sy})`});
+        bagFrames.push({offset,transform:`translate(${headX+11*(face-1)}px, ${headNod+2*front}px) rotate(${bagAngle+12*front}deg) scale(${1-.2*front},1)`});
+        wingFrames.push({offset,transform:`translate(${5*front}px, ${-2*front}px) rotate(${wing+25*front}deg) scaleX(${1-.35*front})`});
+        feetFrames.push({offset,transform:`rotate(${feet}deg) scaleY(${1-Math.abs(feet)/80})`});
+      }
+      link.classList.add('is-bird-hopping');
+      const timing={duration:clock*1000,easing:'linear',fill:'none'};
+      journey=bird.animate(frames,timing);
+      for(const [element,keyframes] of [[link.querySelector('.bird-bag'),bagFrames],[link.querySelector('.bird-wing'),wingFrames],[link.querySelector('.bird-feet'),feetFrames],...Object.entries(detailFrames).map(([name,keyframes])=>[link.querySelector('.'+name),keyframes])]){
+        parts.push(element.animate(keyframes,timing));
+      }
+      await journey.finished;
+    }catch{/* A cancelled animation leaves the static icon in its resting place. */}
+    finally{rest();}
+  }
+  motion.addEventListener('change',()=>{if(motion.matches)rest();else sync();});
+  document.addEventListener('visibilitychange',()=>{
+    if(journey){if(document.hidden)rest();}
+    sync();
+  });
+  render();sync();hopAlongPhrase();
 })();

@@ -104,3 +104,17 @@
 @keyframes boutique-line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes boutique-light{0%{left:0;opacity:0}12%{opacity:.85}85%{opacity:.65}100%{left:calc(100% - 3px);opacity:0}}
 @media(prefers-reduced-motion:reduce){.boutique-underline::before{animation:none}.boutique-underline::after{animation:none;opacity:0}}
+
+/* The little courier hops once, then becomes the invitation's resting icon. */
+.boutique-stage{position:relative;display:block;padding-left:51px}
+.boutique-bird{position:absolute;left:0;top:50%;margin-top:-23px;width:48px;height:41px;pointer-events:none;transform-origin:45% 85%;filter:drop-shadow(0 1px 2px #00152b66)}
+.boutique-bird svg{display:block;width:100%;height:100%;overflow:visible}
+.bird-facing{transform-box:fill-box;transform-origin:center}
+.bird-bag{transform-origin:39px 16px}
+.bird-wing{transform-origin:19px 20px}
+.bird-feet{transform-origin:24px 30px}
+.bird-tail,.bird-body,.bird-chest{transform-origin:23px 23px}
+.bird-head{transform-origin:26px 20px}
+.bird-beak{transform-origin:29px 14px}
+@media(max-width:600px){.boutique-stage{padding-left:47px}.boutique-bird{width:44px;height:38px;margin-top:-22px}}
+@media(prefers-reduced-motion:reduce){.boutique-link.is-bird-hopping .bird-bag,.boutique-link.is-bird-hopping .bird-wing{animation:none}}
