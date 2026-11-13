@@ -3415,8 +3415,8 @@
       "categoryId": "drinks-beverage",
       "priceCents": 250,
       "order": 5,
-      "thumbnail": null,
-      "image": null,
+      "thumbnail": "biblioteca/beverage/thumbnails/acqua-cutout-v1.png",
+      "image": "biblioteca/beverage/full/acqua-cutout-v1.png",
       "allergenCodes": null,
       "allergenStatus": "pending-review",
       "available": true,
@@ -3429,7 +3429,8 @@
         "pdf": "pdf/menu_autunno.pdf",
         "page": 7
       },
-      "reviewStatus": "transcribed"
+      "reviewStatus": "transcribed",
+      "imageStyle": "cutout"
     },
     {
       "id": "nastro-azzurro",
@@ -3511,8 +3512,8 @@
       "categoryId": "drinks-beverage",
       "priceCents": 400,
       "order": 9,
-      "thumbnail": "biblioteca/beverage/thumbnails/bionda-spina.webp",
-      "image": "biblioteca/beverage/full/bionda-spina.webp",
+      "thumbnail": "biblioteca/beverage/thumbnails/birra-spina-cutout-v1.png",
+      "image": "biblioteca/beverage/full/birra-spina-cutout-v1.png",
       "allergenCodes": null,
       "allergenStatus": "pending-review",
       "available": true,
@@ -3540,7 +3541,8 @@
       "reviewStatus": "transcribed",
       "photoSource": {
         "file": ".Beverage\\bionda spina.jpg"
-      }
+      },
+      "imageStyle": "cutout"
     },
     {
       "id": "birra-nartigiana",
@@ -3572,8 +3574,8 @@
       "categoryId": "drinks-beverage",
       "priceCents": 600,
       "order": 11,
-      "thumbnail": "biblioteca/beverage/thumbnails/vino-della-casa.webp",
-      "image": "biblioteca/beverage/full/vino-della-casa.webp",
+      "thumbnail": "biblioteca/beverage/thumbnails/vino-locale-cutout-v1.png",
+      "image": "biblioteca/beverage/full/vino-locale-cutout-v1.png",
       "allergenCodes": null,
       "allergenStatus": "pending-review",
       "available": true,
@@ -3612,7 +3614,8 @@
       "reviewStatus": "transcribed",
       "photoSource": {
         "file": ".Beverage\\vino della casa.webp"
-      }
+      },
+      "imageStyle": "cutout"
     },
     {
       "id": "aperol-spritz",
