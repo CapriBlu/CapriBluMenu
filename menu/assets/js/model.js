@@ -1,6 +1,6 @@
 export const drinkCollections=[
   {id:'soft-drink',labelKey:'softDrinks',itemIds:['coca-cola','coca-cola-zero','sprite','fanta','lemonsoda'],previewIds:['coca-cola','sprite','fanta']},
-  {id:'bottled-beers',labelKey:'bottledBeers',itemIds:['nastro-azzurro','heineken','tennents','birra-nartigiana']}
+  {id:'bottled-beers',labelKey:'bottledBeers',itemIds:['nastro-azzurro','heineken','tennents','birra-nartigiana'],previewIds:['nastro-azzurro','heineken','tennents']}
 ];
 export function groupDepartmentItems(items){
   const grouped=new Set();

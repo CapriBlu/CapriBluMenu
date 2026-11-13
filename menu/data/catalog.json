@@ -3436,8 +3436,8 @@
       "categoryId": "drinks-beverage",
       "priceCents": 350,
       "order": 6,
-      "thumbnail": "biblioteca/beverage/thumbnails/nastro-azzurro.webp",
-      "image": "biblioteca/beverage/full/nastro-azzurro.webp",
+      "thumbnail": "biblioteca/beverage/thumbnails/nastro-azzurro-cutout-v1.png",
+      "image": "biblioteca/beverage/full/nastro-azzurro-cutout-v1.png",
       "allergenCodes": null,
       "allergenStatus": "pending-review",
       "available": true,
@@ -3453,15 +3453,16 @@
       "reviewStatus": "transcribed",
       "photoSource": {
         "file": ".Beverage\\nastro azzurro.jpg"
-      }
+      },
+      "imageStyle": "cutout"
     },
     {
       "id": "heineken",
       "categoryId": "drinks-beverage",
       "priceCents": 400,
       "order": 7,
-      "thumbnail": "biblioteca/beverage/thumbnails/heineken.webp",
-      "image": "biblioteca/beverage/full/heineken.webp",
+      "thumbnail": "biblioteca/beverage/thumbnails/heineken-cutout-v1.png",
+      "image": "biblioteca/beverage/full/heineken-cutout-v1.png",
       "allergenCodes": null,
       "allergenStatus": "pending-review",
       "available": true,
@@ -3477,15 +3478,16 @@
       "reviewStatus": "transcribed",
       "photoSource": {
         "file": ".Beverage\\heineken.jpg"
-      }
+      },
+      "imageStyle": "cutout"
     },
     {
       "id": "tennents",
       "categoryId": "drinks-beverage",
       "priceCents": 400,
       "order": 8,
-      "thumbnail": "biblioteca/beverage/thumbnails/tenents.webp",
-      "image": "biblioteca/beverage/full/tenents.webp",
+      "thumbnail": "biblioteca/beverage/thumbnails/tennents-cutout-v1.png",
+      "image": "biblioteca/beverage/full/tennents-cutout-v1.png",
       "allergenCodes": null,
       "allergenStatus": "pending-review",
       "available": true,
@@ -3501,7 +3503,8 @@
       "reviewStatus": "transcribed",
       "photoSource": {
         "file": ".Beverage\\tenents.jpg"
-      }
+      },
+      "imageStyle": "cutout"
     },
     {
       "id": "birra-spina",
@@ -3544,8 +3547,8 @@
       "categoryId": "drinks-beverage",
       "priceCents": 650,
       "order": 10,
-      "thumbnail": "biblioteca/beverage/thumbnails/birra-nartigiana.webp",
-      "image": "biblioteca/beverage/full/birra-nartigiana.webp",
+      "thumbnail": "biblioteca/beverage/thumbnails/birra-nartigiana-cutout-v1.png",
+      "image": "biblioteca/beverage/full/birra-nartigiana-cutout-v1.png",
       "allergenCodes": null,
       "allergenStatus": "pending-review",
       "available": true,
@@ -3561,7 +3564,8 @@
       "reviewStatus": "transcribed",
       "photoSource": {
         "file": ".Beverage\\Birra Nartigiana.jpg"
-      }
+      },
+      "imageStyle": "cutout"
     },
     {
       "id": "vino-locale",

@@ -1,4 +1,4 @@
-import {visibleItems, selectedOffer, translatedItem, validateMenu, resolveLegacySelection, drinkCollections, groupDepartmentItems} from './model.js?v=drink-groups-20261113-1';
+import {visibleItems, selectedOffer, translatedItem, validateMenu, resolveLegacySelection, drinkCollections, groupDepartmentItems} from './model.js?v=beer-cutouts-20261113-1';
 import {initialLanguages, createLocaleStore} from './locale-store.js?v=eight-languages-20261112-1';
 const base = new URL('../../',import.meta.url);
 const $ = id => document.getElementById(id);
@@ -115,6 +115,7 @@ function render(){
     const {item}=entry;
     const content=itemText(item.id),category=catalog.categories.find(c=>c.id===item.categoryId);
     const card=create('article','pizza-card'+(!item.available?' unavailable':'')+(!item.thumbnail?' no-photo':'')+(item.imageStyle==='cutout'?' product-cutout':''));card.dataset.item=item.id;card.dataset.group=category.group;
+    card.classList.toggle('soft-drink',drinkCollections.find(collection=>collection.id==='soft-drink').itemIds.includes(item.id));
     const visual=create('div','card-visual'),photoButton=create('button','photo-button');photoButton.type='button';photoButton.dataset.item=item.id;photoButton.setAttribute('aria-label',text.details+': '+content.name);
     if(item.thumbnail)photoButton.append(imageElement(item.thumbnail,'thumbnail',content.name));else{const placeholder=create('div','photo-placeholder','CB');placeholder.setAttribute('aria-hidden','true');photoButton.append(placeholder);}
     visual.append(photoButton);
