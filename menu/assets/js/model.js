@@ -1,5 +1,11 @@
 export function visibleItems(catalog, editionId, categoryId) {
-  return catalog.items.filter(item => item.editionIds.includes(editionId) && (!categoryId || item.categoryId === categoryId)).sort((a,b) => a.order-b.order);
+  const hidden=new Set(catalog.categories.filter(category=>category.status==='variant-only').map(category=>category.id));
+  return catalog.items.filter(item => !hidden.has(item.categoryId) && item.editionIds.includes(editionId) && (!categoryId || item.categoryId === categoryId)).sort((a,b) => a.order-b.order);
+}
+export function resolveLegacySelection(catalog, itemId, categoryId, variantId) {
+  const archived=catalog.items.find(item=>item.id===itemId&&item.baseItemId);
+  if(archived)return {item:archived.baseItemId,category:catalog.items.find(item=>item.id===archived.baseItemId)?.categoryId||null,variant:'ruota-di-carro'};
+  return {item:itemId,category:catalog.categories.find(category=>category.id===categoryId)?.status==='variant-only'?null:categoryId,variant:variantId};
 }
 export function selectedOffer(item, variantId) {
   return item.variants.find(variant => variant.id === variantId) || item;
@@ -42,7 +48,8 @@ export function validateMenu(config, catalog, editions, locales) {
     fail(codesOK(offer.allergenCodes), `Invalid allergen codes: ${key}`);
     fail(['pending-review','verified'].includes(offer.allergenStatus), `Invalid allergen review: ${key}`);
     fail(offer.allergenStatus !== 'verified' || (Array.isArray(offer.allergenCodes) && catalog.allergenLegend.status === 'verified'), `Allergens cannot be verified without a verified legend: ${key}`);
-    fail(Number.isInteger(offer.source?.page) && offer.source.page > 0 && /^pdf\/[a-zA-Z0-9_-]+\.pdf$/.test(offer.source?.pdf), `Missing source page: ${key}`);
+    const ownerSource=offer.source?.type==='owner-confirmed'&&/^\d{4}-\d{2}-\d{2}$/.test(offer.source.date)&&typeof offer.source.note==='string'&&offer.source.note.trim();
+    fail(ownerSource || (Number.isInteger(offer.source?.page) && offer.source.page > 0 && /^pdf\/[a-zA-Z0-9_-]+\.pdf$/.test(offer.source?.pdf)), `Missing source page: ${key}`);
   };
   for (const item of catalog.items) {
     fail(idOK(item.id), `Invalid item ID: ${item.id}`);

@@ -15,7 +15,7 @@ try {
     if(item.thumbnail)resources.add(config.imagesBasePath+item.thumbnail);
     if(item.image)resources.add(config.imagesBasePath+item.image);
     resources.add('../'+item.source.pdf);
-    for(const variant of item.variants)resources.add('../'+variant.source.pdf);
+    for(const variant of item.variants)if(variant.source.pdf)resources.add('../'+variant.source.pdf);
   }
   for (const path of resources) {try{await access(new URL(path,base));}catch{errors.push('Missing file: '+path);}}
   for(const language of config.enabledLanguages){

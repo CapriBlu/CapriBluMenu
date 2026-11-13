@@ -27,7 +27,7 @@ test('Season selection excludes items from other editions and keeps unavailable 
 test('Variant selection changes price and preserves missing allergen information',()=>{
   const item=catalog.items.find(item=>item.id==='margherita');
   assert.equal(selectedOffer(item,null).priceCents,750);
-  const variant=selectedOffer(item,'ruota-di-carro');assert.equal(variant.priceCents,850);assert.equal(variant.allergenCodes,null);
+  const variant=selectedOffer(item,'ruota-di-carro');assert.equal(variant.priceCents,950);assert.equal(variant.allergenCodes,null);
   assert.equal(selectedOffer(item,'unknown').priceCents,750);
 });
 test('Missing language fields fall back to Italian',()=>{

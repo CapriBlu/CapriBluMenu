@@ -66,3 +66,6 @@ Home e menu interattivo supportano it/en/es/pt/pl/de/fr/vi. Mostrare i nomi nati
 
 ## Intestazione mobile compatta
 Su telefono lingua, ricerca a icona e Home occupano una sola riga. Il campo ricerca resta chiuso finché richiesto; si apre senza sovrapporsi al logo e mantiene etichetta tradotta, query e comando Escape. Evitare una riga di ricerca sempre aperta sopra il logo.
+
+## Reparti e formati pizza
+Drink & Beverage e il primo reparto nella panoramica e nei collegamenti rapidi. Ruota di Carro non e un reparto attivo: le voci storiche restano archiviate e i vecchi collegamenti aprono la pizza di base con il formato selezionato. Tutte le pizze tradizionali e firmate offrono i formati alternativi Ruota di Carro +2 EUR e Ruotiello +2 EUR per pizza, confermati dal titolare; la scelta aggiorna il totale e non cumula i due formati. Mantenere il reparto Rutiello con le sue proposte dedicate. Conservare separati i prezzi del PDF storico e quelli delle nuove varianti confermate.

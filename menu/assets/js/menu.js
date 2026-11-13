@@ -1,4 +1,4 @@
-import {visibleItems, selectedOffer, translatedItem, validateMenu} from './model.js?v=complete-menu-1';
+import {visibleItems, selectedOffer, translatedItem, validateMenu, resolveLegacySelection} from './model.js?v=pizza-formats-20261113-1';
 import {initialLanguages, createLocaleStore} from './locale-store.js?v=eight-languages-20261112-1';
 const base = new URL('../../',import.meta.url);
 const $ = id => document.getElementById(id);
@@ -58,7 +58,7 @@ function render(){
   $('all-categories').textContent='← '+text.categoryBack;$('all-categories').setAttribute('aria-pressed',String(!state.category&&!state.query));$('navigation-home').textContent=text.homeLabel+' ↗';$('navigation-home').href=new URL('../index.html?lang='+state.language,base);
   $('categories').setAttribute('aria-label',text.chooseCategory);$('category-hub').setAttribute('aria-label',text.chooseCategory);
   const categories=catalog.categories.filter(c=>visibleItems(catalog,config.activeEdition,c.id).length).sort((a,b)=>a.order-b.order);
-  const primary=['pizze-tradizione','fritti','antipasti','primi','drinks-beverage'];
+  const primary=['drinks-beverage','pizze-tradizione','fritti','antipasti','primi'];
   const categoryButton=category=>{const button=create('button','category-shortcut',category.id==='drinks-beverage'?text.drinksShortcut:categoryText(category.id));button.type='button';button.dataset.category=category.id;button.setAttribute('aria-pressed',String(state.category===category.id));return button;};
   const currentCategory=state.category?categoryText(state.category):state.query?text.results:'';
   $('compact-category-label').textContent=text.categoryBack+(currentCategory?' · '+currentCategory:'');
@@ -74,7 +74,7 @@ function render(){
   $('more-label').textContent=state.category&&!primary.includes(state.category)?categoryText(state.category):text.moreCategories;
   $('more-categories').open=false;
   const overview=!state.category&&!state.query.trim();
-  $('category-hub').replaceChildren(...(overview?['pizzeria','cucina','bevande'].map(group=>{
+  $('category-hub').replaceChildren(...(overview?['bevande','pizzeria','cucina'].map(group=>{
     const section=create('section','category-group');section.append(create('h3','',text[{pizzeria:'groupPizzeria',cucina:'groupCucina',bevande:'groupBevande'}[group]]));
     const grid=create('div','category-grid');
     for(const category of categories.filter(c=>c.group===group)){
@@ -110,11 +110,15 @@ function renderDetail(){
   $('detail-category').textContent=categoryText(item.categoryId);$('detail-title').textContent=content.name;$('detail-description').textContent=content.description;
   $('close-detail').setAttribute('aria-label',text.close);$('formats-label').textContent=text.formats;
   const image=$('detail-image').firstElementChild;
-  const photo=state.variant==='ruota-di-carro'?null:item.image;
+  const photo=['ruota-di-carro','ruotiello'].includes(state.variant)?null:item.image;
   if(photo && image?.dataset.item!==item.id){const next=imageElement(photo,'fullImage',content.name);next.dataset.item=item.id;$('detail-image').replaceChildren(next);}
   else if(!photo)$('detail-image').replaceChildren();else image.alt=content.name;
   $('formats').hidden=item.variants.length===0;
-  $('format-options').replaceChildren(...[{id:'',label:content.standardLabel||text.standard},...item.variants.map(variant=>({id:variant.id,label:locale().variants[variant.id]||locales[config.fallbackLanguage].variants[variant.id]}))].map(format=>{
+  $('format-options').replaceChildren(...[{id:'',label:content.standardLabel||text.standard},...item.variants.map(variant=>{
+    let label=locale().variants[variant.id]||locales[config.fallbackLanguage].variants[variant.id];
+    if(['ruota-di-carro','ruotiello'].includes(variant.id)&&variant.priceCents>item.priceCents)label+=' +'+money(variant.priceCents-item.priceCents);
+    return {id:variant.id,label};
+  })].map(format=>{
     const button=create('button','',format.label);button.type='button';button.dataset.variant=format.id;button.setAttribute('aria-pressed',String((state.variant||'')===format.id));return button;
   }));
   $('detail-price').textContent=money(offer.priceCents);
@@ -146,10 +150,11 @@ async function boot(){
     const languages=initialLanguages(config,state.language);
     [catalog,editions,locales]=await Promise.all([getJSON(config.catalog),getJSON(config.editions),Promise.all(languages.map(async language=>[language,await getLocale(language)])).then(Object.fromEntries)]);
     const errors=validateMenu({...config,enabledLanguages:languages},catalog,editions,locales);if(errors.length)throw new Error(errors.join('\n'));
-    state.category=catalog.categories.some(category=>category.id===params.get('category')&&visibleItems(catalog,config.activeEdition,category.id).length)?params.get('category'):null;
+    const selection=resolveLegacySelection(catalog,params.get('item'),params.get('category'),params.get('variant'));
+    state.category=catalog.categories.some(category=>category.id===selection.category&&visibleItems(catalog,config.activeEdition,category.id).length)?selection.category:null;
     state.query=(params.get('q')||'').slice(0,120);
-    const item=currentItems().find(item=>item.id===params.get('item'));
-    state.item=item?.id||null;state.variant=item?.variants.some(variant=>variant.id===params.get('variant'))?params.get('variant'):null;
+    const item=currentItems().find(item=>item.id===selection.item);
+    state.item=item?.id||null;state.variant=item?.variants.some(variant=>variant.id===selection.variant)?selection.variant:null;
     render();if(state.item)dialog.showModal();
     document.documentElement.dataset.menuReady='true';document.dispatchEvent(new Event('menu-ready'));
   }catch(error){
