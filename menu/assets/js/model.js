@@ -1,3 +1,17 @@
+export const drinkCollections=[
+  {id:'soft-drink',labelKey:'softDrinks',itemIds:['coca-cola','coca-cola-zero','sprite','fanta','lemonsoda'],previewIds:['coca-cola','sprite','fanta']},
+  {id:'bottled-beers',labelKey:'bottledBeers',itemIds:['nastro-azzurro','heineken','tennents','birra-nartigiana']}
+];
+export function groupDepartmentItems(items){
+  const grouped=new Set();
+  const entries=[];
+  for(const collection of drinkCollections){
+    const members=items.filter(item=>collection.itemIds.includes(item.id));
+    if(!members.length)continue;
+    members.forEach(item=>grouped.add(item.id));entries.push({type:'collection',collection,members});
+  }
+  return entries.concat(items.filter(item=>!grouped.has(item.id)).map(item=>({type:'item',item})));
+}
 export function visibleItems(catalog, editionId, categoryId) {
   const hidden=new Set(catalog.categories.filter(category=>category.status==='variant-only').map(category=>category.id));
   return catalog.items.filter(item => !hidden.has(item.categoryId) && item.editionIds.includes(editionId) && (!categoryId || item.categoryId === categoryId)).sort((a,b) => a.order-b.order);

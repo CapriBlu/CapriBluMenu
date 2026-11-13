@@ -1,8 +1,8 @@
-import {visibleItems, selectedOffer, translatedItem, validateMenu, resolveLegacySelection} from './model.js?v=pizza-formats-20261113-1';
+import {visibleItems, selectedOffer, translatedItem, validateMenu, resolveLegacySelection, drinkCollections, groupDepartmentItems} from './model.js?v=drink-groups-20261113-1';
 import {initialLanguages, createLocaleStore} from './locale-store.js?v=eight-languages-20261112-1';
 const base = new URL('../../',import.meta.url);
 const $ = id => document.getElementById(id);
-const state = {language:'it',category:null,item:null,variant:null,query:''};
+const state = {language:'it',category:null,collection:null,item:null,variant:null,query:''};
 let config,catalog,editions,locales;
 const dialog = $('detail');
 const categoryPicker = $('category-picker');
@@ -22,15 +22,32 @@ const locale = () => locales[state.language];
 const money = cents => new Intl.NumberFormat(({it:'it-IT',en:'en-IE',es:'es-ES',pt:'pt-PT',pl:'pl-PL',de:'de-DE',fr:'fr-FR',vi:'vi-VN'})[state.language]||'it-IT',{style:'currency',currency:catalog.currency}).format(cents/100);
 function syncURL(){
   const url=new URL(location.href);url.searchParams.set('lang',state.language);if(state.category)url.searchParams.set('category',state.category);else url.searchParams.delete('category');if(state.query)url.searchParams.set('q',state.query);else url.searchParams.delete('q');
-  for(const key of ['item','variant']){if(state[key])url.searchParams.set(key,state[key]);else url.searchParams.delete(key);}
+  for(const key of ['item','variant','collection']){if(state[key])url.searchParams.set(key,state[key]);else url.searchParams.delete(key);}
   history.replaceState(null,'',url);
 }
 function itemText(id){return translatedItem(locales,state.language,config.fallbackLanguage,id);}
 function categoryText(id){return locale().categories[id]||locales[config.fallbackLanguage].categories[id];}
 const normalize=value=>value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/đ/g,'d');
 function countLabel(count){const text=ui();return count===1?text.itemSingular:state.language==='pl'&&new Intl.PluralRules('pl').select(count)==='few'?text.itemFew:text.itemCount;}
-function currentItems(){return visibleItems(catalog,config.activeEdition,state.category).filter(item=>{if(!state.query)return true;const content=itemText(item.id);return normalize(content.name+' '+content.description).includes(normalize(state.query.trim()));});}
-function chooseCategory(id){state.category=id||null;state.item=null;state.variant=null;state.query='';render();const heading=$(id?'category-title':'overview-title');heading.focus({preventScroll:true});heading.scrollIntoView({block:'start'});}
+function activeCollection(){return state.category==='drinks-beverage'?drinkCollections.find(collection=>collection.id===state.collection):null;}
+function currentItems(){const collection=activeCollection();return visibleItems(catalog,config.activeEdition,state.category).filter(item=>{if(collection&&!collection.itemIds.includes(item.id))return false;if(!state.query)return true;const content=itemText(item.id);return normalize(content.name+' '+content.description).includes(normalize(state.query.trim()));});}
+function chooseCategory(id){state.category=id||null;state.collection=null;state.item=null;state.variant=null;state.query='';render();const heading=$(id?'category-title':'overview-title');heading.focus({preventScroll:true});heading.scrollIntoView({block:'start'});}
+function chooseCollection(id){state.collection=id||null;state.item=null;state.variant=null;state.query='';render();$('category-title').focus({preventScroll:true});$('category-title').scrollIntoView({block:'start'});}
+function collectionCard(entry){
+  const {collection,members}=entry,text=ui(),card=create('article','pizza-card collection-card'),button=create('button','collection-open');
+  button.type='button';button.dataset.collection=collection.id;button.setAttribute('aria-label',text[collection.labelKey]);
+  const visual=create('span','collection-visual');visual.setAttribute('aria-hidden','true');
+  if(collection.previewIds){for(const id of collection.previewIds){const member=members.find(item=>item.id===id);if(member?.thumbnail)visual.append(imageElement(member.thumbnail,'thumbnail',''));}}
+  else{
+    const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 180 150');svg.setAttribute('fill','none');
+    for(const [x,y,scale] of [[26,28,.78],[66,10,1],[113,28,.78]]){
+      const path=document.createElementNS('http://www.w3.org/2000/svg','path');path.setAttribute('d','M14 4h14v30c0 9 12 15 12 25v60c0 5-4 8-8 8H10c-5 0-8-3-8-8V59c0-10 12-16 12-25V4Zm0 0h14M3 68h36M3 98h36');path.setAttribute('transform',`translate(${x} ${y}) scale(${scale})`);path.setAttribute('stroke','currentColor');path.setAttribute('stroke-width','2');path.setAttribute('stroke-linejoin','round');svg.append(path);
+    }visual.append(svg);
+  }
+  const caption=create('span','collection-caption'),title=create('h3','',text[collection.labelKey]);
+  caption.append(title,create('span','collection-count',members.length+' '+countLabel(members.length)),create('span','collection-arrow','→'));
+  button.append(visual,caption);card.append(button);return card;
+}
 
 function imageElement(filename,kind,alt){
   const image=create('img');image.src=new URL(config.imagesBasePath+filename,base);image.alt=alt;image.loading=kind==='thumbnail'?'lazy':'eager';image.decoding='async';image.width=640;image.height=480;
@@ -87,10 +104,15 @@ function render(){
     section.append(grid);return section;
   }):[]));
   $('category-overview').hidden=!overview;$('menu-listing').hidden=overview;
-  $('category-title').textContent=state.category?categoryText(state.category):text.results;
+  const collection=activeCollection();
+  $('category-title').textContent=collection?text[collection.labelKey]:state.category?categoryText(state.category):text.results;
+  $('collection-back').hidden=!collection;$('collection-back').textContent='← '+categoryText('drinks-beverage');
   const items=overview?[]:currentItems();$('count').textContent=items.length+' '+countLabel(items.length);
   $('no-results').textContent=text.noResults;$('no-results').hidden=overview||items.length>0;
-  $('items').replaceChildren(...items.map(item=>{
+  const entries=state.category==='drinks-beverage'&&!collection&&!state.query.trim()?groupDepartmentItems(items):items.map(item=>({type:'item',item}));
+  $('items').replaceChildren(...entries.map(entry=>{
+    if(entry.type==='collection')return collectionCard(entry);
+    const {item}=entry;
     const content=itemText(item.id),category=catalog.categories.find(c=>c.id===item.categoryId);
     const card=create('article','pizza-card'+(!item.available?' unavailable':'')+(!item.thumbnail?' no-photo':'')+(item.imageStyle==='cutout'?' product-cutout':''));card.dataset.item=item.id;card.dataset.group=category.group;
     const visual=create('div','card-visual'),photoButton=create('button','photo-button');photoButton.type='button';photoButton.dataset.item=item.id;photoButton.setAttribute('aria-label',text.details+': '+content.name);
@@ -153,6 +175,7 @@ async function boot(){
     const errors=validateMenu({...config,enabledLanguages:languages},catalog,editions,locales);if(errors.length)throw new Error(errors.join('\n'));
     const selection=resolveLegacySelection(catalog,params.get('item'),params.get('category'),params.get('variant'));
     state.category=catalog.categories.some(category=>category.id===selection.category&&visibleItems(catalog,config.activeEdition,category.id).length)?selection.category:null;
+    state.collection=state.category==='drinks-beverage'&&drinkCollections.some(collection=>collection.id===params.get('collection'))?params.get('collection'):null;
     state.query=(params.get('q')||'').slice(0,120);
     const item=currentItems().find(item=>item.id===selection.item);
     state.item=item?.id||null;state.variant=item?.variants.some(variant=>variant.id===selection.variant)?selection.variant:null;
@@ -162,7 +185,8 @@ async function boot(){
     console.error(error);$('status').textContent='Non è stato possibile caricare il menu. Apri il PDF completo. / The menu could not be loaded. Open the full PDF.';$('status').hidden=false;$('retry').hidden=false;
   }
 }
-$('items').addEventListener('click',event=>{const button=event.target.closest('button[data-item]');if(!button)return;state.item=button.dataset.item;state.variant=null;renderDetail();dialog.showModal();syncURL();});
+$('items').addEventListener('click',event=>{const collection=event.target.closest('button[data-collection]');if(collection){chooseCollection(collection.dataset.collection);return;}const button=event.target.closest('button[data-item]');if(!button)return;state.item=button.dataset.item;state.variant=null;renderDetail();dialog.showModal();syncURL();});
+$('collection-back').addEventListener('click',()=>chooseCollection(null));
 $('categories').addEventListener('click',event=>{const button=event.target.closest('button[data-category]');if(button)chooseCategory(button.dataset.category);});
 document.addEventListener('click',event=>{if(!event.target.closest('#more-categories'))$('more-categories').open=false;});
 $('more-categories').addEventListener('keydown',event=>{if(event.key==='Escape'){$('more-categories').open=false;$('more-label').focus();}});
@@ -192,7 +216,7 @@ $('toggle-search').addEventListener('click',()=>{
 $('menu-search').addEventListener('keydown',event=>{
   if(event.key==='Escape') {setSearchOpen(false);$('toggle-search').focus();}
 });
-$('menu-search').addEventListener('input',event=>{if(!locales)return;state.query=event.target.value.slice(0,120);state.item=null;state.variant=null;render();});
+$('menu-search').addEventListener('input',event=>{if(!locales)return;state.query=event.target.value.slice(0,120);state.collection=null;state.item=null;state.variant=null;render();});
 $('clear-search').addEventListener('click',()=>{state.query='';render();$('menu-search').focus();});
 $('format-options').addEventListener('click',event=>{const button=event.target.closest('button[data-variant]');if(!button)return;state.variant=button.dataset.variant||null;renderDetail();syncURL();});
 for (const id of ['language','detail-language']) $(id).addEventListener('change',async event=>{

@@ -54,7 +54,9 @@
     "homeLabel": "Startseite",
     "moreCategories": "Weitere Kategorien",
     "drinksShortcut": "Getränke",
-    "languageError": "Die Sprache konnte nicht geändert werden. Bitte versuchen Sie es erneut."
+    "languageError": "Die Sprache konnte nicht geändert werden. Bitte versuchen Sie es erneut.",
+    "softDrinks": "Softdrinks",
+    "bottledBeers": "Flaschenbiere"
   },
   "categories": {
     "fritti": "Frittierte Spezialitäten",

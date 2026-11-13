@@ -54,7 +54,9 @@
     "homeLabel": "Accueil",
     "moreCategories": "Autres catégories",
     "drinksShortcut": "Boissons",
-    "languageError": "Impossible de changer de langue. Veuillez réessayer."
+    "languageError": "Impossible de changer de langue. Veuillez réessayer.",
+    "softDrinks": "Boissons sans alcool",
+    "bottledBeers": "Bières en bouteille"
   },
   "categories": {
     "fritti": "Fritures",

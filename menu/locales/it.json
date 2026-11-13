@@ -54,7 +54,9 @@
     "homeLabel": "Home",
     "moreCategories": "Altri reparti",
     "drinksShortcut": "Drink & Beverage",
-    "languageError": "Non è stato possibile cambiare lingua. Riprova."
+    "languageError": "Non è stato possibile cambiare lingua. Riprova.",
+    "softDrinks": "Soft Drink",
+    "bottledBeers": "Birre in bottiglia"
   },
   "categories": {
     "fritti": "I Fritti",

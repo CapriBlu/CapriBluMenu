@@ -54,7 +54,9 @@
     "homeLabel": "Home",
     "moreCategories": "More categories",
     "drinksShortcut": "Drinks & Beverage",
-    "languageError": "The language could not be changed. Please try again."
+    "languageError": "The language could not be changed. Please try again.",
+    "softDrinks": "Soft Drinks",
+    "bottledBeers": "Bottled beers"
   },
   "categories": {
     "fritti": "Fried Bites",

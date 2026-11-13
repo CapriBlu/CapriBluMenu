@@ -54,7 +54,9 @@
     "homeLabel": "Trang chủ",
     "moreCategories": "Danh mục khác",
     "drinksShortcut": "Đồ uống",
-    "languageError": "Không thể đổi ngôn ngữ. Vui lòng thử lại."
+    "languageError": "Không thể đổi ngôn ngữ. Vui lòng thử lại.",
+    "softDrinks": "Nước ngọt",
+    "bottledBeers": "Bia chai"
   },
   "categories": {
     "fritti": "Món chiên",

@@ -54,7 +54,9 @@
     "homeLabel": "Início",
     "moreCategories": "Mais categorias",
     "drinksShortcut": "Bebidas",
-    "languageError": "Não foi possível mudar o idioma. Tente novamente."
+    "languageError": "Não foi possível mudar o idioma. Tente novamente.",
+    "softDrinks": "Refrigerantes",
+    "bottledBeers": "Cervejas em garrafa"
   },
   "categories": {
     "fritti": "Fritos",

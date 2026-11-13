@@ -72,3 +72,6 @@ Drink & Beverage e il primo reparto nella panoramica e nei collegamenti rapidi. 
 
 ## Immagini soft drink
 Coca-Cola, Coca-Cola Zero, Sprite, Fanta e Lemonsoda usano PNG con vera trasparenza, senza riquadri fotografici, mani o oggetti esterni. Mostrare bottiglie e lattine intere, centrate e proporzionate sul fondo blu, sia nelle schede sia nel dettaglio. Le immagini sono marcate imageStyle: cutout nel catalogo. Conservare i marchi e le confezioni delle immagini di riferimento; usare miniature leggere, senza modificare prezzi o contenuti delle bevande.
+
+## Raggruppamenti bevande
+Nel reparto Drink & Beverage, le cinque bibite sono raccolte in una sola scheda apribile “Soft Drink”; Nastro Azzurro, Heineken, Tennents e N’Artigiana in “Birre in bottiglia”. Il tocco apre la lista delle singole bevande con prezzi, PNG e dettagli originali. Prevedere il ritorno al reparto e mantenere il gruppo nella lingua e nel collegamento condiviso. Acqua, birra alla spina e vino restano separati; la ricerca trova direttamente le singole bevande.

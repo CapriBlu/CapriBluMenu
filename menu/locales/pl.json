@@ -55,7 +55,9 @@
     "moreCategories": "Więcej kategorii",
     "drinksShortcut": "Napoje",
     "languageError": "Nie udało się zmienić języka. Spróbuj ponownie.",
-    "itemFew": "propozycje"
+    "itemFew": "propozycje",
+    "softDrinks": "Napoje bezalkoholowe",
+    "bottledBeers": "Piwa butelkowe"
   },
   "categories": {
     "fritti": "Smażone przekąski",
