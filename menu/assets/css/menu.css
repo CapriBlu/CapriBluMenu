@@ -446,3 +446,21 @@ footer{border-color:#ffffff40;padding-bottom:58px}
   .topbar.search-open{padding-top:114px}
   .topbar.search-open>.menu-search{display:flex}
 }
+
+/* Transparent soft-drink packshots sit on the Capri Blu background. */
+.pizza-card.product-cutout .card-visual{display:flex;flex-direction:column;flex:1;background:#0b3049}
+.pizza-card.product-cutout .photo-button{background:radial-gradient(ellipse at 50% 70%,#164d64 0,transparent 68%);flex-shrink:0}
+.pizza-card.product-cutout .photo-button img{height:250px;padding:18px 20px 8px;object-fit:contain;object-position:center;transform:none;background:none}
+.pizza-card.product-cutout .card-body{position:static;inset:auto;flex:1;justify-content:flex-start;background:none;padding:14px 16px 18px;gap:8px}
+.pizza-card.product-cutout h3{min-height:0;text-shadow:none}
+.pizza-card.product-cutout .card-description{display:none}
+.pizza-card.product-cutout .card-title-row{align-items:center}
+.pizza-card.product-cutout .price{position:static;flex-shrink:0}
+#detail-image.product-cutout{background:radial-gradient(ellipse at 50% 70%,#164d644d 0,transparent 68%);border-color:transparent}
+#detail-image.product-cutout img{height:340px;max-height:45dvh;padding:16px;object-fit:contain}
+@media(max-width:600px){
+ .pizza-card.product-cutout .photo-button img{height:clamp(170px,46vw,220px);padding:14px 14px 4px}
+ .pizza-card.product-cutout .card-body{padding:12px 10px 14px}
+ .pizza-card.product-cutout .card-title-row{flex-wrap:wrap;gap:9px}
+ .pizza-card.product-cutout h3{font-size:20px;line-height:1.15}
+}

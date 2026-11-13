@@ -69,3 +69,6 @@ Su telefono lingua, ricerca a icona e Home occupano una sola riga. Il campo rice
 
 ## Reparti e formati pizza
 Drink & Beverage e il primo reparto nella panoramica e nei collegamenti rapidi. Ruota di Carro non e un reparto attivo: le voci storiche restano archiviate e i vecchi collegamenti aprono la pizza di base con il formato selezionato. Tutte le pizze tradizionali e firmate offrono i formati alternativi Ruota di Carro +2 EUR e Ruotiello +2 EUR per pizza, confermati dal titolare; la scelta aggiorna il totale e non cumula i due formati. Mantenere il reparto Rutiello con le sue proposte dedicate. Conservare separati i prezzi del PDF storico e quelli delle nuove varianti confermate.
+
+## Immagini soft drink
+Coca-Cola, Coca-Cola Zero, Sprite, Fanta e Lemonsoda usano PNG con vera trasparenza, senza riquadri fotografici, mani o oggetti esterni. Mostrare bottiglie e lattine intere, centrate e proporzionate sul fondo blu, sia nelle schede sia nel dettaglio. Le immagini sono marcate imageStyle: cutout nel catalogo. Conservare i marchi e le confezioni delle immagini di riferimento; usare miniature leggere, senza modificare prezzi o contenuti delle bevande.

@@ -92,7 +92,7 @@ function render(){
   $('no-results').textContent=text.noResults;$('no-results').hidden=overview||items.length>0;
   $('items').replaceChildren(...items.map(item=>{
     const content=itemText(item.id),category=catalog.categories.find(c=>c.id===item.categoryId);
-    const card=create('article','pizza-card'+(!item.available?' unavailable':'')+(!item.thumbnail?' no-photo':''));card.dataset.item=item.id;card.dataset.group=category.group;
+    const card=create('article','pizza-card'+(!item.available?' unavailable':'')+(!item.thumbnail?' no-photo':'')+(item.imageStyle==='cutout'?' product-cutout':''));card.dataset.item=item.id;card.dataset.group=category.group;
     const visual=create('div','card-visual'),photoButton=create('button','photo-button');photoButton.type='button';photoButton.dataset.item=item.id;photoButton.setAttribute('aria-label',text.details+': '+content.name);
     if(item.thumbnail)photoButton.append(imageElement(item.thumbnail,'thumbnail',content.name));else{const placeholder=create('div','photo-placeholder','CB');placeholder.setAttribute('aria-hidden','true');photoButton.append(placeholder);}
     visual.append(photoButton);
@@ -107,6 +107,7 @@ function render(){
 function renderDetail(){
   const item=currentItems().find(item=>item.id===state.item);if(!item){state.item=null;state.variant=null;return;}
   const text=ui(),content=itemText(item.id),offer=selectedOffer(item,state.variant);
+  $('detail-image').classList.toggle('product-cutout',item.imageStyle==='cutout');
   $('detail-category').textContent=categoryText(item.categoryId);$('detail-title').textContent=content.name;$('detail-description').textContent=content.description;
   $('close-detail').setAttribute('aria-label',text.close);$('formats-label').textContent=text.formats;
   const image=$('detail-image').firstElementChild;

@@ -3290,8 +3290,8 @@
       "categoryId": "drinks-beverage",
       "priceCents": 250,
       "order": 0,
-      "thumbnail": "biblioteca/beverage/thumbnails/cocacola.webp",
-      "image": "biblioteca/beverage/full/cocacola.webp",
+      "thumbnail": "biblioteca/beverage/thumbnails/coca-cola-cutout-v1.png",
+      "image": "biblioteca/beverage/full/coca-cola-cutout-v1.png",
       "allergenCodes": null,
       "allergenStatus": "pending-review",
       "available": true,
@@ -3307,15 +3307,16 @@
       "reviewStatus": "transcribed",
       "photoSource": {
         "file": ".Beverage\\cocacola.jpg"
-      }
+      },
+      "imageStyle": "cutout"
     },
     {
       "id": "coca-cola-zero",
       "categoryId": "drinks-beverage",
       "priceCents": 250,
       "order": 1,
-      "thumbnail": "biblioteca/beverage/thumbnails/cocacola0.webp",
-      "image": "biblioteca/beverage/full/cocacola0.webp",
+      "thumbnail": "biblioteca/beverage/thumbnails/coca-cola-zero-cutout-v1.png",
+      "image": "biblioteca/beverage/full/coca-cola-zero-cutout-v1.png",
       "allergenCodes": null,
       "allergenStatus": "pending-review",
       "available": true,
@@ -3331,15 +3332,16 @@
       "reviewStatus": "transcribed",
       "photoSource": {
         "file": ".Beverage\\cocacola0.jpg"
-      }
+      },
+      "imageStyle": "cutout"
     },
     {
       "id": "sprite",
       "categoryId": "drinks-beverage",
       "priceCents": 250,
       "order": 2,
-      "thumbnail": "biblioteca/beverage/thumbnails/sprite.webp",
-      "image": "biblioteca/beverage/full/sprite.webp",
+      "thumbnail": "biblioteca/beverage/thumbnails/sprite-cutout-v1.png",
+      "image": "biblioteca/beverage/full/sprite-cutout-v1.png",
       "allergenCodes": null,
       "allergenStatus": "pending-review",
       "available": true,
@@ -3355,15 +3357,16 @@
       "reviewStatus": "transcribed",
       "photoSource": {
         "file": ".Beverage\\sprite.webp"
-      }
+      },
+      "imageStyle": "cutout"
     },
     {
       "id": "fanta",
       "categoryId": "drinks-beverage",
       "priceCents": 250,
       "order": 3,
-      "thumbnail": "biblioteca/beverage/thumbnails/fanta.webp",
-      "image": "biblioteca/beverage/full/fanta.webp",
+      "thumbnail": "biblioteca/beverage/thumbnails/fanta-cutout-v1.png",
+      "image": "biblioteca/beverage/full/fanta-cutout-v1.png",
       "allergenCodes": null,
       "allergenStatus": "pending-review",
       "available": true,
@@ -3379,15 +3382,16 @@
       "reviewStatus": "transcribed",
       "photoSource": {
         "file": ".Beverage\\fanta.jpg"
-      }
+      },
+      "imageStyle": "cutout"
     },
     {
       "id": "lemonsoda",
       "categoryId": "drinks-beverage",
       "priceCents": 250,
       "order": 4,
-      "thumbnail": "biblioteca/beverage/thumbnails/lemonsoda.webp",
-      "image": "biblioteca/beverage/full/lemonsoda.webp",
+      "thumbnail": "biblioteca/beverage/thumbnails/lemonsoda-cutout-v1.png",
+      "image": "biblioteca/beverage/full/lemonsoda-cutout-v1.png",
       "allergenCodes": null,
       "allergenStatus": "pending-review",
       "available": true,
@@ -3403,7 +3407,8 @@
       "reviewStatus": "transcribed",
       "photoSource": {
         "file": ".Beverage\\lemonsoda.jpg"
-      }
+      },
+      "imageStyle": "cutout"
     },
     {
       "id": "acqua",
