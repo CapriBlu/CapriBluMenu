@@ -35,3 +35,22 @@
   trigger.addEventListener('mouseenter',()=>{hovered=true;sync();});trigger.addEventListener('mouseleave',()=>{hovered=false;sync();});trigger.addEventListener('focus',sync);trigger.addEventListener('blur',sync);
   motion.addEventListener('change',sync);document.addEventListener('visibilitychange',sync);render();sync();
 })();
+
+// Keep both invitation widths reserved so switching language never shifts the line.
+(() => {
+  const link=document.getElementById('boutique-link');
+  if(!link)return;
+  const labels=link.querySelectorAll('.boutique-copy>span');
+  const motion=matchMedia('(prefers-reduced-motion: reduce)');
+  let english=document.documentElement.lang!=='it',timer;
+  function render(){labels.forEach(label=>{label.hidden=(label.lang==='en')!==english;});}
+  function sync(){
+    clearInterval(timer);
+    if(motion.matches||document.hidden||link.matches(':hover, :focus-within'))return;
+    timer=setInterval(()=>{english=!english;render();},5000);
+  }
+  link.addEventListener('mouseenter',sync);link.addEventListener('mouseleave',sync);
+  link.addEventListener('focus',sync);link.addEventListener('blur',sync);
+  motion.addEventListener('change',sync);document.addEventListener('visibilitychange',sync);
+  render();sync();
+})();

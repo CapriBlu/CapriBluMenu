@@ -27,7 +27,7 @@ Queste indicazioni si applicano a grafica, immagini, testi, contenuti e sviluppo
 - La home e l'ingresso unico all'esperienza; evitare accessi duplicati e passaggi inutili.
 - Il pulsante principale si chiama "Scopri il nostro menu" (inglese: "Discover our menu") e deve dare accesso a cibo e bevande.
 - La scelta della lingua deve essere discreta, facile da trovare sulla home e mantenuta durante la navigazione.
-- La Boutique resta da riprogettare; non reinserire un accesso nella home senza una nuova decisione.
+- La home include l'accesso alla Boutique esistente (shop.html), centrato sopra TheFork e recensioni: “Visita la nostra boutique” alternato a “Visit our boutique”, nello stesso stile dei link secondari. Sotto, una linea sottile viene tracciata una sola volta da un piccolo punto luce, poi resta ferma; rispettare il movimento ridotto.
 - Nel menu mantenere il logo centrale, la lingua in alto e i collegamenti compatti al menu e al PDF.
 - Non reintrodurre il grande titolo "La nostra tradizione, una pizza alla volta", la foto introduttiva o la relativa sezione.
 
