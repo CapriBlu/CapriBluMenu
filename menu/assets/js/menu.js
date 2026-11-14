@@ -97,7 +97,11 @@ function render(){
       const count=visibleItems(catalog,config.activeEdition,category.id).length,link=create('a','category-tile');
       const url=new URL(location.href);url.searchParams.set('category',category.id);for(const key of ['q','item','variant','collection'])url.searchParams.delete(key);
       link.href=url.href;link.dataset.category=category.id;
-      if(category.cover){const img=imageElement(category.cover,'thumbnail','');img.className='category-cover';link.append(img);}else{const decoration=create('span','category-decoration','CB');decoration.setAttribute('aria-hidden','true');link.append(decoration);}
+      if(category.id==='drinks-beverage'){
+        const preview=create('span','drink-category-preview');preview.setAttribute('aria-hidden','true');
+        for(const filename of ['acqua-cutout-v1.png','coca-cola-cutout-v1.png','blu-spritz-cutout-v1.png','nastro-azzurro-cutout-v1.png','vino-calice-cutout-v2.png'])preview.append(imageElement('biblioteca/beverage/thumbnails/'+filename,'thumbnail',''));
+        link.append(preview);
+      }else if(category.cover){const img=imageElement(category.cover,'thumbnail','');img.className='category-cover';link.append(img);}else{const decoration=create('span','category-decoration','CB');decoration.setAttribute('aria-hidden','true');link.append(decoration);}
       if(category.id==='drinks-beverage')link.classList.add('drink-menu-tile');
       const caption=create('span','category-caption');caption.append(create('span','category-name',categoryText(category.id)),create('span','category-count',count+' '+countLabel(count)));link.append(caption);grid.append(link);
     }

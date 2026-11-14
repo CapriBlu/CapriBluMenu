@@ -53,7 +53,7 @@
     "categoryBack": "Categorie",
     "homeLabel": "Home",
     "moreCategories": "Altri reparti",
-    "drinksShortcut": "Drink Menu",
+    "drinksShortcut": "Bevande & Cocktail",
     "languageError": "Non è stato possibile cambiare lingua. Riprova.",
     "softDrinks": "Soft Drink",
     "bottledBeers": "Birre in bottiglia",
@@ -75,7 +75,7 @@
     "contorni": "Contorni",
     "insalatone": "Insalatone",
     "dessert": "Dessert",
-    "drinks-beverage": "Drink Menu",
+    "drinks-beverage": "Bevande & Cocktail",
     "spritz": "Cocktail"
   },
   "items": {

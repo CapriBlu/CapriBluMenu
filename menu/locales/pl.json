@@ -53,7 +53,7 @@
     "categoryBack": "Kategorie",
     "homeLabel": "Strona główna",
     "moreCategories": "Więcej kategorii",
-    "drinksShortcut": "Drink Menu",
+    "drinksShortcut": "Napoje i koktajle",
     "languageError": "Nie udało się zmienić języka. Spróbuj ponownie.",
     "itemFew": "propozycje",
     "softDrinks": "Napoje bezalkoholowe",
@@ -76,7 +76,7 @@
     "contorni": "Dodatki",
     "insalatone": "Duże sałatki",
     "dessert": "Desery",
-    "drinks-beverage": "Drink Menu",
+    "drinks-beverage": "Napoje i koktajle",
     "spritz": "Koktajle"
   },
   "items": {

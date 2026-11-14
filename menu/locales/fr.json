@@ -53,7 +53,7 @@
     "categoryBack": "Catégories",
     "homeLabel": "Accueil",
     "moreCategories": "Autres catégories",
-    "drinksShortcut": "Drink Menu",
+    "drinksShortcut": "Boissons & Cocktails",
     "languageError": "Impossible de changer de langue. Veuillez réessayer.",
     "softDrinks": "Boissons sans alcool",
     "bottledBeers": "Bières en bouteille",
@@ -75,7 +75,7 @@
     "contorni": "Accompagnements",
     "insalatone": "Grandes salades",
     "dessert": "Desserts",
-    "drinks-beverage": "Drink Menu",
+    "drinks-beverage": "Boissons & Cocktails",
     "spritz": "Cocktails"
   },
   "items": {

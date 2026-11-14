@@ -489,3 +489,12 @@ footer{border-color:#ffffff40;padding-bottom:58px}
 .beverage-entry-group .category-tile:hover .category-cover{transform:none}
 .beverage-entry-group .category-caption{background:linear-gradient(transparent,#052339d9)}
 @media(max-width:600px){.beverage-entry-group .category-tile{height:220px}.beverage-entry-group .category-cover{padding:12px 14px 64px}.beverage-entry-group .category-name{font-size:24px}}
+
+/* Mixed drinks preview using the original transparent menu assets. */
+.drink-category-preview{position:absolute;inset:12px 28px 72px;display:flex;align-items:flex-end;justify-content:center;gap:2px;pointer-events:none}
+.drink-category-preview img{width:19%;height:92%;min-width:0;object-fit:contain;object-position:center bottom}
+.drink-category-preview img:nth-child(3){width:23%;height:100%}
+.drink-category-preview img:last-child{width:25%;height:86%}
+@media(max-width:600px){.drink-category-preview{inset:14px 8px 94px;gap:0}.beverage-entry-group .drink-menu-tile .category-name{font-size:clamp(18px,5.2vw,24px);line-height:1.1}.beverage-entry-group .drink-menu-tile .category-caption{padding:16px 12px}}
+
+@media(max-width:600px){.drink-category-preview img:first-child,.drink-category-preview img:last-child{display:none}.drink-category-preview img{width:30%;height:100%}.drink-category-preview img:nth-child(3){width:40%;height:100%}}

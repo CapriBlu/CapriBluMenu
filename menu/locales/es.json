@@ -53,7 +53,7 @@
     "categoryBack": "Categorías",
     "homeLabel": "Inicio",
     "moreCategories": "Más categorías",
-    "drinksShortcut": "Drink Menu",
+    "drinksShortcut": "Bebidas y Cócteles",
     "languageError": "No se pudo cambiar el idioma. Inténtalo de nuevo.",
     "softDrinks": "Refrescos",
     "bottledBeers": "Cervezas en botella",
@@ -75,7 +75,7 @@
     "contorni": "Guarniciones",
     "insalatone": "Ensaladas",
     "dessert": "Postres",
-    "drinks-beverage": "Drink Menu",
+    "drinks-beverage": "Bebidas y Cócteles",
     "spritz": "Cócteles"
   },
   "items": {
