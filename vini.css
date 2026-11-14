@@ -71,3 +71,5 @@ footer{text-align:center;margin-top:24px;color:#e5effc}footer a{color:var(--gold
 @media(max-width:800px){.wine-thumb{width:146px;height:102px}.wine-thumb img{height:57px}.wine-thumb span{font-size:.73rem}}
 @media(max-width:600px){.wine-shelf{height:130px}.wine-thumb{top:18px;width:112px;height:92px;padding:5px 4px;gap:2px}.wine-thumb img{height:52px}.wine-thumb span{font-size:.67rem;line-height:1.13}}
 @media(prefers-reduced-motion:reduce){.wine-thumb{transition:none}}
+
+.wine-facts [hidden]{display:none}

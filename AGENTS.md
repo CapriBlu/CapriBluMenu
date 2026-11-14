@@ -83,3 +83,5 @@ Il vino a calice (150 ml) usa il PNG dei due calici bianco/rosso ricavato dalla 
 La scheda Bevande & Cocktail mostra una selezione mista dei PNG trasparenti originali: acqua, bibita, cocktail, birra e calici di vino. Mantenerli proporzionati e leggibili anche su telefono, senza coprire il nome del reparto.
 
 La scheda Carta dei Vini usa i PNG delle bottiglie originali Nua Brut, Nuance Falanghina, Nuance Rosé e Shahmat, al posto della caraffa. Su telefono mostra Falanghina e Rosé più leggibili. I quattro PNG sono disponibili in img/vino; non aggiungere prezzi, annate o descrizioni non forniti per le nuove etichette.
+
+La Carta dei Vini include dodici etichette: aggiunte Nua Brut, Nuance Falanghina, Nuance Rosé e Shahmat Prosecco Extra Dry a 25 EUR a bottiglia ciascuna, confermati dal titolare. Per le nuove bottiglie mostrare solo dati disponibili sulle etichette; nascondere annata e uvaggio quando non forniti.
