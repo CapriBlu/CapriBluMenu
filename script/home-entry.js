@@ -82,9 +82,9 @@
       add(0,0,.5,23);clock+=.95;
       const frames=[],bagFrames=[],wingFrames=[];
       const legFrames=Object.fromEntries(['leg-left','leg-right','shin-left','shin-right','foot-left','foot-right'].map(key=>[key,[]]));
-      const detailFrames=Object.fromEntries(['bird-facing','bird-front-pose','bird-head','bird-beak','bird-eye','bird-far-eye','bird-front-beak','bird-body','bird-chest','bird-tail','bird-far-wing'].map(key=>[key,[]]));
+      const detailFrames=Object.fromEntries(['bird-facing','bird-head','bird-beak','bird-eye','bird-far-eye','bird-front-beak','bird-body','bird-chest','bird-tail','bird-far-wing'].map(key=>[key,[]]));
       let bagAngle=0,bagVelocity=0,tailAngle=0,tailVelocity=0;
-      const smooth=t=>t*t*(3-2*t),mix=(a,b,t)=>a+(b-a)*t;
+      const smooth=t=>t*t*t*(t*(t*6-15)+10),mix=(a,b,t)=>a+(b-a)*t;
       const count=Math.ceil(clock*60),dt=clock/count;
       for(let i=0;i<=count;i++){
         const time=i*dt,offset=i/count;
@@ -112,13 +112,13 @@
         let turn=smooth(clamp((time-turnStart)/1.05));
         if(time>clock-.9)turn=1-smooth(clamp((time-clock+.9)/.9));
         const yaw=turn*Math.PI,face=Math.cos(yaw),front=Math.sin(yaw);
-        // Turn the complete profile together; a front pose preserves volume midway.
+        // Pivot the same silhouette continuously; do not swap in a different drawing.
         const localLook=lookAhead*(face<0?-1:1);
         const headX=.9*localLook,headNod=-.7*Math.abs(localLook);
         const blinkPhase=(time-(clock-.32))/.18;
         const eyelid=blinkPhase>0&&blinkPhase<1?1-.94*Math.sin(Math.PI*blinkPhase)**2:1;
-        if(front>.01){y-=5*front;angle+=4*front;sx*=1+.05*front;sy*=1-.035*front;feet+=8*Math.sin(turn*4*Math.PI)*front;}
-        bagTarget+=front*16;
+        if(front>.01){y-=8*front;angle+=2*front;sx*=1+.02*front;sy*=1-.02*front;feet+=4*Math.sin(turn*2*Math.PI)*front;}
+        bagTarget+=front*5;
         // A damped spring lets the shopping bag lag behind each hop and turn.
         bagVelocity+=((bagTarget-bagAngle)*125-bagVelocity*12)*dt;
         bagAngle+=bagVelocity*dt;
@@ -126,8 +126,7 @@
         tailVelocity+=((tail-tailAngle)*160-tailVelocity*14)*dt;
         tailAngle+=tailVelocity*dt;
         const tailRest=1-smooth(clamp((time-clock+.4)/.4));
-        detailFrames['bird-facing'].push({offset,transform:`scaleX(${face})`,opacity:1-front**4});
-        detailFrames['bird-front-pose'].push({offset,opacity:front**4});
+        detailFrames['bird-facing'].push({offset,transform:`scale(${face}, ${1-.035*front})`,opacity:1});
         detailFrames['bird-head'].push({offset,transform:`translate(${headX}px, ${headNod}px) rotate(${-6*localLook}deg)`});
         detailFrames['bird-beak'].push({offset,transform:'scaleX(1)',opacity:1});
         detailFrames['bird-front-beak'].push({offset,opacity:0});
@@ -172,7 +171,7 @@
           const targets=frame.transform.match(/-?\d*\.?\d+(?:e[-+]?\d+)?/gi).map(Number);
           if(!values)values=[...targets];
           const endBlend=smooth(Math.max(0,Math.min(1,(frame.offset*clock-clock+.18)/.18)));
-          values=values.map((value,i)=>value+(targets[i]-value)*(1-Math.exp(-dt/.032)));
+          values=values.map((value,i)=>value+(targets[i]-value)*(1-Math.exp(-dt/.045)));
           let i=0;frame.transform=frame.transform.replace(/-?\d*\.?\d+(?:e[-+]?\d+)?/gi,()=>{const j=i++;return String(mix(values[j],targets[j],endBlend));});
         }
       };

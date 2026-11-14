@@ -128,4 +128,4 @@
 .bird-shin-left{transform-origin:19.5px 33.5px}.bird-shin-right{transform-origin:26.5px 33.5px}
 .bird-foot-left{transform-origin:19px 37px}.bird-foot-right{transform-origin:26px 37px}
 
-.bird-facing{transform-box:view-box;transform-origin:26px 22px}
+.bird-facing{transform-box:view-box;transform-origin:26px 22px;backface-visibility:visible}
