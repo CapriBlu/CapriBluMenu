@@ -108,7 +108,9 @@ function render(){
     if(group==='bevande'){
       section.classList.add('beverage-entry-group');
       const wine=create('a','category-tile wine-menu-tile');wine.id='wine-link';wine.href=new URL('../vini.html',base);wine.setAttribute('aria-label',text.wineList);
-      const image=imageElement('biblioteca/beverage/thumbnails/vino-locale-cutout-v1.png','thumbnail','');image.className='category-cover';wine.append(image);
+      const preview=create('span','wine-category-preview');preview.setAttribute('aria-hidden','true');
+      for(const filename of ['nua-brut','nuance-falanghina','nuance-rose','shahmat-prosecco'])preview.append(imageElement('biblioteca/beverage/thumbnails/'+filename+'-cutout-v1.png','thumbnail',''));
+      wine.append(preview);
       const caption=create('span','category-caption');caption.append(create('span','category-name',text.wineList),create('span','category-count','↗'));wine.append(caption);grid.append(wine);
     }
     section.append(grid);return section;

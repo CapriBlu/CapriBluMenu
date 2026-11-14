@@ -81,3 +81,5 @@ L'ingresso unico delle bevande si chiama “Bevande & Cocktail” (tradotto nell
 Il vino a calice (150 ml) usa il PNG dei due calici bianco/rosso ricavato dalla foto fornita dal titolare, senza bottiglia o sfondo. I due calici devono essere dritti, simmetrici, della stessa altezza e allineati alla base. La scelta 500 ml o 1 litro mostra invece la caraffa: cambiare anche l'immagine passando fra formati dello stesso articolo. La scheda Carta dei Vini conserva la sua immagine separata.
 
 La scheda Bevande & Cocktail mostra una selezione mista dei PNG trasparenti originali: acqua, bibita, cocktail, birra e calici di vino. Mantenerli proporzionati e leggibili anche su telefono, senza coprire il nome del reparto.
+
+La scheda Carta dei Vini usa i PNG delle bottiglie originali Nua Brut, Nuance Falanghina, Nuance Rosé e Shahmat, al posto della caraffa. Su telefono mostra Falanghina e Rosé più leggibili. I quattro PNG sono disponibili in img/vino; non aggiungere prezzi, annate o descrizioni non forniti per le nuove etichette.

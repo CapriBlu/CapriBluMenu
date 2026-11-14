@@ -498,3 +498,9 @@ footer{border-color:#ffffff40;padding-bottom:58px}
 @media(max-width:600px){.drink-category-preview{inset:14px 8px 94px;gap:0}.beverage-entry-group .drink-menu-tile .category-name{font-size:clamp(18px,5.2vw,24px);line-height:1.1}.beverage-entry-group .drink-menu-tile .category-caption{padding:16px 12px}}
 
 @media(max-width:600px){.drink-category-preview img:first-child,.drink-category-preview img:last-child{display:none}.drink-category-preview img{width:30%;height:100%}.drink-category-preview img:nth-child(3){width:40%;height:100%}}
+
+/* Wine list entrance: original owner-supplied bottles, with a clear title below. */
+.wine-category-preview{position:absolute;inset:12px 24px 72px;display:flex;align-items:flex-end;justify-content:center;gap:0;pointer-events:none}
+.wine-category-preview img{width:25%;height:92%;min-width:0;object-fit:contain;object-position:center bottom}
+.wine-category-preview img:nth-child(2),.wine-category-preview img:nth-child(3){height:100%}
+@media(max-width:600px){.wine-category-preview{inset:12px 10px 86px}.wine-category-preview img:first-child,.wine-category-preview img:last-child{display:none}.wine-category-preview img:nth-child(2),.wine-category-preview img:nth-child(3){width:50%;height:100%}}
