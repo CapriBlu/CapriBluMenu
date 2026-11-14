@@ -87,7 +87,7 @@
       const count=Math.ceil(clock*60),dt=clock/count;
       for(let i=0;i<=count;i++){
         const time=i*dt,offset=i/count;
-        let x=0,y=0,angle=0,sx=1,sy=1,wing=0,feet=0,bagTarget=0;
+        let x=0,y=0,angle=0,sx=1,sy=1,wing=0,feet=0,bagTarget=0,tail=0,wingLift=0;
         const segment=segments.find(step=>time>=step.start&&time<step.end);
         const previous=segments.filter(step=>step.end<=time).at(-1);
         if(previous){x=previous.to;y=previous.ground;}
@@ -95,16 +95,16 @@
           const s=segment,t=time-s.start,direction=Math.sign(s.to-s.from);
           x=s.from;y=s.floor;
           if(t<.12){
-            const p=smooth(t/.12);sx=1+.09*p;sy=1-.14*p;y+=2*p;angle=-3*direction*p;
+            const p=smooth(t/.12);sx=1+.09*p;sy=1-.14*p;y+=2*p;angle=-3*direction*p;tail=-7*p;wing=-6*p;
           }else if(t<.12+s.flight){
             const p=(t-.12)/s.flight,arc=Math.sin(Math.PI*p);
             x=mix(s.from,s.to,p);y=mix(s.floor,s.ground,smooth(p))-4*s.height*p*(1-p);
             sx=1-.055*arc;sy=1+.075*arc;angle=direction*(-7+12*p)*arc;
-            wing=-24*arc;feet=18*arc;bagTarget=-direction*21*Math.sin(Math.PI*p*1.35);
+            wingLift=arc;wing=-24*arc-11*Math.sin(4*Math.PI*p)*arc;tail=12*Math.sin(2*Math.PI*p)*arc-6*arc;feet=18*arc;bagTarget=-direction*21*Math.sin(Math.PI*p*1.35);
           }else{
             const p=Math.min((t-.12-s.flight)/.19,1),settle=Math.sin(Math.PI*p)*Math.exp(-2*p);
             x=s.to;y=s.ground+3*settle;sx=1+.16*settle;sy=1-.2*settle;
-            angle=direction*3*settle;bagTarget=direction*12*settle;
+            angle=direction*3*settle;bagTarget=direction*12*settle;tail=16*settle;wing=-8*settle;
           }
         }
         const clamp=v=>Math.max(0,Math.min(v,1));
@@ -126,8 +126,8 @@
         detailFrames['bird-far-eye'].push({offset,opacity:front**3});
         detailFrames['bird-body'].push({offset,transform:`scale(${1-.14*front}, ${1+.035*front})`});
         detailFrames['bird-chest'].push({offset,opacity:.8*front});
-        detailFrames['bird-tail'].push({offset,transform:`scaleX(${face}) rotate(${-10*front}deg)`,opacity:1-.6*front});
-        detailFrames['bird-far-wing'].push({offset,opacity:front,transform:`translate(${-2*front}px, ${-3*front}px) rotate(${-12*front}deg)`});
+        detailFrames['bird-tail'].push({offset,transform:`scaleX(${face}) rotate(${tail-10*front}deg)`,opacity:1-.6*front});
+        detailFrames['bird-far-wing'].push({offset,opacity:Math.max(front,.45*wingLift),transform:`translate(${-2*front}px, ${-3*front}px) rotate(${wing*.55-12*front}deg)`});
         frames.push({offset,transform:`translate(${x}px, ${y}px) rotate(${angle}deg) scale(${sx}, ${sy})`});
         bagFrames.push({offset,transform:`translate(${headX+11*(face-1)}px, ${headNod+2*front}px) rotate(${bagAngle+12*front}deg) scale(${1-.2*front},1)`});
         wingFrames.push({offset,transform:`translate(${5*front}px, ${-2*front}px) rotate(${wing+25*front}deg) scaleX(${1-.35*front})`});

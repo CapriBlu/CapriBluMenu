@@ -95,3 +95,5 @@ Le didascalie delle card bevande e dei gruppi si sovrappongono leggermente al bo
 Rifinitura card bevande: vetro blu più trasparente con leggera sfocatura e riflesso superiore, sovrapposizione 40 px desktop e 34 px telefono. Acqua descritta come acqua alla spina filtrata, confermata dal titolare, nelle otto lingue.
 
 Entrambi i ritorni dalla Carta dei Vini aprono menu/?category=drinks-beverage, mai drink.html. Conservare la lingua selezionata passando dal menu alla carta e tornando alle bevande.
+
+L’uccellino della Boutique accompagna ogni saltello con piccoli battiti delle due ali e oscillazioni della coda dal suo attacco; la coda reagisce ad anticipo e atterraggio. Conservare un solo passaggio, fermata finale e rispetto del movimento ridotto.

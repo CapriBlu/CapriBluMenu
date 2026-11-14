@@ -113,7 +113,9 @@
 .bird-bag{transform-origin:39px 16px}
 .bird-wing{transform-origin:19px 20px}
 .bird-feet{transform-origin:24px 30px}
-.bird-tail,.bird-body,.bird-chest{transform-origin:23px 23px}
+.bird-tail{transform-origin:15px 23px}
+.bird-far-wing{transform-origin:16px 21px}
+.bird-body,.bird-chest{transform-origin:23px 23px}
 .bird-head{transform-origin:26px 20px}
 .bird-beak{transform-origin:29px 14px}
 @media(max-width:600px){.boutique-stage{padding-left:47px}.boutique-bird{width:44px;height:38px;margin-top:-22px}}
