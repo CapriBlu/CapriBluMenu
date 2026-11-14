@@ -73,3 +73,13 @@ footer{text-align:center;margin-top:24px;color:#e5effc}footer a{color:var(--gold
 @media(prefers-reduced-motion:reduce){.wine-thumb{transition:none}}
 
 .wine-facts [hidden]{display:none}
+
+/* Wine type filters remain in place while browsing a selection. */
+.wine-filters{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:16px auto 18px}
+.wine-filters button{font:inherit;font-size:.88rem;min-height:44px;padding:9px 18px;border:1px solid #ffffff55;border-radius:24px;background:#092c57a8;color:#fff9ed;cursor:pointer}
+.wine-filters button[aria-pressed="true"]{border-color:var(--gold);background:#285b95;color:#fff4cf}
+.wine-filters button:hover{border-color:var(--gold)}
+.wine-filters button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wine-thumb[hidden]{display:none}
+.wine-arrow:disabled{visibility:hidden}
+@media(max-width:600px){.wine-filters{gap:6px;margin:12px 0 14px}.wine-filters button{font-size:.8rem;padding:9px 12px}}

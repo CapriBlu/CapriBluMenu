@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#092b55"><meta name="description" content="La selezione di vini di Capri Blu Sorrento.">
-<title>La Cantina | Capri Blu Sorrento</title><link rel="icon" href="./img/LOGO.capriblu.png"><link rel="stylesheet" href="./drink.css?v=11"><link rel="stylesheet" href="./vini.css?v=7"></head>
+<title>La Cantina | Capri Blu Sorrento</title><link rel="icon" href="./img/LOGO.capriblu.png"><link rel="stylesheet" href="./drink.css?v=11"><link rel="stylesheet" href="./vini.css?v=8"></head>
 <body>
 <video class="bg-video wine-video-desktop" autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src="./img/capri_blu_pc_25s_1080p_hq.mp4?v=1" type="video/mp4"></video>
 <video class="bg-video wine-video-mobile" autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src="./img/vid.webM.mobile.webm" type="video/webm"><source src="./img/capri_blu_pc_25s_1080p_hq.mp4?v=1" type="video/mp4"></video>
@@ -9,6 +9,13 @@
 <div class="wine-page">
 <header class="wine-header"><a href="./drink.html" class="back">← Menu Drink</a><a href="./index.html" class="back">Home</a></header>
 <div class="wine-showroom"><div class="wine-brand"><img src="./img/LOGO.capriblu.png" alt="Capri Blu Sorrento"><span class="eyebrow">Capri Blu Sorrento</span><h1>La nostra Cantina</h1><p>Dodici etichette da scoprire: scegli un’etichetta e lasciati guidare dai suoi profumi e sapori.</p></div>
+<div class="wine-filters" role="group" aria-label="Filtra per tipo di vino">
+<button type="button" data-wine-filter="tutti" aria-pressed="true">Tutti</button>
+<button type="button" data-wine-filter="bianco" aria-pressed="false">Bianco</button>
+<button type="button" data-wine-filter="rosso" aria-pressed="false">Rosso</button>
+<button type="button" data-wine-filter="rose" aria-pressed="false">Rosé</button>
+<button type="button" data-wine-filter="bollicine" aria-pressed="false">Bollicine</button>
+</div>
 <nav class="wine-shelf" aria-label="Scegli un vino"><button type="button" class="wine-thumb active" data-index="0" aria-label="Seleziona Furore Rosso" aria-pressed="true"><img src="./img/vino/Furore%20Rosso.png" alt="" loading="lazy"><span>Furore Rosso</span></button>
 <button type="button" class="wine-thumb" data-index="1" aria-label="Seleziona Jungano" aria-pressed="false"><img src="./img/vino/jungano.png" alt="" loading="lazy"><span>Jungano</span></button>
 <button type="button" class="wine-thumb" data-index="2" aria-label="Seleziona Taurasi Vigna Cinque Querce" aria-pressed="false"><img src="./img/vino/Taurasi.png" alt="" loading="lazy"><span>Taurasi Cinque Querce</span></button>
@@ -24,14 +31,17 @@
 </div><!-- wine-showroom --></div><!-- wine-page -->
 <script>
 (function(){
-const wines=[{"image":"./img/vino/Furore%20Rosso.png","alt":"Furore Rosso Marisa Cuomo","name":"Furore Rosso","maker":"Marisa Cuomo · Costa d'Amalfi DOC","grapes":"Piedirosso e Aglianico","year":"2024","description":"Rosso morbido e mediterraneo, con sentori di ciliegia matura, liquirizia e un finale delicatamente speziato.","price":"€ 50,00"},{"image":"./img/vino/jungano.png","alt":"Jungano Aglianico San Salvatore 2020","name":"Jungano","maker":"San Salvatore 1988 · Paestum IGP","grapes":"Aglianico 100%","year":"2020","description":"Intenso ed elegante, con frutti rossi, violetta e spezie; al palato avvolgente, fresco e persistente.","price":"€ 40,00"},{"image":"./img/vino/Taurasi.png","alt":"Taurasi Vigna Cinque Querce Salvatore Molettieri 2016","name":"Taurasi Vigna Cinque Querce","maker":"Salvatore Molettieri · Taurasi DOCG","grapes":"Aglianico 100%","year":"2016","description":"Strutturato e complesso, con prugna matura, spezie, liquirizia e note balsamiche. Finale lungo e raffinato.","price":"€ 70,00"},{"image":"./img/vino/Brunello.png","alt":"Brunello di Montalcino CastelGiocondo Frescobaldi 2020","name":"Brunello di Montalcino CastelGiocondo","maker":"Frescobaldi · Brunello di Montalcino DOCG","grapes":"Sangiovese 100%","year":"2020","description":"Elegante e armonioso, con piccoli frutti rossi, liquirizia e spezie dolci. Tannini fini e finale persistente.","price":"€ 60,00"},{"image":"./img/vino/Nuance%20Taurasi.png","alt":"Nuance Taurasi","name":"Nuance Taurasi","maker":"Cantine Forno · Taurasi DOCG","grapes":"Aglianico 100%","year":"2020","description":"Rosso intenso e strutturato, con richiami di frutti scuri, prugna, spezie e una piacevole persistenza.","price":"€ 35,00"},{"image":"./img/vino/Cadetto.png","alt":"Cadetto Rosso 2023","name":"Cadetto Rosso","maker":"Lungarotti · Umbria IGT","grapes":"Sangiovese e altre uve rosse locali","year":"2023","description":"Rosso giovane e morbido, con profumi di violetta, spezie leggere, marasca e visciola. Piacevole e versatile a tavola.","price":"€ 25,00"},{"image":"./img/vino/Merlot.png","alt":"Casalforte Merlot Veneto IGT","name":"Casalforte Merlot","maker":"Cantine Riondo · Veneto IGT","grapes":"Merlot 100%","year":"2023","description":"Morbido e avvolgente, con note di ciliegia matura, frutti di bosco, prugna e un delicato accento speziato.","price":"€ 25,00"},{"image":"./img/vino/Nuance%20Aglianico.png","alt":"Nuance Sannio Aglianico DOC","name":"Nuance Sannio Aglianico","maker":"Cantine Forno · Sannio DOC","grapes":"Aglianico 100%","year":"2025","description":"Rubino vivace, profumi di ciliegia, mora, lampone e sfumature di spezie e tabacco. Al palato equilibrato, morbido e persistente.","price":"€ 25,00"},{"image":"./img/vino/nua-brut-cutout-v1.png","alt":"Nua Brut","name":"Nua Brut","maker":"Nua · Brut","grapes":null,"year":null,"description":"Spumante Brut.","price":"€ 25,00"},{"image":"./img/vino/nuance-falanghina-cutout-v1.png","alt":"Nuance Falanghina","name":"Nuance Falanghina","maker":"Nuance · Falanghina del Sannio DOC","grapes":"Falanghina","year":null,"description":"Falanghina del Sannio a Denominazione di Origine Controllata.","price":"€ 25,00"},{"image":"./img/vino/nuance-rose-cutout-v1.png","alt":"Nuance Rosé","name":"Nuance Rosé","maker":"Nuance · Lacryma Christi del Vesuvio DOC","grapes":null,"year":null,"description":"Lacryma Christi del Vesuvio Rosato a Denominazione di Origine Controllata.","price":"€ 25,00"},{"image":"./img/vino/shahmat-prosecco-cutout-v1.png","alt":"Shahmat Prosecco Extra Dry","name":"Shahmat Prosecco Extra Dry","maker":"Dei Cavalieri · Shahmat Millesimato","grapes":null,"year":null,"description":"Prosecco Extra Dry Millesimato.","price":"€ 25,00"}];
+const allWines=[{"image":"./img/vino/Furore%20Rosso.png","alt":"Furore Rosso Marisa Cuomo","name":"Furore Rosso","maker":"Marisa Cuomo · Costa d'Amalfi DOC","grapes":"Piedirosso e Aglianico","year":"2024","description":"Rosso morbido e mediterraneo, con sentori di ciliegia matura, liquirizia e un finale delicatamente speziato.","price":"€ 50,00","type":"rosso"},{"image":"./img/vino/jungano.png","alt":"Jungano Aglianico San Salvatore 2020","name":"Jungano","maker":"San Salvatore 1988 · Paestum IGP","grapes":"Aglianico 100%","year":"2020","description":"Intenso ed elegante, con frutti rossi, violetta e spezie; al palato avvolgente, fresco e persistente.","price":"€ 40,00","type":"rosso"},{"image":"./img/vino/Taurasi.png","alt":"Taurasi Vigna Cinque Querce Salvatore Molettieri 2016","name":"Taurasi Vigna Cinque Querce","maker":"Salvatore Molettieri · Taurasi DOCG","grapes":"Aglianico 100%","year":"2016","description":"Strutturato e complesso, con prugna matura, spezie, liquirizia e note balsamiche. Finale lungo e raffinato.","price":"€ 70,00","type":"rosso"},{"image":"./img/vino/Brunello.png","alt":"Brunello di Montalcino CastelGiocondo Frescobaldi 2020","name":"Brunello di Montalcino CastelGiocondo","maker":"Frescobaldi · Brunello di Montalcino DOCG","grapes":"Sangiovese 100%","year":"2020","description":"Elegante e armonioso, con piccoli frutti rossi, liquirizia e spezie dolci. Tannini fini e finale persistente.","price":"€ 60,00","type":"rosso"},{"image":"./img/vino/Nuance%20Taurasi.png","alt":"Nuance Taurasi","name":"Nuance Taurasi","maker":"Cantine Forno · Taurasi DOCG","grapes":"Aglianico 100%","year":"2020","description":"Rosso intenso e strutturato, con richiami di frutti scuri, prugna, spezie e una piacevole persistenza.","price":"€ 35,00","type":"rosso"},{"image":"./img/vino/Cadetto.png","alt":"Cadetto Rosso 2023","name":"Cadetto Rosso","maker":"Lungarotti · Umbria IGT","grapes":"Sangiovese e altre uve rosse locali","year":"2023","description":"Rosso giovane e morbido, con profumi di violetta, spezie leggere, marasca e visciola. Piacevole e versatile a tavola.","price":"€ 25,00","type":"rosso"},{"image":"./img/vino/Merlot.png","alt":"Casalforte Merlot Veneto IGT","name":"Casalforte Merlot","maker":"Cantine Riondo · Veneto IGT","grapes":"Merlot 100%","year":"2023","description":"Morbido e avvolgente, con note di ciliegia matura, frutti di bosco, prugna e un delicato accento speziato.","price":"€ 25,00","type":"rosso"},{"image":"./img/vino/Nuance%20Aglianico.png","alt":"Nuance Sannio Aglianico DOC","name":"Nuance Sannio Aglianico","maker":"Cantine Forno · Sannio DOC","grapes":"Aglianico 100%","year":"2025","description":"Rubino vivace, profumi di ciliegia, mora, lampone e sfumature di spezie e tabacco. Al palato equilibrato, morbido e persistente.","price":"€ 25,00","type":"rosso"},{"image":"./img/vino/nua-brut-cutout-v1.png","alt":"Nua Brut","name":"Nua Brut","maker":"Nua · Brut","grapes":null,"year":null,"description":"Spumante Brut.","price":"€ 25,00","type":"bollicine"},{"image":"./img/vino/nuance-falanghina-cutout-v1.png","alt":"Nuance Falanghina","name":"Nuance Falanghina","maker":"Nuance · Falanghina del Sannio DOC","grapes":"Falanghina","year":null,"description":"Falanghina del Sannio a Denominazione di Origine Controllata.","price":"€ 25,00","type":"bianco"},{"image":"./img/vino/nuance-rose-cutout-v1.png","alt":"Nuance Rosé","name":"Nuance Rosé","maker":"Nuance · Lacryma Christi del Vesuvio DOC","grapes":null,"year":null,"description":"Lacryma Christi del Vesuvio Rosato a Denominazione di Origine Controllata.","price":"€ 25,00","type":"rose"},{"image":"./img/vino/shahmat-prosecco-cutout-v1.png","alt":"Shahmat Prosecco Extra Dry","name":"Shahmat Prosecco Extra Dry","maker":"Dei Cavalieri · Shahmat Millesimato","grapes":null,"year":null,"description":"Prosecco Extra Dry Millesimato.","price":"€ 25,00","type":"bollicine"}];
+let wines=allWines;
 let selected=-1;
 let position=0;
 let last=0;
 let pauseUntil=0;
 const $=id=>document.getElementById(id);
 const shelf=document.querySelector('.wine-shelf');
-const thumbs=[...shelf.querySelectorAll('.wine-thumb')];
+const allThumbs=[...shelf.querySelectorAll('.wine-thumb')];
+let thumbs=allThumbs;
+const filters=[...document.querySelectorAll('[data-wine-filter]')];
 const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
 const stepSeconds=7.5;
 function cyclicDistance(i,p){
@@ -78,7 +88,21 @@ function choose(i){
  pauseUntil=performance.now()+5500;
  paint();
 }
-thumbs.forEach((button,i)=>button.addEventListener('click',()=>choose(i)));
+allThumbs.forEach(button=>button.addEventListener('click',()=>{const i=thumbs.indexOf(button);if(i>=0)choose(i)}));
+filters.forEach(button=>button.addEventListener('click',()=>{
+ const type=button.dataset.wineFilter;
+ wines=type==='tutti'?allWines:allWines.filter(w=>w.type===type);
+ thumbs=allThumbs.filter((thumb,i)=>{
+  const included=type==='tutti'||allWines[i].type===type;
+  thumb.hidden=!included;thumb.tabIndex=-1;thumb.setAttribute('aria-hidden',String(!included));
+  thumb.classList.remove('active');thumb.setAttribute('aria-pressed','false');
+  return included;
+ });
+ filters.forEach(filter=>filter.setAttribute('aria-pressed',String(filter===button)));
+ selected=-1;position=0;last=0;pauseUntil=performance.now()+5500;
+ $('winePrev').disabled=$('wineNext').disabled=wines.length<2;
+ paint();
+}));
 $('winePrev').addEventListener('click',()=>choose((selected-1+wines.length)%wines.length));
 $('wineNext').addEventListener('click',()=>choose((selected+1)%wines.length));
 shelf.addEventListener('pointerenter',()=>{pauseUntil=Infinity});
@@ -92,7 +116,7 @@ document.addEventListener('keydown',e=>{
 });
 function frame(now){
  const delta=last?Math.min((now-last)/1000,.08):0;last=now;
- if(!reduced.matches&&!document.hidden&&now>pauseUntil)position=(position+delta/stepSeconds)%wines.length;
+ if(wines.length>1&&!reduced.matches&&!document.hidden&&now>pauseUntil)position=(position+delta/stepSeconds)%wines.length;
  paint();
  requestAnimationFrame(frame);
 }
