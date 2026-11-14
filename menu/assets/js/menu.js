@@ -126,14 +126,14 @@ function render(){
     if(entry.type==='collection')return collectionCard(entry);
     const {item}=entry;
     const content=itemText(item.id),category=catalog.categories.find(c=>c.id===item.categoryId);
-    const card=create('article','pizza-card'+(!item.available?' unavailable':'')+(!item.thumbnail?' no-photo':'')+(item.imageStyle==='cutout'?' product-cutout':''));card.dataset.item=item.id;card.dataset.group=category.group;
+    const card=create('article','pizza-card'+(!item.available?' unavailable':'')+(!item.thumbnail?' no-photo':'')+(item.imageStyle==='cutout'?' product-cutout':''));card.dataset.item=item.id;card.dataset.group=category.group;card.classList.toggle('compact-drink',category.group==='bevande');
     card.classList.toggle('soft-drink',drinkCollections.find(collection=>collection.id==='soft-drink').itemIds.includes(item.id));
     const visual=create('div','card-visual'),photoButton=create('button','photo-button');photoButton.type='button';photoButton.dataset.item=item.id;photoButton.setAttribute('aria-label',text.details+': '+content.name);
     if(item.thumbnail)photoButton.append(imageElement(item.thumbnail,'thumbnail',content.name));else{const placeholder=create('div','photo-placeholder','CB');placeholder.setAttribute('aria-hidden','true');photoButton.append(placeholder);}
     visual.append(photoButton);
     const body=create('div','card-body'),row=create('div','card-title-row'),title=create('h3','',content.name);title.id='name-'+item.id;card.setAttribute('aria-labelledby',title.id);
     row.append(title,create('span','price',money(item.priceCents)));if(!state.category)body.append(create('span','result-category',categoryText(item.categoryId)));body.append(row,create('p','card-description',content.description));if(!item.available)body.append(create('p','',text.unavailable));visual.append(body);
-    const bottom=create('div','card-bottom'),open=create('button','detail-button',text.details);open.type='button';open.dataset.item=item.id;open.setAttribute('aria-label',text.details+': '+content.name);bottom.append(open);card.append(visual,bottom);return card;
+    const bottom=create('div','card-bottom'),open=create('button','detail-button',text.details);open.type='button';open.dataset.item=item.id;open.setAttribute('aria-label',text.details+': '+content.name);bottom.append(open);card.append(visual);if(category.group!=='bevande')card.append(bottom);return card;
   }));
   const edition=editions.editions.find(e=>e.id===config.activeEdition);$('cover-charge').textContent=text.coverCharge+' '+money(edition.coverChargeCents)+' '+text.perPerson;
   $('frozen-note').textContent=text.frozen;$('back-link').textContent=text.back;$('retry').textContent=text.retry;

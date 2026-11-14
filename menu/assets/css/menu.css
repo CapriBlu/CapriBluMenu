@@ -504,3 +504,29 @@ footer{border-color:#ffffff40;padding-bottom:58px}
 .wine-category-preview img{width:25%;height:92%;min-width:0;object-fit:contain;object-position:center bottom}
 .wine-category-preview img:nth-child(2),.wine-category-preview img:nth-child(3){height:100%}
 @media(max-width:600px){.wine-category-preview{inset:12px 10px 86px}.wine-category-preview img:first-child,.wine-category-preview img:last-child{display:none}.wine-category-preview img:nth-child(2),.wine-category-preview img:nth-child(3){width:50%;height:100%}}
+
+/* Compact drink cards: keep image, name and price together. */
+.collection-open{min-height:0}
+.collection-visual{height:180px;flex-shrink:0;padding:14px 18px 4px}
+.collection-visual img{height:138px}
+.collection-visual img:nth-child(2){height:152px}
+.collection-visual svg{height:150px}
+.collection-caption{margin-top:0;padding:14px 16px 18px;gap:6px 10px}
+.collection-card h3{font-size:24px}
+.pizza-card.compact-drink .photo-button img{height:180px;padding:14px 18px 4px}
+.pizza-card.compact-drink .card-body{padding:12px 14px 16px;gap:6px}
+.pizza-card.compact-drink h3{font-size:23px}
+.pizza-card.compact-drink .photo-button::after{content:'';position:absolute;inset:0;z-index:3;cursor:pointer}
+.pizza-card.compact-drink:focus-within{outline:2px solid #fff4df;outline-offset:3px}
+.pizza-card.compact-drink:hover{border-color:#d1e8f6}
+@media(max-width:600px){
+ .collection-visual{height:142px;padding:10px 8px 2px}
+ .collection-visual img{height:108px}
+ .collection-visual img:nth-child(2){height:122px}
+ .collection-visual svg{height:118px}
+ .collection-caption{padding:12px 10px 14px}
+ .collection-card h3{font-size:21px}
+ .pizza-card.compact-drink .photo-button img{height:142px;padding:10px 10px 2px}
+ .pizza-card.compact-drink .card-body{padding:10px 10px 14px}
+ .pizza-card.compact-drink h3{font-size:20px}
+}

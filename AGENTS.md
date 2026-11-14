@@ -87,3 +87,5 @@ La scheda Carta dei Vini usa i PNG delle bottiglie originali Nua Brut, Nuance Fa
 La Carta dei Vini include dodici etichette: aggiunte Nua Brut, Nuance Falanghina, Nuance Rosé e Shahmat Prosecco Extra Dry a 25 EUR a bottiglia ciascuna, confermati dal titolare. Per le nuove bottiglie mostrare solo dati disponibili sulle etichette; nascondere annata e uvaggio quando non forniti.
 
 La Carta dei Vini offre i filtri Tutti, Bianco, Rosso, Rosé e Bollicine. Filtro, carosello, frecce e contatore devono usare la stessa selezione; con una sola etichetta fermare lo scorrimento e nascondere le frecce. Le dodici etichette attuali includono otto rossi, una Falanghina bianca, un Nuance Rosé e due bollicine (Nua Brut e Shahmat).
+
+Le card Bevande & Cocktail sono compatte: area immagine 180 px su desktop e 142 px su telefono, titoli vicini ai PNG. Le singole bevande aprono il dettaglio da tutta la card, anche da tastiera, senza il pulsante separato Scopri di più. Le card del menu cibo conservano i propri comandi.
