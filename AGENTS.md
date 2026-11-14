@@ -97,3 +97,5 @@ Rifinitura card bevande: vetro blu più trasparente con leggera sfocatura e rifl
 Entrambi i ritorni dalla Carta dei Vini aprono menu/?category=drinks-beverage, mai drink.html. Conservare la lingua selezionata passando dal menu alla carta e tornando alle bevande.
 
 L’uccellino della Boutique accompagna ogni saltello con piccoli battiti delle due ali e oscillazioni della coda dal suo attacco; la coda reagisce ad anticipo e atterraggio. Conservare un solo passaggio, fermata finale e rispetto del movimento ridotto.
+
+L’uccellino anticipa ogni salto con un piccolo movimento della testa, la coda segue con inerzia smorzata e un singolo battito di palpebre chiude la sequenza. Tutte le parti tornano alla posa neutra finale; nessun ciclo aggiuntivo.

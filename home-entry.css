@@ -120,3 +120,6 @@
 .bird-beak{transform-origin:29px 14px}
 @media(max-width:600px){.boutique-stage{padding-left:47px}.boutique-bird{width:44px;height:38px;margin-top:-22px}}
 @media(prefers-reduced-motion:reduce){.boutique-link.is-bird-hopping .bird-bag,.boutique-link.is-bird-hopping .bird-wing{animation:none}}
+
+.bird-eye{transform-origin:31.6px 11.5px}
+.bird-far-eye{transform-origin:25.7px 11.5px}
