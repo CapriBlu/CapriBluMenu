@@ -78,7 +78,7 @@ export function validateMenu(config, catalog, editions, locales) {
     fail(Number.isInteger(item.order) && item.order>=0, `Invalid order: ${item.id}`);
     checkOffer(item,item.id);
     fail(unique(item.variants.map(variant=>variant.id)), `Duplicate variant: ${item.id}`);
-    for (const variant of item.variants) {fail(idOK(variant.id), `Invalid variant: ${item.id}`);checkOffer(variant,`${item.id}/${variant.id}`);}
+    for (const variant of item.variants) {fail(idOK(variant.id), `Invalid variant: ${item.id}`);checkOffer(variant,`${item.id}/${variant.id}`);if(variant.image!==undefined)fail(fileOK(variant.image,'full'),`Invalid variant image path: ${item.id}/${variant.id}`);}
   }
   for (const supplement of catalog.supplements) checkOffer(supplement, supplement.id);
   for (const language of config.enabledLanguages) {

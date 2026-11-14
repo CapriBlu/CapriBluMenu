@@ -3576,8 +3576,8 @@
       "categoryId": "drinks-beverage",
       "priceCents": 600,
       "order": 11,
-      "thumbnail": "biblioteca/beverage/thumbnails/vino-locale-cutout-v1.png",
-      "image": "biblioteca/beverage/full/vino-locale-cutout-v1.png",
+      "thumbnail": "biblioteca/beverage/thumbnails/vino-calice-cutout-v1.png",
+      "image": "biblioteca/beverage/full/vino-calice-cutout-v1.png",
       "allergenCodes": null,
       "allergenStatus": "pending-review",
       "available": true,
@@ -3595,7 +3595,8 @@
           "source": {
             "pdf": "pdf/menu_autunno.pdf",
             "page": 7
-          }
+          },
+          "image": "biblioteca/beverage/full/vino-locale-cutout-v1.png"
         },
         {
           "id": "un-litro",
@@ -3606,7 +3607,8 @@
           "source": {
             "pdf": "pdf/menu_autunno.pdf",
             "page": 7
-          }
+          },
+          "image": "biblioteca/beverage/full/vino-locale-cutout-v1.png"
         }
       ],
       "source": {
@@ -3615,7 +3617,8 @@
       },
       "reviewStatus": "transcribed",
       "photoSource": {
-        "file": ".Beverage\\vino della casa.webp"
+        "file": "Calice  di vino bianco rosso.jpg",
+        "providedBy": "owner"
       },
       "imageStyle": "cutout"
     },

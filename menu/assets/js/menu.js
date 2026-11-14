@@ -1,4 +1,4 @@
-import {visibleItems, selectedOffer, translatedItem, validateMenu, resolveLegacySelection, drinkCollections, groupDepartmentItems} from './model.js?v=drink-menu-20261114-1';
+import {visibleItems, selectedOffer, translatedItem, validateMenu, resolveLegacySelection, drinkCollections, groupDepartmentItems} from './model.js?v=wine-glasses-20261114-1';
 import {initialLanguages, createLocaleStore} from './locale-store.js?v=eight-languages-20261112-1';
 const base = new URL('../../',import.meta.url);
 const $ = id => document.getElementById(id);
@@ -140,8 +140,9 @@ function renderDetail(){
   $('detail-category').textContent=categoryText(item.categoryId);$('detail-title').textContent=content.name;$('detail-description').textContent=content.description;
   $('close-detail').setAttribute('aria-label',text.close);$('formats-label').textContent=text.formats;
   const image=$('detail-image').firstElementChild;
-  const photo=['ruota-di-carro','ruotiello'].includes(state.variant)?null:item.image;
-  if(photo && image?.dataset.item!==item.id){const next=imageElement(photo,'fullImage',content.name);next.dataset.item=item.id;$('detail-image').replaceChildren(next);}
+  const photo=['ruota-di-carro','ruotiello'].includes(state.variant)?null:(offer.image||item.image);
+  const imageKey=item.id+':'+photo;
+  if(photo && image?.dataset.imageKey!==imageKey){const next=imageElement(photo,'fullImage',content.name);next.dataset.item=item.id;next.dataset.imageKey=imageKey;$('detail-image').replaceChildren(next);}
   else if(!photo)$('detail-image').replaceChildren();else image.alt=content.name;
   $('formats').hidden=item.variants.length===0;
   $('format-options').replaceChildren(...[{id:'',label:content.standardLabel||text.standard},...item.variants.map(variant=>{
