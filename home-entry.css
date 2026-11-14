@@ -123,3 +123,7 @@
 
 .bird-eye{transform-origin:31.6px 11.5px}
 .bird-far-eye{transform-origin:25.7px 11.5px}
+
+.bird-leg-left{transform-origin:20px 30px}.bird-leg-right{transform-origin:27px 30px}
+.bird-shin-left{transform-origin:19.5px 33.5px}.bird-shin-right{transform-origin:26.5px 33.5px}
+.bird-foot-left{transform-origin:19px 37px}.bird-foot-right{transform-origin:26px 37px}

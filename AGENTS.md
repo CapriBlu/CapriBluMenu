@@ -99,3 +99,5 @@ Entrambi i ritorni dalla Carta dei Vini aprono menu/?category=drinks-beverage, m
 L’uccellino della Boutique accompagna ogni saltello con piccoli battiti delle due ali e oscillazioni della coda dal suo attacco; la coda reagisce ad anticipo e atterraggio. Conservare un solo passaggio, fermata finale e rispetto del movimento ridotto.
 
 L’uccellino anticipa ogni salto con un piccolo movimento della testa, la coda segue con inerzia smorzata e un singolo battito di palpebre chiude la sequenza. Tutte le parti tornano alla posa neutra finale; nessun ciclo aggiuntivo.
+
+Le zampette dell’uccellino sono articolate separatamente in anca, ginocchio e dita: raccolta durante il salto, atterraggio sfalsato di 35 ms e due piccoli passi di assestamento prima della posa finale. Conservare un passaggio solo e movimento ridotto.

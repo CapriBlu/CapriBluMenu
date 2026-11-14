@@ -80,7 +80,8 @@
       const turnStart=clock;clock+=1.05;
       add(.76,-24,.4,15);add(.47,-24,.46,19,.08);add(.2,-24,.41,16);
       add(0,0,.5,23);clock+=.95;
-      const frames=[],bagFrames=[],wingFrames=[],feetFrames=[];
+      const frames=[],bagFrames=[],wingFrames=[];
+      const legFrames=Object.fromEntries(['leg-left','leg-right','shin-left','shin-right','foot-left','foot-right'].map(key=>[key,[]]));
       const detailFrames=Object.fromEntries(['bird-head','bird-beak','bird-eye','bird-far-eye','bird-front-beak','bird-body','bird-chest','bird-tail','bird-far-wing'].map(key=>[key,[]]));
       let bagAngle=0,bagVelocity=0,tailAngle=0,tailVelocity=0;
       const smooth=t=>t*t*(3-2*t),mix=(a,b,t)=>a+(b-a)*t;
@@ -137,12 +138,34 @@
         frames.push({offset,transform:`translate(${x}px, ${y}px) rotate(${angle}deg) scale(${sx}, ${sy})`});
         bagFrames.push({offset,transform:`translate(${headX+11*(face-1)}px, ${headNod+2*front}px) rotate(${bagAngle+12*front}deg) scale(${1-.2*front},1)`});
         wingFrames.push({offset,transform:`translate(${5*front}px, ${-2*front}px) rotate(${wing+25*front}deg) scaleX(${1-.35*front})`});
-        feetFrames.push({offset,transform:`rotate(${feet}deg) scaleY(${1-Math.abs(feet)/80})`});
+        // Separate hip, knee and toes let each foot land and settle independently.
+        for(const [side,sign,delay] of [['left',-1,0],['right',1,.035]]){
+          let hip=feet*.15,knee=0,lift=0,toes=0;
+          if(segment){
+            const elapsed=time-segment.start;
+            if(elapsed<.12){
+              const bend=smooth(elapsed/.12);hip+=sign*10*bend;knee-=sign*18*bend;
+            }else if(elapsed<.12+segment.flight){
+              const phase=(elapsed-.12)/segment.flight,fold=Math.sin(Math.PI*phase);
+              hip+=sign*(30+5*Math.sin(2*Math.PI*phase+delay*20))*fold;
+              knee-=sign*58*fold;lift=-.8*fold;toes=sign*7*fold;
+            }else{
+              const contact=clamp((elapsed-.12-segment.flight-delay)/.19);
+              const cushion=Math.sin(Math.PI*contact)*Math.exp(-2*contact);
+              hip+=sign*17*cushion;knee-=sign*30*cushion;toes=-sign*5*cushion;
+            }
+          }
+          const stepPhase=(time-(clock-(side==='left'?.85:.59)))/.22;
+          if(stepPhase>0&&stepPhase<1){const step=Math.sin(Math.PI*stepPhase);lift-=1.8*step;hip+=sign*12*step;knee-=sign*18*step;}
+          legFrames['leg-'+side].push({offset,transform:`translate(0, ${lift}px) rotate(${hip}deg)`});
+          legFrames['shin-'+side].push({offset,transform:`rotate(${knee}deg)`});
+          legFrames['foot-'+side].push({offset,transform:`rotate(${-.75*(hip+knee)+toes}deg)`});
+        }
       }
       link.classList.add('is-bird-hopping');
       const timing={duration:clock*1000,easing:'linear',fill:'none'};
       journey=bird.animate(frames,timing);
-      for(const [element,keyframes] of [[link.querySelector('.bird-bag'),bagFrames],[link.querySelector('.bird-wing'),wingFrames],[link.querySelector('.bird-feet'),feetFrames],...Object.entries(detailFrames).map(([name,keyframes])=>[link.querySelector('.'+name),keyframes])]){
+      for(const [element,keyframes] of [[link.querySelector('.bird-bag'),bagFrames],[link.querySelector('.bird-wing'),wingFrames],...Object.entries(legFrames).map(([name,keyframes])=>[link.querySelector('.bird-'+name),keyframes]),...Object.entries(detailFrames).map(([name,keyframes])=>[link.querySelector('.'+name),keyframes])]){
         parts.push(element.animate(keyframes,timing));
       }
       await journey.finished;
