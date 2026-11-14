@@ -82,7 +82,7 @@
       add(0,0,.5,23);clock+=.95;
       const frames=[],bagFrames=[],wingFrames=[];
       const legFrames=Object.fromEntries(['leg-left','leg-right','shin-left','shin-right','foot-left','foot-right'].map(key=>[key,[]]));
-      const detailFrames=Object.fromEntries(['bird-head','bird-beak','bird-eye','bird-far-eye','bird-front-beak','bird-body','bird-chest','bird-tail','bird-far-wing'].map(key=>[key,[]]));
+      const detailFrames=Object.fromEntries(['bird-facing','bird-front-pose','bird-head','bird-beak','bird-eye','bird-far-eye','bird-front-beak','bird-body','bird-chest','bird-tail','bird-far-wing'].map(key=>[key,[]]));
       let bagAngle=0,bagVelocity=0,tailAngle=0,tailVelocity=0;
       const smooth=t=>t*t*(3-2*t),mix=(a,b,t)=>a+(b-a)*t;
       const count=Math.ceil(clock*60),dt=clock/count;
@@ -112,9 +112,9 @@
         let turn=smooth(clamp((time-turnStart)/1.05));
         if(time>clock-.9)turn=1-smooth(clamp((time-clock+.9)/.9));
         const yaw=turn*Math.PI,face=Math.cos(yaw),front=Math.sin(yaw);
-        // Turn separate volumes through a front pose; the body never flattens.
-        const headTurn=time<turnStart+1.05?smooth(clamp((time-turnStart+.1)/.9)):turn;
-        const headX=-18*headTurn+.9*lookAhead,headNod=-3*front-.7*Math.abs(lookAhead);
+        // Turn the complete profile together; a front pose preserves volume midway.
+        const localLook=lookAhead*(face<0?-1:1);
+        const headX=.9*localLook,headNod=-.7*Math.abs(localLook);
         const blinkPhase=(time-(clock-.32))/.18;
         const eyelid=blinkPhase>0&&blinkPhase<1?1-.94*Math.sin(Math.PI*blinkPhase)**2:1;
         if(front>.01){y-=5*front;angle+=4*front;sx*=1+.05*front;sy*=1-.035*front;feet+=8*Math.sin(turn*4*Math.PI)*front;}
@@ -126,18 +126,20 @@
         tailVelocity+=((tail-tailAngle)*160-tailVelocity*14)*dt;
         tailAngle+=tailVelocity*dt;
         const tailRest=1-smooth(clamp((time-clock+.4)/.4));
-        detailFrames['bird-head'].push({offset,transform:`translate(${headX}px, ${headNod}px) rotate(${-5*front-6*lookAhead}deg)`});
-        detailFrames['bird-beak'].push({offset,transform:`scaleX(${face})`,opacity:1-.45*front});
-        detailFrames['bird-front-beak'].push({offset,opacity:front**5});
-        detailFrames['bird-eye'].push({offset,transform:`translate(${-5.2*turn+.3*lookAhead}px,0) scaleY(${eyelid})`});
-        detailFrames['bird-far-eye'].push({offset,opacity:front**3,transform:`scaleY(${eyelid})`});
-        detailFrames['bird-body'].push({offset,transform:`scale(${1-.14*front}, ${1+.035*front})`});
-        detailFrames['bird-chest'].push({offset,opacity:.8*front});
-        detailFrames['bird-tail'].push({offset,transform:`scaleX(${face}) rotate(${tailAngle*tailRest-10*front}deg)`,opacity:1-.6*front});
-        detailFrames['bird-far-wing'].push({offset,opacity:Math.max(front,.45*wingLift),transform:`translate(${-2*front}px, ${-3*front}px) rotate(${wing*.55-12*front}deg)`});
+        detailFrames['bird-facing'].push({offset,transform:`scaleX(${face})`,opacity:1-front**4});
+        detailFrames['bird-front-pose'].push({offset,opacity:front**4});
+        detailFrames['bird-head'].push({offset,transform:`translate(${headX}px, ${headNod}px) rotate(${-6*localLook}deg)`});
+        detailFrames['bird-beak'].push({offset,transform:'scaleX(1)',opacity:1});
+        detailFrames['bird-front-beak'].push({offset,opacity:0});
+        detailFrames['bird-eye'].push({offset,transform:`translate(${.3*localLook}px,0) scaleY(${eyelid})`});
+        detailFrames['bird-far-eye'].push({offset,opacity:0,transform:`scaleY(${eyelid})`});
+        detailFrames['bird-body'].push({offset,transform:'scale(1, 1)'});
+        detailFrames['bird-chest'].push({offset,opacity:0});
+        detailFrames['bird-tail'].push({offset,transform:`rotate(${tailAngle*tailRest}deg)`,opacity:1});
+        detailFrames['bird-far-wing'].push({offset,opacity:.45*wingLift,transform:`rotate(${wing*.55}deg)`});
         frames.push({offset,transform:`translate(${x}px, ${y}px) rotate(${angle}deg) scale(${sx}, ${sy})`});
-        bagFrames.push({offset,transform:`translate(${headX+11*(face-1)}px, ${headNod+2*front}px) rotate(${bagAngle+12*front}deg) scale(${1-.2*front},1)`});
-        wingFrames.push({offset,transform:`translate(${5*front}px, ${-2*front}px) rotate(${wing+25*front}deg) scaleX(${1-.35*front})`});
+        bagFrames.push({offset,transform:`translate(${headX}px, ${headNod}px) rotate(${bagAngle}deg)`});
+        wingFrames.push({offset,transform:`rotate(${wing}deg)`});
         // Separate hip, knee and toes let each foot land and settle independently.
         for(const [side,sign,delay] of [['left',-1,0],['right',1,.035]]){
           let hip=feet*.15,knee=0,lift=0,toes=0;

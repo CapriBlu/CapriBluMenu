@@ -103,3 +103,5 @@ L’uccellino anticipa ogni salto con un piccolo movimento della testa, la coda 
 Le zampette dell’uccellino sono articolate separatamente in anca, ginocchio e dita: raccolta durante il salto, atterraggio sfalsato di 35 ms e due piccoli passi di assestamento prima della posa finale. Conservare un passaggio solo e movimento ridotto.
 
 La mascotte Boutique riprende il profilo slanciato dell’uccello del logo: becco lungo blu scuro, corpo affusolato, coda sottile e ala azzurra a mezzaluna. Il logo originale resta invariato. Le pose animate hanno raccordi morbidi su tutte le articolazioni, compressione moderata e velocità orizzontale progressiva.
+
+La girata dell’uccellino orienta tutta la sagoma insieme, comprese ala, coda, becco, zampe e borsa. Un breve raccordo con posa frontale mantiene il volume; testa e borsa non vanno traslate separatamente per cambiare direzione.
