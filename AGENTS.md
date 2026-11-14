@@ -89,3 +89,5 @@ La Carta dei Vini include dodici etichette: aggiunte Nua Brut, Nuance Falanghina
 La Carta dei Vini offre i filtri Tutti, Bianco, Rosso, Rosé e Bollicine. Filtro, carosello, frecce e contatore devono usare la stessa selezione; con una sola etichetta fermare lo scorrimento e nascondere le frecce. Le dodici etichette attuali includono otto rossi, una Falanghina bianca, un Nuance Rosé e due bollicine (Nua Brut e Shahmat).
 
 Le card Bevande & Cocktail sono compatte: area immagine 180 px su desktop e 142 px su telefono, titoli vicini ai PNG. Le singole bevande aprono il dettaglio da tutta la card, anche da tastiera, senza il pulsante separato Scopri di più. Le card del menu cibo conservano i propri comandi.
+
+Le didascalie delle card bevande e dei gruppi si sovrappongono leggermente al bordo inferiore delle immagini (28 px desktop, 24 px telefono), con riquadro blu semitrasparente e sfumatura morbida. Mantenere libere le etichette principali e leggibili nomi e prezzi.

@@ -530,3 +530,8 @@ footer{border-color:#ffffff40;padding-bottom:58px}
  .pizza-card.compact-drink .card-body{padding:10px 10px 14px}
  .pizza-card.compact-drink h3{font-size:20px}
 }
+
+/* Translucent captions overlap the lower edge of drink images. */
+.collection-caption,.pizza-card.compact-drink .card-body{position:relative;inset:auto;z-index:1;margin-top:-28px;padding-top:18px;border-top:1px solid #b5d8e52e;border-radius:14px 14px 0 0;background:linear-gradient(180deg,#0b30496b,#082e46de 46%,#082e46f0);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
+.collection-caption{flex:1;align-content:end}
+@media(max-width:600px){.collection-caption,.pizza-card.compact-drink .card-body{margin-top:-24px;padding-top:15px;border-radius:12px 12px 0 0}}
