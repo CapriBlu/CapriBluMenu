@@ -3,14 +3,22 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {visibleItems,groupDepartmentItems,drinkCollections} from '../assets/js/model.js';
 const catalog=JSON.parse(await readFile(new URL('../data/catalog.json',import.meta.url),'utf8'));
-test('Two collections replace nine drink cards without losing or duplicating any product',()=>{
+test('Drink Menu groups all drinks and cocktails without losing or duplicating products',()=>{
   const items=visibleItems(catalog,'autunno-2026','drinks-beverage'),entries=groupDepartmentItems(items);
-  assert.equal(entries.length,5);
-  assert.deepEqual(entries.filter(e=>e.type==='collection').map(e=>[e.collection.id,e.members.length]),[['soft-drink',5],['bottled-beers',4]]);
+  assert.equal(items.length,15);assert.equal(entries.length,6);
+  assert.deepEqual(entries.filter(e=>e.type==='collection').map(e=>[e.collection.id,e.members.length]),[['soft-drink',5],['bottled-beers',4],['cocktails',3]]);
   assert.deepEqual(entries.filter(e=>e.type==='item').map(e=>e.item.id),['acqua','birra-spina','vino-locale']);
   const flattened=entries.flatMap(e=>e.type==='collection'?e.members:[e.item]);
   assert.deepEqual(flattened.map(i=>i.id).sort(),items.map(i=>i.id).sort());
   for(const item of flattened)assert.equal(item.priceCents,items.find(i=>i.id===item.id).priceCents);
+});
+
+test('Old Spritz links open cocktails inside the consolidated Drink Menu',async()=>{
+  const {resolveLegacySelection}=await import('../assets/js/model.js');
+  const selection=resolveLegacySelection(catalog,'aperol-spritz','spritz',null);
+  assert.equal(selection.category,'drinks-beverage');assert.equal(selection.collection,'cocktails');
+  assert.equal(selection.item,'aperol-spritz');
+  assert.ok(visibleItems(catalog,'autunno-2026','drinks-beverage').some(i=>i.id===selection.item));
 });
 test('Collections do not absorb pizza or unrelated search matches',()=>{
   const pizza=visibleItems(catalog,'autunno-2026','pizze-tradizione');

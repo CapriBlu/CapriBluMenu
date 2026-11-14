@@ -53,10 +53,11 @@
     "categoryBack": "Categorie",
     "homeLabel": "Home",
     "moreCategories": "Altri reparti",
-    "drinksShortcut": "Drink & Beverage",
+    "drinksShortcut": "Drink Menu",
     "languageError": "Non è stato possibile cambiare lingua. Riprova.",
     "softDrinks": "Soft Drink",
-    "bottledBeers": "Birre in bottiglia"
+    "bottledBeers": "Birre in bottiglia",
+    "cocktails": "Cocktail"
   },
   "categories": {
     "fritti": "I Fritti",
@@ -74,8 +75,8 @@
     "contorni": "Contorni",
     "insalatone": "Insalatone",
     "dessert": "Dessert",
-    "drinks-beverage": "Drinks & Beverage",
-    "spritz": "Our Spritz"
+    "drinks-beverage": "Drink Menu",
+    "spritz": "Cocktail"
   },
   "items": {
     "tricolore": {

@@ -1,6 +1,7 @@
 export const drinkCollections=[
   {id:'soft-drink',labelKey:'softDrinks',itemIds:['coca-cola','coca-cola-zero','sprite','fanta','lemonsoda'],previewIds:['coca-cola','sprite','fanta']},
-  {id:'bottled-beers',labelKey:'bottledBeers',itemIds:['nastro-azzurro','heineken','tennents','birra-nartigiana'],previewIds:['nastro-azzurro','heineken','tennents']}
+  {id:'bottled-beers',labelKey:'bottledBeers',itemIds:['nastro-azzurro','heineken','tennents','birra-nartigiana'],previewIds:['nastro-azzurro','heineken','tennents']},
+  {id:'cocktails',labelKey:'cocktails',itemIds:['aperol-spritz','blu-spritz','limoncello-spritz'],previewIds:['aperol-spritz','blu-spritz','limoncello-spritz']}
 ];
 export function groupDepartmentItems(items){
   const grouped=new Set();
@@ -14,11 +15,14 @@ export function groupDepartmentItems(items){
 }
 export function visibleItems(catalog, editionId, categoryId) {
   const hidden=new Set(catalog.categories.filter(category=>category.status==='variant-only').map(category=>category.id));
-  return catalog.items.filter(item => !hidden.has(item.categoryId) && item.editionIds.includes(editionId) && (!categoryId || item.categoryId === categoryId)).sort((a,b) => a.order-b.order);
+  const department=id=>catalog.categories.find(category=>category.id===id)?.mergedInto||id;
+  return catalog.items.filter(item => !hidden.has(item.categoryId) && item.editionIds.includes(editionId) && (!categoryId || department(item.categoryId) === department(categoryId))).sort((a,b) => a.order-b.order);
 }
 export function resolveLegacySelection(catalog, itemId, categoryId, variantId) {
   const archived=catalog.items.find(item=>item.id===itemId&&item.baseItemId);
   if(archived)return {item:archived.baseItemId,category:catalog.items.find(item=>item.id===archived.baseItemId)?.categoryId||null,variant:'ruota-di-carro'};
+  const merged=catalog.categories.find(category=>category.id===categoryId&&category.mergedInto);
+  if(merged)return {item:itemId,category:merged.mergedInto,variant:variantId,collection:merged.collectionId||null};
   return {item:itemId,category:catalog.categories.find(category=>category.id===categoryId)?.status==='variant-only'?null:categoryId,variant:variantId};
 }
 export function selectedOffer(item, variantId) {

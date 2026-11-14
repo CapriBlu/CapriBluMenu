@@ -53,11 +53,12 @@
     "categoryBack": "Kategorie",
     "homeLabel": "Strona główna",
     "moreCategories": "Więcej kategorii",
-    "drinksShortcut": "Napoje",
+    "drinksShortcut": "Drink Menu",
     "languageError": "Nie udało się zmienić języka. Spróbuj ponownie.",
     "itemFew": "propozycje",
     "softDrinks": "Napoje bezalkoholowe",
-    "bottledBeers": "Piwa butelkowe"
+    "bottledBeers": "Piwa butelkowe",
+    "cocktails": "Koktajle"
   },
   "categories": {
     "fritti": "Smażone przekąski",
@@ -75,8 +76,8 @@
     "contorni": "Dodatki",
     "insalatone": "Duże sałatki",
     "dessert": "Desery",
-    "drinks-beverage": "Napoje",
-    "spritz": "Nasze Spritze"
+    "drinks-beverage": "Drink Menu",
+    "spritz": "Koktajle"
   },
   "items": {
     "tricolore": {

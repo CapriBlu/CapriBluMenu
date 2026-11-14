@@ -53,10 +53,11 @@
     "categoryBack": "Categories",
     "homeLabel": "Home",
     "moreCategories": "More categories",
-    "drinksShortcut": "Drinks & Beverage",
+    "drinksShortcut": "Drink Menu",
     "languageError": "The language could not be changed. Please try again.",
     "softDrinks": "Soft Drinks",
-    "bottledBeers": "Bottled beers"
+    "bottledBeers": "Bottled beers",
+    "cocktails": "Cocktails"
   },
   "categories": {
     "fritti": "Fried Bites",
@@ -74,8 +75,8 @@
     "contorni": "Side Dishes",
     "insalatone": "Grand Gourmet Salads",
     "dessert": "Sweet Temptations",
-    "drinks-beverage": "Drinks & Beverage",
-    "spritz": "Our Spritz"
+    "drinks-beverage": "Drink Menu",
+    "spritz": "Cocktails"
   },
   "items": {
     "tricolore": {

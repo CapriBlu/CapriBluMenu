@@ -1,4 +1,4 @@
-import {visibleItems, selectedOffer, translatedItem, validateMenu, resolveLegacySelection, drinkCollections, groupDepartmentItems} from './model.js?v=beer-cutouts-20261113-1';
+import {visibleItems, selectedOffer, translatedItem, validateMenu, resolveLegacySelection, drinkCollections, groupDepartmentItems} from './model.js?v=drink-menu-20261114-1';
 import {initialLanguages, createLocaleStore} from './locale-store.js?v=eight-languages-20261112-1';
 const base = new URL('../../',import.meta.url);
 const $ = id => document.getElementById(id);
@@ -63,7 +63,6 @@ function render(){
   $('language-label').textContent=$('detail-language-label').textContent=text.language;
   $('heading').textContent=text.menu;
   $('pdf-link').textContent=text.downloadPdf+' ↓';$('pdf-link').href=new URL(config.sourcePdf,base);
-  $('wine-link').textContent=text.wineList;
   document.querySelector('.topbar .home').href=$('back-link').href=new URL('../index.html?lang='+state.language,base);
   document.querySelector('.menu-actions').setAttribute('aria-label',text.menu);
   $('toggle-search').setAttribute('aria-label',text.search);
@@ -74,7 +73,7 @@ function render(){
   $('overview-title').textContent=text.overviewTitle;$('overview-subtitle').textContent=text.chooseCategory;
   $('all-categories').textContent='← '+text.categoryBack;$('all-categories').setAttribute('aria-pressed',String(!state.category&&!state.query));$('navigation-home').textContent=text.homeLabel+' ↗';$('navigation-home').href=new URL('../index.html?lang='+state.language,base);
   $('categories').setAttribute('aria-label',text.chooseCategory);$('category-hub').setAttribute('aria-label',text.chooseCategory);
-  const categories=catalog.categories.filter(c=>visibleItems(catalog,config.activeEdition,c.id).length).sort((a,b)=>a.order-b.order);
+  const categories=catalog.categories.filter(c=>!c.mergedInto&&visibleItems(catalog,config.activeEdition,c.id).length).sort((a,b)=>a.order-b.order);
   const primary=['drinks-beverage','pizze-tradizione','fritti','antipasti','primi'];
   const categoryButton=category=>{const button=create('button','category-shortcut',category.id==='drinks-beverage'?text.drinksShortcut:categoryText(category.id));button.type='button';button.dataset.category=category.id;button.setAttribute('aria-pressed',String(state.category===category.id));return button;};
   const currentCategory=state.category?categoryText(state.category):state.query?text.results:'';
@@ -96,10 +95,17 @@ function render(){
     const grid=create('div','category-grid');
     for(const category of categories.filter(c=>c.group===group)){
       const count=visibleItems(catalog,config.activeEdition,category.id).length,link=create('a','category-tile');
-      const url=new URL(location.href);url.searchParams.set('category',category.id);for(const key of ['q','item','variant'])url.searchParams.delete(key);
+      const url=new URL(location.href);url.searchParams.set('category',category.id);for(const key of ['q','item','variant','collection'])url.searchParams.delete(key);
       link.href=url.href;link.dataset.category=category.id;
       if(category.cover){const img=imageElement(category.cover,'thumbnail','');img.className='category-cover';link.append(img);}else{const decoration=create('span','category-decoration','CB');decoration.setAttribute('aria-hidden','true');link.append(decoration);}
+      if(category.id==='drinks-beverage')link.classList.add('drink-menu-tile');
       const caption=create('span','category-caption');caption.append(create('span','category-name',categoryText(category.id)),create('span','category-count',count+' '+countLabel(count)));link.append(caption);grid.append(link);
+    }
+    if(group==='bevande'){
+      section.classList.add('beverage-entry-group');
+      const wine=create('a','category-tile wine-menu-tile');wine.id='wine-link';wine.href=new URL('../vini.html',base);wine.setAttribute('aria-label',text.wineList);
+      const image=imageElement('biblioteca/beverage/thumbnails/vino-locale-cutout-v1.png','thumbnail','');image.className='category-cover';wine.append(image);
+      const caption=create('span','category-caption');caption.append(create('span','category-name',text.wineList),create('span','category-count','↗'));wine.append(caption);grid.append(wine);
     }
     section.append(grid);return section;
   }):[]));
@@ -176,7 +182,8 @@ async function boot(){
     const errors=validateMenu({...config,enabledLanguages:languages},catalog,editions,locales);if(errors.length)throw new Error(errors.join('\n'));
     const selection=resolveLegacySelection(catalog,params.get('item'),params.get('category'),params.get('variant'));
     state.category=catalog.categories.some(category=>category.id===selection.category&&visibleItems(catalog,config.activeEdition,category.id).length)?selection.category:null;
-    state.collection=state.category==='drinks-beverage'&&drinkCollections.some(collection=>collection.id===params.get('collection'))?params.get('collection'):null;
+    const requestedCollection=params.get('collection')||selection.collection;
+    state.collection=state.category==='drinks-beverage'&&drinkCollections.some(collection=>collection.id===requestedCollection)?requestedCollection:null;
     state.query=(params.get('q')||'').slice(0,120);
     const item=currentItems().find(item=>item.id===selection.item);
     state.item=item?.id||null;state.variant=item?.variants.some(variant=>variant.id===selection.variant)?selection.variant:null;
@@ -230,7 +237,7 @@ for (const id of ['language','detail-language']) $(id).addEventListener('change'
     const errors=validateMenu({...config,enabledLanguages:initialLanguages(config,language)},catalog,editions,available);
     if(errors.length)throw new Error(errors.join('\n'));
     locales=available;
-    if(state.item){state.category=catalog.items.find(item=>item.id===state.item).categoryId;state.query='';}
+    if(state.item){const itemCategory=catalog.items.find(item=>item.id===state.item).categoryId;state.category=catalog.categories.find(category=>category.id===itemCategory)?.mergedInto||itemCategory;state.query='';}
     state.language=language;try{localStorage.setItem('capriblu-menu-language',language);}catch{}render();
   }catch(error){
     console.error(error);$('language').value=$('detail-language').value=state.language;

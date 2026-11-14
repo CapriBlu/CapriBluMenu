@@ -164,7 +164,7 @@
         7
       ],
       "group": "bevande",
-      "cover": "biblioteca/beverage/thumbnails/cocacola.webp"
+      "cover": "biblioteca/beverage/thumbnails/blu-spritz-cutout-v1.png"
     },
     {
       "id": "spritz",
@@ -174,7 +174,9 @@
         7
       ],
       "group": "bevande",
-      "cover": "biblioteca/beverage/thumbnails/aperol-spritz.webp"
+      "cover": "biblioteca/beverage/thumbnails/aperol-spritz.webp",
+      "mergedInto": "drinks-beverage",
+      "collectionId": "cocktails"
     }
   ],
   "items": [
@@ -3622,8 +3624,8 @@
       "categoryId": "spritz",
       "priceCents": 900,
       "order": 0,
-      "thumbnail": "biblioteca/beverage/thumbnails/aperol-spritz.webp",
-      "image": "biblioteca/beverage/full/aperol-spritz.webp",
+      "thumbnail": "biblioteca/beverage/thumbnails/aperol-spritz-cutout-v1.png",
+      "image": "biblioteca/beverage/full/aperol-spritz-cutout-v1.png",
       "allergenCodes": null,
       "allergenStatus": "pending-review",
       "available": true,
@@ -3639,15 +3641,16 @@
       "reviewStatus": "transcribed",
       "photoSource": {
         "file": ".Beverage\\aperol spritz.jpg"
-      }
+      },
+      "imageStyle": "cutout"
     },
     {
       "id": "blu-spritz",
       "categoryId": "spritz",
       "priceCents": 1000,
       "order": 1,
-      "thumbnail": "biblioteca/beverage/thumbnails/blu-spritz.webp",
-      "image": "biblioteca/beverage/full/blu-spritz.webp",
+      "thumbnail": "biblioteca/beverage/thumbnails/blu-spritz-cutout-v1.png",
+      "image": "biblioteca/beverage/full/blu-spritz-cutout-v1.png",
       "allergenCodes": null,
       "allergenStatus": "pending-review",
       "available": true,
@@ -3663,15 +3666,16 @@
       "reviewStatus": "transcribed",
       "photoSource": {
         "file": ".Beverage\\blu spritz.jpeg"
-      }
+      },
+      "imageStyle": "cutout"
     },
     {
       "id": "limoncello-spritz",
       "categoryId": "spritz",
       "priceCents": 800,
       "order": 2,
-      "thumbnail": "biblioteca/beverage/thumbnails/limoncello-spritz.webp",
-      "image": "biblioteca/beverage/full/limoncello-spritz.webp",
+      "thumbnail": "biblioteca/beverage/thumbnails/limoncello-spritz-cutout-v1.png",
+      "image": "biblioteca/beverage/full/limoncello-spritz-cutout-v1.png",
       "allergenCodes": null,
       "allergenStatus": "pending-review",
       "available": true,
@@ -3687,7 +3691,8 @@
       "reviewStatus": "transcribed",
       "photoSource": {
         "file": ".Beverage\\limoncello spritz.jpg"
-      }
+      },
+      "imageStyle": "cutout"
     },
     {
       "id": "ruota-margherita",

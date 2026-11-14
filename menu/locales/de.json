@@ -53,10 +53,11 @@
     "categoryBack": "Kategorien",
     "homeLabel": "Startseite",
     "moreCategories": "Weitere Kategorien",
-    "drinksShortcut": "Getränke",
+    "drinksShortcut": "Drink Menu",
     "languageError": "Die Sprache konnte nicht geändert werden. Bitte versuchen Sie es erneut.",
     "softDrinks": "Softdrinks",
-    "bottledBeers": "Flaschenbiere"
+    "bottledBeers": "Flaschenbiere",
+    "cocktails": "Cocktails"
   },
   "categories": {
     "fritti": "Frittierte Spezialitäten",
@@ -74,8 +75,8 @@
     "contorni": "Beilagen",
     "insalatone": "Große Salate",
     "dessert": "Desserts",
-    "drinks-beverage": "Getränke",
-    "spritz": "Unsere Spritz"
+    "drinks-beverage": "Drink Menu",
+    "spritz": "Cocktails"
   },
   "items": {
     "tricolore": {

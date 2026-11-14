@@ -53,10 +53,11 @@
     "categoryBack": "Danh mục",
     "homeLabel": "Trang chủ",
     "moreCategories": "Danh mục khác",
-    "drinksShortcut": "Đồ uống",
+    "drinksShortcut": "Drink Menu",
     "languageError": "Không thể đổi ngôn ngữ. Vui lòng thử lại.",
     "softDrinks": "Nước ngọt",
-    "bottledBeers": "Bia chai"
+    "bottledBeers": "Bia chai",
+    "cocktails": "Cocktail"
   },
   "categories": {
     "fritti": "Món chiên",
@@ -74,8 +75,8 @@
     "contorni": "Món ăn kèm",
     "insalatone": "Salad phần lớn",
     "dessert": "Tráng miệng",
-    "drinks-beverage": "Đồ uống",
-    "spritz": "Spritz của chúng tôi"
+    "drinks-beverage": "Drink Menu",
+    "spritz": "Cocktail"
   },
   "items": {
     "tricolore": {
