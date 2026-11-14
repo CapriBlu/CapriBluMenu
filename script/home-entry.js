@@ -96,15 +96,15 @@
           const s=segment,t=time-s.start,direction=Math.sign(s.to-s.from);
           x=s.from;y=s.floor;
           if(t<.12){
-            const p=smooth(t/.12);sx=1+.09*p;sy=1-.14*p;y+=2*p;angle=-3*direction*p;tail=-7*p;wing=-6*p;lookAhead=direction*Math.sin(Math.PI*t/.24);
+            const p=smooth(t/.12);sx=1+.05*p;sy=1-.08*p;y+=2*p;angle=-3*direction*p;tail=-7*p;wing=-6*p;lookAhead=direction*Math.sin(Math.PI*t/.24);
           }else if(t<.12+s.flight){
             const p=(t-.12)/s.flight,arc=Math.sin(Math.PI*p);lookAhead=direction*Math.exp(-6*p);
-            x=mix(s.from,s.to,p);y=mix(s.floor,s.ground,smooth(p))-4*s.height*p*(1-p);
+            x=mix(s.from,s.to,smooth(p));y=mix(s.floor,s.ground,smooth(p))-4*s.height*p*(1-p);
             sx=1-.055*arc;sy=1+.075*arc;angle=direction*(-7+12*p)*arc;
             wingLift=arc;wing=-24*arc-11*Math.sin(4*Math.PI*p)*arc;tail=12*Math.sin(2*Math.PI*p)*arc-6*arc;feet=18*arc;bagTarget=-direction*21*Math.sin(Math.PI*p*1.35);
           }else{
             const p=Math.min((t-.12-s.flight)/.19,1),settle=Math.sin(Math.PI*p)*Math.exp(-2*p);
-            x=s.to;y=s.ground+3*settle;sx=1+.16*settle;sy=1-.2*settle;
+            x=s.to;y=s.ground+3*settle;sx=1+.09*settle;sy=1-.12*settle;
             angle=direction*3*settle;bagTarget=direction*12*settle;tail=16*settle;wing=-8*settle;
           }
         }
@@ -114,7 +114,7 @@
         const yaw=turn*Math.PI,face=Math.cos(yaw),front=Math.sin(yaw);
         // Turn separate volumes through a front pose; the body never flattens.
         const headTurn=time<turnStart+1.05?smooth(clamp((time-turnStart+.1)/.9)):turn;
-        const headX=-14*headTurn+.9*lookAhead,headNod=-3*front-.7*Math.abs(lookAhead);
+        const headX=-18*headTurn+.9*lookAhead,headNod=-3*front-.7*Math.abs(lookAhead);
         const blinkPhase=(time-(clock-.32))/.18;
         const eyelid=blinkPhase>0&&blinkPhase<1?1-.94*Math.sin(Math.PI*blinkPhase)**2:1;
         if(front>.01){y-=5*front;angle+=4*front;sx*=1+.05*front;sy*=1-.035*front;feet+=8*Math.sin(turn*4*Math.PI)*front;}
@@ -147,8 +147,8 @@
               const bend=smooth(elapsed/.12);hip+=sign*10*bend;knee-=sign*18*bend;
             }else if(elapsed<.12+segment.flight){
               const phase=(elapsed-.12)/segment.flight,fold=Math.sin(Math.PI*phase);
-              hip+=sign*(30+5*Math.sin(2*Math.PI*phase+delay*20))*fold;
-              knee-=sign*58*fold;lift=-.8*fold;toes=sign*7*fold;
+              hip+=sign*(22+4*Math.sin(2*Math.PI*phase+delay*20))*fold;
+              knee-=sign*40*fold;lift=-.8*fold;toes=sign*7*fold;
             }else{
               const contact=clamp((elapsed-.12-segment.flight-delay)/.19);
               const cushion=Math.sin(Math.PI*contact)*Math.exp(-2*contact);
@@ -162,6 +162,19 @@
           legFrames['foot-'+side].push({offset,transform:`rotate(${-.75*(hip+knee)+toes}deg)`});
         }
       }
+      // Ease every joint through phase boundaries rather than snapping to each pose.
+      const soften=keyframes=>{
+        let values;
+        for(const frame of keyframes){
+          if(!frame.transform)continue;
+          const targets=frame.transform.match(/-?\d*\.?\d+(?:e[-+]?\d+)?/gi).map(Number);
+          if(!values)values=[...targets];
+          const endBlend=smooth(Math.max(0,Math.min(1,(frame.offset*clock-clock+.18)/.18)));
+          values=values.map((value,i)=>value+(targets[i]-value)*(1-Math.exp(-dt/.032)));
+          let i=0;frame.transform=frame.transform.replace(/-?\d*\.?\d+(?:e[-+]?\d+)?/gi,()=>{const j=i++;return String(mix(values[j],targets[j],endBlend));});
+        }
+      };
+      [frames,bagFrames,wingFrames,...Object.values(legFrames),...Object.values(detailFrames)].forEach(soften);
       link.classList.add('is-bird-hopping');
       const timing={duration:clock*1000,easing:'linear',fill:'none'};
       journey=bird.animate(frames,timing);

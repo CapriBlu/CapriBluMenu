@@ -101,3 +101,5 @@ L’uccellino della Boutique accompagna ogni saltello con piccoli battiti delle 
 L’uccellino anticipa ogni salto con un piccolo movimento della testa, la coda segue con inerzia smorzata e un singolo battito di palpebre chiude la sequenza. Tutte le parti tornano alla posa neutra finale; nessun ciclo aggiuntivo.
 
 Le zampette dell’uccellino sono articolate separatamente in anca, ginocchio e dita: raccolta durante il salto, atterraggio sfalsato di 35 ms e due piccoli passi di assestamento prima della posa finale. Conservare un passaggio solo e movimento ridotto.
+
+La mascotte Boutique riprende il profilo slanciato dell’uccello del logo: becco lungo blu scuro, corpo affusolato, coda sottile e ala azzurra a mezzaluna. Il logo originale resta invariato. Le pose animate hanno raccordi morbidi su tutte le articolazioni, compressione moderata e velocità orizzontale progressiva.
