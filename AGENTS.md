@@ -93,3 +93,5 @@ Le card Bevande & Cocktail sono compatte: area immagine 180 px su desktop e 142 
 Le didascalie delle card bevande e dei gruppi si sovrappongono leggermente al bordo inferiore delle immagini (28 px desktop, 24 px telefono), con riquadro blu semitrasparente e sfumatura morbida. Mantenere libere le etichette principali e leggibili nomi e prezzi.
 
 Rifinitura card bevande: vetro blu più trasparente con leggera sfocatura e riflesso superiore, sovrapposizione 40 px desktop e 34 px telefono. Acqua descritta come acqua alla spina filtrata, confermata dal titolare, nelle otto lingue.
+
+Entrambi i ritorni dalla Carta dei Vini aprono menu/?category=drinks-beverage, mai drink.html. Conservare la lingua selezionata passando dal menu alla carta e tornando alle bevande.
