@@ -1,0 +1,128 @@
+{
+  "limoncello": {
+    "image": "./img/boutique/optimized/full/bott.Limoncello.webp",
+    "kicker": "Collezione Liquori",
+    "title": "Limoncello Capri Blu",
+    "description": "Ispirato ai profumi dei limoni della Penisola Sorrentina, racchiuso in una bottiglia decorata a mano.",
+    "price": "14",
+    "glowStrong": "rgba(255,218,84,.34)",
+    "glowSoft": "rgba(255,194,32,.13)",
+    "pairings": true,
+    "id": "limoncello",
+    "previewTitle": "Limoncello"
+  },
+  "meloncello": {
+    "image": "./img/boutique/optimized/full/bott.meloncello.webp",
+    "kicker": "Collezione Liquori",
+    "title": "Meloncello Capri Blu",
+    "description": "Liquore cremoso e profumato al melone, presentato nella bottiglia decorata Capri Blu.",
+    "price": "14",
+    "glowStrong": "rgba(255,151,34,.40)",
+    "glowSoft": "rgba(255,105,15,.16)",
+    "pairings": true,
+    "id": "meloncello",
+    "previewTitle": "Meloncello"
+  },
+  "cremadilimone": {
+    "image": "./img/boutique/optimized/full/Bott.cremadilimone.webp",
+    "kicker": "Collezione Liquori",
+    "title": "Crema di limone Capri Blu",
+    "description": "Una crema al limone morbida e vellutata, ispirata ai profumi della Penisola Sorrentina.",
+    "price": "14",
+    "glowStrong": "rgba(255,244,183,.38)",
+    "glowSoft": "rgba(255,225,125,.15)",
+    "pairings": true,
+    "id": "cremadilimone",
+    "previewTitle": "Crema di limone"
+  },
+  "acqua": {
+    "image": "./img/boutique/optimized/full/bott.acqua.CapriBlu.webp",
+    "kicker": "Capri Blu Table Collection",
+    "title": "Acqua Capri Blu 0,75 l",
+    "description": "La bottiglia Capri Blu per la tavola, disponibile sia naturale sia frizzante.",
+    "price": "10",
+    "glowStrong": "rgba(142,220,255,.36)",
+    "glowSoft": "rgba(79,167,255,.14)",
+    "id": "acqua",
+    "previewTitle": "Acqua Capri Blu"
+  },
+  "nucis": {
+    "image": "./img/boutique/optimized/full/bott.Nucis.Nocillo.webp",
+    "kicker": "Selezione d'autore",
+    "title": "Nucis – Nocino Assoluto",
+    "description": "Un nocino intenso e raffinato, nato dalla collaborazione tra Capri Blu e Andrea Ragosta.",
+    "price": "40",
+    "glowStrong": "rgba(150,108,69,.38)",
+    "glowSoft": "rgba(83,53,30,.18)",
+    "link": "https://andrearagosta.com/pages/nucis",
+    "pairings": true,
+    "id": "nucis",
+    "previewTitle": "Nucis"
+  },
+  "shotvetro": {
+    "image": "./img/boutique/optimized/full/bicchierino.blu.shot.webp",
+    "kicker": "Capri Blu Table Collection",
+    "title": "Bicchierino in vetro Capri Blu",
+    "description": "Bicchierino in vetro blu con logo Capri Blu, ideale per limoncello, meloncello e liquori artigianali.",
+    "price": "3",
+    "glowStrong": "rgba(88,170,255,.38)",
+    "glowSoft": "rgba(35,89,210,.17)",
+    "id": "shotvetro",
+    "previewTitle": "Bicchierino in vetro"
+  },
+  "shotceramica": {
+    "image": "./img/boutique/optimized/full/bicchierino.ceramica.shot.webp",
+    "kicker": "Ceramiche Capri Blu",
+    "title": "Bicchierino in ceramica Capri Blu",
+    "description": "Bicchierino artigianale in ceramica, pensato per la degustazione dei liquori Capri Blu.",
+    "price": "5",
+    "glowStrong": "rgba(255,247,225,.36)",
+    "glowSoft": "rgba(80,120,220,.13)",
+    "id": "shotceramica",
+    "previewTitle": "Bicchierino in ceramica"
+  },
+  "piattopiccolo1": {
+    "image": "./img/boutique/optimized/full/piattino.piccolino1.webp",
+    "kicker": "Ceramiche Capri Blu",
+    "title": "Piattino Capri Blu – Case sul mare",
+    "description": "Piattino artigianale in ceramica dipinta a mano, ispirato ai colori e alle architetture della Costiera.",
+    "price": "12",
+    "glowStrong": "rgba(134,205,255,.35)",
+    "glowSoft": "rgba(57,111,203,.14)",
+    "id": "piattopiccolo1",
+    "previewTitle": "Piattino Case sul mare"
+  },
+  "piattopiccolo2": {
+    "image": "./img/boutique/optimized/full/piattino.piccolino.nuovo2.webp",
+    "kicker": "Ceramiche Capri Blu",
+    "title": "Piattino Capri Blu – Borgo mediterraneo",
+    "description": "Ceramica artigianale con decorazione mediterranea, onde, case colorate e dettagli dipinti a mano.",
+    "price": "12",
+    "glowStrong": "rgba(255,211,103,.34)",
+    "glowSoft": "rgba(86,156,224,.14)",
+    "id": "piattopiccolo2",
+    "previewTitle": "Piattino Borgo mediterraneo"
+  },
+  "piattomedio": {
+    "image": "./img/boutique/optimized/full/piattino.medio.capriblu.webp",
+    "kicker": "Ceramiche Capri Blu",
+    "title": "Piatto Capri Blu – Logo Classic",
+    "description": "Piatto in ceramica con il logo Capri Blu, realizzato e decorato artigianalmente.",
+    "price": "15",
+    "glowStrong": "rgba(225,240,255,.35)",
+    "glowSoft": "rgba(47,92,178,.14)",
+    "id": "piattomedio",
+    "previewTitle": "Piatto Logo Classic"
+  },
+  "tamburello": {
+    "image": "./img/boutique/optimized/full/file_00000000f6c481f4adb760489839a24b.webp",
+    "kicker": "Tradizione Napoletana",
+    "title": "Tamburello Capri Blu",
+    "description": "Un piccolo omaggio alla tradizione napoletana: il nostro tamburello Capri Blu, decorato con i colori e i simboli del Mediterraneo, ci riporta subito all’energia e all’allegria della fantastica Tarantella Napoletana.",
+    "price": "10",
+    "glowStrong": "rgba(255,224,150,.34)",
+    "glowSoft": "rgba(70,150,230,.15)",
+    "id": "tamburello",
+    "previewTitle": "Tamburello Capri Blu"
+  }
+}

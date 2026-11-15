@@ -1,196 +1,234 @@
 (() => {
-  const trigger=document.getElementById('discover-menu'),panel=document.getElementById('language-panel'),label=document.getElementById('discover-menu-label');
-  if(!trigger||!panel)return;
-  const copy={
-    it:{menu:'Scopri il nostro menu',book:'Prenota con TheFork',review:'Recensioni Google',slider:"L'anima di Capri Blu",phrases:['Sorrento','Pizzeria & Trattoria Napoletana','Sapori Autentici','Cucina Mediterranea',"Un Agrumeto Tutto l'Anno"]},
-    en:{menu:'Discover our menu',book:'Book with TheFork',review:'Google reviews',slider:'The soul of Capri Blu',phrases:['Sorrento','Neapolitan Pizzeria & Trattoria','Authentic Flavours','Mediterranean Cuisine','A Citrus Grove All Year Round']},
-    es:{menu:'Descubre nuestro menú',book:'Reserva con TheFork',review:'Reseñas de Google',slider:'El alma de Capri Blu',phrases:['Sorrento','Pizzería y Trattoria Napolitana','Sabores auténticos','Cocina mediterránea','Un jardín de cítricos todo el año']},
-    pt:{menu:'Descubra o nosso menu',book:'Reserve com TheFork',review:'Avaliações Google',slider:'A alma de Capri Blu',phrases:['Sorrento','Pizzaria e Trattoria Napolitana','Sabores autênticos','Cozinha mediterrânica','Um jardim de citrinos todo o ano']},
-    pl:{"menu": "Odkryj nasze menu", "book": "Zarezerwuj przez TheFork", "review": "Opinie Google", "choose": "Wybierz język menu", "slider": "Dusza Capri Blu", "phrases": ["Sorrento", "Pizzeria i trattoria neapolitańska", "Autentyczne smaki", "Kuchnia śródziemnomorska", "Ogród cytrusowy przez cały rok"]},
-    de:{"menu": "Unsere Speisekarte", "book": "Mit TheFork reservieren", "review": "Google-Bewertungen", "choose": "Sprache der Speisekarte wählen", "slider": "Die Seele von Capri Blu", "phrases": ["Sorrento", "Neapolitanische Pizzeria & Trattoria", "Authentische Aromen", "Mediterrane Küche", "Ein Zitrusgarten das ganze Jahr"]},
-    fr:{"menu": "Découvrez notre menu", "book": "Réserver avec TheFork", "review": "Avis Google", "choose": "Choisir la langue du menu", "slider": "L’âme de Capri Blu", "phrases": ["Sorrento", "Pizzeria et trattoria napolitaine", "Saveurs authentiques", "Cuisine méditerranéenne", "Un jardin d’agrumes toute l’année"]},
-    vi:{"menu": "Khám phá thực đơn", "book": "Đặt bàn qua TheFork", "review": "Đánh giá Google", "choose": "Chọn ngôn ngữ thực đơn", "slider": "Tinh thần Capri Blu", "phrases": ["Sorrento", "Pizzeria & Trattoria kiểu Napoli", "Hương vị đích thực", "Ẩm thực Địa Trung Hải", "Vườn cam chanh quanh năm"]}
+  const trigger = document.getElementById("discover-menu"),
+    panel = document.getElementById("language-panel"),
+    label = document.getElementById("discover-menu-label");
+  if (!trigger || !panel) return;
+  const copy = {
+    it: {
+      menu: "Scopri il nostro menu",
+      book: "Prenota con TheFork",
+      review: "Recensioni Google",
+      slider: "L'anima di Capri Blu",
+      phrases: [
+        "Sorrento",
+        "Pizzeria & Trattoria Napoletana",
+        "Sapori Autentici",
+        "Cucina Mediterranea",
+        "Un Agrumeto Tutto l'Anno",
+      ],
+    },
+    en: {
+      menu: "Discover our menu",
+      book: "Book with TheFork",
+      review: "Google reviews",
+      slider: "The soul of Capri Blu",
+      phrases: [
+        "Sorrento",
+        "Neapolitan Pizzeria & Trattoria",
+        "Authentic Flavours",
+        "Mediterranean Cuisine",
+        "A Citrus Grove All Year Round",
+      ],
+    },
+    es: {
+      menu: "Descubre nuestro menú",
+      book: "Reserva con TheFork",
+      review: "Reseñas de Google",
+      slider: "El alma de Capri Blu",
+      phrases: [
+        "Sorrento",
+        "Pizzería y Trattoria Napolitana",
+        "Sabores auténticos",
+        "Cocina mediterránea",
+        "Un jardín de cítricos todo el año",
+      ],
+    },
+    pt: {
+      menu: "Descubra o nosso menu",
+      book: "Reserve com TheFork",
+      review: "Avaliações Google",
+      slider: "A alma de Capri Blu",
+      phrases: [
+        "Sorrento",
+        "Pizzaria e Trattoria Napolitana",
+        "Sabores autênticos",
+        "Cozinha mediterrânica",
+        "Um jardim de citrinos todo o ano",
+      ],
+    },
+    pl: {
+      menu: "Odkryj nasze menu",
+      book: "Zarezerwuj przez TheFork",
+      review: "Opinie Google",
+      choose: "Wybierz język menu",
+      slider: "Dusza Capri Blu",
+      phrases: [
+        "Sorrento",
+        "Pizzeria i trattoria neapolitańska",
+        "Autentyczne smaki",
+        "Kuchnia śródziemnomorska",
+        "Ogród cytrusowy przez cały rok",
+      ],
+    },
+    de: {
+      menu: "Unsere Speisekarte",
+      book: "Mit TheFork reservieren",
+      review: "Google-Bewertungen",
+      choose: "Sprache der Speisekarte wählen",
+      slider: "Die Seele von Capri Blu",
+      phrases: [
+        "Sorrento",
+        "Neapolitanische Pizzeria & Trattoria",
+        "Authentische Aromen",
+        "Mediterrane Küche",
+        "Ein Zitrusgarten das ganze Jahr",
+      ],
+    },
+    fr: {
+      menu: "Découvrez notre menu",
+      book: "Réserver avec TheFork",
+      review: "Avis Google",
+      choose: "Choisir la langue du menu",
+      slider: "L’âme de Capri Blu",
+      phrases: [
+        "Sorrento",
+        "Pizzeria et trattoria napolitaine",
+        "Saveurs authentiques",
+        "Cuisine méditerranéenne",
+        "Un jardin d’agrumes toute l’année",
+      ],
+    },
+    vi: {
+      menu: "Khám phá thực đơn",
+      book: "Đặt bàn qua TheFork",
+      review: "Đánh giá Google",
+      choose: "Chọn ngôn ngữ thực đơn",
+      slider: "Tinh thần Capri Blu",
+      phrases: [
+        "Sorrento",
+        "Pizzeria & Trattoria kiểu Napoli",
+        "Hương vị đích thực",
+        "Ẩm thực Địa Trung Hải",
+        "Vườn cam chanh quanh năm",
+      ],
+    },
   };
-  const languages=Object.keys(copy),motion=matchMedia('(prefers-reduced-motion: reduce)');
-  let saved;try{saved=localStorage.getItem('capriblu-menu-language');}catch{}
-  let language=[new URL(location.href).searchParams.get('lang'),saved,'it'].find(value=>languages.includes(value)),index=languages.indexOf(language),timer,fade,hovered=false;
-  function render(){
-    const boutique=document.getElementById('boutique-link');if(boutique)boutique.href='./shop.html?lang='+language;
-    const text=copy[language];document.documentElement.lang=language;label.textContent=text.menu;label.lang=language;if(text.choose){trigger.setAttribute('aria-label',text.choose);panel.setAttribute('aria-label',text.choose);}else{trigger.setAttribute('aria-label',text.menu);panel.setAttribute('aria-label',text.menu);}
-    const slider=document.querySelector('.brand-slider');
-    if(slider){slider.lang=language;slider.setAttribute('aria-label',text.slider);slider.querySelectorAll('.brand-slider-phrase').forEach((el,i)=>el.textContent=text.phrases[i]);slider.querySelectorAll('.brand-slider-description li').forEach((el,i)=>el.textContent=text.phrases[i]);}
-    document.getElementById('book-label').textContent=text.book;document.getElementById('review-label').textContent=text.review;
+  const languages = Object.keys(copy),
+    motion = matchMedia("(prefers-reduced-motion: reduce)");
+  let saved;
+  try {
+    saved = localStorage.getItem("capriblu-menu-language");
+  } catch {}
+  let language = [
+      new URL(location.href).searchParams.get("lang"),
+      saved,
+      "it",
+    ].find((value) => languages.includes(value)),
+    index = languages.indexOf(language),
+    timer,
+    fade,
+    hovered = false;
+  function render() {
+    const boutique = document.getElementById("boutique-link");
+    if (boutique) boutique.href = "./shop.html?lang=" + language;
+    const text = copy[language];
+    document.documentElement.lang = language;
+    label.textContent = text.menu;
+    label.lang = language;
+    if (text.choose) {
+      trigger.setAttribute("aria-label", text.choose);
+      panel.setAttribute("aria-label", text.choose);
+    } else {
+      trigger.setAttribute("aria-label", text.menu);
+      panel.setAttribute("aria-label", text.menu);
+    }
+    const slider = document.querySelector(".brand-slider");
+    if (slider) {
+      slider.lang = language;
+      slider.setAttribute("aria-label", text.slider);
+      slider
+        .querySelectorAll(".brand-slider-phrase")
+        .forEach((el, i) => (el.textContent = text.phrases[i]));
+      slider
+        .querySelectorAll(".brand-slider-description li")
+        .forEach((el, i) => (el.textContent = text.phrases[i]));
+    }
+    document.getElementById("book-label").textContent = text.book;
+    document.getElementById("review-label").textContent = text.review;
   }
-  function stop(){clearInterval(timer);clearTimeout(fade);label.classList.remove('is-changing');}
-  function sync(){
-    stop();
-    if(motion.matches||!panel.hidden||document.hidden||hovered||document.activeElement===trigger)return;
-    timer=setInterval(()=>{label.classList.add('is-changing');fade=setTimeout(()=>{index=(index+1)%languages.length;label.textContent=copy[languages[index]].menu;label.lang=languages[index];label.classList.remove('is-changing');},300);},3200);
-  }
-  function open(value,focus=false){panel.hidden=!value;trigger.setAttribute('aria-expanded',String(value));sync();if(value&&focus)panel.querySelector('a').focus();}
-  trigger.addEventListener('click',()=>open(panel.hidden));
-  trigger.addEventListener('keydown',event=>{if(event.key==='ArrowDown'){event.preventDefault();open(true,true);}});
-  document.addEventListener('click',event=>{if(!panel.hidden&&!panel.contains(event.target)&&!trigger.contains(event.target))open(false);});
-  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!panel.hidden){open(false);trigger.focus();}});
-  panel.addEventListener('click',event=>{const link=event.target.closest('a[data-language]');if(!link)return;language=link.dataset.language;try{localStorage.setItem('capriblu-menu-language',language);}catch{}render();});
-  trigger.addEventListener('mouseenter',()=>{hovered=true;sync();});trigger.addEventListener('mouseleave',()=>{hovered=false;sync();});trigger.addEventListener('focus',sync);trigger.addEventListener('blur',sync);
-  motion.addEventListener('change',sync);document.addEventListener('visibilitychange',sync);render();sync();
-})();
-
-// Keep both invitation widths reserved so switching language never shifts the line.
-(() => {
-  const link=document.getElementById('boutique-link');
-  if(!link)return;
-  const labels=link.querySelectorAll('.boutique-copy>span');
-  const bird=link.querySelector('.boutique-bird'),facing=link.querySelector('.bird-facing');
-  const motion=matchMedia('(prefers-reduced-motion: reduce)');
-  let english=document.documentElement.lang!=='it',timer,hopping=false,journey,parts=[];
-  function render(){labels.forEach(label=>{label.hidden=(label.lang==='en')!==english;});}
-  function sync(){
+  function stop() {
     clearInterval(timer);
-    if(hopping||motion.matches||document.hidden||link.matches(':hover, :focus-within'))return;
-    timer=setInterval(()=>{english=!english;render();},5000);
+    clearTimeout(fade);
+    label.classList.remove("is-changing");
   }
-  link.addEventListener('mouseenter',sync);link.addEventListener('mouseleave',sync);
-  link.addEventListener('focus',sync);link.addEventListener('blur',sync);
-  function rest(){
-    if(journey){journey.cancel();journey=null;}
-    parts.forEach(animation=>animation.cancel());parts=[];
-    link.classList.remove('is-bird-hopping');hopping=false;
-    if(facing)facing.style.transform='';
+  function sync() {
+    stop();
+    if (
+      motion.matches ||
+      !panel.hidden ||
+      document.hidden ||
+      hovered ||
+      document.activeElement === trigger
+    )
+      return;
+    timer = setInterval(() => {
+      label.classList.add("is-changing");
+      fade = setTimeout(() => {
+        index = (index + 1) % languages.length;
+        label.textContent = copy[languages[index]].menu;
+        label.lang = languages[index];
+        label.classList.remove("is-changing");
+      }, 300);
+    }, 3200);
+  }
+  function open(value, focus = false) {
+    panel.hidden = !value;
+    trigger.setAttribute("aria-expanded", String(value));
     sync();
+    if (value && focus) panel.querySelector("a").focus();
   }
-  async function hopAlongPhrase(){
-    if(!bird||!bird.animate||motion.matches)return;
-    hopping=true;sync();
-    try{
-      if(document.fonts)await document.fonts.ready;
-      if(motion.matches){rest();return;}
-      // Measure after fonts load. Both labels reserve space even when hidden.
-      const distance=link.querySelector('.boutique-stage').clientWidth-bird.clientWidth;
-      // Sample actual arcs: anticipation, ballistic flight and a soft landing.
-      // Unequal strides and pauses keep the courier from moving like a metronome.
-      const segments=[];let clock=.55,last=0,floor=0;
-      const add=(to,ground,flight,height,pause=0)=>{
-        const duration=.12+flight+.19+pause;
-        segments.push({start:clock,end:clock+duration,from:last,to:to*distance,floor,ground,flight,height});
-        clock+=duration;last=to*distance;floor=ground;
-      };
-      add(.22,-24,.46,21);add(.4,-24,.36,13,.09);add(.66,-24,.48,19);
-      add(.83,-24,.34,12,.13);add(1,-24,.4,16);
-      const turnStart=clock;clock+=1.05;
-      add(.76,-24,.4,15);add(.47,-24,.46,19,.08);add(.2,-24,.41,16);
-      add(0,0,.5,23);clock+=.95;
-      const frames=[],bagFrames=[],wingFrames=[];
-      const legFrames=Object.fromEntries(['leg-left','leg-right','shin-left','shin-right','foot-left','foot-right'].map(key=>[key,[]]));
-      const detailFrames=Object.fromEntries(['bird-facing','bird-head','bird-beak','bird-eye','bird-far-eye','bird-front-beak','bird-body','bird-chest','bird-tail','bird-far-wing'].map(key=>[key,[]]));
-      let bagAngle=0,bagVelocity=0,tailAngle=0,tailVelocity=0;
-      const smooth=t=>t*t*t*(t*(t*6-15)+10),mix=(a,b,t)=>a+(b-a)*t;
-      const count=Math.ceil(clock*60),dt=clock/count;
-      for(let i=0;i<=count;i++){
-        const time=i*dt,offset=i/count;
-        let x=0,y=0,angle=0,sx=1,sy=1,wing=0,feet=0,bagTarget=0,tail=0,wingLift=0,lookAhead=0;
-        const segment=segments.find(step=>time>=step.start&&time<step.end);
-        const previous=segments.filter(step=>step.end<=time).at(-1);
-        if(previous){x=previous.to;y=previous.ground;}
-        if(segment){
-          const s=segment,t=time-s.start,direction=Math.sign(s.to-s.from);
-          x=s.from;y=s.floor;
-          if(t<.12){
-            const p=smooth(t/.12);sx=1+.05*p;sy=1-.08*p;y+=2*p;angle=-3*direction*p;tail=-7*p;wing=-6*p;lookAhead=direction*Math.sin(Math.PI*t/.24);
-          }else if(t<.12+s.flight){
-            const p=(t-.12)/s.flight,arc=Math.sin(Math.PI*p);lookAhead=direction*Math.exp(-6*p);
-            x=mix(s.from,s.to,smooth(p));y=mix(s.floor,s.ground,smooth(p))-4*s.height*p*(1-p);
-            sx=1-.055*arc;sy=1+.075*arc;angle=direction*(-7+12*p)*arc;
-            wingLift=arc;wing=-24*arc-11*Math.sin(4*Math.PI*p)*arc;tail=12*Math.sin(2*Math.PI*p)*arc-6*arc;feet=18*arc;bagTarget=-direction*21*Math.sin(Math.PI*p*1.35);
-          }else{
-            const p=Math.min((t-.12-s.flight)/.19,1),settle=Math.sin(Math.PI*p)*Math.exp(-2*p);
-            x=s.to;y=s.ground+3*settle;sx=1+.09*settle;sy=1-.12*settle;
-            angle=direction*3*settle;bagTarget=direction*12*settle;tail=16*settle;wing=-8*settle;
-          }
-        }
-        const clamp=v=>Math.max(0,Math.min(v,1));
-        let turn=smooth(clamp((time-turnStart)/1.05));
-        if(time>clock-.9)turn=1-smooth(clamp((time-clock+.9)/.9));
-        const yaw=turn*Math.PI,face=Math.cos(yaw),front=Math.sin(yaw);
-        // Pivot the same silhouette continuously; do not swap in a different drawing.
-        const localLook=lookAhead*(face<0?-1:1);
-        const headX=.9*localLook,headNod=-.7*Math.abs(localLook);
-        const blinkPhase=(time-(clock-.32))/.18;
-        const eyelid=blinkPhase>0&&blinkPhase<1?1-.94*Math.sin(Math.PI*blinkPhase)**2:1;
-        if(front>.01){y-=8*front;angle+=2*front;sx*=1+.02*front;sy*=1-.02*front;feet+=4*Math.sin(turn*2*Math.PI)*front;}
-        bagTarget+=front*5;
-        // A damped spring lets the shopping bag lag behind each hop and turn.
-        bagVelocity+=((bagTarget-bagAngle)*125-bagVelocity*12)*dt;
-        bagAngle+=bagVelocity*dt;
-        // The tail follows with a small delay and settles after each landing.
-        tailVelocity+=((tail-tailAngle)*160-tailVelocity*14)*dt;
-        tailAngle+=tailVelocity*dt;
-        const tailRest=1-smooth(clamp((time-clock+.4)/.4));
-        detailFrames['bird-facing'].push({offset,transform:`scale(${face}, ${1-.035*front})`,opacity:1});
-        detailFrames['bird-head'].push({offset,transform:`translate(${headX}px, ${headNod}px) rotate(${-6*localLook}deg)`});
-        detailFrames['bird-beak'].push({offset,transform:'scaleX(1)',opacity:1});
-        detailFrames['bird-front-beak'].push({offset,opacity:0});
-        detailFrames['bird-eye'].push({offset,transform:`translate(${.3*localLook}px,0) scaleY(${eyelid})`});
-        detailFrames['bird-far-eye'].push({offset,opacity:0,transform:`scaleY(${eyelid})`});
-        detailFrames['bird-body'].push({offset,transform:'scale(1, 1)'});
-        detailFrames['bird-chest'].push({offset,opacity:0});
-        detailFrames['bird-tail'].push({offset,transform:`rotate(${tailAngle*tailRest}deg)`,opacity:1});
-        detailFrames['bird-far-wing'].push({offset,opacity:.45*wingLift,transform:`rotate(${wing*.55}deg)`});
-        frames.push({offset,transform:`translate(${x}px, ${y}px) rotate(${angle}deg) scale(${sx}, ${sy})`});
-        bagFrames.push({offset,transform:`translate(${headX}px, ${headNod}px) rotate(${bagAngle}deg)`});
-        wingFrames.push({offset,transform:`rotate(${wing}deg)`});
-        // Separate hip, knee and toes let each foot land and settle independently.
-        for(const [side,sign,delay] of [['left',-1,0],['right',1,.035]]){
-          let hip=feet*.15,knee=0,lift=0,toes=0;
-          if(segment){
-            const elapsed=time-segment.start;
-            if(elapsed<.12){
-              const bend=smooth(elapsed/.12);hip+=sign*10*bend;knee-=sign*18*bend;
-            }else if(elapsed<.12+segment.flight){
-              const phase=(elapsed-.12)/segment.flight,fold=Math.sin(Math.PI*phase);
-              hip+=sign*(22+4*Math.sin(2*Math.PI*phase+delay*20))*fold;
-              knee-=sign*40*fold;lift=-.8*fold;toes=sign*7*fold;
-            }else{
-              const contact=clamp((elapsed-.12-segment.flight-delay)/.19);
-              const cushion=Math.sin(Math.PI*contact)*Math.exp(-2*contact);
-              hip+=sign*17*cushion;knee-=sign*30*cushion;toes=-sign*5*cushion;
-            }
-          }
-          const stepPhase=(time-(clock-(side==='left'?.85:.59)))/.22;
-          if(stepPhase>0&&stepPhase<1){const step=Math.sin(Math.PI*stepPhase);lift-=1.8*step;hip+=sign*12*step;knee-=sign*18*step;}
-          legFrames['leg-'+side].push({offset,transform:`translate(0, ${lift}px) rotate(${hip}deg)`});
-          legFrames['shin-'+side].push({offset,transform:`rotate(${knee}deg)`});
-          legFrames['foot-'+side].push({offset,transform:`rotate(${-.75*(hip+knee)+toes}deg)`});
-        }
-      }
-      // Ease every joint through phase boundaries rather than snapping to each pose.
-      const soften=keyframes=>{
-        let values;
-        for(const frame of keyframes){
-          if(!frame.transform)continue;
-          const targets=frame.transform.match(/-?\d*\.?\d+(?:e[-+]?\d+)?/gi).map(Number);
-          if(!values)values=[...targets];
-          const endBlend=smooth(Math.max(0,Math.min(1,(frame.offset*clock-clock+.18)/.18)));
-          values=values.map((value,i)=>value+(targets[i]-value)*(1-Math.exp(-dt/.045)));
-          let i=0;frame.transform=frame.transform.replace(/-?\d*\.?\d+(?:e[-+]?\d+)?/gi,()=>{const j=i++;return String(mix(values[j],targets[j],endBlend));});
-        }
-      };
-      [frames,bagFrames,wingFrames,...Object.values(legFrames),...Object.values(detailFrames)].forEach(soften);
-      link.classList.add('is-bird-hopping');
-      const timing={duration:clock*1000,easing:'linear',fill:'none'};
-      journey=bird.animate(frames,timing);
-      for(const [element,keyframes] of [[link.querySelector('.bird-bag'),bagFrames],[link.querySelector('.bird-wing'),wingFrames],...Object.entries(legFrames).map(([name,keyframes])=>[link.querySelector('.bird-'+name),keyframes]),...Object.entries(detailFrames).map(([name,keyframes])=>[link.querySelector('.'+name),keyframes])]){
-        parts.push(element.animate(keyframes,timing));
-      }
-      await journey.finished;
-    }catch{/* A cancelled animation leaves the static icon in its resting place. */}
-    finally{rest();}
-  }
-  motion.addEventListener('change',()=>{if(motion.matches)rest();else sync();});
-  document.addEventListener('visibilitychange',()=>{
-    if(journey){if(document.hidden)rest();}
+  trigger.addEventListener("click", () => open(panel.hidden));
+  trigger.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      open(true, true);
+    }
+  });
+  document.addEventListener("click", (event) => {
+    if (
+      !panel.hidden &&
+      !panel.contains(event.target) &&
+      !trigger.contains(event.target)
+    )
+      open(false);
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !panel.hidden) {
+      open(false);
+      trigger.focus();
+    }
+  });
+  panel.addEventListener("click", (event) => {
+    const link = event.target.closest("a[data-language]");
+    if (!link) return;
+    language = link.dataset.language;
+    try {
+      localStorage.setItem("capriblu-menu-language", language);
+    } catch {}
+    render();
+  });
+  trigger.addEventListener("mouseenter", () => {
+    hovered = true;
     sync();
   });
-  render();sync();hopAlongPhrase();
+  trigger.addEventListener("mouseleave", () => {
+    hovered = false;
+    sync();
+  });
+  trigger.addEventListener("focus", sync);
+  trigger.addEventListener("blur", sync);
+  motion.addEventListener("change", sync);
+  document.addEventListener("visibilitychange", sync);
+  render();
+  sync();
 })();
