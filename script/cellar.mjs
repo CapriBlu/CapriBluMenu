@@ -46,6 +46,13 @@ function cyclicDistance(i, p) {
     wines.length / 2;
   return d;
 }
+function showMetadata(id, key, value) {
+  const element = $(id);
+  element.hidden = !value;
+  const label = document.createElement("b");
+  label.textContent = t(key);
+  element.replaceChildren(...(value ? [label, " " + value] : []));
+}
 function showWine(index) {
   const i = (index + wines.length) % wines.length;
   if (i === selected) return;
@@ -56,10 +63,8 @@ function showWine(index) {
   img.alt = w.alt;
   $("wineTitle").textContent = w.name;
   $("wineMaker").textContent = w.maker;
-  $("wineGrapes").hidden = !w.grapes;
-  $("wineGrapes").innerHTML = w.grapes ? "<b>Uvaggio</b> " + w.grapes : "";
-  $("wineVintage").hidden = !w.year;
-  $("wineVintage").innerHTML = w.year ? "<b>Annata</b> " + w.year : "";
+  showMetadata("wineGrapes", "wine.grapes", w.grapes);
+  showMetadata("wineVintage", "wine.vintage", w.year);
   $("wineDescription").textContent = w.description;
   $("winePrice").textContent = w.price;
   $("wineCounter").textContent = t("ui.counter")
