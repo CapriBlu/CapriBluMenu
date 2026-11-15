@@ -105,3 +105,5 @@ Le zampette dell’uccellino sono articolate separatamente in anca, ginocchio e 
 La mascotte Boutique riprende il profilo slanciato dell’uccello del logo: becco lungo blu scuro, corpo affusolato, coda sottile e ala azzurra a mezzaluna. Il logo originale resta invariato. Le pose animate hanno raccordi morbidi su tutte le articolazioni, compressione moderata e velocità orizzontale progressiva.
 
 La girata dell’uccellino orienta tutta la sagoma insieme, comprese ala, coda, becco, zampe e borsa. La girata usa una rotazione continua della stessa sagoma durante un piccolo salto, senza sostituirla con una posa frontale diversa; testa e borsa non vanno traslate separatamente per cambiare direzione.
+
+La Boutique deve mostrare subito logo e primo prodotto senza attendere window.load o un conto alla rovescia. Usare WebP ottimizzati (miniature separate), immagini grandi su scelta e un solo video caricato dopo il primo rendering in base allo schermo. Rispettare movimento ridotto e risparmio dati; conservare originali, prezzi, trasparenza e aspetto della vetrina.
