@@ -58,7 +58,8 @@
     "itemFew": "propozycje",
     "softDrinks": "Napoje bezalkoholowe",
     "bottledBeers": "Piwa butelkowe",
-    "cocktails": "Koktajle"
+    "cocktails": "Koktajle",
+    "allergensFromPdf": "Alergeny wskazane w PDF"
   },
   "categories": {
     "fritti": "Smażone przekąski",
@@ -572,7 +573,22 @@
     "ruotiello": "Ruotiello"
   },
   "supplements": {},
-  "allergens": {},
+  "allergens": {
+    "1": "Zboża zawierające gluten",
+    "2": "Skorupiaki",
+    "3": "Jaja",
+    "4": "Ryby",
+    "5": "Orzeszki ziemne",
+    "6": "Soja",
+    "7": "Mleko",
+    "8": "Orzechy",
+    "9": "Seler",
+    "10": "Gorczyca",
+    "11": "Sezam",
+    "12": "Dwutlenek siarki i siarczyny",
+    "13": "Łubin",
+    "14": "Mięczaki"
+  },
   "brandPhrases": [
     "Sorrento",
     "Pizzeria i trattoria neapolitańska",

@@ -160,7 +160,8 @@ function renderDetail(){
   }));
   $('detail-price').textContent=money(offer.priceCents);
   $('detail-availability').textContent=!item.available||!offer.available?text.unavailable:'';
-  $('allergen-note').textContent=text.allergensPending;
+  const allergenNames=offer.allergenStatus==='verified'&&Array.isArray(offer.allergenCodes)?offer.allergenCodes.map(code=>code+' · '+(locale().allergens?.[code]||locales[config.fallbackLanguage].allergens[code])).join(', '):'';
+  $('allergen-note').textContent=(allergenNames?text.allergensFromPdf+': '+allergenNames+'. ':'')+text.allergensPending;
   const items=currentItems(),index=items.findIndex(entry=>entry.id===item.id);
   $('previous-item-label').textContent=text.previousItem;
   $('next-item-label').textContent=text.nextItem;

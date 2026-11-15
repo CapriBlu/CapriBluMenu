@@ -57,7 +57,8 @@
     "languageError": "Không thể đổi ngôn ngữ. Vui lòng thử lại.",
     "softDrinks": "Nước ngọt",
     "bottledBeers": "Bia chai",
-    "cocktails": "Cocktail"
+    "cocktails": "Cocktail",
+    "allergensFromPdf": "Chất gây dị ứng được ghi trong PDF"
   },
   "categories": {
     "fritti": "Món chiên",
@@ -571,7 +572,22 @@
     "ruotiello": "Ruotiello"
   },
   "supplements": {},
-  "allergens": {},
+  "allergens": {
+    "1": "Ngũ cốc chứa gluten",
+    "2": "Động vật giáp xác",
+    "3": "Trứng",
+    "4": "Cá",
+    "5": "Đậu phộng",
+    "6": "Đậu nành",
+    "7": "Sữa",
+    "8": "Các loại hạt cây",
+    "9": "Cần tây",
+    "10": "Mù tạt",
+    "11": "Mè",
+    "12": "Sulfur dioxide và sulfite",
+    "13": "Đậu lupin",
+    "14": "Động vật thân mềm"
+  },
   "brandPhrases": [
     "Sorrento",
     "Pizzeria & Trattoria kiểu Napoli",

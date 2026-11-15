@@ -16,7 +16,7 @@ test('Rejects invalid prices, duplicate identifiers, unknown supplements, and mi
   for(const expected of ['Invalid price','Duplicate item','Unknown supplement','Missing item translation: en/margherita'])assert.ok(errors.includes(expected),expected);
 });
 test('Unreviewed allergen codes cannot be presented as verified',()=>{
-  const bad=structuredClone(catalog);bad.items[0].allergenStatus='verified';
+  const bad=structuredClone(catalog);bad.allergenLegend.status='pending-review';bad.items[0].allergenStatus='verified';
   assert.ok(validateMenu(config,bad,editions,locales).some(error=>error.includes('verified legend')));
 });
 test('Season selection excludes items from other editions and keeps unavailable items visible',()=>{

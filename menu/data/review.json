@@ -72,5 +72,15 @@
       "status": "pending",
       "note": "69 foto associate per corrispondenza del nome; da revisione editoriale. Nessuna foto tradizionale riutilizzata per Ruota di Carro. Altre foto della biblioteca non corrispondono necessariamente al menu autunnale."
     }
-  ]
+  ],
+  "allergenReview": {
+    "date": "2026-11-15",
+    "legendSource": {
+      "pdf": "pdf/menu_autunno.pdf",
+      "page": 18
+    },
+    "pdfCodedItems": 80,
+    "itemsWithoutPdfCodes": 39,
+    "note": "Codici del PDF conservati senza deduzioni dagli ingredienti. Le varianti prive di codici restano da confermare."
+  }
 }

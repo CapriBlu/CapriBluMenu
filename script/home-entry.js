@@ -15,6 +15,7 @@
   let saved;try{saved=localStorage.getItem('capriblu-menu-language');}catch{}
   let language=[new URL(location.href).searchParams.get('lang'),saved,'it'].find(value=>languages.includes(value)),index=languages.indexOf(language),timer,fade,hovered=false;
   function render(){
+    const boutique=document.getElementById('boutique-link');if(boutique)boutique.href='./shop.html?lang='+language;
     const text=copy[language];document.documentElement.lang=language;label.textContent=text.menu;label.lang=language;if(text.choose){trigger.setAttribute('aria-label',text.choose);panel.setAttribute('aria-label',text.choose);}else{trigger.setAttribute('aria-label',text.menu);panel.setAttribute('aria-label',text.menu);}
     const slider=document.querySelector('.brand-slider');
     if(slider){slider.lang=language;slider.setAttribute('aria-label',text.slider);slider.querySelectorAll('.brand-slider-phrase').forEach((el,i)=>el.textContent=text.phrases[i]);slider.querySelectorAll('.brand-slider-description li').forEach((el,i)=>el.textContent=text.phrases[i]);}

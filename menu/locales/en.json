@@ -57,7 +57,8 @@
     "languageError": "The language could not be changed. Please try again.",
     "softDrinks": "Soft Drinks",
     "bottledBeers": "Bottled beers",
-    "cocktails": "Cocktails"
+    "cocktails": "Cocktails",
+    "allergensFromPdf": "Allergens listed in the PDF"
   },
   "categories": {
     "fritti": "Fried Bites",
@@ -571,7 +572,22 @@
     "ruotiello": "Ruotiello"
   },
   "supplements": {},
-  "allergens": {},
+  "allergens": {
+    "1": "Cereals containing gluten",
+    "2": "Crustaceans",
+    "3": "Eggs",
+    "4": "Fish",
+    "5": "Peanuts",
+    "6": "Soybeans",
+    "7": "Milk",
+    "8": "Nuts",
+    "9": "Celery",
+    "10": "Mustard",
+    "11": "Sesame",
+    "12": "Sulphur dioxide and sulphites",
+    "13": "Lupin",
+    "14": "Molluscs"
+  },
   "brandPhrases": [
     "Sorrento",
     "Neapolitan Pizzeria & Trattoria",

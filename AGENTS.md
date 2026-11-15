@@ -107,3 +107,5 @@ La mascotte Boutique riprende il profilo slanciato dell’uccello del logo: becc
 La girata dell’uccellino orienta tutta la sagoma insieme, comprese ala, coda, becco, zampe e borsa. La girata usa una rotazione continua della stessa sagoma durante un piccolo salto, senza sostituirla con una posa frontale diversa; testa e borsa non vanno traslate separatamente per cambiare direzione.
 
 La Boutique deve mostrare subito logo e primo prodotto senza attendere window.load o un conto alla rovescia. Usare WebP ottimizzati (miniature separate), immagini grandi su scelta e un solo video caricato dopo il primo rendering in base allo schermo. Rispettare movimento ridotto e risparmio dati; conservare originali, prezzi, trasparenza e aspetto della vetrina.
+
+Home e Carta dei Vini caricano un solo video dopo il primo rendering, con rispetto di risparmio dati e movimento ridotto. Boutique e Carta dei Vini offrono le otto lingue del menu; preservare nomi commerciali, denominazioni e prezzi. Gli allergeni restano da confermare dal locale e le foto mancanti in attesa del titolare.

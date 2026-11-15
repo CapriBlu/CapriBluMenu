@@ -57,7 +57,8 @@
     "languageError": "Não foi possível mudar o idioma. Tente novamente.",
     "softDrinks": "Refrigerantes",
     "bottledBeers": "Cervejas em garrafa",
-    "cocktails": "Cocktails"
+    "cocktails": "Cocktails",
+    "allergensFromPdf": "Alergénios indicados no PDF"
   },
   "categories": {
     "fritti": "Fritos",
@@ -571,7 +572,22 @@
     "ruotiello": "Ruotiello"
   },
   "supplements": {},
-  "allergens": {},
+  "allergens": {
+    "1": "Cereais com glúten",
+    "2": "Crustáceos",
+    "3": "Ovos",
+    "4": "Peixe",
+    "5": "Amendoins",
+    "6": "Soja",
+    "7": "Leite",
+    "8": "Frutos de casca rija",
+    "9": "Aipo",
+    "10": "Mostarda",
+    "11": "Sésamo",
+    "12": "Dióxido de enxofre e sulfitos",
+    "13": "Tremoços",
+    "14": "Moluscos"
+  },
   "brandPhrases": [
     "Sorrento",
     "Pizzaria e Trattoria Napolitana",

@@ -57,7 +57,8 @@
     "languageError": "Non è stato possibile cambiare lingua. Riprova.",
     "softDrinks": "Soft Drink",
     "bottledBeers": "Birre in bottiglia",
-    "cocktails": "Cocktail"
+    "cocktails": "Cocktail",
+    "allergensFromPdf": "Allergeni indicati nel PDF"
   },
   "categories": {
     "fritti": "I Fritti",
@@ -571,7 +572,22 @@
     "ruotiello": "Ruotiello"
   },
   "supplements": {},
-  "allergens": {},
+  "allergens": {
+    "1": "Cereali contenenti glutine",
+    "2": "Crostacei",
+    "3": "Uova",
+    "4": "Pesce",
+    "5": "Arachidi",
+    "6": "Soia",
+    "7": "Latte",
+    "8": "Frutta a guscio",
+    "9": "Sedano",
+    "10": "Senape",
+    "11": "Sesamo",
+    "12": "Anidride solforosa e solfiti",
+    "13": "Lupini",
+    "14": "Molluschi"
+  },
   "brandPhrases": [
     "Sorrento",
     "Pizzeria & Trattoria Napoletana",
