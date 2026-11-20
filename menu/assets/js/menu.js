@@ -1,3 +1,4 @@
+import {createMenuHistory} from './history.js?v=history-20261120-1';
 import {visibleItems, selectedOffer, translatedItem, validateMenu, resolveLegacySelection, drinkCollections, groupDepartmentItems} from './model.js?v=wine-glasses-20261114-1';
 import {initialLanguages, createLocaleStore} from './locale-store.js?v=eight-languages-20261112-1';
 const base = new URL('../../',import.meta.url);
@@ -6,6 +7,13 @@ const state = {language:'it',category:null,collection:null,item:null,variant:nul
 let config,catalog,editions,locales;
 const dialog = $('detail');
 const categoryPicker = $('category-picker');
+const menuHistory=createMenuHistory(state,selection=>{
+  Object.assign(state,selection);
+  if(dialog.open&&!state.item)dialog.close();
+  if(categoryPicker.open)categoryPicker.close();
+  render();
+  if(state.item&&!dialog.open)dialog.showModal();
+});
 const mobileNavigation = matchMedia('(max-width: 600px)');
 function updateCompactNavigation() {
   $('compact-categories').hidden = !locales || !mobileNavigation.matches;
@@ -23,7 +31,7 @@ const money = cents => new Intl.NumberFormat(({it:'it-IT',en:'en-IE',es:'es-ES',
 function syncURL(){
   const url=new URL(location.href);url.searchParams.set('lang',state.language);if(state.category)url.searchParams.set('category',state.category);else url.searchParams.delete('category');if(state.query)url.searchParams.set('q',state.query);else url.searchParams.delete('q');
   for(const key of ['item','variant','collection']){if(state[key])url.searchParams.set(key,state[key]);else url.searchParams.delete(key);}
-  history.replaceState(null,'',url);
+  menuHistory.sync(url);
 }
 function itemText(id){return translatedItem(locales,state.language,config.fallbackLanguage,id);}
 function categoryText(id){return locale().categories[id]||locales[config.fallbackLanguage].categories[id];}
@@ -178,7 +186,7 @@ function navigateItem(direction){
   state.variant=null;
   renderDetail();dialog.scrollTop=0;syncURL();
 }
-function closeDetail(){if(dialog.open)dialog.close();state.item=null;state.variant=null;syncURL();}
+function closeDetail(){if(menuHistory.closeDetail())return;if(dialog.open)dialog.close();state.item=null;state.variant=null;syncURL();}
 async function boot(){
   $('status').hidden=false;$('retry').hidden=true;
   try{
@@ -259,7 +267,7 @@ dialog.addEventListener('keydown',event=>{
   if(event.altKey||event.ctrlKey||event.metaKey||event.shiftKey||event.target.closest('select,input,textarea,[contenteditable]'))return;
   if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();navigateItem(event.key==='ArrowLeft'?-1:1);}
 });
-dialog.addEventListener('cancel',()=>{state.item=null;state.variant=null;syncURL();});
+dialog.addEventListener('cancel',event=>{event.preventDefault();closeDetail();});
 dialog.addEventListener('click',event=>{if(event.target===dialog){const rect=dialog.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)closeDetail();}});
 $('retry').addEventListener('click',boot);
 boot();

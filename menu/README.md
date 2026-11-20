@@ -60,3 +60,7 @@ Su telefono la barra grande è sostituita fin dall'inizio da un unico selettore 
 Aggiunti pl/de/fr/vi per tutte le 119 voci, 17 reparti, testi dell'interfaccia, opzioni e frasi del marchio. Home con otto bandiere e selettori aggiornati anche nel dettaglio. I nomi tradizionali restano italiani; ingredienti e nomi generici sono tradotti dal riferimento italiano, senza aggiungere ingredienti non presenti. Le traduzioni nuove sono redazionali e non risultano revisionate da madrelingua.
 
 All'avvio si scaricano soltanto la lingua scelta e il fallback italiano. Le altre lingue si scaricano alla selezione e vengono riutilizzate nella sessione; un errore permette di ritentare mantenendo la lingua precedente. Supportati formati monetari locali, ricerca vietnamita senza diacritici e plurale polacco. PDF e carta dei vini storica restano nelle rispettive lingue originali.
+
+## Indietro e Avanti — 20 novembre 2026
+
+Il gesto Indietro del telefono e i comandi del browser ripercorrono categorie, gruppi bevande e apertura dei piatti, ripristinando lingua e posizione di scorrimento. La chiusura del piatto usa la stessa cronologia. Ricerca, cambio formato e navigazione fra piatti non producono passaggi superflui. I link diretti a un piatto permettono di tornare alla categoria e poi alla panoramica.
