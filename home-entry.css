@@ -83,6 +83,51 @@
   margin-top: 48px;
 }
 
+.home-primary-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.home-order-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-sizing: border-box;
+  width: min(440px, calc(100% - 16px));
+  min-height: 54px;
+  padding: 12px;
+  border: 1px solid #d9efff80;
+  border-radius: 14px;
+  background: linear-gradient(115deg, #266cab44, #082b5766);
+  color: #fff8e9;
+  font: 16px/1.3 Arial, sans-serif;
+  text-decoration: none;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background .2s, border-color .2s;
+}
+
+.home-order-link svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.home-order-link:hover,
+.home-order-link:active {
+  background: linear-gradient(115deg, #478cca55, #124a7c88);
+  border-color: #d9efffbb;
+}
+
 .discover-menu-button {
   display: flex;
   align-items: center;
@@ -205,6 +250,11 @@
     gap: 14px;
   }
 
+  .home-order-link {
+    min-height: 52px;
+    font-size: 14px;
+  }
+
   .secondary-link {
     font-size: 14px;
     padding: 8px 12px;
@@ -244,6 +294,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .discover-menu-button,
+  .home-order-link,
   .secondary-link {
     transition: none;
   }
@@ -551,7 +602,7 @@
   }
 }
 
-/* A quiet boutique invitation above the reservation and review links. */
+/* The boutique invitation closes the home, below reservations and reviews. */
 .home-secondary-actions {
   display: flex;
   flex-direction: column;

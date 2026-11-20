@@ -19,8 +19,8 @@
     />
     <link rel="stylesheet" href="./brand-slider.css?v=3" />
     <script src="./script/brand-slider.js?v=2" defer></script>
-    <link rel="stylesheet" href="./home-entry.css?v=refactor-20261115-1" />
-    <script src="./script/home-entry.js?v=refactor-20261115-1" defer></script>
+    <link rel="stylesheet" href="./home-entry.css?v=orders-entry-20261120-1" />
+    <script src="./script/home-entry.js?v=orders-entry-20261120-1" defer></script>
     <script src="./script/site-background.js?v=refactor-20261115-1" defer></script>
     <script
       type="module"
@@ -95,6 +95,7 @@
 
       <main class="home-entry">
         <div class="buttons">
+          <div class="home-primary-actions">
           <button
             class="discover-menu-button"
             id="discover-menu"
@@ -215,7 +216,43 @@
             </div>
           </nav>
 
+            <a class="home-order-link" id="home-order-link" href="https://capriblu-ordini-sorrento.area-di-lavo-2120.chatgpt.site/?lang=it">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg>
+              <span id="home-order-label">Ordina da asporto o a domicilio</span>
+            </a>
+          </div>
           <div class="home-secondary-actions">
+            <div class="quick-buttons" aria-label="Quick actions">
+              <a
+                class="secondary-link thefork-button"
+                href="https://www.thefork.it/ristorante/capri-blu-sorrento-r861548"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  class="secondary-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 3v5a3 3 0 0 0 6 0V3M8 3v18M18 3c-3 3-4 6-4 9h4m0-9v18"
+                  /></svg
+                ><span id="book-label">Prenota con TheFork</span>
+              </a>
+
+              <a
+                class="secondary-link google-button"
+                href="https://www.google.com/search?q=capri+blu+sorrento"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span class="google-letter" aria-hidden="true">G</span
+                ><span id="review-label">Recensioni Google</span>
+              </a>
+            </div>
             <a
               class="secondary-link boutique-link"
               href="./shop.html"
@@ -361,37 +398,6 @@
               </span>
               <span class="boutique-underline" aria-hidden="true"></span>
             </a>
-            <div class="quick-buttons" aria-label="Quick actions">
-              <a
-                class="secondary-link thefork-button"
-                href="https://www.thefork.it/ristorante/capri-blu-sorrento-r861548"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <svg
-                  class="secondary-icon"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M5 3v5a3 3 0 0 0 6 0V3M8 3v18M18 3c-3 3-4 6-4 9h4m0-9v18"
-                  /></svg
-                ><span id="book-label">Prenota con TheFork</span>
-              </a>
-
-              <a
-                class="secondary-link google-button"
-                href="https://www.google.com/search?q=capri+blu+sorrento"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span class="google-letter" aria-hidden="true">G</span
-                ><span id="review-label">Recensioni Google</span>
-              </a>
-            </div>
           </div>
         </div>
       </main>

@@ -5,6 +5,7 @@
   if (!trigger || !panel) return;
   const copy = {
     it: {
+      order: "Ordina da asporto o a domicilio",
       menu: "Scopri il nostro menu",
       book: "Prenota con TheFork",
       review: "Recensioni Google",
@@ -18,6 +19,7 @@
       ],
     },
     en: {
+      order: "Order takeaway or delivery",
       menu: "Discover our menu",
       book: "Book with TheFork",
       review: "Google reviews",
@@ -31,6 +33,7 @@
       ],
     },
     es: {
+      order: "Pide para llevar o a domicilio",
       menu: "Descubre nuestro menú",
       book: "Reserva con TheFork",
       review: "Reseñas de Google",
@@ -44,6 +47,7 @@
       ],
     },
     pt: {
+      order: "Pedir para levar ou ao domicílio",
       menu: "Descubra o nosso menu",
       book: "Reserve com TheFork",
       review: "Avaliações Google",
@@ -57,6 +61,7 @@
       ],
     },
     pl: {
+      order: "Zamów na wynos lub z dostawą",
       menu: "Odkryj nasze menu",
       book: "Zarezerwuj przez TheFork",
       review: "Opinie Google",
@@ -71,6 +76,7 @@
       ],
     },
     de: {
+      order: "Zur Abholung oder Lieferung",
       menu: "Unsere Speisekarte",
       book: "Mit TheFork reservieren",
       review: "Google-Bewertungen",
@@ -85,6 +91,7 @@
       ],
     },
     fr: {
+      order: "Commander à emporter / livraison",
       menu: "Découvrez notre menu",
       book: "Réserver avec TheFork",
       review: "Avis Google",
@@ -99,6 +106,7 @@
       ],
     },
     vi: {
+      order: "Đặt mang đi hoặc giao tận nơi",
       menu: "Khám phá thực đơn",
       book: "Đặt bàn qua TheFork",
       review: "Đánh giá Google",
@@ -132,6 +140,13 @@
     const boutique = document.getElementById("boutique-link");
     if (boutique) boutique.href = "./shop.html?lang=" + language;
     const text = copy[language];
+    const order = document.getElementById("home-order-link");
+    if (order) {
+      const url = new URL(order.href);
+      url.searchParams.set("lang", language);
+      order.href = url.href;
+      document.getElementById("home-order-label").textContent = text.order;
+    }
     document.documentElement.lang = language;
     label.textContent = text.menu;
     label.lang = language;
