@@ -1,3 +1,4 @@
+import {refreshHeaderControls} from './header-controls.js?v=glass-nav-20261120-1';
 import {createMenuHistory} from './history.js?v=history-20261120-1';
 import {visibleItems, selectedOffer, translatedItem, validateMenu, resolveLegacySelection, drinkCollections, groupDepartmentItems} from './model.js?v=wine-glasses-20261114-1';
 import {initialLanguages, createLocaleStore} from './locale-store.js?v=eight-languages-20261112-1';
@@ -79,7 +80,7 @@ function render(){
   if($('menu-search').value!==state.query)$('menu-search').value=state.query;
   $('clear-search').hidden=!state.query;$('clear-search').setAttribute('aria-label',text.clearSearch);
   $('overview-title').textContent=text.overviewTitle;$('overview-subtitle').textContent=text.chooseCategory;
-  $('all-categories').textContent='← '+text.categoryBack;$('all-categories').setAttribute('aria-pressed',String(!state.category&&!state.query));$('navigation-home').textContent=text.homeLabel+' ↗';$('navigation-home').href=new URL('../index.html?lang='+state.language,base);
+  $('all-categories').textContent='← '+text.categoryBack;$('all-categories').setAttribute('aria-pressed',String(!state.category&&!state.query));$('navigation-home').textContent=text.homeLabel+' ↗';$('navigation-home').href=new URL('../index.html?lang='+state.language,base);refreshHeaderControls(state.language,text.homeLabel);
   $('categories').setAttribute('aria-label',text.chooseCategory);$('category-hub').setAttribute('aria-label',text.chooseCategory);
   const categories=catalog.categories.filter(c=>!c.mergedInto&&visibleItems(catalog,config.activeEdition,c.id).length).sort((a,b)=>a.order-b.order);
   const primary=['drinks-beverage','pizze-tradizione','fritti','antipasti','primi'];

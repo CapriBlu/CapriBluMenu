@@ -68,3 +68,5 @@ Il gesto Indietro del telefono e i comandi del browser ripercorrono categorie, g
 ## Categorie nella barra superiore — 20 novembre 2026
 
 Su telefono il pulsante Categorie condivide la barra superiore con lingua, ricerca e Home. La barra rimane disponibile durante lo scorrimento; il selettore non occupa più una riga separata sotto il PDF. Ricerca e pannello categorie conservano il comportamento esistente.
+
+La barra mobile usa un unico contenitore in vetro blu: lingua con bandiera circolare, Categorie, lente con area più ampia e Home con icona a casetta. Il selettore nativo delle otto lingue rimane accessibile.
